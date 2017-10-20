@@ -10,6 +10,11 @@
 
 @implementation CoreObject
 
+- (void)dealloc
+{
+    [self removeNotifications];
+}
+
 - (NSDictionary *) toDictionary
 {
     // Child class should override this.
@@ -25,6 +30,16 @@
 }
 
 - (void) updateWithDictionary:(NSDictionary *)dictionary
+{
+    // Child class should override this.
+}
+
+- (void) listenNotifications
+{
+    // Child class should override this.
+}
+
+- (void) removeNotifications
 {
     // Child class should override this.
 }

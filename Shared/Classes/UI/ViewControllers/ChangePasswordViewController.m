@@ -7,13 +7,13 @@
 //
 
 #import "ChangePasswordViewController.h"
-#import "ChangePasswordModelObject.h"
+#import "ChangePasswordModel.h"
 #import "PasswordFieldCell.h"
 
 const CGFloat changePasswordVC_cellHeight = 90;
 
 @interface ChangePasswordViewController () <TextEntryDelegate>
-@property (nonatomic, strong) ChangePasswordModelObject* changePasswordModel;
+@property (nonatomic, strong) ChangePasswordModel* changePasswordModel;
 @property (nonatomic, strong) NSMutableDictionary* valueSet;
 @property (strong, nonatomic) UIBarButtonItem* bbiSave;
 @end
@@ -90,11 +90,11 @@ const CGFloat changePasswordVC_cellHeight = 90;
     [self.navigationController popViewControllerAnimated:YES];
 }
 
-- (ChangePasswordModelObject *)changePasswordModel
+- (ChangePasswordModel *)changePasswordModel
 {
     if (_changePasswordModel == nil)
     {
-        _changePasswordModel = [ChangePasswordModelObject new];
+        _changePasswordModel = [ChangePasswordModel new];
     }
     return _changePasswordModel;
 }

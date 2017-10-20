@@ -60,6 +60,16 @@ const CGFloat BaseTVC_keyboardButtonBottomMargin = 10;
     // Dispose of any resources that can be recreated.
 }
 
+- (void) listenNotifications
+{
+    // Child class should override this.
+}
+
+- (void) removeNotifications
+{
+    // Child class should override this.
+}
+
 #pragma mark - Header View
 
 - (HeaderInfoView *)headerInfoView

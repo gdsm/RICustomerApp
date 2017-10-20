@@ -15,4 +15,7 @@
 - (NSDictionary *) nonnullDictionary;
 - (void) updateWithDictionary:(NSDictionary *)dictionary;
 
+- (void) listenNotifications;
+- (void) removeNotifications;
+
 @end

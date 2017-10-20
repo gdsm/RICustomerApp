@@ -15,6 +15,8 @@
 #import "UserInfoView.h"
 #import "CartView.h"
 
+#import "NotificationInfo.h"
+
 const CGFloat MainVC_BarcodeBtnHeight = 44;
 const CGFloat MainVC_BarcodeBtnWidth = 44;
 const CGFloat MainVC_BarcodeHomeBtnOverlap = 10;
@@ -44,6 +46,7 @@ const CGFloat MainVC_UserViewHeight = 160;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self listenNotifications];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -102,6 +105,20 @@ const CGFloat MainVC_UserViewHeight = 160;
     [super didReceiveMemoryWarning];
 }
 
+- (void) listenNotifications
+{
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(clearTicketDone:) name:noti_ClearTicketDone object:nil];
+}
+
+- (void) removeNotifications
+{
+    // Child class should override this.
+}
+
+- (void)dealloc
+{
+    [self removeNotifications];
+}
 
 
 #pragma mark - Logical Flow Methods
@@ -150,6 +167,15 @@ const CGFloat MainVC_UserViewHeight = 160;
 {
     TicketViewController* view = [[TicketViewController alloc] initWithStyle:UITableViewStylePlain];
     [self safePush:view animated:YES];
+}
+
+
+#pragma mark - Listener Methods
+
+- (void) clearTicketDone:(NSNotification *)sender
+{
+    [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+    [self performSelectorOnMainThread:@selector(setHomeTab) withObject:nil waitUntilDone:NO];
 }
 
 

@@ -15,4 +15,6 @@
 @property (nonatomic, strong) NSString* hostAddress;
 @property (nonatomic, strong) NSString* sessionKey;
 
+- (void) initializeListeners;
+
 @end

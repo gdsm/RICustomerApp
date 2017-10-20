@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "UserManager.h"
 #import "DatabaseManager.h"
+#import "CoreService.h"
 
 
 @interface AppDelegate ()
@@ -21,6 +22,7 @@
     // Override point for customization after application launch.
     [[DatabaseManager shared] tryToUpgradeCoreData];
     [[UserManager shared] createDemoUser];
+    [[CoreService shared] initializeListeners];
     return YES;
 }
 

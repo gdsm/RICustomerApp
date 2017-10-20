@@ -8,6 +8,7 @@
 
 #import "OrderConfirmationViewController.h"
 #import "TitleCell.h"
+#import "NotificationInfo.h"
 #import "NSString+Additions.h"
 
 const CGFloat OrderConfVC_lblThanks_Height = 70;
@@ -105,7 +106,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
 - (void) orderPlacementComplete
 {
-    
+    [[NSNotificationCenter defaultCenter] postNotificationName:noti_OrderConfirmationDone object:nil userInfo:nil];
 }
 
 #pragma mark - TableView Methods

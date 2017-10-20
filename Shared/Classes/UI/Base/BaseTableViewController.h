@@ -19,6 +19,8 @@
 @property (nonatomic) CGFloat nextHeaderMargin;
 /// @brief layoutSubviews is used to increase performance. As a low level class try to avoid usage of layout subviews method. Layout will be called from viewWillAppear but the child class which needs to explicitely called this can call this.
 - (void) layoutSubviews;
+- (void) listenNotifications;
+- (void) removeNotifications;
 
 #pragma mark - Header View
 

@@ -7,6 +7,7 @@
 //
 
 #import "CoreService.h"
+#import "TicketManager.h"
 
 @implementation CoreService
 
@@ -39,6 +40,11 @@
     {
     }
     return _sessionKey;
+}
+
+- (void) initializeListeners
+{
+    [[TicketManager shared] listenNotifications];
 }
 
 @end
