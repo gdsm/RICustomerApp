@@ -1,0 +1,69 @@
+//
+//  BaseViewController.h
+//  ReddyIce
+//
+//  Created by Gagan on 10/10/17.
+//  Copyright © 2017 HCL. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "BlockUtils.h"
+#import "LocalizedStrings.h"
+#import "Globals.h"
+#import "Utilities.h"
+#import "IconFontCodes.h"
+#import "BottomTabView.h"
+
+extern const CGFloat BaseVC_BottomTabHeight;
+
+@interface BaseViewController : UIViewController
+
+/// @brief Method allows to setup any custom UI by ViewController.
+- (void) setupUI;
+@property (nonatomic) CGFloat navigationBarHeight;
+@property (nonatomic) CGFloat statusBarHeight;
+/// @brief Property will allow tableview to change content insets. By default this is true for iPhone.
+@property (nonatomic) BOOL allowKeyboardNotifications;
+- (void) keyboardDidShow:(nullable NSNotification *)notification;
+- (void) keyboardDidHide:(nullable NSNotification *)notification;
+
+@property (nonatomic, strong, nullable) UIImageView* bgImgv;
+
+@property (nonatomic, strong, nullable) BottomTabView* bottomTabView;
+
+#pragma mark - Push/Present ViewControllers
+
+/**
+ * @brief Would push the new view controller on the navigation controller. With safe push. It would make some cross checks to avoid crashes.
+ * @param viewController : The new ViewController to be pushed.
+ * @param animated : The new viewcontroller need to be pushed with animation or not.
+ */
+- (void) safePush:(nonnull UIViewController *)viewController
+         animated:(BOOL)animated;
+/**
+ * @brief This is simply the counter part of above method
+ * @param viewController : The new ViewController to be pushed.
+ * @param animated : The new viewcontroller need to be pushed with animation or not.
+ */
+- (void) unSafePush:(nonnull UIViewController *)viewController
+           animated:(BOOL)animated;
+/**
+ * @brief Would present the new view controller on the navigation controller. With safe present. It would make some cross checks to avoid crashes.
+ * @param onSelf : The new view controller to be presented on ViewController or on navigation Controller
+ * @param callback : Completion Block
+ */
+- (void) safePresent:(nonnull UIViewController *)viewController
+              onSelf:(BOOL)onSelf
+            animated:(BOOL)animated
+  callbackCompletion:(nullable blk_completion)callback;
+/**
+ * @brief This is simply the counter part of above method
+ * @param onSelf : The new view controller to be presented on ViewController or on navigation Controller
+ * @param callback : Completion Block
+ */
+- (void) unSafePresent:(nonnull UIViewController *)viewController
+                onSelf:(BOOL)onSelf
+              animated:(BOOL)animated
+    callbackCompletion:(nullable blk_completion)callback;
+
+@end
