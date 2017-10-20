@@ -149,6 +149,7 @@
         CGRect rect = CGRectMake(0, self.view.frame.size.height - checkoutViewHeight, self.view.frame.size.width, checkoutViewHeight);
         _checkoutView = [[CheckoutView alloc] initWithFrame:rect];
         _checkoutView.checkoutTitle = @"Confirm Cart";
+        [_checkoutView updateUI];
         _checkoutView.onCheckout = ^(id sender) {
             [weakSelf confirmOrder];
         };

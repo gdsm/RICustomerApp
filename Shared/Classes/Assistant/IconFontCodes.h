@@ -22,5 +22,6 @@
 @property (nonatomic, weak, readonly) NSString* barcode;
 @property (nonatomic, weak, readonly) NSString* cart;
 @property (nonatomic, weak, readonly) NSString* calendar;
+@property (nonatomic, weak, readonly) NSString* share;
 
 @end

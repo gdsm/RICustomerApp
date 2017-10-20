@@ -9,7 +9,13 @@
 #import "Globals.h"
 #import "UserManager.h"
 
-const CGFloat seperatorHeight = 1.0;
+const CGFloat seperatorHeight_1px = 1.0;
+const CGFloat topMargin_20px = 20.0;
+const CGFloat leftMargin_20px = 20.0;
+const CGFloat leftMargin_40px = 40.0;
+const CGFloat rightMargin_20px = 20.0;
+const CGFloat rightMargin_40px = 40.0;
+const CGFloat bottomMargin_20px = 20.0;
 
 @interface Globals()
 
@@ -45,7 +51,7 @@ const CGFloat seperatorHeight = 1.0;
 
 - (BOOL) anyActiveUser
 {
-    BOOL retVal = ([UserManager shared].activeUser != nil);
+//    BOOL retVal = ([UserManager shared].activeUser != nil);
 //    return retVal;
     return YES;
 //    return NO;
@@ -53,8 +59,8 @@ const CGFloat seperatorHeight = 1.0;
 
 - (BOOL) isSessionExpired
 {
-//    BOOL retVal = NO;
-    BOOL retVal = YES;
+    BOOL retVal = NO;
+//    BOOL retVal = YES;
     return retVal;
 }
 

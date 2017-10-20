@@ -140,16 +140,9 @@ static BottomTabView* _static_btmTabView = nil;
         _bgImgv.image = [UIImage imageNamed:@"Background.png"];
         _bgImgv.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
         _bgImgv.backgroundColor = [Globals shared].themingAssistant.itemVCBgColor;
-        UITapGestureRecognizer* tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(onTap:)];
-        [_bgImgv addGestureRecognizer:tap];
         [self.view insertSubview:_bgImgv atIndex:0];
     }
     return _bgImgv;
-}
-
-- (void) onTap:(UITapGestureRecognizer *)sender
-{
-    [[Utilities findFirstResonderIn:self.view] resignFirstResponder];
 }
 
 - (BottomTabView *) bottomTabView
@@ -163,7 +156,6 @@ static BottomTabView* _static_btmTabView = nil;
             [_static_btmTabView updateUI];
         }
         _bottomTabView = _static_btmTabView;
-        _bottomTabView.backgroundColor = [UIColor whiteColor];
         _bottomTabView.layer.shadowColor = [UIColor blackColor].CGColor;
         _bottomTabView.layer.shadowOffset = CGSizeMake(0, -1);
         _bottomTabView.layer.shadowRadius = 2;

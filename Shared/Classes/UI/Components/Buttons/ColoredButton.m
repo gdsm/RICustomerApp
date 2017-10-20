@@ -88,10 +88,10 @@ const CGFloat coloredButton_DefaultHeight = 50.0f;
     switch (coloredButtonType)
     {
         case ColoredButtonType_Red:
-            self.bgNormalColor = [Globals shared].themingAssistant.coloredButtonRed;
+            self.bgNormalColor = [Globals shared].themingAssistant.redNorm;
             break;
         case ColoredButtonType_Green:
-            self.bgNormalColor = [Globals shared].themingAssistant.coloredButtonGreen;
+            self.bgNormalColor = [Globals shared].themingAssistant.greenBtnNormBG;
             break;
         case ColoredButtonType_White:
             self.bgNormalColor = [Globals shared].themingAssistant.coloredButtonWhite;
@@ -100,7 +100,7 @@ const CGFloat coloredButton_DefaultHeight = 50.0f;
             self.bgNormalColor = [UIColor clearColor];
             break;
         case ColoredButtonType_Blue:
-            self.bgNormalColor = [Globals shared].themingAssistant.coloredButtonGreen;
+            self.bgNormalColor = [Globals shared].themingAssistant.blueNorm;
             break;
         default:
             break;

@@ -74,9 +74,9 @@ const CGFloat iconTextField_tf_botomMargin = 0.0f;
     if (self.viewUnderLine.hidden == NO)
     {
         rect_underLine.origin.x = 0;
-        rect_underLine.origin.y = self.frame.size.height - seperatorHeight;
+        rect_underLine.origin.y = self.frame.size.height - seperatorHeight_1px;
         rect_underLine.size.width = self.frame.size.width;
-        rect_underLine.size.height = seperatorHeight;
+        rect_underLine.size.height = seperatorHeight_1px;
     }
 
     self.imgvIcon.frame = rect_imgv;
@@ -160,7 +160,7 @@ const CGFloat iconTextField_tf_botomMargin = 0.0f;
 {
     if (_viewUnderLine == nil)
     {
-        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight)];
+        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight_1px)];
         _viewUnderLine.backgroundColor = [UIColor blackColor];
         _viewUnderLine.hidden = YES;
         

@@ -41,12 +41,12 @@ const CGFloat EnterQtyView_textField_width = 80;
     rect_textField.origin.x = xOffset;
     rect_textField.origin.y = self.contentInsets.top;
     rect_textField.size.width = EnterQtyView_textField_width;
-    rect_textField.size.height = self.contentHeight - seperatorHeight;
+    rect_textField.size.height = self.contentHeight - seperatorHeight_1px;
 
     rect_viewUnderLine.origin.x = xOffset;
     rect_viewUnderLine.origin.y = rect_textField.origin.y + rect_textField.size.height;
     rect_viewUnderLine.size.width = rect_textField.size.width;
-    rect_viewUnderLine.size.height = seperatorHeight;
+    rect_viewUnderLine.size.height = seperatorHeight_1px;
 
     
     self.lblTitle.frame = rect_lblTitle;
@@ -115,7 +115,7 @@ const CGFloat EnterQtyView_textField_width = 80;
 {
     if (_viewUnderLine == nil)
     {
-        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight)];
+        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight_1px)];
         _viewUnderLine.hidden = NO;
         _viewUnderLine.backgroundColor = [Globals shared].themingAssistant.defaultSeperatorColor;
         

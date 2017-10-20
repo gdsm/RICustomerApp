@@ -50,6 +50,11 @@ const CGFloat CheckoutView_lblAmt_width = CheckoutView_btnCart_width;
     }
 }
 
+- (void) updateUI
+{
+    self.backgroundColor = [Globals shared].themingAssistant.itemVCBgColor;
+}
+
 #pragma mark - Layout Methods
 
 - (void)layoutUI
@@ -86,7 +91,7 @@ const CGFloat CheckoutView_lblAmt_width = CheckoutView_btnCart_width;
     rect_viewUnderline.origin.x = 0;
     rect_viewUnderline.origin.y = 0;
     rect_viewUnderline.size.width = self.frame.size.width;
-    rect_viewUnderline.size.height = seperatorHeight;
+    rect_viewUnderline.size.height = seperatorHeight_1px;
 
     self.btnCheckout.frame = rect_btnCheckout;
     self.lblAmount.frame = rect_lblAmount;
@@ -159,7 +164,7 @@ const CGFloat CheckoutView_lblAmt_width = CheckoutView_btnCart_width;
 {
     if (_viewUnderLine == nil)
     {
-        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight)];
+        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight_1px)];
         _viewUnderLine.hidden = NO;
         _viewUnderLine.backgroundColor = [Globals shared].themingAssistant.defaultSeperatorColor;
         

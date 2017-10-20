@@ -89,9 +89,9 @@ const CGFloat TLI_amt_width_percent = 0.25;
     rect_lblAmount.size.width = avlWidth * TLI_amt_width_percent;
 
     rect_viewUnderline.origin.x = self.contentInsets.left;
-    rect_viewUnderline.origin.y = (self.frame.size.height - seperatorHeight);
+    rect_viewUnderline.origin.y = (self.frame.size.height - seperatorHeight_1px);
     rect_viewUnderline.size.width = self.frame.size.width - (self.contentInsets.left + self.contentInsets.right);
-    rect_viewUnderline.size.height = seperatorHeight;
+    rect_viewUnderline.size.height = seperatorHeight_1px;
 
     self.checkbox.frame = rect_checkbox;
     self.imgvProduct.frame = rect_imgvProd;
@@ -196,7 +196,7 @@ const CGFloat TLI_amt_width_percent = 0.25;
 {
     if (_viewUnderLine == nil)
     {
-        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight)];
+        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight_1px)];
         _viewUnderLine.hidden = NO;
         _viewUnderLine.backgroundColor = [Globals shared].themingAssistant.itemCartQtyTitleColor;
         

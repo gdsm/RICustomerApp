@@ -20,7 +20,6 @@ const CGFloat MainVC_BarcodeBtnWidth = 44;
 const CGFloat MainVC_BarcodeHomeBtnOverlap = 10;
 const CGFloat MainVC_TableLeftMargin = 40;
 const CGFloat MainVC_TableRightMargin = 40;
-const CGFloat MainVC_TableBottomMargin = 20;
 const CGFloat MainVC_TableHeight = 120;
 const CGFloat MainVC_UserViewTopMargin = 10;
 const CGFloat MainVC_UserViewLeftMargin = 40;
@@ -229,7 +228,7 @@ const CGFloat MainVC_UserViewHeight = 160;
     rect_tableView.size.height = MainVC_TableHeight;
     rect_tableView.size.width = self.view.frame.size.width - (MainVC_TableLeftMargin + MainVC_TableRightMargin);
     rect_tableView.origin.x = MainVC_TableLeftMargin;
-    rect_tableView.origin.y = rect_homeButtonView.origin.y - (MainVC_TableHeight + MainVC_TableBottomMargin);
+    rect_tableView.origin.y = rect_homeButtonView.origin.y - (MainVC_TableHeight + bottomMargin_20px);
 
     rect_userInfoView.size.height = MainVC_UserViewHeight;
     rect_userInfoView.size.width = self.view.frame.size.width - (MainVC_UserViewLeftMargin + MainVC_UserViewRightMargin);
@@ -261,7 +260,6 @@ const CGFloat MainVC_UserViewHeight = 160;
     {
         _bbiUser = [[UIBarButtonItem alloc] initWithTitle:[IconFontCodes shared].userCircle style:UIBarButtonItemStylePlain target:self action:@selector(onbbiUser:)];
         [_bbiUser setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].bbiIconFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-        
     }
     return _bbiUser;
 }

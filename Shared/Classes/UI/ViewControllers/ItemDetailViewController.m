@@ -70,6 +70,8 @@ typedef NS_ENUM(NSUInteger, ItemDetailVC_CellSequence)
     }
 
     self.tableView.scrollEnabled = doesViewRequiresScroll;
+    self.allowKeyboardNotifications = YES;
+    self.bgImgv.userInteractionEnabled = YES;
 
     self.bottomTabView.hidden = NO;
     self.navigationItem.rightBarButtonItem = self.bbiCart;
@@ -198,6 +200,11 @@ typedef NS_ENUM(NSUInteger, ItemDetailVC_CellSequence)
     return retVal;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [[Utilities findFirstResonderIn:self.tableView] resignFirstResponder];
+}
+
 
 #pragma mark - Layout Methods
 
@@ -227,6 +234,7 @@ typedef NS_ENUM(NSUInteger, ItemDetailVC_CellSequence)
         CGRect rect = CGRectMake(0, self.view.frame.size.height - checkoutViewHeight, self.view.frame.size.width, checkoutViewHeight);
         _checkoutView = [[CheckoutView alloc] initWithFrame:rect];
         _checkoutView.checkoutTitle = @"Add to Cart";
+        [_checkoutView updateUI];
         _checkoutView.onCheckout = ^(id sender) {
             [weakSelf addToCart];
         };

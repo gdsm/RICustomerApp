@@ -155,7 +155,7 @@ const CGFloat tabItemSideInset = 2.0f;
 {
     if (_normalIconColor == nil)
     {
-        _normalIconColor = [Globals shared].themingAssistant.coloredButtonRed;
+        _normalIconColor = [Globals shared].themingAssistant.redNorm;
     }
     return _normalIconColor;
 }
@@ -164,7 +164,7 @@ const CGFloat tabItemSideInset = 2.0f;
 {
     if (_normalTitleColor == nil)
     {
-        _normalTitleColor = [Globals shared].themingAssistant.coloredButtonRed;
+        _normalTitleColor = [Globals shared].themingAssistant.redNorm;
     }
     return _normalTitleColor;
 }
@@ -173,7 +173,7 @@ const CGFloat tabItemSideInset = 2.0f;
 {
     if (_highlightedIconColor == nil)
     {
-        _highlightedIconColor = [Globals shared].themingAssistant.coloredButtonGreen;
+        _highlightedIconColor = [Globals shared].themingAssistant.greenBtnHighBG;
     }
     return _highlightedIconColor;
 }
@@ -182,7 +182,7 @@ const CGFloat tabItemSideInset = 2.0f;
 {
     if (_highlightedTitleColor == nil)
     {
-        _highlightedTitleColor = [Globals shared].themingAssistant.coloredButtonGreen;
+        _highlightedTitleColor = [Globals shared].themingAssistant.greenBtnHighBG;
     }
     return _highlightedTitleColor;
 }

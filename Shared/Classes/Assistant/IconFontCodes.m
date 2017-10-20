@@ -71,4 +71,9 @@
     return @"\uf32f";
 }
 
+- (NSString *) share
+{
+    return @"\uf35b";
+}
+
 @end

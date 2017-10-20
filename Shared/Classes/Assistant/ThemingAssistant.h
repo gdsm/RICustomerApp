@@ -11,23 +11,27 @@
 
 @interface ThemingAssistant : NSObject
 
-@property (nonatomic, strong) UIColor* coloredButtonRed;
-@property (nonatomic, strong) UIColor* coloredButtonGreen;
 @property (nonatomic, strong) UIColor* coloredButtonWhite;
+@property (nonatomic, strong) UIColor* blueNorm;
+@property (nonatomic, strong) UIColor* blueHigh;
+@property (nonatomic, strong) UIColor* redNorm;
+@property (nonatomic, strong) UIColor* redHigh;
+@property (nonatomic, strong) UIColor* greenBtnNormBG;
+@property (nonatomic, strong) UIColor* greenBtnHighBG;
 
 @property (nonatomic, strong) UIColor* defaultTableViewBGColor;
 @property (nonatomic, strong) UIColor* defaultViewBGColor;
 @property (nonatomic, strong) UIColor* defaultTextColor;
-@property (nonatomic, strong) UIColor* defaultBorderColor;
-@property (nonatomic, strong) UIColor* defaultIconColor;
-@property (nonatomic, strong) UIColor* defaultContentBgColor;
-@property (nonatomic, strong) UIColor* defaultButtonNormalBgColor;
-@property (nonatomic, strong) UIColor* defaultButtonHighlightedBgColor;
+@property (nonatomic, weak) UIColor* defaultBorderColor;
+@property (nonatomic, weak) UIColor* defaultIconColor;
+@property (nonatomic, weak) UIColor* defaultContentBgColor;
+@property (nonatomic, weak) UIColor* defaultButtonNormalBgColor;
+@property (nonatomic, weak) UIColor* defaultButtonHighlightedBgColor;
 @property (nonatomic, strong) UIColor* defaultSeperatorColor;
 
-@property (nonatomic, strong) UIColor* badgeButtonColor;
+@property (nonatomic, weak) UIColor* badgeButtonColor;
 
-@property (nonatomic, strong) UIColor* cartIconColor;
+@property (nonatomic, weak) UIColor* cartIconColor;
 
 @property (nonatomic, strong) UIColor* touchIDLogoBGColor;
 @property (nonatomic, strong) UIColor* touchIDLogoBGBorderColor;
@@ -50,10 +54,10 @@
 @property (nonatomic, strong) UIColor* itemVariationButtonBGSelectedColor;
 
 @property (nonatomic, strong) UIColor* checkoutAmountColor;
-@property (nonatomic, strong) UIColor* checkoutAmountTitleColor;
+@property (nonatomic, weak) UIColor* checkoutAmountTitleColor;
 @property (nonatomic, strong) UIColor* checkoutBtnHighColor;
 
-@property (nonatomic, strong) UIColor* qtySliderThumbColor;
+@property (nonatomic, weak) UIColor* qtySliderThumbColor;
 @property (nonatomic, strong) UIColor* qtySliderLeftTrackColor;
 
 @property (nonatomic, strong) UIColor* crauselDotColor;

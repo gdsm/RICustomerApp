@@ -7,6 +7,7 @@
 //
 
 #import "OrderViewController.h"
+#import "OrderConfirmationViewController.h"
 #import "CheckoutView.h"
 #import "TicketLineItemCell.h"
 #import "TicketLineItemHeaderCell.h"
@@ -59,7 +60,8 @@ const CGFloat TicketVC_deliveryView_height = 60;
 
 - (void) placeOrder
 {
-    
+    OrderConfirmationViewController* view = [[OrderConfirmationViewController alloc] initWithNibName:@"OrderConfirmationViewController" bundle:nil];
+    [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 
 - (void) clearTicket

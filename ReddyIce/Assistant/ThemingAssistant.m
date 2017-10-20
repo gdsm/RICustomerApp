@@ -11,24 +11,6 @@
 
 @implementation ThemingAssistant
 
-- (UIColor *) coloredButtonRed
-{
-    if (_coloredButtonRed == nil)
-    {
-        _coloredButtonRed = [[Utilities shared] colorFromHexRed:@"E5" green:@"23" blue:@"23" alpha:@"FF"];
-    }
-    return _coloredButtonRed;
-}
-
-- (UIColor *) coloredButtonGreen
-{
-    if (_coloredButtonGreen == nil)
-    {
-        _coloredButtonGreen = [UIColor greenColor];
-    }
-    return _coloredButtonGreen;
-}
-
 - (UIColor *) coloredButtonWhite
 {
     if (_coloredButtonWhite == nil)
@@ -36,6 +18,60 @@
         _coloredButtonWhite = [[UIColor whiteColor] colorWithAlphaComponent:0.2];
     }
     return _coloredButtonWhite;
+}
+
+- (UIColor *) blueNorm
+{
+    if (_blueNorm == nil)
+    {
+        _blueNorm = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
+    }
+    return _blueNorm;
+}
+
+- (UIColor *) blueHigh
+{
+    if (_blueHigh == nil)
+    {
+        _blueHigh = [[Utilities shared] colorFromHexRed:@"14" green:@"40" blue:@"5C" alpha:@"FF"];
+    }
+    return _blueHigh;
+}
+
+- (UIColor *) redNorm
+{
+    if (_redNorm == nil)
+    {
+        _redNorm = [[Utilities shared] colorFromHexRed:@"E5" green:@"23" blue:@"23" alpha:@"FF"];
+    }
+    return _redNorm;
+}
+
+- (UIColor *) redHigh
+{
+    if (_redHigh == nil)
+    {
+        _redHigh = [[Utilities shared] colorFromHexRed:@"C9" green:@"14" blue:@"14" alpha:@"FF"];
+    }
+    return _redHigh;
+}
+
+- (UIColor *) greenBtnNormBG
+{
+    if (_greenBtnNormBG == nil)
+    {
+        _greenBtnNormBG = [UIColor greenColor];
+    }
+    return _greenBtnNormBG;
+}
+
+- (UIColor *) greenBtnHighBG
+{
+    if (_greenBtnHighBG == nil)
+    {
+        _greenBtnHighBG = [UIColor greenColor];
+    }
+    return _greenBtnHighBG;
 }
 
 - (UIColor *) defaultTableViewBGColor
@@ -67,29 +103,17 @@
 
 - (UIColor *) defaultBorderColor
 {
-    if (_defaultBorderColor == nil)
-    {
-        _defaultBorderColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _defaultBorderColor;
+    return self.blueNorm;
 }
 
 - (UIColor *) defaultIconColor
 {
-    if (_defaultIconColor == nil)
-    {
-        _defaultIconColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _defaultIconColor;
+    return  self.blueNorm;
 }
 
 - (UIColor *) defaultContentBgColor
 {
-    if (_defaultContentBgColor == nil)
-    {
-        _defaultContentBgColor = [[Utilities shared] colorFromHexRed:@"E5" green:@"23" blue:@"23" alpha:@"FF"];
-    }
-    return _defaultContentBgColor;
+    return self.redNorm;
 }
 
 - (UIColor *) defaultButtonNormalBgColor
@@ -103,11 +127,7 @@
 
 - (UIColor *) defaultButtonHighlightedBgColor
 {
-    if (_defaultButtonHighlightedBgColor == nil)
-    {
-        _defaultButtonHighlightedBgColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _defaultButtonHighlightedBgColor;
+    return self.blueHigh;
 }
 
 - (UIColor *) defaultSeperatorColor
@@ -121,20 +141,12 @@
 
 - (UIColor *) badgeButtonColor
 {
-    if (_badgeButtonColor == nil)
-    {
-        _badgeButtonColor = self.coloredButtonRed;
-    }
-    return _badgeButtonColor;
+    return self.redNorm;
 }
 
 - (UIColor *) cartIconColor
 {
-    if (_cartIconColor == nil)
-    {
-        _cartIconColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _cartIconColor;
+    return self.blueNorm;
 }
 
 - (UIColor *) touchIDLogoBGColor
@@ -283,11 +295,7 @@
 
 - (UIColor *) checkoutBtnHighColor
 {
-    if (_checkoutBtnHighColor == nil)
-    {
-        _checkoutBtnHighColor = [[Utilities shared] colorFromHexRed:@"C9" green:@"14" blue:@"14" alpha:@"FF"];
-    }
-    return _checkoutBtnHighColor;
+    return self.redHigh;
 }
 
 - (UIColor *) checkoutAmountColor
@@ -310,11 +318,7 @@
 
 - (UIColor *) qtySliderLeftTrackColor
 {
-    if (_qtySliderLeftTrackColor == nil)
-    {
-        _qtySliderLeftTrackColor = [[Utilities shared] colorFromHexRed:@"E5" green:@"23" blue:@"23" alpha:@"FF"];
-    }
-    return _qtySliderLeftTrackColor;
+    return self.redNorm;
 }
 
 - (UIColor *) crauselDotColor

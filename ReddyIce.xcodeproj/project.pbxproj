@@ -107,6 +107,8 @@
 		CE3A713B1F8D344300F42B9A /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A713A1F8D344300F42B9A /* BaseView.m */; };
 		CE3C819A1F8EE31C0092FDF0 /* ReddyIceActive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3C81981F8EDC0D0092FDF0 /* ReddyIceActive.xcdatamodeld */; };
 		CE3CE7D51F8E72320050B656 /* BaseTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */; };
+		CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */; };
+		CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */; };
 		CE5685531F8D5A63005922AA /* ThemingAssistant.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5685521F8D5A63005922AA /* ThemingAssistant.m */; };
 		CE56855C1F8D60F9005922AA /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56855B1F8D60F9005922AA /* NSString+Additions.m */; };
 		CE5685671F8D73BC005922AA /* ButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5685621F8D73BC005922AA /* ButtonItem.m */; };
@@ -368,6 +370,9 @@
 		CE3C81991F8EDC0D0092FDF0 /* ReddyIce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReddyIce.xcdatamodel; sourceTree = "<group>"; };
 		CE3CE7D31F8E72320050B656 /* BaseTextEntryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTextEntryCell.h; sourceTree = "<group>"; };
 		CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTextEntryCell.m; sourceTree = "<group>"; };
+		CE54331C1F9A5BDB0059CA2C /* OrderConfirmationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderConfirmationViewController.h; sourceTree = "<group>"; };
+		CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationViewController.m; sourceTree = "<group>"; };
+		CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationViewController.xib; sourceTree = "<group>"; };
 		CE5685501F8D5A56005922AA /* ThemingAssistant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThemingAssistant.h; sourceTree = "<group>"; };
 		CE5685521F8D5A63005922AA /* ThemingAssistant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThemingAssistant.m; sourceTree = "<group>"; };
 		CE56855A1F8D60F9005922AA /* NSString+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+Additions.h"; sourceTree = "<group>"; };
@@ -931,6 +936,7 @@
 		CE3A71011F8D0C5200F42B9A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */,
 				CE3A71021F8D0C5200F42B9A /* LoginViewController.xib */,
 				CE3A71031F8D0C5200F42B9A /* MainViewController.xib */,
 			);
@@ -1077,6 +1083,8 @@
 				CED748FC1F97CA10006810D5 /* TicketViewController.m */,
 				CED748FE1F97CA2A006810D5 /* OrderViewController.h */,
 				CED748FF1F97CA2A006810D5 /* OrderViewController.m */,
+				CE54331C1F9A5BDB0059CA2C /* OrderConfirmationViewController.h */,
+				CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1353,6 +1361,7 @@
 				CE3A71111F8D0C5200F42B9A /* MainViewController.xib in Resources */,
 				CE1805D91F8E623700081FD0 /* PasswordFieldCell.xib in Resources */,
 				CE0ACFA01F914A6500984EB3 /* ProfilePic@1x.png in Resources */,
+				CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */,
 				CE23D20C1F942F310021403B /* ItemCell.xib in Resources */,
 				CE3A71101F8D0C5200F42B9A /* LoginViewController.xib in Resources */,
 				CEDE050B1F9550CE005A3354 /* Problem_high@3x.png in Resources */,
@@ -1461,6 +1470,7 @@
 				CE5685531F8D5A63005922AA /* ThemingAssistant.m in Sources */,
 				CE12C2AD1F968F3200D9EDB8 /* CrauselView.m in Sources */,
 				CE12C2FE1F96B63600D9EDB8 /* UserSummary.m in Sources */,
+				CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */,
 				CE5983341F90FED40098DC13 /* CoreService.m in Sources */,
 				CE3A71301F8D274E00F42B9A /* BaseTableViewController.m in Sources */,
 				CE23D2091F942E640021403B /* ItemCell.m in Sources */,
@@ -1642,7 +1652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+                DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReddyIce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1650,7 +1660,7 @@
 				OTHER_CFLAGS = "-DDEV_MODE";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hclTest.ri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1658,7 +1668,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+                DEVELOPMENT_TEAM = "";
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReddyIce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1666,7 +1676,7 @@
 				OTHER_CFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hclTest.ri;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

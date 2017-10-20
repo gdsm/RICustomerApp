@@ -44,6 +44,7 @@ const CGFloat BottomBtnView_InterMargin = 2;
 - (void) updateUI
 {
 //    [self addSubview:self.tabBar];
+    self.backgroundColor = [UIColor whiteColor];
 }
 
 - (void) layoutUI

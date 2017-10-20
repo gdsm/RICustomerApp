@@ -15,7 +15,6 @@
 
 
 
-const CGFloat loginVC_verticalMargin = 20;
 const CGFloat loginVC_verticalLogoUserNameMargin = 30;
 const CGFloat loginVC_verticalUserNamePwdMargin = 10;
 const CGFloat loginVC_verticalPwdInfoMargin = 30;
@@ -54,7 +53,7 @@ const CGFloat loginVC_passwordIconSize = 26;
 {
     [super viewWillAppear:animated];
     self.allowKeyboardNotifications = YES;
-    [self layoutLoginButton:loginVC_verticalMargin];
+    [self layoutLoginButton:topMargin_20px];
 }
 
 - (void)viewWillDisappear:(BOOL)animated
@@ -174,7 +173,7 @@ const CGFloat loginVC_passwordIconSize = 26;
     CGRect rect_lblInfo = self.lblInfo.frame;
     CGRect rect_viewAdditionalSecurity = self.viewAdditionalSecurity.frame;
 
-    CGFloat offsetY = loginVC_verticalMargin + self.navigationBarHeight + self.statusBarHeight;
+    CGFloat offsetY = topMargin_20px + self.navigationBarHeight + self.statusBarHeight;
     
     rect_viewLogo.origin.x = (self.view.frame.size.width - rect_viewLogo.size.width) * 0.5;
     rect_viewLogo.origin.y = offsetY;
@@ -204,7 +203,7 @@ const CGFloat loginVC_passwordIconSize = 26;
     rect_viewAdditionalSecurity.size.height = loginVC_additionalInfoHeight;
     rect_viewAdditionalSecurity.origin.x = (self.view.frame.size.width - rect_viewAdditionalSecurity.size.width) * 0.5;
     rect_viewAdditionalSecurity.origin.y = offsetY;
-    offsetY += (rect_viewAdditionalSecurity.size.height + loginVC_verticalMargin);
+    offsetY += (rect_viewAdditionalSecurity.size.height + topMargin_20px);
     
     self.viewLogo.frame = rect_viewLogo;
     self.iconFieldUserName.frame = rect_iconFieldUserName;
@@ -260,13 +259,13 @@ const CGFloat loginVC_passwordIconSize = 26;
 
 - (void)keyboardDidHide:(NSNotification *)notification
 {
-    [self layoutLoginButton:loginVC_verticalMargin];
+    [self layoutLoginButton:topMargin_20px];
 }
 
 - (void)keyboardDidShow:(NSNotification *)notification
 {
     CGRect keyBoardFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    [self layoutLoginButton:keyBoardFrame.size.height + loginVC_verticalMargin];
+    [self layoutLoginButton:keyBoardFrame.size.height + topMargin_20px];
 }
 
 - (void) onbbiForgotPassword:(UIBarButtonItem *)bbi

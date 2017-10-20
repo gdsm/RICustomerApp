@@ -14,7 +14,13 @@
  * @brief Class will store the Global access objects, properties.
  */
 
-extern const CGFloat seperatorHeight;
+extern const CGFloat seperatorHeight_1px;
+extern const CGFloat topMargin_20px;
+extern const CGFloat leftMargin_20px;
+extern const CGFloat leftMargin_40px;
+extern const CGFloat rightMargin_20px;
+extern const CGFloat rightMargin_40px;
+extern const CGFloat bottomMargin_20px;
 
 @interface Globals : NSObject
 

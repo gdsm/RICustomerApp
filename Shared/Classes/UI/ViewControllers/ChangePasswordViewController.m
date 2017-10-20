@@ -11,9 +11,6 @@
 #import "PasswordFieldCell.h"
 
 const CGFloat changePasswordVC_cellHeight = 90;
-const CGFloat changePasswordVC_infoTopMargin = 20;
-const CGFloat changePasswordVC_infoLeftMargin = 40;
-const CGFloat changePasswordVC_infoRightMargin = 40;
 
 @interface ChangePasswordViewController () <TextEntryDelegate>
 @property (nonatomic, strong) ChangePasswordModelObject* changePasswordModel;
