@@ -9,8 +9,6 @@
 #import "TicketLineItemView.h"
 #import "Globals.h"
 
-const CGFloat TLI_checkBox_Size = 20;
-
 const CGFloat TLI_checkBoxImage_margin = 5;
 const CGFloat TLI_imageTitle_margin = 5;
 const CGFloat TLI_titleSize_margin = 5;
@@ -59,7 +57,7 @@ const CGFloat TLI_amt_width_percent = 0.25;
 
     if (self.checkbox.hidden == NO)
     {
-        rect_checkbox.origin.y = (self.frame.size.height - TLI_checkBox_Size) * 0.5;
+        rect_checkbox.origin.y = (self.frame.size.height - checkboxSize) * 0.5;
         xOffset += (rect_checkbox.size.width + TLI_checkBoxImage_margin);
         avlWidth -= (rect_checkbox.size.width + TLI_checkBoxImage_margin);
     }
@@ -118,14 +116,13 @@ const CGFloat TLI_amt_width_percent = 0.25;
     {
         __weak TicketLineItemView* weakSelf = self;
         
-        CGRect rect = CGRectMake(self.contentInsets.left, (self.frame.size.height - TLI_checkBox_Size) * 0.5 , TLI_checkBox_Size, TLI_checkBox_Size);
+        CGRect rect = CGRectMake(self.contentInsets.left, (self.frame.size.height - checkboxSize) * 0.5 , checkboxSize, checkboxSize);
         _checkbox = [[CheckBox alloc] initWithFrame:rect];
         [_checkbox updateUI];
         _checkbox.onCheckboxCallback = ^(id sender) {
             [weakSelf lineItemChecked];
         };
         [self addSubview:_checkbox];
-        return _checkbox;
     }
     return _checkbox;
 }

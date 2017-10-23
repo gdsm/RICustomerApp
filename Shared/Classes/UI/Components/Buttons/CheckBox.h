@@ -9,6 +9,8 @@
 #import "BaseView.h"
 #import "BlockUtils.h"
 
+extern const CGFloat checkboxSize;
+
 @interface CheckBox : BaseView
 
 @property (nonatomic, strong) blk_actionSender onCheckboxCallback;

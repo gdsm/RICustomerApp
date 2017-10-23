@@ -100,5 +100,26 @@
     self.layer.cornerRadius = cornerRadius;
 }
 
+- (void) layoutUI
+{
+    // Child class should implement this to layout the UI on parent ViewController demand
+}
+
+- (void) updateUI
+{
+    // child class override this.
+}
+
+- (CGFloat) contentHeight
+{
+    CGFloat retVal = self.frame.size.height - (self.contentInsets.top + self.contentInsets.bottom);
+    return retVal;
+}
+
+- (CGFloat) contentWidth
+{
+    CGFloat retVal = self.frame.size.width - (self.contentInsets.left + self.contentInsets.right);
+    return retVal;
+}
 
 @end

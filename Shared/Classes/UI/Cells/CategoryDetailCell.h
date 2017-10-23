@@ -9,6 +9,8 @@
 #import "BaseTableViewCell.h"
 #import "CategoryDetailView.h"
 
+extern const CGFloat CatDetCell_Default_Height;
+
 @interface CategoryDetailCell : BaseTableViewCell
 
 + (CategoryDetailCell *) dequeueFrom:(UITableView *)tableView loadFromNib:(NSString *)nibName;

@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import "ItemViewController.h"
 #import "TicketViewController.h"
+#import "DeliveryOrderViewController.h"
 
 #import "HomeButtonsView.h"
 #import "TitleCell.h"
@@ -132,23 +133,32 @@ const CGFloat MainVC_UserViewHeight = 160;
 
 - (void) deliveryHistory
 {
-    
+    [self.bottomTabView unselectBottomTabs];
+    self.bottomTabView.btnDeliveryHistory.selected = YES;
+    [self.navigationController popToViewController:self animated:NO];
+    DeliveryOrderViewController* view = [[DeliveryOrderViewController alloc] init];
+    [self safePush:view animated:YES];
 }
 
 - (void) reportAProblem
 {
-    
+    [self.bottomTabView unselectBottomTabs];
+    self.bottomTabView.btnReportAProb.selected = YES;
+    [self.navigationController popToViewController:self animated:NO];
 }
 
 - (void) shareFeedback
 {
-    
+    [self.bottomTabView unselectBottomTabs];
+    self.bottomTabView.btnShareFeedback.selected = YES;
+    [self.navigationController popToViewController:self animated:NO];
 }
 
 - (void) placeAnOrder
 {
     [self.bottomTabView unselectBottomTabs];
     self.bottomTabView.btnPlaceOrder.selected = YES;
+    [self.navigationController popToViewController:self animated:NO];
     ItemViewController* view = [[ItemViewController alloc] initWithStyle:UITableViewStylePlain];
     [self safePush:view animated:YES];
 }

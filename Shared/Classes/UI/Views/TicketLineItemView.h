@@ -9,8 +9,6 @@
 #import "BaseView.h"
 #import "CheckBox.h"
 
-extern const CGFloat TLI_checkBox_Size;
-
 extern const CGFloat TLI_checkBoxImage_margin;
 extern const CGFloat TLI_imageTitle_margin;
 extern const CGFloat TLI_titleSize_margin;

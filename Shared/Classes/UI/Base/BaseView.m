@@ -83,6 +83,18 @@ const CGFloat viewContentInset_right = 20;
     // child class override this.
 }
 
+- (BaseLabel *) getBaseLabel
+{
+    CGRect rect = CGRectMake(0, self.contentInsets.top, self.contentWidth, self.contentHeight);
+    BaseLabel* retVal = [[BaseLabel alloc] initWithFrame:rect];
+    retVal.adjustsFontSizeToFitWidth = YES;
+    retVal.font = [Globals shared].defaultTextFont;
+    retVal.textColor = [Globals shared].themingAssistant.defaultTextColor;
+    retVal.backgroundColor = [UIColor clearColor];
+    retVal.numberOfLines = 0;
+    return retVal;
+}
+
 - (UILabel *) getLabel
 {
     CGRect rect = CGRectMake(0, self.contentInsets.top, self.contentWidth, self.contentHeight);

@@ -76,4 +76,19 @@
     return @"\uf35b";
 }
 
+- (NSString *) search
+{
+    return @"\uf1c3";
+}
+
+- (NSString *) image
+{
+    return @"\uf17f";
+}
+
+- (NSString *) comment_text
+{
+    return @"\uf263";
+}
+
 @end

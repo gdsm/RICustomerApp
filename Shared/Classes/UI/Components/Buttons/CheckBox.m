@@ -10,6 +10,8 @@
 #import "ColoredButton.h"
 #import "IconFontCodes.h"
 
+const CGFloat checkboxSize = 20;
+
 @interface CheckBox()
 @property (nonatomic, strong) ColoredButton* button;
 @end

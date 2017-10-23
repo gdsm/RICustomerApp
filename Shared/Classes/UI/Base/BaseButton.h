@@ -11,6 +11,10 @@
 
 @interface BaseButton : UIButton
 
+@property (nonatomic) UIEdgeInsets contentInsets;
+@property (nonatomic) CGFloat contentWidth;
+@property (nonatomic) CGFloat contentHeight;
+
 @property (nonatomic) BOOL canHighlight;
 
 @property (nonatomic, strong) UIColor* bgNormalColor;
@@ -26,6 +30,11 @@
 @property (nonatomic, weak) UIColor* borderNormalColor;
 @property (nonatomic) CGFloat normalBorderWidth;
 @property (nonatomic) CGFloat cornerRadius;
+
+/// @brief Method will layout the UI. Child Classes would use this to layout the UI.
+- (void) layoutUI;
+/// @brief Update any ui.
+- (void) updateUI;
 
 /// @brief This property is generic property. It allows to associate any NSObject with this button. Whenever a button needs to carry additional information use this property.
 @property (nonatomic, strong) id associatedObject;

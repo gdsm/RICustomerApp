@@ -10,6 +10,8 @@
 #import "UserManager.h"
 
 const CGFloat seperatorHeight_1px = 1.0;
+const CGFloat viewHeight_20px = 20.0;
+const CGFloat viewHeight_40px = 40.0;
 const CGFloat topMargin_20px = 20.0;
 const CGFloat leftMargin_20px = 20.0;
 const CGFloat leftMargin_40px = 40.0;

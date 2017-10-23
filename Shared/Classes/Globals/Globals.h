@@ -15,6 +15,8 @@
  */
 
 extern const CGFloat seperatorHeight_1px;
+extern const CGFloat viewHeight_20px;
+extern const CGFloat viewHeight_40px;
 extern const CGFloat topMargin_20px;
 extern const CGFloat leftMargin_20px;
 extern const CGFloat leftMargin_40px;

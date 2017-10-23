@@ -87,7 +87,7 @@
         [cell updateCell];
 
         UIEdgeInsets inset = cell.lineItemHeaderView.contentInsets;
-        inset.left = viewContentInset_left + TLI_checkBoxImage_margin + TLI_checkBox_Size;
+        inset.left = viewContentInset_left + TLI_checkBoxImage_margin + checkboxSize;
         cell.lineItemHeaderView.contentInsets = inset;
         
         cell.selectionStyle = UITableViewCellSelectionStyleNone;

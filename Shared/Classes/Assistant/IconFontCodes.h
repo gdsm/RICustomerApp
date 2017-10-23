@@ -23,5 +23,7 @@
 @property (nonatomic, weak, readonly) NSString* cart;
 @property (nonatomic, weak, readonly) NSString* calendar;
 @property (nonatomic, weak, readonly) NSString* share;
-
+@property (nonatomic, weak, readonly) NSString* search;
+@property (nonatomic, weak, readonly) NSString* image;
+@property (nonatomic, weak, readonly) NSString* comment_text;
 @end

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseLabel.h"
 
 extern const CGFloat viewContentInset_top;
 extern const CGFloat viewContentInset_left;
@@ -25,6 +26,7 @@ extern const CGFloat viewContentInset_right;
 @property (nonatomic) UIEdgeInsets contentInsets;
 @property (nonatomic) CGFloat contentWidth;
 @property (nonatomic) CGFloat contentHeight;
+- (BaseLabel *) getBaseLabel;
 - (UILabel *) getLabel;
 
 @end

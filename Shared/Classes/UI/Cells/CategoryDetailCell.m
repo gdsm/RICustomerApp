@@ -8,6 +8,8 @@
 
 #import "CategoryDetailCell.h"
 
+const CGFloat CatDetCell_Default_Height = 40;
+
 @implementation CategoryDetailCell
 
 + (CategoryDetailCell *) dequeueFrom:(UITableView *)tableView loadFromNib:(NSString *)nibName
@@ -52,12 +54,18 @@
 
 - (void)setCategory:(NSString *)category
 {
-    self.categoryDetailView.lblCategory.text = category;
+    self.categoryDetailView.category = category;
 }
 
 - (void)setDetail:(NSString *)detail
 {
-    self.categoryDetailView.lblDetail.text = detail;
+    self.categoryDetailView.detail = detail;
+}
+
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    [self.categoryDetailView layoutUI];
 }
 
 @end
