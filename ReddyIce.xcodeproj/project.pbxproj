@@ -40,7 +40,6 @@
 		CE12C2751F963FD100D9EDB8 /* Problem@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12C25D1F963FD100D9EDB8 /* Problem@1x.png */; };
 		CE12C2761F963FD100D9EDB8 /* Problem@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12C25E1F963FD100D9EDB8 /* Problem@2x.png */; };
 		CE12C2771F963FD100D9EDB8 /* Problem@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE12C25F1F963FD100D9EDB8 /* Problem@3x.png */; };
-		CE12C27A1F964E5800D9EDB8 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2791F964E5700D9EDB8 /* SliderView.m */; };
 		CE12C27D1F96517C00D9EDB8 /* NSDecimalNumber+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C27C1F96517C00D9EDB8 /* NSDecimalNumber+Additions.m */; };
 		CE12C2861F96546B00D9EDB8 /* SliderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2841F96546B00D9EDB8 /* SliderCell.m */; };
 		CE12C2891F9654A000D9EDB8 /* SliderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C2881F9654A000D9EDB8 /* SliderCell.xib */; };
@@ -50,10 +49,8 @@
 		CE12C2991F966C7E00D9EDB8 /* EnterQuantityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C2981F966C7E00D9EDB8 /* EnterQuantityCell.xib */; };
 		CE12C29D1F9678AE00D9EDB8 /* ItemVariationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C29B1F9678AE00D9EDB8 /* ItemVariationCell.m */; };
 		CE12C2A01F9678DE00D9EDB8 /* ItemVariationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C29F1F9678DE00D9EDB8 /* ItemVariationCell.xib */; };
-		CE12C2A31F9689B600D9EDB8 /* CategoryDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2A21F9689B600D9EDB8 /* CategoryDetailView.m */; };
 		CE12C2A71F968B1500D9EDB8 /* CategoryDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2A51F968B1500D9EDB8 /* CategoryDetailCell.m */; };
 		CE12C2AA1F968B5700D9EDB8 /* CategoryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C2A91F968B5700D9EDB8 /* CategoryDetailCell.xib */; };
-		CE12C2AD1F968F3200D9EDB8 /* CrauselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2AC1F968F3200D9EDB8 /* CrauselView.m */; };
 		CE12C2B11F96947500D9EDB8 /* CrauselCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2AF1F96947500D9EDB8 /* CrauselCell.m */; };
 		CE12C2B41F9694C200D9EDB8 /* CrauselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C2B31F9694C200D9EDB8 /* CrauselCell.xib */; };
 		CE12C2B71F9698CC00D9EDB8 /* BadgeButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2B61F9698CC00D9EDB8 /* BadgeButton.m */; };
@@ -79,7 +76,6 @@
 		CE1805D11F8E5EC200081FD0 /* PasswordField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D01F8E5EC200081FD0 /* PasswordField.m */; };
 		CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */; };
 		CE1805D91F8E623700081FD0 /* PasswordFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */; };
-		CE1805DC1F8E659600081FD0 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805DB1F8E659600081FD0 /* ChangePasswordViewController.m */; };
 		CE23D2091F942E640021403B /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23D2071F942E640021403B /* ItemCell.m */; };
 		CE23D20C1F942F310021403B /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE23D20B1F942F310021403B /* ItemCell.xib */; };
 		CE23D20F1F943BD60021403B /* ToggleSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23D20E1F943BD60021403B /* ToggleSwitchButton.m */; };
@@ -102,6 +98,16 @@
 		CE3A713B1F8D344300F42B9A /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A713A1F8D344300F42B9A /* BaseView.m */; };
 		CE3C819A1F8EE31C0092FDF0 /* ReddyIceActive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3C81981F8EDC0D0092FDF0 /* ReddyIceActive.xcdatamodeld */; };
 		CE3CE7D51F8E72320050B656 /* BaseTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */; };
+		CE42D68F1F9E2F8D00A9FE50 /* DeliveryHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D68E1F9E2F8D00A9FE50 /* DeliveryHistoryView.m */; };
+		CE42D6921F9E382700A9FE50 /* PathCheckboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6911F9E382700A9FE50 /* PathCheckboxView.m */; };
+		CE42D6961F9E3D8200A9FE50 /* DeliveryHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6941F9E3D8200A9FE50 /* DeliveryHistoryCell.m */; };
+		CE42D6991F9E3F0200A9FE50 /* DeliveryHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D6981F9E3F0200A9FE50 /* DeliveryHistoryCell.xib */; };
+		CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D69B1F9E86B500A9FE50 /* DriverInfoView.m */; };
+		CE42D69F1F9E86ED00A9FE50 /* DriverInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D69E1F9E86ED00A9FE50 /* DriverInfoView.xib */; };
+		CE42D6A31F9E8A9500A9FE50 /* DriverInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6A11F9E8A9500A9FE50 /* DriverInfoCell.m */; };
+		CE42D6A61F9E8ADF00A9FE50 /* DriverInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D6A51F9E8ADF00A9FE50 /* DriverInfoCell.xib */; };
+		CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6A81F9E925A00A9FE50 /* CategoryDetailButton.m */; };
+		CE42D6B11F9EA68200A9FE50 /* ReportLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */; };
 		CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */; };
 		CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */; };
 		CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433261F9A8CE20059CA2C /* ItemSummary.m */; };
@@ -119,8 +125,6 @@
 		CE56855C1F8D60F9005922AA /* NSString+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56855B1F8D60F9005922AA /* NSString+Additions.m */; };
 		CE5685671F8D73BC005922AA /* ButtonItem.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5685621F8D73BC005922AA /* ButtonItem.m */; };
 		CE5685681F8D73BC005922AA /* ColoredButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5685641F8D73BC005922AA /* ColoredButton.m */; };
-		CE5685741F8D746E005922AA /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56856C1F8D746E005922AA /* LaunchViewController.m */; };
-		CE5685751F8D746E005922AA /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE56856E1F8D746E005922AA /* LoginViewController.m */; };
 		CE5685761F8D746E005922AA /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5685701F8D746E005922AA /* MainViewController.m */; };
 		CE5685771F8D746E005922AA /* AdditionalSecurityButtons.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5685731F8D746E005922AA /* AdditionalSecurityButtons.m */; };
 		CE56857A1F8D8D47005922AA /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE5685791F8D8D47005922AA /* LocalAuthentication.framework */; };
@@ -137,13 +141,26 @@
 		CE5A4FFD1F8FF153009D373B /* RILogo@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A4FFA1F8FF152009D373B /* RILogo@1x.png */; };
 		CE5A4FFE1F8FF153009D373B /* RILogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A4FFB1F8FF153009D373B /* RILogo@2x.png */; };
 		CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A50001F9022A6009D373B /* HeaderInfoView.m */; };
+		CE70B81F1F9AAF7600135A38 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B81A1F9AAF7600135A38 /* ChangePasswordViewController.m */; };
+		CE70B8201F9AAF7600135A38 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B81C1F9AAF7600135A38 /* LaunchViewController.m */; };
+		CE70B8211F9AAF7600135A38 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B81E1F9AAF7600135A38 /* LoginViewController.m */; };
+		CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */; };
+		CE70B8281F9AB11D00135A38 /* ReportLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8271F9AB11D00135A38 /* ReportLineView.m */; };
+		CE70B8311F9AB19500135A38 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8291F9AB19300135A38 /* SliderView.m */; };
+		CE70B8321F9AB19500135A38 /* CategoryDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B82B1F9AB19400135A38 /* CategoryDetailView.m */; };
+		CE70B8331F9AB19500135A38 /* CrauselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B82F1F9AB19500135A38 /* CrauselView.m */; };
+		CE70B8341F9AB19500135A38 /* BottomTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8301F9AB19500135A38 /* BottomTabView.m */; };
+		CE70B8371F9AB44A00135A38 /* BaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8361F9AB44A00135A38 /* BaseLabel.m */; };
+		CE70B83E1F9AB67500135A38 /* ReportLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE70B83D1F9AB67400135A38 /* ReportLineCell.xib */; };
 		CEAF7CB51F90362000010042 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7CB31F90362000010042 /* TitleCell.m */; };
 		CEAF7CB81F90365000010042 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEAF7CB71F90365000010042 /* TitleCell.xib */; };
 		CEB4DA111F97ABF50059CDBD /* TicketLineItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB4DA101F97ABF50059CDBD /* TicketLineItemView.m */; };
 		CEB4DA141F97AD7C0059CDBD /* CheckBox.m in Sources */ = {isa = PBXBuildFile; fileRef = CEB4DA131F97AD7C0059CDBD /* CheckBox.m */; };
 		CEBDCB531F916C720078C813 /* ItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBDCB521F916C720078C813 /* ItemViewController.m */; };
-		CEBDCB591F916DAC0078C813 /* BottomTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBDCB581F916DAC0078C813 /* BottomTabView.m */; };
 		CEBDCB5C1F916EA80078C813 /* BottomTabButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEBDCB5B1F916EA80078C813 /* BottomTabButton.m */; };
+		CEC3A7D51F9BFD6E00392073 /* DeliveryHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3A7D41F9BFD6E00392073 /* DeliveryHistoryViewController.m */; };
+		CEC3A7D81F9BFD8B00392073 /* OrderHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3A7D71F9BFD8B00392073 /* OrderHistoryViewController.m */; };
+		CEC3A7DB1F9BFD9B00392073 /* DNSHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC3A7DA1F9BFD9B00392073 /* DNSHistoryViewController.m */; };
 		CEC81A1E1F99246400035909 /* DeliveryTimelineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEC81A1D1F99246400035909 /* DeliveryTimelineView.m */; };
 		CED4F4F81F8EBB0600723DAC /* TouchIdView.m in Sources */ = {isa = PBXBuildFile; fileRef = CED4F4F71F8EBB0600723DAC /* TouchIdView.m */; };
 		CED4F4FA1F8EBB2200723DAC /* TouchIdView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED4F4F91F8EBB2200723DAC /* TouchIdView.xib */; };
@@ -246,8 +263,6 @@
 		CE12C25D1F963FD100D9EDB8 /* Problem@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Problem@1x.png"; sourceTree = "<group>"; };
 		CE12C25E1F963FD100D9EDB8 /* Problem@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Problem@2x.png"; sourceTree = "<group>"; };
 		CE12C25F1F963FD100D9EDB8 /* Problem@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Problem@3x.png"; sourceTree = "<group>"; };
-		CE12C2781F964E5700D9EDB8 /* SliderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
-		CE12C2791F964E5700D9EDB8 /* SliderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		CE12C27B1F96517C00D9EDB8 /* NSDecimalNumber+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDecimalNumber+Additions.h"; sourceTree = "<group>"; };
 		CE12C27C1F96517C00D9EDB8 /* NSDecimalNumber+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDecimalNumber+Additions.m"; sourceTree = "<group>"; };
 		CE12C2831F96546B00D9EDB8 /* SliderCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SliderCell.h; sourceTree = "<group>"; };
@@ -263,13 +278,9 @@
 		CE12C29A1F9678AE00D9EDB8 /* ItemVariationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemVariationCell.h; sourceTree = "<group>"; };
 		CE12C29B1F9678AE00D9EDB8 /* ItemVariationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemVariationCell.m; sourceTree = "<group>"; };
 		CE12C29F1F9678DE00D9EDB8 /* ItemVariationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemVariationCell.xib; sourceTree = "<group>"; };
-		CE12C2A11F9689B600D9EDB8 /* CategoryDetailView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryDetailView.h; sourceTree = "<group>"; };
-		CE12C2A21F9689B600D9EDB8 /* CategoryDetailView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailView.m; sourceTree = "<group>"; };
 		CE12C2A41F968B1500D9EDB8 /* CategoryDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryDetailCell.h; sourceTree = "<group>"; };
 		CE12C2A51F968B1500D9EDB8 /* CategoryDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailCell.m; sourceTree = "<group>"; };
 		CE12C2A91F968B5700D9EDB8 /* CategoryDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryDetailCell.xib; sourceTree = "<group>"; };
-		CE12C2AB1F968F3200D9EDB8 /* CrauselView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrauselView.h; sourceTree = "<group>"; };
-		CE12C2AC1F968F3200D9EDB8 /* CrauselView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrauselView.m; sourceTree = "<group>"; };
 		CE12C2AE1F96947500D9EDB8 /* CrauselCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CrauselCell.h; sourceTree = "<group>"; };
 		CE12C2AF1F96947500D9EDB8 /* CrauselCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CrauselCell.m; sourceTree = "<group>"; };
 		CE12C2B31F9694C200D9EDB8 /* CrauselCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CrauselCell.xib; sourceTree = "<group>"; };
@@ -319,8 +330,6 @@
 		CE1805D21F8E621300081FD0 /* PasswordFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordFieldCell.h; sourceTree = "<group>"; };
 		CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldCell.m; sourceTree = "<group>"; };
 		CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordFieldCell.xib; sourceTree = "<group>"; };
-		CE1805DA1F8E659600081FD0 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
-		CE1805DB1F8E659600081FD0 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		CE23D2061F942E640021403B /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		CE23D2071F942E640021403B /* ItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		CE23D20B1F942F310021403B /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
@@ -362,6 +371,23 @@
 		CE3C81991F8EDC0D0092FDF0 /* ReddyIce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReddyIce.xcdatamodel; sourceTree = "<group>"; };
 		CE3CE7D31F8E72320050B656 /* BaseTextEntryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTextEntryCell.h; sourceTree = "<group>"; };
 		CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTextEntryCell.m; sourceTree = "<group>"; };
+		CE42D68D1F9E2F8D00A9FE50 /* DeliveryHistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryHistoryView.h; sourceTree = "<group>"; };
+		CE42D68E1F9E2F8D00A9FE50 /* DeliveryHistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryHistoryView.m; sourceTree = "<group>"; };
+		CE42D6901F9E382700A9FE50 /* PathCheckboxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathCheckboxView.h; sourceTree = "<group>"; };
+		CE42D6911F9E382700A9FE50 /* PathCheckboxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathCheckboxView.m; sourceTree = "<group>"; };
+		CE42D6931F9E3D8200A9FE50 /* DeliveryHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryHistoryCell.h; sourceTree = "<group>"; };
+		CE42D6941F9E3D8200A9FE50 /* DeliveryHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryHistoryCell.m; sourceTree = "<group>"; };
+		CE42D6981F9E3F0200A9FE50 /* DeliveryHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryHistoryCell.xib; sourceTree = "<group>"; };
+		CE42D69A1F9E86B500A9FE50 /* DriverInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DriverInfoView.h; sourceTree = "<group>"; };
+		CE42D69B1F9E86B500A9FE50 /* DriverInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverInfoView.m; sourceTree = "<group>"; };
+		CE42D69E1F9E86ED00A9FE50 /* DriverInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverInfoView.xib; sourceTree = "<group>"; };
+		CE42D6A01F9E8A9500A9FE50 /* DriverInfoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DriverInfoCell.h; sourceTree = "<group>"; };
+		CE42D6A11F9E8A9500A9FE50 /* DriverInfoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverInfoCell.m; sourceTree = "<group>"; };
+		CE42D6A51F9E8ADF00A9FE50 /* DriverInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DriverInfoCell.xib; sourceTree = "<group>"; };
+		CE42D6A71F9E925A00A9FE50 /* CategoryDetailButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryDetailButton.h; sourceTree = "<group>"; };
+		CE42D6A81F9E925A00A9FE50 /* CategoryDetailButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailButton.m; sourceTree = "<group>"; };
+		CE42D6AF1F9EA68100A9FE50 /* ReportLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportLineCell.h; sourceTree = "<group>"; };
+		CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportLineCell.m; sourceTree = "<group>"; };
 		CE54331C1F9A5BDB0059CA2C /* OrderConfirmationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderConfirmationViewController.h; sourceTree = "<group>"; };
 		CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationViewController.m; sourceTree = "<group>"; };
 		CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationViewController.xib; sourceTree = "<group>"; };
@@ -396,10 +422,6 @@
 		CE5685621F8D73BC005922AA /* ButtonItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ButtonItem.m; sourceTree = "<group>"; };
 		CE5685631F8D73BC005922AA /* ColoredButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColoredButton.h; sourceTree = "<group>"; };
 		CE5685641F8D73BC005922AA /* ColoredButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColoredButton.m; sourceTree = "<group>"; };
-		CE56856B1F8D746E005922AA /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
-		CE56856C1F8D746E005922AA /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
-		CE56856D1F8D746E005922AA /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		CE56856E1F8D746E005922AA /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CE56856F1F8D746E005922AA /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		CE5685701F8D746E005922AA /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 		CE5685721F8D746E005922AA /* AdditionalSecurityButtons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AdditionalSecurityButtons.h; sourceTree = "<group>"; };
@@ -428,6 +450,27 @@
 		CE5A4FFB1F8FF153009D373B /* RILogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RILogo@2x.png"; sourceTree = "<group>"; };
 		CE5A4FFF1F9022A6009D373B /* HeaderInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderInfoView.h; sourceTree = "<group>"; };
 		CE5A50001F9022A6009D373B /* HeaderInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderInfoView.m; sourceTree = "<group>"; };
+		CE70B8191F9AAF7600135A38 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		CE70B81A1F9AAF7600135A38 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		CE70B81B1F9AAF7600135A38 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		CE70B81C1F9AAF7600135A38 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		CE70B81D1F9AAF7600135A38 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CE70B81E1F9AAF7600135A38 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CE70B8221F9AAFC700135A38 /* DeliveryOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryOrderViewController.h; sourceTree = "<group>"; };
+		CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryOrderViewController.m; sourceTree = "<group>"; };
+		CE70B8261F9AB11D00135A38 /* ReportLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportLineView.h; sourceTree = "<group>"; };
+		CE70B8271F9AB11D00135A38 /* ReportLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportLineView.m; sourceTree = "<group>"; };
+		CE70B8291F9AB19300135A38 /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
+		CE70B82A1F9AB19300135A38 /* BottomTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomTabView.h; sourceTree = "<group>"; };
+		CE70B82B1F9AB19400135A38 /* CategoryDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailView.m; sourceTree = "<group>"; };
+		CE70B82C1F9AB19400135A38 /* CategoryDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetailView.h; sourceTree = "<group>"; };
+		CE70B82D1F9AB19500135A38 /* CrauselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrauselView.h; sourceTree = "<group>"; };
+		CE70B82E1F9AB19500135A38 /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		CE70B82F1F9AB19500135A38 /* CrauselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrauselView.m; sourceTree = "<group>"; };
+		CE70B8301F9AB19500135A38 /* BottomTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomTabView.m; sourceTree = "<group>"; };
+		CE70B8351F9AB44A00135A38 /* BaseLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLabel.h; sourceTree = "<group>"; };
+		CE70B8361F9AB44A00135A38 /* BaseLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseLabel.m; sourceTree = "<group>"; };
+		CE70B83D1F9AB67400135A38 /* ReportLineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportLineCell.xib; sourceTree = "<group>"; };
 		CEAF7CB21F90362000010042 /* TitleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleCell.h; sourceTree = "<group>"; };
 		CEAF7CB31F90362000010042 /* TitleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleCell.m; sourceTree = "<group>"; };
 		CEAF7CB71F90365000010042 /* TitleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
@@ -437,10 +480,14 @@
 		CEB4DA131F97AD7C0059CDBD /* CheckBox.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckBox.m; sourceTree = "<group>"; };
 		CEBDCB511F916C720078C813 /* ItemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemViewController.h; sourceTree = "<group>"; };
 		CEBDCB521F916C720078C813 /* ItemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemViewController.m; sourceTree = "<group>"; };
-		CEBDCB571F916DAC0078C813 /* BottomTabView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomTabView.h; sourceTree = "<group>"; };
-		CEBDCB581F916DAC0078C813 /* BottomTabView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomTabView.m; sourceTree = "<group>"; };
 		CEBDCB5A1F916EA80078C813 /* BottomTabButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BottomTabButton.h; sourceTree = "<group>"; };
 		CEBDCB5B1F916EA80078C813 /* BottomTabButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BottomTabButton.m; sourceTree = "<group>"; };
+		CEC3A7D31F9BFD6E00392073 /* DeliveryHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryHistoryViewController.h; sourceTree = "<group>"; };
+		CEC3A7D41F9BFD6E00392073 /* DeliveryHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryHistoryViewController.m; sourceTree = "<group>"; };
+		CEC3A7D61F9BFD8B00392073 /* OrderHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderHistoryViewController.h; sourceTree = "<group>"; };
+		CEC3A7D71F9BFD8B00392073 /* OrderHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderHistoryViewController.m; sourceTree = "<group>"; };
+		CEC3A7D91F9BFD9B00392073 /* DNSHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNSHistoryViewController.h; sourceTree = "<group>"; };
+		CEC3A7DA1F9BFD9B00392073 /* DNSHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNSHistoryViewController.m; sourceTree = "<group>"; };
 		CEC81A1C1F99246400035909 /* DeliveryTimelineView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryTimelineView.h; sourceTree = "<group>"; };
 		CEC81A1D1F99246400035909 /* DeliveryTimelineView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryTimelineView.m; sourceTree = "<group>"; };
 		CED4F4F61F8EBB0600723DAC /* TouchIdView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TouchIdView.h; sourceTree = "<group>"; };
@@ -665,6 +712,8 @@
 		CE1805CD1F8E5DD100081FD0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE42D6AF1F9EA68100A9FE50 /* ReportLineCell.h */,
+				CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */,
 				CE1805D21F8E621300081FD0 /* PasswordFieldCell.h */,
 				CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */,
 				CEAF7CB21F90362000010042 /* TitleCell.h */,
@@ -685,6 +734,10 @@
 				CED748EE1F97C877006810D5 /* TicketLineItemCell.m */,
 				CED748F21F97C88E006810D5 /* TicketLineItemHeaderCell.h */,
 				CED748F31F97C88E006810D5 /* TicketLineItemHeaderCell.m */,
+				CE42D6931F9E3D8200A9FE50 /* DeliveryHistoryCell.h */,
+				CE42D6941F9E3D8200A9FE50 /* DeliveryHistoryCell.m */,
+				CE42D6A01F9E8A9500A9FE50 /* DriverInfoCell.h */,
+				CE42D6A11F9E8A9500A9FE50 /* DriverInfoCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -701,6 +754,9 @@
 		CE1805D71F8E623700081FD0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE42D6A51F9E8ADF00A9FE50 /* DriverInfoCell.xib */,
+				CE42D6981F9E3F0200A9FE50 /* DeliveryHistoryCell.xib */,
+				CE70B83D1F9AB67400135A38 /* ReportLineCell.xib */,
 				CED748F71F97C8EA006810D5 /* TicketLineItemCell.xib */,
 				CED748F81F97C8EB006810D5 /* TicketLineItemHeaderCell.xib */,
 				CE12C2B31F9694C200D9EDB8 /* CrauselCell.xib */,
@@ -864,6 +920,8 @@
 				CE1805CB1F8E5A4F00081FD0 /* BaseTableViewCell.m */,
 				CE3CE7D31F8E72320050B656 /* BaseTextEntryCell.h */,
 				CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */,
+				CE70B8351F9AB44A00135A38 /* BaseLabel.h */,
+				CE70B8361F9AB44A00135A38 /* BaseLabel.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -883,6 +941,7 @@
 		CE3A70FE1F8D0C5200F42B9A /* IB */ = {
 			isa = PBXGroup;
 			children = (
+				CE42D69D1F9E86D700A9FE50 /* Views */,
 				CE1805D71F8E623700081FD0 /* Cells */,
 				CE3A70FF1F8D0C5200F42B9A /* LaunchScreen.storyboard */,
 				CE3A71011F8D0C5200F42B9A /* ViewControllers */,
@@ -960,6 +1019,7 @@
 		CE3A71251F8D1A8D00F42B9A /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CE70B8251F9AB11D00135A38 /* Views */,
 				CE1805CE1F8E5EA900081FD0 /* PasswordField */,
 				CE5685601F8D73BC005922AA /* Buttons */,
 				CE3A71351F8D339800F42B9A /* IconTextField */,
@@ -992,6 +1052,14 @@
 				CE3A71371F8D33C200F42B9A /* IconTextField.m */,
 			);
 			path = IconTextField;
+			sourceTree = "<group>";
+		};
+		CE42D69D1F9E86D700A9FE50 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE42D69E1F9E86ED00A9FE50 /* DriverInfoView.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CE5433231F9A8CE20059CA2C /* ModelClasses */ = {
@@ -1144,6 +1212,8 @@
 				CE12C2B61F9698CC00D9EDB8 /* BadgeButton.m */,
 				CEB4DA121F97AD7B0059CDBD /* CheckBox.h */,
 				CEB4DA131F97AD7C0059CDBD /* CheckBox.m */,
+				CE42D6A71F9E925A00A9FE50 /* CategoryDetailButton.h */,
+				CE42D6A81F9E925A00A9FE50 /* CategoryDetailButton.m */,
 			);
 			path = Buttons;
 			sourceTree = "<group>";
@@ -1151,14 +1221,10 @@
 		CE56856A1F8D746E005922AA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				CE56856B1F8D746E005922AA /* LaunchViewController.h */,
-				CE56856C1F8D746E005922AA /* LaunchViewController.m */,
-				CE56856D1F8D746E005922AA /* LoginViewController.h */,
-				CE56856E1F8D746E005922AA /* LoginViewController.m */,
+				CE70B8171F9AAF7500135A38 /* Delivery_Orders */,
+				CE70B8181F9AAF7600135A38 /* Login */,
 				CE56856F1F8D746E005922AA /* MainViewController.h */,
 				CE5685701F8D746E005922AA /* MainViewController.m */,
-				CE1805DA1F8E659600081FD0 /* ChangePasswordViewController.h */,
-				CE1805DB1F8E659600081FD0 /* ChangePasswordViewController.m */,
 				CEBDCB511F916C720078C813 /* ItemViewController.h */,
 				CEBDCB521F916C720078C813 /* ItemViewController.m */,
 				CEDE04D21F953EE0005A3354 /* ItemDetailViewController.h */,
@@ -1186,22 +1252,14 @@
 				CE5A50001F9022A6009D373B /* HeaderInfoView.m */,
 				CE0ACF9A1F9137A300984EB3 /* UserInfoView.h */,
 				CE0ACF9B1F9137A300984EB3 /* UserInfoView.m */,
-				CEBDCB571F916DAC0078C813 /* BottomTabView.h */,
-				CEBDCB581F916DAC0078C813 /* BottomTabView.m */,
 				CE11E1261F93CC640043104F /* ItemView.h */,
 				CE11E1271F93CC640043104F /* ItemView.m */,
 				CE11E1291F93CCFA0043104F /* ItemVariationView.h */,
 				CE11E12A1F93CCFA0043104F /* ItemVariationView.m */,
 				CEDE04D51F953EFC005A3354 /* CheckoutView.h */,
 				CEDE04D61F953EFC005A3354 /* CheckoutView.m */,
-				CE12C2781F964E5700D9EDB8 /* SliderView.h */,
-				CE12C2791F964E5700D9EDB8 /* SliderView.m */,
 				CE12C2901F96638400D9EDB8 /* EnterQuantityView.h */,
 				CE12C2911F96638400D9EDB8 /* EnterQuantityView.m */,
-				CE12C2A11F9689B600D9EDB8 /* CategoryDetailView.h */,
-				CE12C2A21F9689B600D9EDB8 /* CategoryDetailView.m */,
-				CE12C2AB1F968F3200D9EDB8 /* CrauselView.h */,
-				CE12C2AC1F968F3200D9EDB8 /* CrauselView.m */,
 				CE12C2B81F969D9900D9EDB8 /* CartView.h */,
 				CE12C2B91F969D9900D9EDB8 /* CartView.m */,
 				CEB4DA0F1F97ABF50059CDBD /* TicketLineItemView.h */,
@@ -1210,6 +1268,12 @@
 				CED748EB1F97B973006810D5 /* TicketLineItemHeaderView.m */,
 				CEC81A1C1F99246400035909 /* DeliveryTimelineView.h */,
 				CEC81A1D1F99246400035909 /* DeliveryTimelineView.m */,
+				CE42D68D1F9E2F8D00A9FE50 /* DeliveryHistoryView.h */,
+				CE42D68E1F9E2F8D00A9FE50 /* DeliveryHistoryView.m */,
+				CE42D6901F9E382700A9FE50 /* PathCheckboxView.h */,
+				CE42D6911F9E382700A9FE50 /* PathCheckboxView.m */,
+				CE42D69A1F9E86B500A9FE50 /* DriverInfoView.h */,
+				CE42D69B1F9E86B500A9FE50 /* DriverInfoView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1231,6 +1295,51 @@
 				CE12C28B1F96582E00D9EDB8 /* CoreObject.m */,
 			);
 			path = ApplicationCoreServices;
+			sourceTree = "<group>";
+		};
+		CE70B8171F9AAF7500135A38 /* Delivery_Orders */ = {
+			isa = PBXGroup;
+			children = (
+				CE70B8221F9AAFC700135A38 /* DeliveryOrderViewController.h */,
+				CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */,
+				CEC3A7D31F9BFD6E00392073 /* DeliveryHistoryViewController.h */,
+				CEC3A7D41F9BFD6E00392073 /* DeliveryHistoryViewController.m */,
+				CEC3A7D61F9BFD8B00392073 /* OrderHistoryViewController.h */,
+				CEC3A7D71F9BFD8B00392073 /* OrderHistoryViewController.m */,
+				CEC3A7D91F9BFD9B00392073 /* DNSHistoryViewController.h */,
+				CEC3A7DA1F9BFD9B00392073 /* DNSHistoryViewController.m */,
+			);
+			path = Delivery_Orders;
+			sourceTree = "<group>";
+		};
+		CE70B8181F9AAF7600135A38 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE70B8191F9AAF7600135A38 /* ChangePasswordViewController.h */,
+				CE70B81A1F9AAF7600135A38 /* ChangePasswordViewController.m */,
+				CE70B81B1F9AAF7600135A38 /* LaunchViewController.h */,
+				CE70B81C1F9AAF7600135A38 /* LaunchViewController.m */,
+				CE70B81D1F9AAF7600135A38 /* LoginViewController.h */,
+				CE70B81E1F9AAF7600135A38 /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		CE70B8251F9AB11D00135A38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE70B82A1F9AB19300135A38 /* BottomTabView.h */,
+				CE70B8301F9AB19500135A38 /* BottomTabView.m */,
+				CE70B82C1F9AB19400135A38 /* CategoryDetailView.h */,
+				CE70B82B1F9AB19400135A38 /* CategoryDetailView.m */,
+				CE70B82D1F9AB19500135A38 /* CrauselView.h */,
+				CE70B82F1F9AB19500135A38 /* CrauselView.m */,
+				CE70B82E1F9AB19500135A38 /* SliderView.h */,
+				CE70B8291F9AB19300135A38 /* SliderView.m */,
+				CE70B8261F9AB11D00135A38 /* ReportLineView.h */,
+				CE70B8271F9AB11D00135A38 /* ReportLineView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CED4F5011F8EC6EA00723DAC /* 3rdParty */ = {
@@ -1417,13 +1526,16 @@
 				CE12C2601F963FD100D9EDB8 /* barcode.png in Resources */,
 				CEDE05021F9550CE005A3354 /* Feedback_norm@3x.png in Resources */,
 				CE12C2711F963FD100D9EDB8 /* Feedback@3x.png in Resources */,
+				CE42D69F1F9E86ED00A9FE50 /* DriverInfoView.xib in Resources */,
 				CEDE04F91F9550CE005A3354 /* Delivery_high@3x.png in Resources */,
+				CE70B83E1F9AB67500135A38 /* ReportLineCell.xib in Resources */,
 				CE12C26A1F963FD100D9EDB8 /* prod_sample_2.png in Resources */,
 				CEDE050F1F9550CE005A3354 /* Products_high@1x.png in Resources */,
 				CE12C2721F963FD100D9EDB8 /* Order@1x.png in Resources */,
 				CE12C2681F963FD100D9EDB8 /* prod_sample_0.png in Resources */,
 				CE5A4FFE1F8FF153009D373B /* RILogo@2x.png in Resources */,
 				CEDE05121F9550CE005A3354 /* Products_norm@1x.png in Resources */,
+				CE42D6A61F9E8ADF00A9FE50 /* DriverInfoCell.xib in Resources */,
 				CED748FA1F97C8EB006810D5 /* TicketLineItemHeaderCell.xib in Resources */,
 				CEDE04FB1F9550CE005A3354 /* Delivery_norm@2x.png in Resources */,
 				CEDE050E1F9550CE005A3354 /* Problem_norm@3x.png in Resources */,
@@ -1459,6 +1571,7 @@
 				CEDE04F81F9550CE005A3354 /* Delivery_high@2x.png in Resources */,
 				CE12C26E1F963FD100D9EDB8 /* Delivery@3x.png in Resources */,
 				CEDE050C1F9550CE005A3354 /* Problem_norm@1x.png in Resources */,
+				CE42D6991F9E3F0200A9FE50 /* DeliveryHistoryCell.xib in Resources */,
 				CEDE05141F9550CE005A3354 /* Products_norm@3x.png in Resources */,
 				CEDE05011F9550CE005A3354 /* Feedback_norm@2x.png in Resources */,
 				CE3A710E1F8D0C5200F42B9A /* LaunchScreen.storyboard in Resources */,
@@ -1501,6 +1614,7 @@
 				CE12C2ED1F96B36B00D9EDB8 /* TOPasscodeViewControllerAnimatedTransitioning.m in Sources */,
 				CE59832F1F90FDE50098DC13 /* JSONRequest.m in Sources */,
 				CE5433431F9A8CE20059CA2C /* DataSyncManager.m in Sources */,
+				CEC3A7DB1F9BFD9B00392073 /* DNSHistoryViewController.m in Sources */,
 				CEDE04D71F953EFC005A3354 /* CheckoutView.m in Sources */,
 				CE5433451F9A8CE20059CA2C /* ItemManager.m in Sources */,
 				CE3A71381F8D33C200F42B9A /* IconTextField.m in Sources */,
@@ -1508,9 +1622,11 @@
 				CE12C2861F96546B00D9EDB8 /* SliderCell.m in Sources */,
 				CEB4DA111F97ABF50059CDBD /* TicketLineItemView.m in Sources */,
 				CE3CE7D51F8E72320050B656 /* BaseTextEntryCell.m in Sources */,
+				CEC3A7D81F9BFD8B00392073 /* OrderHistoryViewController.m in Sources */,
 				CED748FD1F97CA10006810D5 /* TicketViewController.m in Sources */,
+				CE70B8311F9AB19500135A38 /* SliderView.m in Sources */,
 				CE12C2F51F96B36B00D9EDB8 /* TOPasscodeSettingsKeypadView.m in Sources */,
-				CE12C2A31F9689B600D9EDB8 /* CategoryDetailView.m in Sources */,
+				CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */,
 				CE12C2EC1F96B36B00D9EDB8 /* TOPasscodeViewContentLayout.m in Sources */,
 				CE5433401F9A8CE20059CA2C /* ChangePasswordModel.m in Sources */,
 				CE5A4FF01F8FD504009D373B /* IconFontCodes.m in Sources */,
@@ -1520,13 +1636,14 @@
 				CED748F01F97C877006810D5 /* TicketLineItemCell.m in Sources */,
 				CEB4DA141F97AD7C0059CDBD /* CheckBox.m in Sources */,
 				CE12C2F21F96B36B00D9EDB8 /* TOPasscodeKeypadView.m in Sources */,
+				CE70B8371F9AB44A00135A38 /* BaseLabel.m in Sources */,
 				CE12C2B11F96947500D9EDB8 /* CrauselCell.m in Sources */,
 				CE5685761F8D746E005922AA /* MainViewController.m in Sources */,
 				CEDE04D41F953EE0005A3354 /* ItemDetailViewController.m in Sources */,
+				CE70B8341F9AB19500135A38 /* BottomTabView.m in Sources */,
 				CED4F5051F8EC6EA00723DAC /* MBProgressHUD.m in Sources */,
 				CE59833A1F910CE40098DC13 /* NSData+Additions.m in Sources */,
 				CE12C28C1F96582E00D9EDB8 /* CoreObject.m in Sources */,
-				CE5685751F8D746E005922AA /* LoginViewController.m in Sources */,
 				CE12C2F31F96B36B00D9EDB8 /* TOPasscodeView.m in Sources */,
 				CE12C2B71F9698CC00D9EDB8 /* BadgeButton.m in Sources */,
 				CED748F51F97C88E006810D5 /* TicketLineItemHeaderCell.m in Sources */,
@@ -1535,12 +1652,11 @@
 				CE59832E1F90FDE50098DC13 /* JSONResult.m in Sources */,
 				CE5685771F8D746E005922AA /* AdditionalSecurityButtons.m in Sources */,
 				CE12C2FA1F96B36B00D9EDB8 /* TOPasscodeInputField.m in Sources */,
-				CE1805DC1F8E659600081FD0 /* ChangePasswordViewController.m in Sources */,
 				CED4F4FD1F8EC20A00723DAC /* CD_User.m in Sources */,
-				CEBDCB591F916DAC0078C813 /* BottomTabView.m in Sources */,
 				CE3A71181F8D0C9B00F42B9A /* BaseNavigationController.m in Sources */,
 				CE12C27D1F96517C00D9EDB8 /* NSDecimalNumber+Additions.m in Sources */,
 				CE0ACF9C1F9137A300984EB3 /* UserInfoView.m in Sources */,
+				CE42D6A31F9E8A9500A9FE50 /* DriverInfoCell.m in Sources */,
 				CE12C2921F96638400D9EDB8 /* EnterQuantityView.m in Sources */,
 				CE12C2F71F96B36B00D9EDB8 /* TOPasscodeButtonLabel.m in Sources */,
 				CE3A71151F8D0C7B00F42B9A /* BaseViewController.m in Sources */,
@@ -1549,44 +1665,53 @@
 				CE5433491F9A8D6F0059CA2C /* NotificationInfo.m in Sources */,
 				CE5685681F8D73BC005922AA /* ColoredButton.m in Sources */,
 				CE5433421F9A8CE20059CA2C /* DatabaseManager.m in Sources */,
+				CE70B81F1F9AAF7600135A38 /* ChangePasswordViewController.m in Sources */,
 				CE3A710B1F8D0C5200F42B9A /* AppDelegate.m in Sources */,
 				CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */,
 				CE12C2BA1F969D9900D9EDB8 /* CartView.m in Sources */,
 				CE3A710C1F8D0C5200F42B9A /* Globals.m in Sources */,
+				CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */,
 				CE12C2EB1F96B36B00D9EDB8 /* TOPasscodeCircleImage.m in Sources */,
+				CE42D6B11F9EA68200A9FE50 /* ReportLineCell.m in Sources */,
 				CE5685531F8D5A63005922AA /* ThemingAssistant.m in Sources */,
-				CE12C2AD1F968F3200D9EDB8 /* CrauselView.m in Sources */,
 				CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */,
 				CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */,
 				CE5983341F90FED40098DC13 /* CoreService.m in Sources */,
 				CE3A71301F8D274E00F42B9A /* BaseTableViewController.m in Sources */,
+				CE42D6921F9E382700A9FE50 /* PathCheckboxView.m in Sources */,
 				CE23D2091F942E640021403B /* ItemCell.m in Sources */,
 				CE1805D11F8E5EC200081FD0 /* PasswordField.m in Sources */,
 				CEF9994B1F8D538600B7F1FC /* Utilities.m in Sources */,
 				CE12C2F91F96B36B00D9EDB8 /* TOPasscodeFixedInputView.m in Sources */,
 				CE12C2F61F96B36B00D9EDB8 /* TOPasscodeSettingsWarningLabel.m in Sources */,
-				CE5685741F8D746E005922AA /* LaunchViewController.m in Sources */,
 				CE5433511F9A90580059CA2C /* TicketManager.m in Sources */,
+				CEC3A7D51F9BFD6E00392073 /* DeliveryHistoryViewController.m in Sources */,
 				CE12C2F41F96B36B00D9EDB8 /* TOPasscodeSettingsKeypadButton.m in Sources */,
 				CE12C2F11F96B36B00D9EDB8 /* TOPasscodeCircleButton.m in Sources */,
 				CE5685671F8D73BC005922AA /* ButtonItem.m in Sources */,
+				CE70B8321F9AB19500135A38 /* CategoryDetailView.m in Sources */,
 				CEC81A1E1F99246400035909 /* DeliveryTimelineView.m in Sources */,
 				CE54334D1F9A8E8C0059CA2C /* TicketObject.m in Sources */,
 				CE23D20F1F943BD60021403B /* ToggleSwitchButton.m in Sources */,
 				CE12C2F01F96B36B00D9EDB8 /* TOPasscodeViewController.m in Sources */,
+				CE42D6961F9E3D8200A9FE50 /* DeliveryHistoryCell.m in Sources */,
 				CE3A71241F8D122400F42B9A /* BlockUtils.m in Sources */,
 				CE3A71291F8D1AAB00F42B9A /* LogoView.m in Sources */,
 				CE12C29D1F9678AE00D9EDB8 /* ItemVariationCell.m in Sources */,
 				CEF999441F8D501C00B7F1FC /* BaseButton.m in Sources */,
+				CE70B8201F9AAF7600135A38 /* LaunchViewController.m in Sources */,
 				CE5A4FE51F8FC1D7009D373B /* HomeButton.m in Sources */,
-				CE12C27A1F964E5800D9EDB8 /* SliderView.m in Sources */,
 				CE5433441F9A8CE20059CA2C /* DeviceManager.m in Sources */,
 				CE12C2961F966C3800D9EDB8 /* EnterQuantityCell.m in Sources */,
 				CE5433411F9A8CE20059CA2C /* UserSummary.m in Sources */,
 				CE5A4FE81F8FC3B6009D373B /* HomeButtonsView.m in Sources */,
+				CE70B8331F9AB19500135A38 /* CrauselView.m in Sources */,
 				CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */,
 				CE3A70CB1F8D0B9900F42B9A /* main.m in Sources */,
+				CE42D68F1F9E2F8D00A9FE50 /* DeliveryHistoryView.m in Sources */,
+				CE70B8211F9AAF7600135A38 /* LoginViewController.m in Sources */,
 				CED748EC1F97B973006810D5 /* TicketLineItemHeaderView.m in Sources */,
+				CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */,
 				CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */,
 				CE12C2EF1F96B36B00D9EDB8 /* TOPasscodeSettingsViewController.m in Sources */,
 				CEBDCB5C1F916EA80078C813 /* BottomTabButton.m in Sources */,
@@ -1594,6 +1719,7 @@
 				CED749001F97CA2A006810D5 /* OrderViewController.m in Sources */,
 				CED4F4F81F8EBB0600723DAC /* TouchIdView.m in Sources */,
 				CE12C2FB1F96B36B00D9EDB8 /* TOPasscodeVariableInputView.m in Sources */,
+				CE70B8281F9AB11D00135A38 /* ReportLineView.m in Sources */,
 				CEBDCB531F916C720078C813 /* ItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1738,7 +1864,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-                DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6964R4MSRJ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReddyIce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -1754,7 +1880,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 6964R4MSRJ;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReddyIce/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
