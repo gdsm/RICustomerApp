@@ -46,7 +46,7 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
 
         CGFloat top = (self.navigationBarHeight + self.statusBarHeight);
         self.tableOffset = UIEdgeInsetsMake(top, 0, 0, 0);
-        self.tableView.scrollEnabled = NO;
+        self.tableView.scrollEnabled = YES;
     }
     else
     {

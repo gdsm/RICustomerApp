@@ -64,7 +64,7 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
         
         CGFloat top = (self.navigationBarHeight + self.statusBarHeight);
         self.tableOffset = UIEdgeInsetsMake(top, 0, 0, 0);
-        self.tableView.scrollEnabled = NO;
+        self.tableView.scrollEnabled = YES;
     }
     else
     {

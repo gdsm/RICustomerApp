@@ -50,12 +50,6 @@ const CGFloat MainVC_UserViewHeight = 160;
     [self listenNotifications];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    self.bottomTabView.hidden = YES;
-}
-
 - (void)setupUI
 {
     __weak MainViewController* weakSelf = self;
@@ -71,7 +65,8 @@ const CGFloat MainVC_UserViewHeight = 160;
 
     self.bgImgv.image = [UIImage imageNamed:@"HomeBG.png"];
     
-    self.bottomTabView.hidden = YES;
+    self.bottomTabView.hidden = NO;
+    self.bottomTabView.btnHome.selected = YES;
     self.bottomTabView.callbackHome = ^(id sender) {
         [weakSelf setHomeTab];
     };
@@ -258,7 +253,8 @@ const CGFloat MainVC_UserViewHeight = 160;
     rect_homeButtonView.origin.x = 0;
     rect_homeButtonView.size.width = self.view.frame.size.width;
     rect_homeButtonView.size.height = [self.homeButtonView estimatedSize].height;
-    rect_homeButtonView.origin.y = self.view.frame.size.height - (rect_homeButtonView.size.height + MainVC_BarcodeBtnHeight - MainVC_BarcodeHomeBtnOverlap);
+    rect_homeButtonView.origin.y = self.view.frame.size.height - (rect_homeButtonView.size.height + self.bottomTabView.frame.size.height + MainVC_BarcodeHomeBtnOverlap);
+//    rect_homeButtonView.origin.y = self.view.frame.size.height - (rect_homeButtonView.size.height + MainVC_BarcodeBtnHeight - MainVC_BarcodeHomeBtnOverlap);
 //    rect_homeButtonView.origin.y = self.view.frame.size.height - (rect_homeButtonView.size.height + rect_btnBarcode.size.height - MainVC_BarcodeHomeBtnOverlap);
 
     rect_tableView.size.height = MainVC_TableHeight;

@@ -111,6 +111,11 @@
 		CE4BC5221F9EAE89004F1CDC /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC51D1F9EAE88004F1CDC /* ChangePasswordViewController.m */; };
 		CE4BC5231F9EAE89004F1CDC /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC51F1F9EAE88004F1CDC /* LaunchViewController.m */; };
 		CE4BC5241F9EAE89004F1CDC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */; };
+		CE4BC5301F9EB0AB004F1CDC /* BottomTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5271F9EB0AB004F1CDC /* BottomTabView.m */; };
+		CE4BC5311F9EB0AB004F1CDC /* CategoryDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5291F9EB0AB004F1CDC /* CategoryDetailView.m */; };
+		CE4BC5321F9EB0AB004F1CDC /* CrauselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52B1F9EB0AB004F1CDC /* CrauselView.m */; };
+		CE4BC5331F9EB0AB004F1CDC /* ReportLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52D1F9EB0AB004F1CDC /* ReportLineView.m */; };
+		CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */; };
 		CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */; };
 		CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */; };
 		CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433261F9A8CE20059CA2C /* ItemSummary.m */; };
@@ -145,11 +150,6 @@
 		CE5A4FFE1F8FF153009D373B /* RILogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A4FFB1F8FF153009D373B /* RILogo@2x.png */; };
 		CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A50001F9022A6009D373B /* HeaderInfoView.m */; };
 		CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */; };
-		CE70B8281F9AB11D00135A38 /* ReportLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8271F9AB11D00135A38 /* ReportLineView.m */; };
-		CE70B8311F9AB19500135A38 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8291F9AB19300135A38 /* SliderView.m */; };
-		CE70B8321F9AB19500135A38 /* CategoryDetailView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B82B1F9AB19400135A38 /* CategoryDetailView.m */; };
-		CE70B8331F9AB19500135A38 /* CrauselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B82F1F9AB19500135A38 /* CrauselView.m */; };
-		CE70B8341F9AB19500135A38 /* BottomTabView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8301F9AB19500135A38 /* BottomTabView.m */; };
 		CE70B8371F9AB44A00135A38 /* BaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8361F9AB44A00135A38 /* BaseLabel.m */; };
 		CE70B83E1F9AB67500135A38 /* ReportLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE70B83D1F9AB67400135A38 /* ReportLineCell.xib */; };
 		CEAF7CB51F90362000010042 /* TitleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CEAF7CB31F90362000010042 /* TitleCell.m */; };
@@ -394,6 +394,16 @@
 		CE4BC51F1F9EAE88004F1CDC /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
 		CE4BC5201F9EAE88004F1CDC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CE4BC5261F9EB0AB004F1CDC /* BottomTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomTabView.h; sourceTree = "<group>"; };
+		CE4BC5271F9EB0AB004F1CDC /* BottomTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomTabView.m; sourceTree = "<group>"; };
+		CE4BC5281F9EB0AB004F1CDC /* CategoryDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetailView.h; sourceTree = "<group>"; };
+		CE4BC5291F9EB0AB004F1CDC /* CategoryDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailView.m; sourceTree = "<group>"; };
+		CE4BC52A1F9EB0AB004F1CDC /* CrauselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrauselView.h; sourceTree = "<group>"; };
+		CE4BC52B1F9EB0AB004F1CDC /* CrauselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrauselView.m; sourceTree = "<group>"; };
+		CE4BC52C1F9EB0AB004F1CDC /* ReportLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportLineView.h; sourceTree = "<group>"; };
+		CE4BC52D1F9EB0AB004F1CDC /* ReportLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportLineView.m; sourceTree = "<group>"; };
+		CE4BC52E1F9EB0AB004F1CDC /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		CE54331C1F9A5BDB0059CA2C /* OrderConfirmationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderConfirmationViewController.h; sourceTree = "<group>"; };
 		CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationViewController.m; sourceTree = "<group>"; };
 		CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationViewController.xib; sourceTree = "<group>"; };
@@ -458,16 +468,6 @@
 		CE5A50001F9022A6009D373B /* HeaderInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderInfoView.m; sourceTree = "<group>"; };
 		CE70B8221F9AAFC700135A38 /* DeliveryOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryOrderViewController.h; sourceTree = "<group>"; };
 		CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryOrderViewController.m; sourceTree = "<group>"; };
-		CE70B8261F9AB11D00135A38 /* ReportLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportLineView.h; sourceTree = "<group>"; };
-		CE70B8271F9AB11D00135A38 /* ReportLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportLineView.m; sourceTree = "<group>"; };
-		CE70B8291F9AB19300135A38 /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
-		CE70B82A1F9AB19300135A38 /* BottomTabView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BottomTabView.h; sourceTree = "<group>"; };
-		CE70B82B1F9AB19400135A38 /* CategoryDetailView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailView.m; sourceTree = "<group>"; };
-		CE70B82C1F9AB19400135A38 /* CategoryDetailView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDetailView.h; sourceTree = "<group>"; };
-		CE70B82D1F9AB19500135A38 /* CrauselView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrauselView.h; sourceTree = "<group>"; };
-		CE70B82E1F9AB19500135A38 /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
-		CE70B82F1F9AB19500135A38 /* CrauselView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrauselView.m; sourceTree = "<group>"; };
-		CE70B8301F9AB19500135A38 /* BottomTabView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BottomTabView.m; sourceTree = "<group>"; };
 		CE70B8351F9AB44A00135A38 /* BaseLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLabel.h; sourceTree = "<group>"; };
 		CE70B8361F9AB44A00135A38 /* BaseLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseLabel.m; sourceTree = "<group>"; };
 		CE70B83D1F9AB67400135A38 /* ReportLineCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReportLineCell.xib; sourceTree = "<group>"; };
@@ -1019,7 +1019,7 @@
 		CE3A71251F8D1A8D00F42B9A /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				CE70B8251F9AB11D00135A38 /* Views */,
+				CE4BC5251F9EB0AB004F1CDC /* Views */,
 				CE1805CE1F8E5EA900081FD0 /* PasswordField */,
 				CE5685601F8D73BC005922AA /* Buttons */,
 				CE3A71351F8D339800F42B9A /* IconTextField */,
@@ -1073,6 +1073,23 @@
 				CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		CE4BC5251F9EB0AB004F1CDC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BC5261F9EB0AB004F1CDC /* BottomTabView.h */,
+				CE4BC5271F9EB0AB004F1CDC /* BottomTabView.m */,
+				CE4BC5281F9EB0AB004F1CDC /* CategoryDetailView.h */,
+				CE4BC5291F9EB0AB004F1CDC /* CategoryDetailView.m */,
+				CE4BC52A1F9EB0AB004F1CDC /* CrauselView.h */,
+				CE4BC52B1F9EB0AB004F1CDC /* CrauselView.m */,
+				CE4BC52C1F9EB0AB004F1CDC /* ReportLineView.h */,
+				CE4BC52D1F9EB0AB004F1CDC /* ReportLineView.m */,
+				CE4BC52E1F9EB0AB004F1CDC /* SliderView.h */,
+				CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		CE5433231F9A8CE20059CA2C /* ModelClasses */ = {
@@ -1323,23 +1340,6 @@
 				CEC3A7DA1F9BFD9B00392073 /* DNSHistoryViewController.m */,
 			);
 			path = Delivery_Orders;
-			sourceTree = "<group>";
-		};
-		CE70B8251F9AB11D00135A38 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				CE70B82A1F9AB19300135A38 /* BottomTabView.h */,
-				CE70B8301F9AB19500135A38 /* BottomTabView.m */,
-				CE70B82C1F9AB19400135A38 /* CategoryDetailView.h */,
-				CE70B82B1F9AB19400135A38 /* CategoryDetailView.m */,
-				CE70B82D1F9AB19500135A38 /* CrauselView.h */,
-				CE70B82F1F9AB19500135A38 /* CrauselView.m */,
-				CE70B82E1F9AB19500135A38 /* SliderView.h */,
-				CE70B8291F9AB19300135A38 /* SliderView.m */,
-				CE70B8261F9AB11D00135A38 /* ReportLineView.h */,
-				CE70B8271F9AB11D00135A38 /* ReportLineView.m */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		CED4F5011F8EC6EA00723DAC /* 3rdParty */ = {
@@ -1624,9 +1624,9 @@
 				CE3CE7D51F8E72320050B656 /* BaseTextEntryCell.m in Sources */,
 				CEC3A7D81F9BFD8B00392073 /* OrderHistoryViewController.m in Sources */,
 				CED748FD1F97CA10006810D5 /* TicketViewController.m in Sources */,
-				CE70B8311F9AB19500135A38 /* SliderView.m in Sources */,
 				CE12C2F51F96B36B00D9EDB8 /* TOPasscodeSettingsKeypadView.m in Sources */,
 				CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */,
+				CE4BC5301F9EB0AB004F1CDC /* BottomTabView.m in Sources */,
 				CE12C2EC1F96B36B00D9EDB8 /* TOPasscodeViewContentLayout.m in Sources */,
 				CE5433401F9A8CE20059CA2C /* ChangePasswordModel.m in Sources */,
 				CE5A4FF01F8FD504009D373B /* IconFontCodes.m in Sources */,
@@ -1639,12 +1639,13 @@
 				CE70B8371F9AB44A00135A38 /* BaseLabel.m in Sources */,
 				CE12C2B11F96947500D9EDB8 /* CrauselCell.m in Sources */,
 				CE5685761F8D746E005922AA /* MainViewController.m in Sources */,
+				CE4BC5311F9EB0AB004F1CDC /* CategoryDetailView.m in Sources */,
 				CEDE04D41F953EE0005A3354 /* ItemDetailViewController.m in Sources */,
-				CE70B8341F9AB19500135A38 /* BottomTabView.m in Sources */,
 				CED4F5051F8EC6EA00723DAC /* MBProgressHUD.m in Sources */,
 				CE59833A1F910CE40098DC13 /* NSData+Additions.m in Sources */,
 				CE12C28C1F96582E00D9EDB8 /* CoreObject.m in Sources */,
 				CE12C2F31F96B36B00D9EDB8 /* TOPasscodeView.m in Sources */,
+				CE4BC5331F9EB0AB004F1CDC /* ReportLineView.m in Sources */,
 				CE12C2B71F9698CC00D9EDB8 /* BadgeButton.m in Sources */,
 				CED748F51F97C88E006810D5 /* TicketLineItemHeaderCell.m in Sources */,
 				CE5433461F9A8CE20059CA2C /* UserManager.m in Sources */,
@@ -1667,6 +1668,7 @@
 				CE5433421F9A8CE20059CA2C /* DatabaseManager.m in Sources */,
 				CE3A710B1F8D0C5200F42B9A /* AppDelegate.m in Sources */,
 				CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */,
+				CE4BC5321F9EB0AB004F1CDC /* CrauselView.m in Sources */,
 				CE12C2BA1F969D9900D9EDB8 /* CartView.m in Sources */,
 				CE3A710C1F8D0C5200F42B9A /* Globals.m in Sources */,
 				CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */,
@@ -1689,7 +1691,6 @@
 				CE12C2F41F96B36B00D9EDB8 /* TOPasscodeSettingsKeypadButton.m in Sources */,
 				CE12C2F11F96B36B00D9EDB8 /* TOPasscodeCircleButton.m in Sources */,
 				CE5685671F8D73BC005922AA /* ButtonItem.m in Sources */,
-				CE70B8321F9AB19500135A38 /* CategoryDetailView.m in Sources */,
 				CEC81A1E1F99246400035909 /* DeliveryTimelineView.m in Sources */,
 				CE54334D1F9A8E8C0059CA2C /* TicketObject.m in Sources */,
 				CE23D20F1F943BD60021403B /* ToggleSwitchButton.m in Sources */,
@@ -1705,11 +1706,11 @@
 				CE12C2961F966C3800D9EDB8 /* EnterQuantityCell.m in Sources */,
 				CE5433411F9A8CE20059CA2C /* UserSummary.m in Sources */,
 				CE5A4FE81F8FC3B6009D373B /* HomeButtonsView.m in Sources */,
-				CE70B8331F9AB19500135A38 /* CrauselView.m in Sources */,
 				CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */,
 				CE3A70CB1F8D0B9900F42B9A /* main.m in Sources */,
 				CE42D68F1F9E2F8D00A9FE50 /* DeliveryHistoryView.m in Sources */,
 				CED748EC1F97B973006810D5 /* TicketLineItemHeaderView.m in Sources */,
+				CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */,
 				CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */,
 				CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */,
 				CE12C2EF1F96B36B00D9EDB8 /* TOPasscodeSettingsViewController.m in Sources */,
@@ -1719,7 +1720,6 @@
 				CED749001F97CA2A006810D5 /* OrderViewController.m in Sources */,
 				CED4F4F81F8EBB0600723DAC /* TouchIdView.m in Sources */,
 				CE12C2FB1F96B36B00D9EDB8 /* TOPasscodeVariableInputView.m in Sources */,
-				CE70B8281F9AB11D00135A38 /* ReportLineView.m in Sources */,
 				CEBDCB531F916C720078C813 /* ItemViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

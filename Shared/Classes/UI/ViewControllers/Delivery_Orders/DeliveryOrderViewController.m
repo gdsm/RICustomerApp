@@ -43,7 +43,6 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
     self.bgImgv.image = nil;
     
     self.tableView.hidden = YES;
-    
     self.bottomTabView.hidden = NO;
     
     self.navigationItem.rightBarButtonItem = self.bbiSearch;
