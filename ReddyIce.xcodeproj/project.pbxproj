@@ -108,6 +108,9 @@
 		CE42D6A61F9E8ADF00A9FE50 /* DriverInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D6A51F9E8ADF00A9FE50 /* DriverInfoCell.xib */; };
 		CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6A81F9E925A00A9FE50 /* CategoryDetailButton.m */; };
 		CE42D6B11F9EA68200A9FE50 /* ReportLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */; };
+		CE4BC5221F9EAE89004F1CDC /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC51D1F9EAE88004F1CDC /* ChangePasswordViewController.m */; };
+		CE4BC5231F9EAE89004F1CDC /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC51F1F9EAE88004F1CDC /* LaunchViewController.m */; };
+		CE4BC5241F9EAE89004F1CDC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */; };
 		CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */; };
 		CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */; };
 		CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433261F9A8CE20059CA2C /* ItemSummary.m */; };
@@ -141,9 +144,6 @@
 		CE5A4FFD1F8FF153009D373B /* RILogo@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A4FFA1F8FF152009D373B /* RILogo@1x.png */; };
 		CE5A4FFE1F8FF153009D373B /* RILogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A4FFB1F8FF153009D373B /* RILogo@2x.png */; };
 		CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A50001F9022A6009D373B /* HeaderInfoView.m */; };
-		CE70B81F1F9AAF7600135A38 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B81A1F9AAF7600135A38 /* ChangePasswordViewController.m */; };
-		CE70B8201F9AAF7600135A38 /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B81C1F9AAF7600135A38 /* LaunchViewController.m */; };
-		CE70B8211F9AAF7600135A38 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B81E1F9AAF7600135A38 /* LoginViewController.m */; };
 		CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */; };
 		CE70B8281F9AB11D00135A38 /* ReportLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8271F9AB11D00135A38 /* ReportLineView.m */; };
 		CE70B8311F9AB19500135A38 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8291F9AB19300135A38 /* SliderView.m */; };
@@ -388,6 +388,12 @@
 		CE42D6A81F9E925A00A9FE50 /* CategoryDetailButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailButton.m; sourceTree = "<group>"; };
 		CE42D6AF1F9EA68100A9FE50 /* ReportLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportLineCell.h; sourceTree = "<group>"; };
 		CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportLineCell.m; sourceTree = "<group>"; };
+		CE4BC51C1F9EAE88004F1CDC /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		CE4BC51D1F9EAE88004F1CDC /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
+		CE4BC51E1F9EAE88004F1CDC /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
+		CE4BC51F1F9EAE88004F1CDC /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
+		CE4BC5201F9EAE88004F1CDC /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CE54331C1F9A5BDB0059CA2C /* OrderConfirmationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderConfirmationViewController.h; sourceTree = "<group>"; };
 		CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationViewController.m; sourceTree = "<group>"; };
 		CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationViewController.xib; sourceTree = "<group>"; };
@@ -450,12 +456,6 @@
 		CE5A4FFB1F8FF153009D373B /* RILogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RILogo@2x.png"; sourceTree = "<group>"; };
 		CE5A4FFF1F9022A6009D373B /* HeaderInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderInfoView.h; sourceTree = "<group>"; };
 		CE5A50001F9022A6009D373B /* HeaderInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderInfoView.m; sourceTree = "<group>"; };
-		CE70B8191F9AAF7600135A38 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
-		CE70B81A1F9AAF7600135A38 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
-		CE70B81B1F9AAF7600135A38 /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
-		CE70B81C1F9AAF7600135A38 /* LaunchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LaunchViewController.m; sourceTree = "<group>"; };
-		CE70B81D1F9AAF7600135A38 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
-		CE70B81E1F9AAF7600135A38 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		CE70B8221F9AAFC700135A38 /* DeliveryOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryOrderViewController.h; sourceTree = "<group>"; };
 		CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryOrderViewController.m; sourceTree = "<group>"; };
 		CE70B8261F9AB11D00135A38 /* ReportLineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportLineView.h; sourceTree = "<group>"; };
@@ -1062,6 +1062,19 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CE4BC51B1F9EAE88004F1CDC /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BC51C1F9EAE88004F1CDC /* ChangePasswordViewController.h */,
+				CE4BC51D1F9EAE88004F1CDC /* ChangePasswordViewController.m */,
+				CE4BC51E1F9EAE88004F1CDC /* LaunchViewController.h */,
+				CE4BC51F1F9EAE88004F1CDC /* LaunchViewController.m */,
+				CE4BC5201F9EAE88004F1CDC /* LoginViewController.h */,
+				CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		CE5433231F9A8CE20059CA2C /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -1221,8 +1234,8 @@
 		CE56856A1F8D746E005922AA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE4BC51B1F9EAE88004F1CDC /* Login */,
 				CE70B8171F9AAF7500135A38 /* Delivery_Orders */,
-				CE70B8181F9AAF7600135A38 /* Login */,
 				CE56856F1F8D746E005922AA /* MainViewController.h */,
 				CE5685701F8D746E005922AA /* MainViewController.m */,
 				CEBDCB511F916C720078C813 /* ItemViewController.h */,
@@ -1310,19 +1323,6 @@
 				CEC3A7DA1F9BFD9B00392073 /* DNSHistoryViewController.m */,
 			);
 			path = Delivery_Orders;
-			sourceTree = "<group>";
-		};
-		CE70B8181F9AAF7600135A38 /* Login */ = {
-			isa = PBXGroup;
-			children = (
-				CE70B8191F9AAF7600135A38 /* ChangePasswordViewController.h */,
-				CE70B81A1F9AAF7600135A38 /* ChangePasswordViewController.m */,
-				CE70B81B1F9AAF7600135A38 /* LaunchViewController.h */,
-				CE70B81C1F9AAF7600135A38 /* LaunchViewController.m */,
-				CE70B81D1F9AAF7600135A38 /* LoginViewController.h */,
-				CE70B81E1F9AAF7600135A38 /* LoginViewController.m */,
-			);
-			path = Login;
 			sourceTree = "<group>";
 		};
 		CE70B8251F9AB11D00135A38 /* Views */ = {
@@ -1665,7 +1665,6 @@
 				CE5433491F9A8D6F0059CA2C /* NotificationInfo.m in Sources */,
 				CE5685681F8D73BC005922AA /* ColoredButton.m in Sources */,
 				CE5433421F9A8CE20059CA2C /* DatabaseManager.m in Sources */,
-				CE70B81F1F9AAF7600135A38 /* ChangePasswordViewController.m in Sources */,
 				CE3A710B1F8D0C5200F42B9A /* AppDelegate.m in Sources */,
 				CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */,
 				CE12C2BA1F969D9900D9EDB8 /* CartView.m in Sources */,
@@ -1673,6 +1672,7 @@
 				CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */,
 				CE12C2EB1F96B36B00D9EDB8 /* TOPasscodeCircleImage.m in Sources */,
 				CE42D6B11F9EA68200A9FE50 /* ReportLineCell.m in Sources */,
+				CE4BC5221F9EAE89004F1CDC /* ChangePasswordViewController.m in Sources */,
 				CE5685531F8D5A63005922AA /* ThemingAssistant.m in Sources */,
 				CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */,
 				CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */,
@@ -1697,9 +1697,9 @@
 				CE42D6961F9E3D8200A9FE50 /* DeliveryHistoryCell.m in Sources */,
 				CE3A71241F8D122400F42B9A /* BlockUtils.m in Sources */,
 				CE3A71291F8D1AAB00F42B9A /* LogoView.m in Sources */,
+				CE4BC5241F9EAE89004F1CDC /* LoginViewController.m in Sources */,
 				CE12C29D1F9678AE00D9EDB8 /* ItemVariationCell.m in Sources */,
 				CEF999441F8D501C00B7F1FC /* BaseButton.m in Sources */,
-				CE70B8201F9AAF7600135A38 /* LaunchViewController.m in Sources */,
 				CE5A4FE51F8FC1D7009D373B /* HomeButton.m in Sources */,
 				CE5433441F9A8CE20059CA2C /* DeviceManager.m in Sources */,
 				CE12C2961F966C3800D9EDB8 /* EnterQuantityCell.m in Sources */,
@@ -1709,12 +1709,12 @@
 				CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */,
 				CE3A70CB1F8D0B9900F42B9A /* main.m in Sources */,
 				CE42D68F1F9E2F8D00A9FE50 /* DeliveryHistoryView.m in Sources */,
-				CE70B8211F9AAF7600135A38 /* LoginViewController.m in Sources */,
 				CED748EC1F97B973006810D5 /* TicketLineItemHeaderView.m in Sources */,
 				CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */,
 				CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */,
 				CE12C2EF1F96B36B00D9EDB8 /* TOPasscodeSettingsViewController.m in Sources */,
 				CEBDCB5C1F916EA80078C813 /* BottomTabButton.m in Sources */,
+				CE4BC5231F9EAE89004F1CDC /* LaunchViewController.m in Sources */,
 				CEAF7CB51F90362000010042 /* TitleCell.m in Sources */,
 				CED749001F97CA2A006810D5 /* OrderViewController.m in Sources */,
 				CED4F4F81F8EBB0600723DAC /* TouchIdView.m in Sources */,
