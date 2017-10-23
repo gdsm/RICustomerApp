@@ -61,8 +61,8 @@ const CGFloat bottomMargin_20px = 20.0;
 
 - (BOOL) isSessionExpired
 {
-    BOOL retVal = NO;
-//    BOOL retVal = YES;
+//    BOOL retVal = NO;
+    BOOL retVal = YES;
     return retVal;
 }
 
