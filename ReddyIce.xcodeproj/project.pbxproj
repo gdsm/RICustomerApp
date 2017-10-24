@@ -88,6 +88,7 @@
 		CE14A9AA1F9FDD4300FB9C47 /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9A31F9FDD4300FB9C47 /* OrderConfirmationViewController.m */; };
 		CE14A9AB1F9FDD4300FB9C47 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9A51F9FDD4300FB9C47 /* OrderViewController.m */; };
 		CE14A9AC1F9FDD4300FB9C47 /* TicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9A71F9FDD4300FB9C47 /* TicketViewController.m */; };
+		CE14A9AF1F9FDE8B00FB9C47 /* QuickOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9AE1F9FDE8B00FB9C47 /* QuickOrderViewController.m */; };
 		CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805CB1F8E5A4F00081FD0 /* BaseTableViewCell.m */; };
 		CE1805D11F8E5EC200081FD0 /* PasswordField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D01F8E5EC200081FD0 /* PasswordField.m */; };
 		CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */; };
@@ -365,6 +366,8 @@
 		CE14A9A51F9FDD4300FB9C47 /* OrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OrderViewController.m; sourceTree = "<group>"; };
 		CE14A9A61F9FDD4300FB9C47 /* TicketViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TicketViewController.h; sourceTree = "<group>"; };
 		CE14A9A71F9FDD4300FB9C47 /* TicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketViewController.m; sourceTree = "<group>"; };
+		CE14A9AD1F9FDE8B00FB9C47 /* QuickOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickOrderViewController.h; sourceTree = "<group>"; };
+		CE14A9AE1F9FDE8B00FB9C47 /* QuickOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickOrderViewController.m; sourceTree = "<group>"; };
 		CE1805CA1F8E5A4F00081FD0 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		CE1805CB1F8E5A4F00081FD0 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		CE1805CF1F8E5EC200081FD0 /* PasswordField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordField.h; sourceTree = "<group>"; };
@@ -771,6 +774,8 @@
 				CE14A9A51F9FDD4300FB9C47 /* OrderViewController.m */,
 				CE14A9A61F9FDD4300FB9C47 /* TicketViewController.h */,
 				CE14A9A71F9FDD4300FB9C47 /* TicketViewController.m */,
+				CE14A9AD1F9FDE8B00FB9C47 /* QuickOrderViewController.h */,
+				CE14A9AE1F9FDE8B00FB9C47 /* QuickOrderViewController.m */,
 			);
 			path = IceOrder;
 			sourceTree = "<group>";
@@ -1781,6 +1786,7 @@
 				CE12C2F61F96B36B00D9EDB8 /* TOPasscodeSettingsWarningLabel.m in Sources */,
 				CE5433511F9A90580059CA2C /* TicketManager.m in Sources */,
 				CE14A9A91F9FDD4300FB9C47 /* ItemViewController.m in Sources */,
+				CE14A9AF1F9FDE8B00FB9C47 /* QuickOrderViewController.m in Sources */,
 				CEC3A7D51F9BFD6E00392073 /* DeliveryHistoryViewController.m in Sources */,
 				CE12C2F41F96B36B00D9EDB8 /* TOPasscodeSettingsKeypadButton.m in Sources */,
 				CE14A98B1F9FA0A500FB9C47 /* ProblemCategoryViewController.m in Sources */,

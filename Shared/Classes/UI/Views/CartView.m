@@ -12,8 +12,6 @@
 
 static CartView *staticCartView = nil;
 
-const CGFloat CartView_Size = 44;
-
 @interface CartView()
 @property (nonatomic, strong) BadgeButton* btnCart;
 @end
@@ -25,7 +23,7 @@ const CGFloat CartView_Size = 44;
 {
     if (staticCartView == nil)
     {
-        staticCartView = [[CartView alloc] initWithFrame:CGRectMake(0, 0, CartView_Size, CartView_Size)];
+        staticCartView = [[CartView alloc] initWithFrame:CGRectMake(0, 0, cartSize_44px, cartSize_44px)];
         [staticCartView listenNotifications];
         [staticCartView updateUI];
     }
@@ -60,6 +58,12 @@ const CGFloat CartView_Size = 44;
     {
         self.onCartCallback(sender);
     }
+}
+
+- (void)setHideBadge:(BOOL)hideBadge
+{
+    _hideBadge = hideBadge;
+    self.btnCart.lblBadge.hidden = hideBadge;
 }
 
 - (BadgeButton *)btnCart

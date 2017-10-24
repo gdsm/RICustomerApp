@@ -101,6 +101,7 @@ const CGFloat coloredButton_DefaultHeight = 50.0f;
             break;
         case ColoredButtonType_Blue:
             self.bgNormalColor = [Globals shared].themingAssistant.blueNorm;
+            self.bgHighlightedColor = [Globals shared].themingAssistant.blueHigh;
             break;
         default:
             break;

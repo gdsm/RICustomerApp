@@ -10,6 +10,7 @@
 #import "UserManager.h"
 
 const CGFloat seperatorHeight_1px = 1.0;
+const CGFloat borderWidth_1px = 1.0;
 const CGFloat viewHeight_20px = 20.0;
 const CGFloat viewHeight_40px = 40.0;
 const CGFloat topMargin_20px = 20.0;
@@ -20,6 +21,7 @@ const CGFloat rightMargin_40px = 40.0;
 const CGFloat bottomMargin_20px = 20.0;
 const CGFloat cornerRadius_20px = 20.0;
 const CGFloat cornerRadius_6px = 6.0;
+const CGFloat cartSize_44px = 44.0f;
 
 @interface Globals()
 

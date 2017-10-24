@@ -11,6 +11,7 @@
 #import "TicketViewController.h"
 #import "DeliveryOrderViewController.h"
 #import "ReportProblemViewController.h"
+#import "QuickOrderViewController.h"
 
 #import "HomeButtonsView.h"
 #import "TitleCell.h"
@@ -157,8 +158,10 @@ const CGFloat MainVC_UserViewHeight = 160;
     [self.bottomTabView unselectBottomTabs];
     self.bottomTabView.btnPlaceOrder.selected = YES;
     [self.navigationController popToViewController:self animated:NO];
-    ItemViewController* view = [[ItemViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self safePush:view animated:YES];
+    QuickOrderViewController* view = [[QuickOrderViewController alloc] init];
+    [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
+//    ItemViewController* view = [[ItemViewController alloc] initWithStyle:UITableViewStylePlain];
+//    [self safePush:view animated:YES];
 }
 
 - (void) showUserInfo

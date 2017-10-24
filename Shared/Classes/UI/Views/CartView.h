@@ -14,6 +14,7 @@
 + (CartView *) instance;
 + (void) clearInstance;
 
+@property (nonatomic) BOOL hideBadge;
 @property (nonatomic, strong) blk_actionSender onCartCallback;
 
 @end

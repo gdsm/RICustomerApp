@@ -38,7 +38,7 @@
     CGFloat bottom = self.bottomTabView.frame.size.height + self.checkoutView.frame.size.height;
     self.tableOffset = UIEdgeInsetsMake(top, 0, bottom, 0);
     
-    self.bottomTabView.hidden = NO;
+    self.bottomTabView.hidden = YES;
     
     self.navigationItem.rightBarButtonItem = self.bbiClear;
 }
