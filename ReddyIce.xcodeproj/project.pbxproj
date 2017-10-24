@@ -116,6 +116,7 @@
 		CE4BC5321F9EB0AB004F1CDC /* CrauselView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52B1F9EB0AB004F1CDC /* CrauselView.m */; };
 		CE4BC5331F9EB0AB004F1CDC /* ReportLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52D1F9EB0AB004F1CDC /* ReportLineView.m */; };
 		CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */; };
+		CE4BC5381F9EC0D9004F1CDC /* ReportProblemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5371F9EC0D9004F1CDC /* ReportProblemViewController.m */; };
 		CE54331F1F9A5BDC0059CA2C /* OrderConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */; };
 		CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */; };
 		CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433261F9A8CE20059CA2C /* ItemSummary.m */; };
@@ -404,6 +405,8 @@
 		CE4BC52D1F9EB0AB004F1CDC /* ReportLineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportLineView.m; sourceTree = "<group>"; };
 		CE4BC52E1F9EB0AB004F1CDC /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
 		CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
+		CE4BC5361F9EC0D9004F1CDC /* ReportProblemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportProblemViewController.h; sourceTree = "<group>"; };
+		CE4BC5371F9EC0D9004F1CDC /* ReportProblemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportProblemViewController.m; sourceTree = "<group>"; };
 		CE54331C1F9A5BDB0059CA2C /* OrderConfirmationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderConfirmationViewController.h; sourceTree = "<group>"; };
 		CE54331D1F9A5BDB0059CA2C /* OrderConfirmationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrderConfirmationViewController.m; sourceTree = "<group>"; };
 		CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationViewController.xib; sourceTree = "<group>"; };
@@ -1092,6 +1095,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		CE4BC5351F9EC08D004F1CDC /* EquipmentService */ = {
+			isa = PBXGroup;
+			children = (
+				CE4BC5361F9EC0D9004F1CDC /* ReportProblemViewController.h */,
+				CE4BC5371F9EC0D9004F1CDC /* ReportProblemViewController.m */,
+			);
+			path = EquipmentService;
+			sourceTree = "<group>";
+		};
 		CE5433231F9A8CE20059CA2C /* ModelClasses */ = {
 			isa = PBXGroup;
 			children = (
@@ -1251,6 +1263,7 @@
 		CE56856A1F8D746E005922AA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE4BC5351F9EC08D004F1CDC /* EquipmentService */,
 				CE4BC51B1F9EAE88004F1CDC /* Login */,
 				CE70B8171F9AAF7500135A38 /* Delivery_Orders */,
 				CE56856F1F8D746E005922AA /* MainViewController.h */,
@@ -1617,6 +1630,7 @@
 				CEC3A7DB1F9BFD9B00392073 /* DNSHistoryViewController.m in Sources */,
 				CEDE04D71F953EFC005A3354 /* CheckoutView.m in Sources */,
 				CE5433451F9A8CE20059CA2C /* ItemManager.m in Sources */,
+				CE4BC5381F9EC0D9004F1CDC /* ReportProblemViewController.m in Sources */,
 				CE3A71381F8D33C200F42B9A /* IconTextField.m in Sources */,
 				CE12C2F81F96B36B00D9EDB8 /* TOPasscodeCircleView.m in Sources */,
 				CE12C2861F96546B00D9EDB8 /* SliderCell.m in Sources */,
