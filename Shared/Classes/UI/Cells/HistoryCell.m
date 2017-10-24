@@ -6,22 +6,22 @@
 //  Copyright © 2017 HCL. All rights reserved.
 //
 
-#import "DeliveryHistoryCell.h"
+#import "HistoryCell.h"
 
-@implementation DeliveryHistoryCell
+@implementation HistoryCell
 
-+ (DeliveryHistoryCell *) dequeueFrom:(UITableView *)tableView loadFromNib:(NSString *)nibName;
++ (HistoryCell *) dequeueFrom:(UITableView *)tableView loadFromNib:(NSString *)nibName;
 {
-    static NSString *CellIdentifier = @"DeliveryHistoryCell";
-    DeliveryHistoryCell *cell = (DeliveryHistoryCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"HistoryCell";
+    HistoryCell *cell = (HistoryCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
     {
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil];
         for (id currentObject in topLevelObjects)
         {
-            if ([currentObject isKindOfClass:[DeliveryHistoryCell class]])
+            if ([currentObject isKindOfClass:[HistoryCell class]])
             {
-                cell = (DeliveryHistoryCell *)currentObject;
+                cell = (HistoryCell *)currentObject;
                 break;
             }
         }
@@ -34,9 +34,9 @@
 {
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
-    self.deliveryHistoryView.backgroundColor = [UIColor clearColor];
+    self.historyView.backgroundColor = [UIColor clearColor];
     
-    [self.deliveryHistoryView updateUI];
+    [self.historyView updateUI];
 }
 
 - (void)awakeFromNib {
@@ -53,7 +53,7 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    [self.deliveryHistoryView layoutUI];
+    [self.historyView layoutUI];
 }
 
 @end

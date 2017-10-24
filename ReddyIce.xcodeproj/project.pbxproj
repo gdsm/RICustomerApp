@@ -98,10 +98,10 @@
 		CE3A713B1F8D344300F42B9A /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3A713A1F8D344300F42B9A /* BaseView.m */; };
 		CE3C819A1F8EE31C0092FDF0 /* ReddyIceActive.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CE3C81981F8EDC0D0092FDF0 /* ReddyIceActive.xcdatamodeld */; };
 		CE3CE7D51F8E72320050B656 /* BaseTextEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */; };
-		CE42D68F1F9E2F8D00A9FE50 /* DeliveryHistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D68E1F9E2F8D00A9FE50 /* DeliveryHistoryView.m */; };
+		CE42D68F1F9E2F8D00A9FE50 /* HistoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D68E1F9E2F8D00A9FE50 /* HistoryView.m */; };
 		CE42D6921F9E382700A9FE50 /* PathCheckboxView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6911F9E382700A9FE50 /* PathCheckboxView.m */; };
-		CE42D6961F9E3D8200A9FE50 /* DeliveryHistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6941F9E3D8200A9FE50 /* DeliveryHistoryCell.m */; };
-		CE42D6991F9E3F0200A9FE50 /* DeliveryHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D6981F9E3F0200A9FE50 /* DeliveryHistoryCell.xib */; };
+		CE42D6961F9E3D8200A9FE50 /* HistoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6941F9E3D8200A9FE50 /* HistoryCell.m */; };
+		CE42D6991F9E3F0200A9FE50 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D6981F9E3F0200A9FE50 /* HistoryCell.xib */; };
 		CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D69B1F9E86B500A9FE50 /* DriverInfoView.m */; };
 		CE42D69F1F9E86ED00A9FE50 /* DriverInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D69E1F9E86ED00A9FE50 /* DriverInfoView.xib */; };
 		CE42D6A31F9E8A9500A9FE50 /* DriverInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6A11F9E8A9500A9FE50 /* DriverInfoCell.m */; };
@@ -372,13 +372,13 @@
 		CE3C81991F8EDC0D0092FDF0 /* ReddyIce.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ReddyIce.xcdatamodel; sourceTree = "<group>"; };
 		CE3CE7D31F8E72320050B656 /* BaseTextEntryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTextEntryCell.h; sourceTree = "<group>"; };
 		CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTextEntryCell.m; sourceTree = "<group>"; };
-		CE42D68D1F9E2F8D00A9FE50 /* DeliveryHistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryHistoryView.h; sourceTree = "<group>"; };
-		CE42D68E1F9E2F8D00A9FE50 /* DeliveryHistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryHistoryView.m; sourceTree = "<group>"; };
+		CE42D68D1F9E2F8D00A9FE50 /* HistoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryView.h; sourceTree = "<group>"; };
+		CE42D68E1F9E2F8D00A9FE50 /* HistoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryView.m; sourceTree = "<group>"; };
 		CE42D6901F9E382700A9FE50 /* PathCheckboxView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PathCheckboxView.h; sourceTree = "<group>"; };
 		CE42D6911F9E382700A9FE50 /* PathCheckboxView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PathCheckboxView.m; sourceTree = "<group>"; };
-		CE42D6931F9E3D8200A9FE50 /* DeliveryHistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryHistoryCell.h; sourceTree = "<group>"; };
-		CE42D6941F9E3D8200A9FE50 /* DeliveryHistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryHistoryCell.m; sourceTree = "<group>"; };
-		CE42D6981F9E3F0200A9FE50 /* DeliveryHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeliveryHistoryCell.xib; sourceTree = "<group>"; };
+		CE42D6931F9E3D8200A9FE50 /* HistoryCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HistoryCell.h; sourceTree = "<group>"; };
+		CE42D6941F9E3D8200A9FE50 /* HistoryCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HistoryCell.m; sourceTree = "<group>"; };
+		CE42D6981F9E3F0200A9FE50 /* HistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		CE42D69A1F9E86B500A9FE50 /* DriverInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DriverInfoView.h; sourceTree = "<group>"; };
 		CE42D69B1F9E86B500A9FE50 /* DriverInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DriverInfoView.m; sourceTree = "<group>"; };
 		CE42D69E1F9E86ED00A9FE50 /* DriverInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DriverInfoView.xib; sourceTree = "<group>"; };
@@ -737,8 +737,8 @@
 				CED748EE1F97C877006810D5 /* TicketLineItemCell.m */,
 				CED748F21F97C88E006810D5 /* TicketLineItemHeaderCell.h */,
 				CED748F31F97C88E006810D5 /* TicketLineItemHeaderCell.m */,
-				CE42D6931F9E3D8200A9FE50 /* DeliveryHistoryCell.h */,
-				CE42D6941F9E3D8200A9FE50 /* DeliveryHistoryCell.m */,
+				CE42D6931F9E3D8200A9FE50 /* HistoryCell.h */,
+				CE42D6941F9E3D8200A9FE50 /* HistoryCell.m */,
 				CE42D6A01F9E8A9500A9FE50 /* DriverInfoCell.h */,
 				CE42D6A11F9E8A9500A9FE50 /* DriverInfoCell.m */,
 			);
@@ -758,7 +758,7 @@
 			isa = PBXGroup;
 			children = (
 				CE42D6A51F9E8ADF00A9FE50 /* DriverInfoCell.xib */,
-				CE42D6981F9E3F0200A9FE50 /* DeliveryHistoryCell.xib */,
+				CE42D6981F9E3F0200A9FE50 /* HistoryCell.xib */,
 				CE70B83D1F9AB67400135A38 /* ReportLineCell.xib */,
 				CED748F71F97C8EA006810D5 /* TicketLineItemCell.xib */,
 				CED748F81F97C8EB006810D5 /* TicketLineItemHeaderCell.xib */,
@@ -1311,8 +1311,8 @@
 				CED748EB1F97B973006810D5 /* TicketLineItemHeaderView.m */,
 				CEC81A1C1F99246400035909 /* DeliveryTimelineView.h */,
 				CEC81A1D1F99246400035909 /* DeliveryTimelineView.m */,
-				CE42D68D1F9E2F8D00A9FE50 /* DeliveryHistoryView.h */,
-				CE42D68E1F9E2F8D00A9FE50 /* DeliveryHistoryView.m */,
+				CE42D68D1F9E2F8D00A9FE50 /* HistoryView.h */,
+				CE42D68E1F9E2F8D00A9FE50 /* HistoryView.m */,
 				CE42D6901F9E382700A9FE50 /* PathCheckboxView.h */,
 				CE42D6911F9E382700A9FE50 /* PathCheckboxView.m */,
 				CE42D69A1F9E86B500A9FE50 /* DriverInfoView.h */,
@@ -1584,7 +1584,7 @@
 				CEDE04F81F9550CE005A3354 /* Delivery_high@2x.png in Resources */,
 				CE12C26E1F963FD100D9EDB8 /* Delivery@3x.png in Resources */,
 				CEDE050C1F9550CE005A3354 /* Problem_norm@1x.png in Resources */,
-				CE42D6991F9E3F0200A9FE50 /* DeliveryHistoryCell.xib in Resources */,
+				CE42D6991F9E3F0200A9FE50 /* HistoryCell.xib in Resources */,
 				CEDE05141F9550CE005A3354 /* Products_norm@3x.png in Resources */,
 				CEDE05011F9550CE005A3354 /* Feedback_norm@2x.png in Resources */,
 				CE3A710E1F8D0C5200F42B9A /* LaunchScreen.storyboard in Resources */,
@@ -1709,7 +1709,7 @@
 				CE54334D1F9A8E8C0059CA2C /* TicketObject.m in Sources */,
 				CE23D20F1F943BD60021403B /* ToggleSwitchButton.m in Sources */,
 				CE12C2F01F96B36B00D9EDB8 /* TOPasscodeViewController.m in Sources */,
-				CE42D6961F9E3D8200A9FE50 /* DeliveryHistoryCell.m in Sources */,
+				CE42D6961F9E3D8200A9FE50 /* HistoryCell.m in Sources */,
 				CE3A71241F8D122400F42B9A /* BlockUtils.m in Sources */,
 				CE3A71291F8D1AAB00F42B9A /* LogoView.m in Sources */,
 				CE4BC5241F9EAE89004F1CDC /* LoginViewController.m in Sources */,
@@ -1722,7 +1722,7 @@
 				CE5A4FE81F8FC3B6009D373B /* HomeButtonsView.m in Sources */,
 				CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */,
 				CE3A70CB1F8D0B9900F42B9A /* main.m in Sources */,
-				CE42D68F1F9E2F8D00A9FE50 /* DeliveryHistoryView.m in Sources */,
+				CE42D68F1F9E2F8D00A9FE50 /* HistoryView.m in Sources */,
 				CED748EC1F97B973006810D5 /* TicketLineItemHeaderView.m in Sources */,
 				CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */,
 				CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */,

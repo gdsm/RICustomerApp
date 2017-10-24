@@ -10,7 +10,7 @@
 #import "DeliveryOrderViewController.h"
 #import "OrderViewController.h"
 #import "ReportLineCell.h"
-#import "DeliveryHistoryCell.h"
+#import "HistoryCell.h"
 #import "TicketLineItemHeaderCell.h"
 #import "TicketLineItemCell.h"
 #import "CategoryDetailCell.h"
@@ -215,15 +215,15 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
     }
     else
     {
-        DeliveryHistoryCell* cell = [DeliveryHistoryCell dequeueFrom:tableView loadFromNib:@"DeliveryHistoryCell"];
+        HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
 
-        UIEdgeInsets inset = cell.deliveryHistoryView.contentInsets;
+        UIEdgeInsets inset = cell.historyView.contentInsets;
         inset.left = 0;
         inset.right = 0;
-        cell.deliveryHistoryView.contentInsets = inset;
+        cell.historyView.contentInsets = inset;
         
         [cell updateCell];
-        cell.deliveryHistoryView.historyType = DeliveryHistoryType_Delivery;
+        cell.historyView.historyType = HistoryType_Delivery;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;
@@ -237,10 +237,10 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
     {
         if (indexPath.row == 0)
         {
-            DeliveryHistoryCell* cell = [DeliveryHistoryCell dequeueFrom:tableView loadFromNib:@"DeliveryHistoryCell"];
+            HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
             [cell updateCell];
-            cell.deliveryHistoryView.historyType = DeliveryHistoryType_Delivery;
-            cell.deliveryHistoryView.hidePathView = NO;
+            cell.historyView.historyType = HistoryType_Delivery;
+            cell.historyView.hidePathView = NO;
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
             return cell;
         }

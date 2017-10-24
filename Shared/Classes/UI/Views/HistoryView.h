@@ -1,5 +1,5 @@
 //
-//  DeliveryHistoryView.h
+//  HistoryView.h
 //  ReddyIce
 //
 //  Created by Gagan on 23/10/17.
@@ -10,17 +10,17 @@
 #import "BlockUtils.h"
 
 //TODO:[Gagan]: mode this enum to object class
-typedef NS_ENUM(NSUInteger, DeliveryHistoryType) {
-    DeliveryHistoryType_Order,
-    DeliveryHistoryType_Delivery,
-    DeliveryHistoryType_DNS
+typedef NS_ENUM(NSUInteger, HistoryType) {
+    HistoryType_Order,
+    HistoryType_Delivery,
+    HistoryType_DNS
 };
 
-@interface DeliveryHistoryView : BaseView
+@interface HistoryView : BaseView
 
 @property (nonatomic, strong) blk_actionSender onStartPathCheck;
 @property (nonatomic, strong) blk_actionSender onEndPathCheck;
-@property (nonatomic) DeliveryHistoryType historyType;
+@property (nonatomic) HistoryType historyType;
 @property (nonatomic) BOOL hidePathView;
 
 @end

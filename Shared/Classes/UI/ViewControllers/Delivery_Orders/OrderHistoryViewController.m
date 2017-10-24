@@ -10,7 +10,7 @@
 #import "DeliveryOrderViewController.h"
 #import "OrderViewController.h"
 #import "ReportLineCell.h"
-#import "DeliveryHistoryCell.h"
+#import "HistoryCell.h"
 #import "TicketLineItemHeaderCell.h"
 #import "TicketLineItemCell.h"
 #import "CategoryDetailCell.h"
@@ -181,19 +181,19 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
     }
     else
     {
-        DeliveryHistoryCell* cell = [DeliveryHistoryCell dequeueFrom:tableView loadFromNib:@"DeliveryHistoryCell"];
+        HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
 
-        UIEdgeInsets inset = cell.deliveryHistoryView.contentInsets;
+        UIEdgeInsets inset = cell.historyView.contentInsets;
         inset.left = 0;
         inset.right = 0;
-        cell.deliveryHistoryView.contentInsets = inset;
+        cell.historyView.contentInsets = inset;
 
         [cell updateCell];
-        cell.deliveryHistoryView.historyType = DeliveryHistoryType_Order;
-        cell.deliveryHistoryView.onStartPathCheck = ^(id sender) {
+        cell.historyView.historyType = HistoryType_Order;
+        cell.historyView.onStartPathCheck = ^(id sender) {
             [weakSelf startPathChecked];
         };
-        cell.deliveryHistoryView.onEndPathCheck = ^(id sender) {
+        cell.historyView.onEndPathCheck = ^(id sender) {
             [weakSelf endPathChecked];
         };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -211,13 +211,13 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
     {
         if (indexPath.row == 0)
         {
-            DeliveryHistoryCell* cell = [DeliveryHistoryCell dequeueFrom:tableView loadFromNib:@"DeliveryHistoryCell"];
+            HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
             [cell updateCell];
-            cell.deliveryHistoryView.historyType = DeliveryHistoryType_Order;
-            cell.deliveryHistoryView.onStartPathCheck = ^(id sender) {
+            cell.historyView.historyType = HistoryType_Order;
+            cell.historyView.onStartPathCheck = ^(id sender) {
                 [weakSelf startPathChecked];
             };
-            cell.deliveryHistoryView.onEndPathCheck = ^(id sender) {
+            cell.historyView.onEndPathCheck = ^(id sender) {
                 [weakSelf endPathChecked];
             };
             cell.selectionStyle = UITableViewCellSelectionStyleNone;

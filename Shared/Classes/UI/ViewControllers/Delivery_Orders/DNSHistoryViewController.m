@@ -9,7 +9,7 @@
 #import "DNSHistoryViewController.h"
 #import "DeliveryOrderViewController.h"
 #import "ReportLineCell.h"
-#import "DeliveryHistoryCell.h"
+#import "HistoryCell.h"
 
 
 @interface DNSHistoryViewController ()
@@ -68,9 +68,9 @@
     }
     else
     {
-        DeliveryHistoryCell* cell = [DeliveryHistoryCell dequeueFrom:tableView loadFromNib:@"DeliveryHistoryCell"];
+        HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
         [cell updateCell];
-        cell.deliveryHistoryView.historyType = DeliveryHistoryType_DNS;
+        cell.historyView.historyType = HistoryType_DNS;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         return cell;

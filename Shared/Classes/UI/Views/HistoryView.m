@@ -1,18 +1,18 @@
 //
-//  DeliveryHistoryView.m
+//  HistoryView.m
 //  ReddyIce
 //
 //  Created by Gagan on 23/10/17.
 //  Copyright © 2017 HCL. All rights reserved.
 //
 
-#import "DeliveryHistoryView.h"
+#import "HistoryView.h"
 #import "PathCheckboxView.h"
 #import "Globals.h"
 #import "IconFontCodes.h"
 
 
-@interface DeliveryHistoryView ()
+@interface HistoryView ()
 
 @property (nonatomic, strong) BaseLabel* lblOrderNo;
 @property (nonatomic, strong) BaseLabel* lblTotalAmount;
@@ -25,7 +25,7 @@
 @end
 
 
-@implementation DeliveryHistoryView
+@implementation HistoryView
 
 - (void)updateUI
 {
@@ -38,13 +38,13 @@
     [self addSubview:self.viewUnderLine];
 }
 
-- (void)setHistoryType:(DeliveryHistoryType)historyType
+- (void)setHistoryType:(HistoryType)historyType
 {
     _historyType = historyType;
     
     switch (_historyType)
     {
-        case DeliveryHistoryType_Order:
+        case HistoryType_Order:
         {
             self.pathView.hidden = NO;
             self.lblStatus.hidden = NO;
@@ -56,13 +56,13 @@
             self.lblStatus.layer.borderWidth = 1;
             self.lblStatus.textAlignment = NSTextAlignmentCenter;
         }break;
-        case DeliveryHistoryType_Delivery:
+        case HistoryType_Delivery:
         {
             self.pathView.hidden = YES;
             self.lblStatus.hidden = YES;
             self.lblTotalAmount.textAlignment = NSTextAlignmentRight;
         }break;
-        case DeliveryHistoryType_DNS:
+        case HistoryType_DNS:
         {
             self.pathView.hidden = YES;
             self.lblStatus.hidden = NO;
@@ -97,7 +97,7 @@
     CGFloat xOffset = self.contentInsets.left;
     CGFloat yOffset = self.contentInsets.top;
     CGFloat widthDivider[] = {0.3f, 0.4f, 0.3f};
-    if (self.historyType == DeliveryHistoryType_Delivery)
+    if (self.historyType == HistoryType_Delivery)
     {
         widthDivider[0] = 0.5f;
         widthDivider[1] = 0.5f;
