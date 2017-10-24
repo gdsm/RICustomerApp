@@ -13,15 +13,7 @@
 
 
 @interface HistoryView ()
-
-@property (nonatomic, strong) BaseLabel* lblOrderNo;
-@property (nonatomic, strong) BaseLabel* lblTotalAmount;
-@property (nonatomic, strong) BaseLabel* lblStatus;
-@property (nonatomic, strong) BaseLabel* lblStartTime;
-@property (nonatomic, strong) BaseLabel* lblEndTime;
 @property (nonatomic, strong) PathCheckboxView* pathView;
-@property (nonatomic, strong) BaseView* viewUnderLine;
-
 @end
 
 
@@ -73,6 +65,12 @@
             self.lblStatus.backgroundColor = [UIColor clearColor];
             self.lblStatus.layer.borderWidth = 0;
             self.lblStatus.textAlignment = NSTextAlignmentRight;
+        }break;
+        case HistoryType_RequestHistory:
+        {
+            self.pathView.hidden = YES;
+            self.lblStatus.hidden = NO;
+            self.lblTotalAmount.textAlignment = NSTextAlignmentCenter;
         }break;
         default:
             break;

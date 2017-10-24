@@ -76,6 +76,7 @@
 		CE1805D11F8E5EC200081FD0 /* PasswordField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D01F8E5EC200081FD0 /* PasswordField.m */; };
 		CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */; };
 		CE1805D91F8E623700081FD0 /* PasswordFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */; };
+		CE20D9811F9ECD4800E48AD7 /* CreateServiceRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20D9801F9ECD4800E48AD7 /* CreateServiceRequestView.m */; };
 		CE23D2091F942E640021403B /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23D2071F942E640021403B /* ItemCell.m */; };
 		CE23D20C1F942F310021403B /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE23D20B1F942F310021403B /* ItemCell.xib */; };
 		CE23D20F1F943BD60021403B /* ToggleSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23D20E1F943BD60021403B /* ToggleSwitchButton.m */; };
@@ -331,6 +332,8 @@
 		CE1805D21F8E621300081FD0 /* PasswordFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordFieldCell.h; sourceTree = "<group>"; };
 		CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldCell.m; sourceTree = "<group>"; };
 		CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordFieldCell.xib; sourceTree = "<group>"; };
+		CE20D97F1F9ECD4800E48AD7 /* CreateServiceRequestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateServiceRequestView.h; sourceTree = "<group>"; };
+		CE20D9801F9ECD4800E48AD7 /* CreateServiceRequestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateServiceRequestView.m; sourceTree = "<group>"; };
 		CE23D2061F942E640021403B /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
 		CE23D2071F942E640021403B /* ItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		CE23D20B1F942F310021403B /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
@@ -772,6 +775,15 @@
 				CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		CE20D97E1F9ECD1D00E48AD7 /* EquipmentService */ = {
+			isa = PBXGroup;
+			children = (
+				CE20D97F1F9ECD4800E48AD7 /* CreateServiceRequestView.h */,
+				CE20D9801F9ECD4800E48AD7 /* CreateServiceRequestView.m */,
+			);
+			path = EquipmentService;
 			sourceTree = "<group>";
 		};
 		CE3A70AC1F8D0B9600F42B9A = {
@@ -1285,6 +1297,7 @@
 		CE5685711F8D746E005922AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE20D97E1F9ECD1D00E48AD7 /* EquipmentService */,
 				CE5685721F8D746E005922AA /* AdditionalSecurityButtons.h */,
 				CE5685731F8D746E005922AA /* AdditionalSecurityButtons.m */,
 				CED4F4F61F8EBB0600723DAC /* TouchIdView.h */,
@@ -1724,6 +1737,7 @@
 				CE3A70CB1F8D0B9900F42B9A /* main.m in Sources */,
 				CE42D68F1F9E2F8D00A9FE50 /* HistoryView.m in Sources */,
 				CED748EC1F97B973006810D5 /* TicketLineItemHeaderView.m in Sources */,
+				CE20D9811F9ECD4800E48AD7 /* CreateServiceRequestView.m in Sources */,
 				CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */,
 				CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */,
 				CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */,

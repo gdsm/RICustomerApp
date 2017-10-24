@@ -10,6 +10,7 @@
 #import "ItemViewController.h"
 #import "TicketViewController.h"
 #import "DeliveryOrderViewController.h"
+#import "ReportProblemViewController.h"
 
 #import "HomeButtonsView.h"
 #import "TitleCell.h"
@@ -140,13 +141,15 @@ const CGFloat MainVC_UserViewHeight = 160;
     [self.bottomTabView unselectBottomTabs];
     self.bottomTabView.btnReportAProb.selected = YES;
     [self.navigationController popToViewController:self animated:NO];
+    ReportProblemViewController* view = [[ReportProblemViewController alloc] init];
+    [self safePush:view animated:YES];
 }
 
 - (void) shareFeedback
 {
-    [self.bottomTabView unselectBottomTabs];
-    self.bottomTabView.btnShareFeedback.selected = YES;
-    [self.navigationController popToViewController:self animated:NO];
+//    [self.bottomTabView unselectBottomTabs];
+//    self.bottomTabView.btnShareFeedback.selected = YES;
+//    [self.navigationController popToViewController:self animated:NO];
 }
 
 - (void) placeAnOrder
