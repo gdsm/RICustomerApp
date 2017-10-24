@@ -145,6 +145,7 @@ const CGFloat ProblemDescrVC_category_height = 50;
         _textView.layer.borderWidth = 1;
         _textView.font = [Globals shared].defaultTextFont;
         _textView.layer.cornerRadius = cornerRadius_20px;
+        _textView.returnKeyType = UIReturnKeySend;
         _textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleTopMargin;
     }
     return _textView;
