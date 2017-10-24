@@ -26,6 +26,7 @@
 - (void) listenNotifications
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orderConfirmationDone:) name:noti_OrderConfirmationDone object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(problemRequestSubmit:) name:noti_ProblemRequestSubmit object:nil];
 }
 
 - (void) removeNotifications
@@ -37,6 +38,12 @@
 #pragma mark - Listener Methods
 
 - (void) orderConfirmationDone:(NSNotification *)sender
+{
+    // Have some core stuff later.
+    [[NSNotificationCenter defaultCenter] postNotificationName:noti_ClearTicketDone object:nil userInfo:nil];
+}
+
+- (void) problemRequestSubmit:(NSNotification *)sender
 {
     // Have some core stuff later.
     [[NSNotificationCenter defaultCenter] postNotificationName:noti_ClearTicketDone object:nil userInfo:nil];

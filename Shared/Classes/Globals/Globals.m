@@ -18,6 +18,8 @@ const CGFloat leftMargin_40px = 40.0;
 const CGFloat rightMargin_20px = 20.0;
 const CGFloat rightMargin_40px = 40.0;
 const CGFloat bottomMargin_20px = 20.0;
+const CGFloat cornerRadius_20px = 20.0;
+const CGFloat cornerRadius_6px = 6.0;
 
 @interface Globals()
 

@@ -10,7 +10,7 @@
 
 @implementation CategoryDetailButton
 
-+ (CategoryDetailButton *) instance
++ (CategoryDetailButton *) instanceWithFrame:(CGRect)frame
 {
     CategoryDetailButton* btn = [CategoryDetailButton buttonWithType:UIButtonTypeCustom];
     [btn updateUI];
@@ -20,6 +20,7 @@
 - (void)updateUI
 {
     [self addSubview:self.categoryDetailView];
+    [self.categoryDetailView updateUI];
 }
 
 - (CategoryDetailView *) categoryDetailView

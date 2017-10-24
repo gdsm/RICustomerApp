@@ -11,7 +11,7 @@
 
 @interface CategoryDetailButton : BaseButton
 
-+ (CategoryDetailButton *) instance;
++ (CategoryDetailButton *) instanceWithFrame:(CGRect)frame;
 @property (nonatomic, strong) CategoryDetailView* categoryDetailView;
 
 @end

@@ -9,6 +9,7 @@
 #import "CoreObject.h"
 
 extern NSString* const noti_OrderConfirmationDone;
+extern NSString* const noti_ProblemRequestSubmit;
 extern NSString* const noti_ClearTicketDone;
 
 @interface NotificationInfo : CoreObject

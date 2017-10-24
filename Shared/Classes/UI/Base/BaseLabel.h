@@ -13,5 +13,6 @@
 @property (nonatomic) UIEdgeInsets contentInsets;
 - (void) defaultIconFont;
 - (void) defaultTextFont;
+- (void) defaultStyling;
 
 @end

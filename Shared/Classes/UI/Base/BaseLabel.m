@@ -23,6 +23,14 @@
     self.textColor = [Globals shared].themingAssistant.defaultTextColor;
 }
 
+- (void) defaultStyling
+{
+    self.adjustsFontSizeToFitWidth = YES;
+    self.font = [Globals shared].defaultTextFont;
+    self.textColor = [Globals shared].themingAssistant.defaultTextColor;
+    self.backgroundColor = [UIColor clearColor];
+    self.numberOfLines = 0;
+}
 
 
 @end

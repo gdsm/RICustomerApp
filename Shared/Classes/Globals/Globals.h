@@ -23,6 +23,8 @@ extern const CGFloat leftMargin_40px;
 extern const CGFloat rightMargin_20px;
 extern const CGFloat rightMargin_40px;
 extern const CGFloat bottomMargin_20px;
+extern const CGFloat cornerRadius_20px;
+extern const CGFloat cornerRadius_6px;
 
 @interface Globals : NSObject
 

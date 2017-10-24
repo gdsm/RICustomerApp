@@ -7,6 +7,7 @@
 //
 
 #import "ReportProblemViewController.h"
+#import "CreateProblemViewController.h"
 #import "CreateServiceRequestView.h"
 #import "ReportLineCell.h"
 #import "HistoryCell.h"
@@ -60,7 +61,8 @@ const CGFloat ReportProbVC_HistoryCell_Height = 80.0;
 
 - (void) createServiceRequest
 {
-    
+    CreateProblemViewController* view = [[CreateProblemViewController alloc] initWithNibName:@"CreateProblemViewController" bundle:nil];
+    [self safePush:view animated:YES];
 }
 
 
