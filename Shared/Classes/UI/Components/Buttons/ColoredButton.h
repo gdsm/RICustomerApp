@@ -7,7 +7,7 @@
  * NCRButton class will provide basic layouting like background image, corner radius But ColoredButton will provide color schem for buttons.
  */
 
-
+// ideally you should not supply color here. Color should be module dependent. Go to themingAssistant and define color for module there. This is for quick developent. Since instead of Agile some crazy spiral development is going on need to have some quick changeable development code.
 typedef NS_ENUM(NSUInteger, ColoredButtonType)
 {
     ColoredButtonType_Red,

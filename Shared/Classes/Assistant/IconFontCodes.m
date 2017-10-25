@@ -91,4 +91,14 @@
     return @"\uf263";
 }
 
+- (NSString *)chevron_left
+{
+    return @"\uf2fa";
+}
+
+- (NSString *) cancel
+{
+    return @"\uf136";
+}
+
 @end

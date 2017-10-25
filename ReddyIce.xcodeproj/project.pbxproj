@@ -137,6 +137,11 @@
 		CE4BC5331F9EB0AB004F1CDC /* ReportLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52D1F9EB0AB004F1CDC /* ReportLineView.m */; };
 		CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */; };
 		CE4BC5381F9EC0D9004F1CDC /* ReportProblemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5371F9EC0D9004F1CDC /* ReportProblemViewController.m */; };
+		CE4E2DBE1FA0F5C400C806A9 /* QuickOrderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E2DBD1FA0F5C400C806A9 /* QuickOrderView.m */; };
+		CE4E2DC91FA0FF8B00C806A9 /* QuickOrder@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4E2DC61FA0FF8A00C806A9 /* QuickOrder@2x.png */; };
+		CE4E2DCA1FA0FF8B00C806A9 /* QuickOrder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4E2DC71FA0FF8B00C806A9 /* QuickOrder@3x.png */; };
+		CE4E2DCB1FA0FF8B00C806A9 /* QuickOrder@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4E2DC81FA0FF8B00C806A9 /* QuickOrder@1x.png */; };
+		CE4E2DCF1FA11F3300C806A9 /* UserOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E2DCE1FA11F3300C806A9 /* UserOptionsViewController.m */; };
 		CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */; };
 		CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433261F9A8CE20059CA2C /* ItemSummary.m */; };
 		CE5433401F9A8CE20059CA2C /* ChangePasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433291F9A8CE20059CA2C /* ChangePasswordModel.m */; };
@@ -458,6 +463,13 @@
 		CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		CE4BC5361F9EC0D9004F1CDC /* ReportProblemViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReportProblemViewController.h; sourceTree = "<group>"; };
 		CE4BC5371F9EC0D9004F1CDC /* ReportProblemViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReportProblemViewController.m; sourceTree = "<group>"; };
+		CE4E2DBC1FA0F5C400C806A9 /* QuickOrderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickOrderView.h; sourceTree = "<group>"; };
+		CE4E2DBD1FA0F5C400C806A9 /* QuickOrderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickOrderView.m; sourceTree = "<group>"; };
+		CE4E2DC61FA0FF8A00C806A9 /* QuickOrder@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuickOrder@2x.png"; sourceTree = "<group>"; };
+		CE4E2DC71FA0FF8B00C806A9 /* QuickOrder@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuickOrder@3x.png"; sourceTree = "<group>"; };
+		CE4E2DC81FA0FF8B00C806A9 /* QuickOrder@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuickOrder@1x.png"; sourceTree = "<group>"; };
+		CE4E2DCD1FA11F3300C806A9 /* UserOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserOptionsViewController.h; sourceTree = "<group>"; };
+		CE4E2DCE1FA11F3300C806A9 /* UserOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserOptionsViewController.m; sourceTree = "<group>"; };
 		CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationViewController.xib; sourceTree = "<group>"; };
 		CE5433251F9A8CE20059CA2C /* ItemSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSummary.h; sourceTree = "<group>"; };
 		CE5433261F9A8CE20059CA2C /* ItemSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSummary.m; sourceTree = "<group>"; };
@@ -1073,6 +1085,7 @@
 		CE3A71061F8D0C5200F42B9A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CE4E2DBF1FA0F80D00C806A9 /* IceOrder */,
 				CE12C2461F963FD000D9EDB8 /* Backgrounds */,
 				CE12C2451F963FCF00D9EDB8 /* barcode.png */,
 				CE12C2531F963FD100D9EDB8 /* HomeButtons */,
@@ -1193,6 +1206,34 @@
 				CE14A9971F9FBFD300FB9C47 /* ProblemSubmitConfirmationViewController.m */,
 			);
 			path = EquipmentService;
+			sourceTree = "<group>";
+		};
+		CE4E2DBB1FA0F5A800C806A9 /* IceOrder */ = {
+			isa = PBXGroup;
+			children = (
+				CE4E2DBC1FA0F5C400C806A9 /* QuickOrderView.h */,
+				CE4E2DBD1FA0F5C400C806A9 /* QuickOrderView.m */,
+			);
+			path = IceOrder;
+			sourceTree = "<group>";
+		};
+		CE4E2DBF1FA0F80D00C806A9 /* IceOrder */ = {
+			isa = PBXGroup;
+			children = (
+				CE4E2DC81FA0FF8B00C806A9 /* QuickOrder@1x.png */,
+				CE4E2DC61FA0FF8A00C806A9 /* QuickOrder@2x.png */,
+				CE4E2DC71FA0FF8B00C806A9 /* QuickOrder@3x.png */,
+			);
+			path = IceOrder;
+			sourceTree = "<group>";
+		};
+		CE4E2DCC1FA11F0A00C806A9 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				CE4E2DCD1FA11F3300C806A9 /* UserOptionsViewController.h */,
+				CE4E2DCE1FA11F3300C806A9 /* UserOptionsViewController.m */,
+			);
+			path = User;
 			sourceTree = "<group>";
 		};
 		CE5433231F9A8CE20059CA2C /* ModelClasses */ = {
@@ -1354,6 +1395,7 @@
 		CE56856A1F8D746E005922AA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE4E2DCC1FA11F0A00C806A9 /* User */,
 				CE14A99D1F9FDD4300FB9C47 /* IceOrder */,
 				CE4BC5351F9EC08D004F1CDC /* EquipmentService */,
 				CE4BC51B1F9EAE88004F1CDC /* Login */,
@@ -1367,6 +1409,7 @@
 		CE5685711F8D746E005922AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CE4E2DBB1FA0F5A800C806A9 /* IceOrder */,
 				CE20D97E1F9ECD1D00E48AD7 /* EquipmentService */,
 				CE5685721F8D746E005922AA /* AdditionalSecurityButtons.h */,
 				CE5685731F8D746E005922AA /* AdditionalSecurityButtons.m */,
@@ -1606,6 +1649,8 @@
 				CEDE050D1F9550CE005A3354 /* Problem_norm@2x.png in Resources */,
 				CE12C2741F963FD100D9EDB8 /* Order@3x.png in Resources */,
 				CE12C2691F963FD100D9EDB8 /* prod_sample_1.png in Resources */,
+				CE4E2DCB1FA0FF8B00C806A9 /* QuickOrder@1x.png in Resources */,
+				CE4E2DCA1FA0FF8B00C806A9 /* QuickOrder@3x.png in Resources */,
 				CE12C2A01F9678DE00D9EDB8 /* ItemVariationCell.xib in Resources */,
 				CEDE04FD1F9550CE005A3354 /* Feedback_high@1x.png in Resources */,
 				CED748F91F97C8EB006810D5 /* TicketLineItemCell.xib in Resources */,
@@ -1661,6 +1706,7 @@
 				CEDE050B1F9550CE005A3354 /* Problem_high@3x.png in Resources */,
 				CEDE05091F9550CE005A3354 /* Problem_high@1x.png in Resources */,
 				CE12C2771F963FD100D9EDB8 /* Problem@3x.png in Resources */,
+				CE4E2DC91FA0FF8B00C806A9 /* QuickOrder@2x.png in Resources */,
 				CEDE04FA1F9550CE005A3354 /* Delivery_norm@1x.png in Resources */,
 				CE12C2621F963FD100D9EDB8 /* Background@2x.png in Resources */,
 				CE12C26D1F963FD100D9EDB8 /* Delivery@2x.png in Resources */,
@@ -1752,6 +1798,7 @@
 				CE12C2B71F9698CC00D9EDB8 /* BadgeButton.m in Sources */,
 				CED748F51F97C88E006810D5 /* TicketLineItemHeaderCell.m in Sources */,
 				CE5433461F9A8CE20059CA2C /* UserManager.m in Sources */,
+				CE4E2DBE1FA0F5C400C806A9 /* QuickOrderView.m in Sources */,
 				CE5983371F91063E0098DC13 /* NSDictionary+Additions.m in Sources */,
 				CE59832E1F90FDE50098DC13 /* JSONResult.m in Sources */,
 				CE5685771F8D746E005922AA /* AdditionalSecurityButtons.m in Sources */,
@@ -1780,6 +1827,7 @@
 				CE3A710C1F8D0C5200F42B9A /* Globals.m in Sources */,
 				CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */,
 				CE12C2EB1F96B36B00D9EDB8 /* TOPasscodeCircleImage.m in Sources */,
+				CE4E2DCF1FA11F3300C806A9 /* UserOptionsViewController.m in Sources */,
 				CE42D6B11F9EA68200A9FE50 /* ReportLineCell.m in Sources */,
 				CE4BC5221F9EAE89004F1CDC /* ChangePasswordViewController.m in Sources */,
 				CE5685531F8D5A63005922AA /* ThemingAssistant.m in Sources */,

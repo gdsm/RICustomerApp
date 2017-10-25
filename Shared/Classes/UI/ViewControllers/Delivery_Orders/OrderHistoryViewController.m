@@ -19,7 +19,6 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
 
 @interface OrderHistoryViewController ()
 @property (nonatomic, strong) UIBarButtonItem* bbiShare;
-@property (nonatomic, strong) UIBarButtonItem* bbiCancel;
 @property (nonatomic, strong) NSMutableArray* lineItems;
 @end
 
@@ -292,16 +291,6 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
 
 
 #pragma mark - UI Methods
-
-- (UIBarButtonItem *)bbiCancel
-{
-    if (_bbiCancel == nil)
-    {
-        _bbiCancel = [[UIBarButtonItem alloc] initWithTitle:@"X" style:UIBarButtonItemStylePlain target:self action:@selector(onBBICancel:)];
-        [_bbiCancel setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].boldTextFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-    }
-    return _bbiCancel;
-}
 
 - (void) onBBICancel:(UIBarButtonItem *)sender
 {

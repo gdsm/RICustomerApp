@@ -20,7 +20,6 @@ const CGFloat additionalSecurityButtons_width = 200;
     {
         _btnFingure = [ColoredButton coloredButtonType:ColoredButtonType_White frame:CGRectMake(0, 0, 50, 50)];
         _btnFingure.titleNormalColor = [[Globals shared].themingAssistant defaultTextColor];
-        _btnFingure.bgHighlightedColor = [[Globals shared].themingAssistant defaultButtonHighlightedBgColor];
         _btnFingure.titleLabel.font = [[Globals shared] helveticaNeue:16];
 
         [_btnFingure setTitle:@"Touch ID" forState:UIControlStateNormal];
@@ -39,7 +38,6 @@ const CGFloat additionalSecurityButtons_width = 200;
     {
         _btnPasscode = [ColoredButton coloredButtonType:ColoredButtonType_White frame:CGRectMake(0, 0, 50, 50)];
         _btnPasscode.titleNormalColor = [[Globals shared].themingAssistant defaultTextColor];
-        _btnPasscode.bgHighlightedColor = [[Globals shared].themingAssistant defaultButtonHighlightedBgColor];
         _btnPasscode.layer.borderColor = [Globals shared].themingAssistant.defaultBorderColor.CGColor;
         _btnPasscode.layer.borderWidth = 1;
         _btnPasscode.titleLabel.font = [[Globals shared] helveticaNeue:16];

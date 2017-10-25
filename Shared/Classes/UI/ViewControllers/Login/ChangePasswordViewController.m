@@ -56,6 +56,11 @@ const CGFloat changePasswordVC_cellHeight = 90;
     self.headerInfoView.lblInfo.text = @"Change your password before logging on the first time. please update your password";
     
     self.tableView.scrollEnabled = NO;
+    
+    if ((self.isPresentedViewController) || (self.isPresentedNavigationController))
+    {
+        self.navigationItem.leftBarButtonItem = self.bbiCancel;
+    }
 }
 
 - (UIBarButtonItem *) bbiSave

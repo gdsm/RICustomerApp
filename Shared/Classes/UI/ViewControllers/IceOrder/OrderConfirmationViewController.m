@@ -151,7 +151,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TitleCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.backgroundColor = [Globals shared].themingAssistant.defaultButtonHighlightedBgColor;
+    cell.backgroundColor = [Globals shared].themingAssistant.whiteHigh;
 }
 
 - (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath

@@ -4,14 +4,8 @@
 
 @implementation ThemingAssistant
 
-- (UIColor *) coloredButtonWhite
-{
-    if (_coloredButtonWhite == nil)
-    {
-        _coloredButtonWhite = [[UIColor whiteColor] colorWithAlphaComponent:0.2];
-    }
-    return _coloredButtonWhite;
-}
+
+#pragma mark - Core Colors
 
 - (UIColor *) blueNorm
 {
@@ -49,49 +43,94 @@
     return _redHigh;
 }
 
-- (UIColor *) greenBtnNormBG
+- (UIColor *) greenNorm
 {
-    if (_greenBtnNormBG == nil)
+    if (_greenNorm == nil)
     {
-        _greenBtnNormBG = [UIColor greenColor];
+        _greenNorm = [UIColor greenColor];
     }
-    return _greenBtnNormBG;
+    return _greenNorm;
 }
 
-- (UIColor *) greenBtnHighBG
+- (UIColor *) greenHigh
 {
-    if (_greenBtnHighBG == nil)
+    if (_greenHigh == nil)
     {
-        _greenBtnHighBG = [UIColor greenColor];
+        _greenHigh = [UIColor greenColor];
     }
-    return _greenBtnHighBG;
+    return _greenHigh;
 }
+
+- (UIColor *) whiteNorm
+{
+    if (_whiteNorm == nil)
+    {
+        _whiteNorm = [UIColor whiteColor];
+    }
+    return _whiteNorm;
+}
+
+- (UIColor *) whiteHigh
+{
+    if (_whiteHigh == nil)
+    {
+        _whiteHigh = [UIColor lightGrayColor];
+    }
+    return _whiteHigh;
+}
+
+- (UIColor *) gray666666
+{
+    if (_gray666666 == nil)
+    {
+        _gray666666 = [[Utilities shared] colorFromHexRed:@"66" green:@"66" blue:@"66" alpha:@"FF"];
+    }
+    return _gray666666;
+}
+
+- (UIColor *) gray999999
+{
+    if (_gray999999 == nil)
+    {
+        _gray999999 = [[Utilities shared] colorFromHexRed:@"99" green:@"99" blue:@"99" alpha:@"FF"];
+    }
+    return _gray999999;
+}
+
+- (UIColor *) grayCCCCCC
+{
+    if (_grayCCCCCC == nil)
+    {
+        _grayCCCCCC = [[Utilities shared] colorFromHexRed:@"CC" green:@"CC" blue:@"CC" alpha:@"FF"];
+    }
+    return _grayCCCCCC;
+}
+
+- (UIColor *)clearNorm
+{
+    if (_clearNorm == nil)
+    {
+        _clearNorm = [UIColor clearColor];
+    }
+    return _clearNorm;
+}
+
+
+#pragma mark - Default Colors
 
 - (UIColor *) defaultTableViewBGColor
 {
-    if (_defaultTableViewBGColor == nil)
-    {
-        _defaultTableViewBGColor = [UIColor whiteColor];
-    }
-    return _defaultTableViewBGColor;
+    return self.whiteNorm;
 }
 
 - (UIColor *) defaultViewBGColor
 {
-    if (_defaultViewBGColor == nil)
-    {
-        _defaultViewBGColor = [UIColor whiteColor];
-    }
-    return _defaultViewBGColor;
+    return self.whiteNorm;
 }
 
 - (UIColor *) defaultTextColor
 {
-    if (_defaultTextColor == nil)
-    {
-        _defaultTextColor = [[Utilities shared] colorFromHexRed:@"66" green:@"66" blue:@"66" alpha:@"FF"];
-    }
-    return _defaultTextColor;
+    return self.gray666666;
 }
 
 - (UIColor *) defaultBorderColor
@@ -109,28 +148,13 @@
     return self.redNorm;
 }
 
-- (UIColor *) defaultButtonNormalBgColor
-{
-    if (_defaultButtonNormalBgColor == nil)
-    {
-        _defaultButtonNormalBgColor = [[UIColor whiteColor] colorWithAlphaComponent:0.2];
-    }
-    return _defaultButtonNormalBgColor;
-}
-
-- (UIColor *) defaultButtonHighlightedBgColor
-{
-    return self.blueHigh;
-}
-
 - (UIColor *) defaultSeperatorColor
 {
-    if (_defaultSeperatorColor == nil)
-    {
-        _defaultSeperatorColor = [[Utilities shared] colorFromHexRed:@"99" green:@"99" blue:@"99" alpha:@"FF"];
-    }
-    return _defaultSeperatorColor;
+    return self.gray999999;
 }
+
+
+#pragma mark - Usage Based Colors
 
 - (UIColor *) badgeButtonColor
 {
@@ -144,20 +168,12 @@
 
 - (UIColor *) touchIDLogoBGColor
 {
-    if (_touchIDLogoBGColor == nil)
-    {
-        _touchIDLogoBGColor = [[Utilities shared] colorFromHexRed:@"FF" green:@"FF" blue:@"FF" alpha:@"FF"];
-    }
-    return _touchIDLogoBGColor;
+    return self.whiteNorm;
 }
 
 - (UIColor *) touchIDLogoBGBorderColor
 {
-    if (_touchIDLogoBGBorderColor == nil)
-    {
-        _touchIDLogoBGBorderColor = [[Utilities shared] colorFromHexRed:@"CC" green:@"CC" blue:@"CC" alpha:@"FF"];
-    }
-    return _touchIDLogoBGBorderColor;
+    return self.grayCCCCCC;
 }
 
 - (UIColor *) homeBtnBgNormColor
@@ -189,29 +205,17 @@
 
 - (UIColor *) btmBarBtnBgNormColor
 {
-    if (_btmBarBtnBgNormColor == nil)
-    {
-        _btmBarBtnBgNormColor = [UIColor clearColor];
-    }
-    return _btmBarBtnBgNormColor;
+    return self.clearNorm;
 }
 
 - (UIColor *) btmBarBtnTitleColor
 {
-    if (_btmBarBtnTitleColor == nil)
-    {
-        _btmBarBtnTitleColor = self.defaultTextColor;
-    }
-    return _btmBarBtnTitleColor;
+    return self.gray666666;
 }
 
 - (UIColor *) btmBarBtnBgHighColor
 {
-    if (_btmBarBtnBgHighColor == nil)
-    {
-        _btmBarBtnBgHighColor = [UIColor clearColor];
-    }
-    return _btmBarBtnBgHighColor;
+    return self.clearNorm;
 }
 
 - (UIColor *) profilePicBackground
@@ -279,11 +283,7 @@
 
 - (UIColor *) checkoutAmountTitleColor
 {
-    if (_checkoutAmountTitleColor == nil)
-    {
-        _checkoutAmountTitleColor = [[Utilities shared] colorFromHexRed:@"99" green:@"99" blue:@"99" alpha:@"FF"];
-    }
-    return _checkoutAmountTitleColor;
+    return self.gray999999;
 }
 
 - (UIColor *) checkoutBtnHighColor
@@ -293,20 +293,12 @@
 
 - (UIColor *) checkoutAmountColor
 {
-    if (_checkoutAmountColor == nil)
-    {
-        _checkoutAmountColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _checkoutAmountColor;
+    return self.blueNorm;
 }
 
 - (UIColor *) qtySliderThumbColor
 {
-    if (_qtySliderThumbColor == nil)
-    {
-        _qtySliderThumbColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _qtySliderThumbColor;
+    return self.blueNorm;
 }
 
 - (UIColor *) qtySliderLeftTrackColor
@@ -316,20 +308,12 @@
 
 - (UIColor *) crauselDotColor
 {
-    if (_crauselDotColor == nil)
-    {
-        _crauselDotColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _crauselDotColor;
+    return self.blueNorm;
 }
 
-- (UIColor *)deliveryTimelineViewBgColor
+- (UIColor *) deliveryTimelineViewBgColor
 {
-    if (_deliveryTimelineViewBgColor == nil)
-    {
-        _deliveryTimelineViewBgColor = [[Utilities shared] colorFromHexRed:@"04" green:@"77" blue:@"BE" alpha:@"FF"];
-    }
-    return _deliveryTimelineViewBgColor;
+    return self.blueNorm;
 }
 
 @end

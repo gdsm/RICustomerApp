@@ -12,8 +12,11 @@
 #import "DeliveryOrderViewController.h"
 #import "ReportProblemViewController.h"
 #import "QuickOrderViewController.h"
+#import "UserOptionsViewController.h"
+#import "ChangePasswordViewController.h"
 
 #import "HomeButtonsView.h"
+#import "QuickOrderView.h"
 #import "TitleCell.h"
 #import "UserInfoView.h"
 #import "CartView.h"
@@ -35,6 +38,7 @@ const CGFloat MainVC_UserViewHeight = 160;
 @interface MainViewController ()
 @property (nonatomic, strong) HomeButtonsView* homeButtonView;
 @property (nonatomic, strong) UserInfoView* userInfoView;
+@property (nonatomic, strong) QuickOrderView* viewQuickOrder;
 @property (nonatomic, strong) UIButton* btnBarcode;
 @property (nonatomic, strong) UIBarButtonItem* bbiUser;
 @property (nonatomic, strong) UIBarButtonItem* bbiBarcode;
@@ -50,6 +54,14 @@ const CGFloat MainVC_UserViewHeight = 160;
 {
     [super viewDidLoad];
     [self listenNotifications];
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.bottomTabView.hidden = NO;
+    [self.bottomTabView unselectBottomTabs];
+    self.bottomTabView.btnHome.selected = YES;
 }
 
 - (void)setupUI
@@ -166,7 +178,25 @@ const CGFloat MainVC_UserViewHeight = 160;
 
 - (void) showUserInfo
 {
+    __weak MainViewController* weakSelf = self;
     
+    UserOptionsViewController* view = [[UserOptionsViewController alloc] init];
+    view.callbackLogout = ^{
+        [weakSelf performSelectorOnMainThread:@selector(logoutUser) withObject:nil waitUntilDone:NO];
+    };
+    view.callbackMyProfile = ^{
+        [weakSelf performSelectorOnMainThread:@selector(userProfile) withObject:nil waitUntilDone:NO];
+    };
+    view.callbackChangePassword = ^{
+        [weakSelf performSelectorOnMainThread:@selector(changePassword) withObject:nil waitUntilDone:NO];
+    };
+    
+    view.modalPresentationStyle = UIModalPresentationPopover;
+    UIPopoverPresentationController* controller = view.popoverPresentationController;
+    controller.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    controller.barButtonItem = self.bbiUser;
+    
+    [self safePresent:view onSelf:YES animated:YES callbackCompletion:nil];
 }
 
 - (void) barcodeScanner
@@ -178,6 +208,29 @@ const CGFloat MainVC_UserViewHeight = 160;
 {
     TicketViewController* view = [[TicketViewController alloc] initWithStyle:UITableViewStylePlain];
     [self safePush:view animated:YES];
+}
+
+- (void) logoutUser
+{
+    [self dismissPopOversAnimated:NO];
+}
+
+- (void) userProfile
+{
+    [self dismissPopOversAnimated:NO];
+}
+
+- (void) changePassword
+{
+    __weak MainViewController* weakSelf = self;
+
+    [self dismissPopOversAnimated:NO];
+    ChangePasswordViewController* view = [[ChangePasswordViewController alloc] init];
+    view.removeCallback = ^{
+        [weakSelf safeDismissViewControllerFromSelf:NO animated:YES callbackCompletion:nil];
+    };
+    
+    [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 
 
@@ -233,7 +286,7 @@ const CGFloat MainVC_UserViewHeight = 160;
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
     TitleCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.backgroundColor = [Globals shared].themingAssistant.defaultButtonHighlightedBgColor;
+    cell.backgroundColor = [Globals shared].themingAssistant.whiteHigh;
 }
 
 - (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath
@@ -249,9 +302,8 @@ const CGFloat MainVC_UserViewHeight = 160;
     [super layoutSubviews];
     
     CGRect rect_homeButtonView = self.homeButtonView.frame;
-//    CGRect rect_btnBarcode = self.btnBarcode.frame;
     CGRect rect_tableView = self.tableView.frame;
-    CGRect rect_userInfoView = self.userInfoView.frame;
+    CGRect rect_quickOrderView = self.viewQuickOrder.frame;
 
 //    rect_btnBarcode.origin.x = (self.view.frame.size.width - rect_btnBarcode.size.width) * 0.5;
 //    rect_btnBarcode.origin.y = self.view.frame.size.height - rect_btnBarcode.size.height;
@@ -268,20 +320,17 @@ const CGFloat MainVC_UserViewHeight = 160;
     rect_tableView.origin.x = MainVC_TableLeftMargin;
     rect_tableView.origin.y = rect_homeButtonView.origin.y - (MainVC_TableHeight + bottomMargin_20px);
 
-    rect_userInfoView.size.height = MainVC_UserViewHeight;
-    rect_userInfoView.size.width = self.view.frame.size.width - (MainVC_UserViewLeftMargin + MainVC_UserViewRightMargin);
-    rect_userInfoView.origin.x = MainVC_UserViewLeftMargin;
-    rect_userInfoView.origin.y = self.navigationBarHeight + self.statusBarHeight +  MainVC_UserViewTopMargin;
+    rect_quickOrderView.size.width = self.view.frame.size.width - (MainVC_UserViewLeftMargin + MainVC_UserViewRightMargin);
+    rect_quickOrderView.origin.x = MainVC_UserViewLeftMargin;
+    rect_quickOrderView.origin.y = self.navigationBarHeight + self.statusBarHeight +  QuickOrderViewTopMargin;
 
 
     
     self.homeButtonView.frame = rect_homeButtonView;
-//    self.btnBarcode.frame = rect_btnBarcode;
     self.tableView.frame = rect_tableView;
-    self.userInfoView.frame = rect_userInfoView;
+    self.viewQuickOrder.frame = rect_quickOrderView;
 
     [self.homeButtonView layoutUI];
-    [self.userInfoView layoutUI];
 }
 
 - (void)viewWillLayoutSubviews
@@ -386,10 +435,76 @@ const CGFloat MainVC_UserViewHeight = 160;
         _userInfoView.lblUserName.text = [Globals shared].userName;
         _userInfoView.lblDescription.text = @"Walmart SuperCenter(D)";//
         [_userInfoView updateUI];
+        _userInfoView.hidden = YES;
 
         [self.view addSubview:_userInfoView];
     }
     return _userInfoView;
 }
 
+- (QuickOrderView *)viewQuickOrder
+{
+    if (_viewQuickOrder == nil)
+    {
+        __weak MainViewController* weakSelf = self;
+        
+        CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, QuickOrderViewHeight);
+        _viewQuickOrder = [[QuickOrderView alloc] initWithFrame:rect];
+        [_viewQuickOrder updateUI];
+        _viewQuickOrder.onQuickCheckout = ^(id sender) {
+            [weakSelf placeAnOrder];
+        };
+        [self.view addSubview:_viewQuickOrder];
+    }
+    return _viewQuickOrder;
+}
+
 @end
+
+
+
+
+
+
+
+// ---> Old Code : After changes with business mettings
+//- (void) layoutSubViews
+//{
+//    [super layoutSubviews];
+//
+//    CGRect rect_homeButtonView = self.homeButtonView.frame;
+//    //    CGRect rect_btnBarcode = self.btnBarcode.frame;
+//    CGRect rect_tableView = self.tableView.frame;
+//    CGRect rect_userInfoView = self.userInfoView.frame;
+//
+//    //    rect_btnBarcode.origin.x = (self.view.frame.size.width - rect_btnBarcode.size.width) * 0.5;
+//    //    rect_btnBarcode.origin.y = self.view.frame.size.height - rect_btnBarcode.size.height;
+//
+//    rect_homeButtonView.origin.x = 0;
+//    rect_homeButtonView.size.width = self.view.frame.size.width;
+//    rect_homeButtonView.size.height = [self.homeButtonView estimatedSize].height;
+//    rect_homeButtonView.origin.y = self.view.frame.size.height - (rect_homeButtonView.size.height + self.bottomTabView.frame.size.height + MainVC_BarcodeHomeBtnOverlap);
+//    //    rect_homeButtonView.origin.y = self.view.frame.size.height - (rect_homeButtonView.size.height + MainVC_BarcodeBtnHeight - MainVC_BarcodeHomeBtnOverlap);
+//    //    rect_homeButtonView.origin.y = self.view.frame.size.height - (rect_homeButtonView.size.height + rect_btnBarcode.size.height - MainVC_BarcodeHomeBtnOverlap);
+//
+//    rect_tableView.size.height = MainVC_TableHeight;
+//    rect_tableView.size.width = self.view.frame.size.width - (MainVC_TableLeftMargin + MainVC_TableRightMargin);
+//    rect_tableView.origin.x = MainVC_TableLeftMargin;
+//    rect_tableView.origin.y = rect_homeButtonView.origin.y - (MainVC_TableHeight + bottomMargin_20px);
+//
+//    rect_userInfoView.size.height = MainVC_UserViewHeight;
+//    rect_userInfoView.size.width = self.view.frame.size.width - (MainVC_UserViewLeftMargin + MainVC_UserViewRightMargin);
+//    rect_userInfoView.origin.x = MainVC_UserViewLeftMargin;
+//    rect_userInfoView.origin.y = self.navigationBarHeight + self.statusBarHeight +  MainVC_UserViewTopMargin;
+//
+//
+//
+//    self.homeButtonView.frame = rect_homeButtonView;
+//    //    self.btnBarcode.frame = rect_btnBarcode;
+//    self.tableView.frame = rect_tableView;
+//    self.userInfoView.frame = rect_userInfoView;
+//
+//    [self.homeButtonView layoutUI];
+//    [self.userInfoView layoutUI];
+//}
+

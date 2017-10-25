@@ -26,4 +26,6 @@
 @property (nonatomic, weak, readonly) NSString* search;
 @property (nonatomic, weak, readonly) NSString* image;
 @property (nonatomic, weak, readonly) NSString* comment_text;
+@property (nonatomic, weak, readonly) NSString* chevron_left;
+@property (nonatomic, weak, readonly) NSString* cancel;
 @end

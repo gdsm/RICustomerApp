@@ -173,7 +173,7 @@ const CGFloat tabItemSideInset = 2.0f;
 {
     if (_highlightedIconColor == nil)
     {
-        _highlightedIconColor = [Globals shared].themingAssistant.greenBtnHighBG;
+        _highlightedIconColor = [Globals shared].themingAssistant.greenHigh;
     }
     return _highlightedIconColor;
 }
@@ -182,7 +182,7 @@ const CGFloat tabItemSideInset = 2.0f;
 {
     if (_highlightedTitleColor == nil)
     {
-        _highlightedTitleColor = [Globals shared].themingAssistant.greenBtnHighBG;
+        _highlightedTitleColor = [Globals shared].themingAssistant.greenHigh;
     }
     return _highlightedTitleColor;
 }

@@ -26,13 +26,30 @@ extern const CGFloat BaseVC_BottomTabHeight;
 @property (nonatomic) BOOL allowKeyboardNotifications;
 - (void) keyboardDidShow:(nullable NSNotification *)notification;
 - (void) keyboardDidHide:(nullable NSNotification *)notification;
+- (CGSize) preferredContentSize;
+- (void) dismissPopOversAnimated:(BOOL)animated;
 
 @property (nonatomic, strong, nullable) UIImageView* bgImgv;
+//@property (nonatomic, strong, nullable) UIBarButtonItem* bbiBack;
+@property (nonatomic, strong, nullable) UIBarButtonItem* bbiCancel;
+- (void) onBBICancel:(nullable UIBarButtonItem *)sender;
 
 @property (nonatomic, strong, nullable) BottomTabView* bottomTabView;
 
-#pragma mark - Push/Present ViewControllers
+@property (nonatomic, strong, nullable) blk_completion removeCallback;
 
+
+#pragma mark - Push/Present ViewControllers
+/**
+ * @brief This view controller is presented one or pushed one.
+ * @return TRUE is presented FALSE if pushed
+ */
+- (BOOL) isPresentedViewController;
+/**
+ * @brief Navigation controller is presented one or pushed one.
+ * @return TRUE is presented FALSE if pushed
+ */
+- (BOOL) isPresentedNavigationController;
 /**
  * @brief Would push the new view controller on the navigation controller. With safe push. It would make some cross checks to avoid crashes.
  * @param viewController : The new ViewController to be pushed.
@@ -66,4 +83,17 @@ extern const CGFloat BaseVC_BottomTabHeight;
               animated:(BOOL)animated
     callbackCompletion:(nullable blk_completion)callback;
 
+/**
+ * @brief Method would dismiss the presented view controller.
+ * @param onSelf : true = self ; false = self.navigationController
+ * @param animated : Dismiss with animation or not
+ * @param callback : Completion Block
+*/
+- (BOOL) safeDismissViewControllerFromSelf:(BOOL)onSelf
+                                  animated:(BOOL)animated
+                        callbackCompletion:(nullable blk_completion)callback;
+
+- (BOOL) unSafeDismissViewControllerFromSelf:(BOOL)onSelf
+                                    animated:(BOOL)animated
+                          callbackCompletion:(nullable blk_completion)callback;
 @end

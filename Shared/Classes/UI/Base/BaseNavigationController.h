@@ -37,5 +37,11 @@
 - (void) unSafePresent:(nonnull UIViewController *)viewController
               animated:(BOOL)animated
     callbackCompletion:(nullable blk_completion)callback;
-
+/**
+ * @brief Method would dismiss the presented view controller.
+ * @param animated : Dismiss with animation or not
+ * @param callback : Completion Block
+ */
+- (BOOL) safeDismissViewControllerAnimated:(BOOL)animated
+                        callbackCompletion:(nullable blk_completion)callback;
 @end

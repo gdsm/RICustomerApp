@@ -33,10 +33,13 @@ static BottomTabView* _static_btmTabView = nil;
     [self setupUI];
 }
 
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-}
+//- (void)viewDidAppear:(BOOL)animated
+//{
+//    [super viewDidAppear:animated];
+////    self.navigationController.navigationItem.backBarButtonItem.title = nil;
+////    self.navigationItem.backBarButtonItem.title = nil;
+////    self.navigationItem.leftBarButtonItem = self.bbiBack;
+//}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -103,6 +106,16 @@ static BottomTabView* _static_btmTabView = nil;
     // child class use this.
 }
 
+- (CGSize) preferredContentSize
+{
+    // child class use this for popovers
+    return self.view.frame.size;
+}
+
+- (void) dismissPopOversAnimated:(BOOL)animated
+{
+    [self unSafeDismissViewControllerFromSelf:YES animated:animated callbackCompletion:nil];
+}
 
 #pragma mark - Layout Methods
 
@@ -145,6 +158,21 @@ static BottomTabView* _static_btmTabView = nil;
     return _bgImgv;
 }
 
+//- (UIBarButtonItem *) bbiBack
+//{
+//    if (_bbiBack == nil)
+//    {
+//        _bbiBack = [[UIBarButtonItem alloc] initWithTitle:[IconFontCodes shared].chevron_left style:UIBarButtonItemStylePlain target:self action:@selector(onbbiBack:)];
+//        [_bbiBack setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].bbiIconFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+//    }
+//    return _bbiBack;
+//}
+
+- (void) onbbiBack:(UIBarButtonItem *)sender
+{
+    
+}
+
 - (BottomTabView *) bottomTabView
 {
     if (_bottomTabView == nil)
@@ -167,8 +195,41 @@ static BottomTabView* _static_btmTabView = nil;
     return _bottomTabView;
 }
 
+- (UIBarButtonItem *)bbiCancel
+{
+    if (_bbiCancel == nil)
+    {
+        _bbiCancel = [[UIBarButtonItem alloc] initWithTitle:[IconFontCodes shared].cancel style:UIBarButtonItemStylePlain target:self action:@selector(onBBICancel:)];
+        [_bbiCancel setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].bbiIconFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+    }
+    return _bbiCancel;
+}
+
+- (void) onBBICancel:(UIBarButtonItem *)sender
+{
+    // child class use this.
+    if (self.removeCallback != nil)
+    {
+        // Nothing can be done. Just intimate the parent this viewController want to go away.
+        self.removeCallback();
+    }
+}
 
 #pragma mark - Push/Present ViewControllers
+
+- (BOOL) isPresentedViewController
+{
+    BOOL retVal = NO;
+    retVal = (self.presentingViewController != nil);
+    return retVal;
+}
+
+- (BOOL) isPresentedNavigationController
+{
+    BOOL retVal = NO;
+    retVal = (self.navigationController.presentingViewController != nil);
+    return retVal;
+}
 
 - (void) safePush:(UIViewController *)view
          animated:(BOOL)animated
@@ -246,6 +307,70 @@ static BottomTabView* _static_btmTabView = nil;
             [navController presentViewController:view animated:animated completion:callback];
         }
     }
+}
+
+- (BOOL) safeDismissViewControllerFromSelf:(BOOL)onSelf
+                                  animated:(BOOL)animated
+                        callbackCompletion:(nullable blk_completion)callback
+{
+    BOOL isSuccess = NO;
+    UIViewController* view = self.presentedViewController;
+    
+    if ([view isKindOfClass:[UIAlertController class]])
+    {
+        return isSuccess;
+    }
+    else if (view.modalPresentationStyle == UIModalPresentationPopover)
+    {
+        return isSuccess;
+    }
+
+    if (onSelf)
+    {
+        [self dismissViewControllerAnimated:animated completion:callback];
+    }
+    else
+    {
+        UINavigationController* navController = self.navigationController;
+        if ([navController isKindOfClass:[BaseNavigationController class]])
+        {
+            BaseNavigationController* baseNav = (BaseNavigationController *)navController;
+            [baseNav safeDismissViewControllerAnimated:animated callbackCompletion:callback];
+        }
+        else
+        {
+            [navController dismissViewControllerAnimated:animated completion:callback];
+        }
+    }
+    isSuccess = YES;
+    return isSuccess;
+}
+
+- (BOOL) unSafeDismissViewControllerFromSelf:(BOOL)onSelf
+                                    animated:(BOOL)animated
+                          callbackCompletion:(nullable blk_completion)callback
+{
+    BOOL isSuccess = NO;
+
+    if (onSelf)
+    {
+        [self dismissViewControllerAnimated:animated completion:callback];
+    }
+    else
+    {
+        UINavigationController* navController = self.navigationController;
+        if ([navController isKindOfClass:[BaseNavigationController class]])
+        {
+            BaseNavigationController* baseNav = (BaseNavigationController *)navController;
+            [baseNav safeDismissViewControllerAnimated:animated callbackCompletion:callback];
+        }
+        else
+        {
+            [navController dismissViewControllerAnimated:animated completion:callback];
+        }
+    }
+    isSuccess = YES;
+    return isSuccess;
 }
 
 @end

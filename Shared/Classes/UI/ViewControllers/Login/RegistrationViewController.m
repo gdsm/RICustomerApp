@@ -152,6 +152,7 @@
         
         _btnContinue = [ColoredButton coloredButtonType:ColoredButtonType_Blue frame:rect];
         [_btnContinue updateUI];
+        _btnContinue.titleLabel.font = [Globals shared].defaultTextFont;
         _btnContinue.layer.cornerRadius = cornerRadius_6px;
         [_btnContinue setTitle:@"Continue." forState:UIControlStateNormal];
         _btnContinue.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
@@ -169,6 +170,7 @@
         _btnRegister = [ColoredButton coloredButtonType:ColoredButtonType_Blue frame:rect];
         [_btnRegister updateUI];
         [_btnRegister setTitle:@"Registered store phone number not avaliable." forState:UIControlStateNormal];
+        _btnRegister.titleLabel.font = [Globals shared].defaultTextFont;
         _btnRegister.layer.cornerRadius = cornerRadius_6px;
         _btnRegister.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
         [_btnRegister addTarget:self action:@selector(onBtnTap:) forControlEvents:UIControlEventTouchUpInside];

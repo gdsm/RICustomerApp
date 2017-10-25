@@ -70,4 +70,24 @@
     [self presentViewController:nav animated:animated completion:callback];
 }
 
+- (BOOL) safeDismissViewControllerAnimated:(BOOL)animated
+                        callbackCompletion:(nullable blk_completion)callback
+{
+    BOOL isSuccess = NO;
+    UIViewController* view = self.presentedViewController;
+
+    if ([view isKindOfClass:[UIAlertController class]])
+    {
+        return isSuccess;
+    }
+    else if (view.modalPresentationStyle == UIModalPresentationPopover)
+    {
+        return isSuccess;
+    }
+    
+    [self dismissViewControllerAnimated:animated completion:callback];
+
+    return isSuccess;
+}
+
 @end

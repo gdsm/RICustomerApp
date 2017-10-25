@@ -22,7 +22,6 @@ const CGFloat TicketVC_deliveryView_height = 60;
 @interface OrderViewController ()
 @property (nonatomic, strong) CheckoutView* checkoutView;
 @property (nonatomic, strong) DeliveryTimelineView* deliveryTimeLineView;
-@property (nonatomic, strong) UIBarButtonItem* bbiCancel;
 @end
 
 @implementation OrderViewController
@@ -47,7 +46,9 @@ const CGFloat TicketVC_deliveryView_height = 60;
     self.tableView.scrollEnabled = NO;
     
     self.bottomTabView.hidden = NO;
-    
+
+    self.bbiCancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onbbiCancel:)];
+
     self.navigationItem.rightBarButtonItem = self.bbiCancel;
 }
 
@@ -167,16 +168,7 @@ const CGFloat TicketVC_deliveryView_height = 60;
     return _deliveryTimeLineView;
 }
 
-- (UIBarButtonItem *) bbiCancel
-{
-    if (_bbiCancel == nil)
-    {
-        _bbiCancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onbbiCancel:)];
-    }
-    return _bbiCancel;
-}
-
-- (void) onbbiCancel:(UIBarButtonItem *)sender
+- (void) onBBICancel:(UIBarButtonItem *)sender
 {
     [self clearTicket];
 }

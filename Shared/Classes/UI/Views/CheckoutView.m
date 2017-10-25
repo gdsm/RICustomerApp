@@ -108,7 +108,6 @@ const CGFloat CheckoutView_lblAmt_width = CheckoutView_btnCart_width;
 {
     if (_btnCheckout == nil)
     {
-        //TODO:[GM] Add Localisation
         CGRect rect = CGRectMake(0, 0, CheckoutView_btnCart_width, CheckoutView_btnCart_height);
         _btnCheckout = [ColoredButton coloredButtonType:ColoredButtonType_Red frame:rect];
         [_btnCheckout setTitle:@"Add to Cart" forState:UIControlStateNormal];

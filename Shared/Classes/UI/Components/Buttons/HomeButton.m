@@ -9,8 +9,8 @@
 #import "HomeButton.h"
 #import "Globals.h"
 
-const CGFloat HomeButton_LeftMargin = 20;
-const CGFloat HomeButton_TopMargin = 10;
+const CGFloat HomeButton_LeftMargin = 0;
+const CGFloat HomeButton_TopMargin = 20;
 const CGFloat HomeButton_ImgLblMargin = 5;
 const CGFloat HomeButton_BottomMargin = 10;
 
@@ -57,7 +57,7 @@ const CGFloat HomeButton_BottomMargin = 10;
         _lblBottom.clipsToBounds = YES;
         _lblBottom.font = [Globals shared].defaultTextFont;
         _lblBottom.textColor = [Globals shared].themingAssistant.homeBtnTitleColor;
-        _lblBottom.textAlignment = NSTextAlignmentLeft;
+        _lblBottom.textAlignment = NSTextAlignmentCenter;
         _lblBottom.numberOfLines = 0;
         
         [self addSubview:_lblBottom];
@@ -82,7 +82,7 @@ const CGFloat HomeButton_BottomMargin = 10;
 
     rect_imgvTop.origin.x = xOffset;
     rect_imgvTop.origin.y = yOffset;
-    rect_imgvTop.size.width = self.imgvTop.image.size.width;
+    rect_imgvTop.size.width = avlWid;
     rect_imgvTop.size.height = avlHei * 0.5;
 
     yOffset += (rect_imgvTop.size.height + HomeButton_ImgLblMargin);
@@ -97,3 +97,36 @@ const CGFloat HomeButton_BottomMargin = 10;
 }
 
 @end
+
+//----> Old design code.
+//- (void)layoutSubviews
+//{
+//    [super layoutSubviews];
+//
+//    CGRect rect_imgvTop = self.imgvTop.frame;
+//    CGRect rect_lblBottom = self.lblBottom.frame;
+//
+//    CGFloat avlWid = self.frame.size.width;
+//    CGFloat avlHei = self.frame.size.height;
+//    CGFloat xOffset = HomeButton_LeftMargin;
+//    CGFloat yOffset = HomeButton_TopMargin;
+//
+//    avlWid -= (2 * xOffset);
+//    avlHei -= ((2 * yOffset) + HomeButton_ImgLblMargin);
+//
+//    rect_imgvTop.origin.x = xOffset;
+//    rect_imgvTop.origin.y = yOffset;
+//    rect_imgvTop.size.width = self.imgvTop.image.size.width;
+//    rect_imgvTop.size.height = avlHei * 0.5;
+//
+//    yOffset += (rect_imgvTop.size.height + HomeButton_ImgLblMargin);
+//
+//    rect_lblBottom.origin.x = xOffset;
+//    rect_lblBottom.origin.y = yOffset;
+//    rect_lblBottom.size.width = avlWid;
+//    rect_lblBottom.size.height = avlHei * 0.5;
+//
+//    self.imgvTop.frame = rect_imgvTop;
+//    self.lblBottom.frame = rect_lblBottom;
+//}
+

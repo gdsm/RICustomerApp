@@ -9,17 +9,17 @@
 #import "QuickOrderViewController.h"
 #import "OrderConfirmationViewController.h"
 #import "CartView.h"
+#import "QuickOrderView.h"
 
+const CGFloat QuickOrderVC_QuickOrderViewHeight = 200;
 const CGFloat QuickOrderVC_vartInfo_margin = 20;
 const CGFloat QuickOrderVC_lblInfo_height = 100;
 const CGFloat QuickOrderVC_btnDone_height = 60;
 
 @interface QuickOrderViewController ()
 
-@property (nonatomic, strong) CartView* viewCart;
-@property (nonatomic, strong) BaseLabel* lblInfo;
+@property (nonatomic, strong) QuickOrderView* viewQuickOrder;
 @property (nonatomic, strong) ColoredButton* btnDone;
-@property (nonatomic, strong) UIBarButtonItem* bbiCancel;
 
 @end
 
@@ -45,9 +45,7 @@ const CGFloat QuickOrderVC_btnDone_height = 60;
     self.title = @"Quick Order";
     self.bgImgv.image = nil;
     
-    self.bottomTabView.hidden = YES;
-    [self.view addSubview:self.viewCart];
-    [self.view addSubview:self.lblInfo];
+    [self.view addSubview:self.viewQuickOrder];
     [self.view addSubview:self.btnDone];
 
     self.navigationItem.rightBarButtonItem = self.bbiCancel;
@@ -65,37 +63,24 @@ const CGFloat QuickOrderVC_btnDone_height = 60;
 
 #pragma mark - UI Methods
 
-- (CartView *)viewCart
+- (QuickOrderView *)viewQuickOrder
 {
-    if (_viewCart == nil)
+    if (_viewQuickOrder == nil)
     {
-        CGFloat top = (self.navigationBarHeight + self.statusBarHeight);
-        CGFloat avlHei = self.view.frame.size.height - top;
-        CGRect rect = CGRectMake((self.view.frame.size.width - cartSize_44px) * 0.5, avlHei * 0.2, cartSize_44px, cartSize_44px);
-        _viewCart = [[CartView alloc] initWithFrame:rect];
-        _viewCart.layer.cornerRadius = rect.size.width * 0.5;
-        _viewCart.layer.borderColor = [Globals shared].themingAssistant.defaultBorderColor.CGColor;
-        _viewCart.layer.borderWidth = 1;
-        _viewCart.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin;
-        _viewCart.hideBadge = YES;
-        [_viewCart updateUI];
-    }
-    return _viewCart;
-}
+        CGFloat top = (self.navigationBarHeight + self.statusBarHeight + QuickOrderViewTopMargin);
+        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, QuickOrderVC_QuickOrderViewHeight);
+        _viewQuickOrder = [[QuickOrderView alloc] initWithFrame:rect];
 
-- (BaseLabel *)lblInfo
-{
-    if (_lblInfo == nil)
-    {
-        CGFloat top = (self.viewCart.frame.origin.y + self.viewCart.frame.size.height + QuickOrderVC_vartInfo_margin);
+        _viewQuickOrder.contentMargin = topMargin_10px;
+        
+        _viewQuickOrder.autoresizingMask = UIViewAutoresizingFlexibleBottomMargin | UIViewAutoresizingFlexibleWidth;
 
-        CGRect rect = CGRectMake(leftMargin_20px, top, self.view.frame.size.width - (leftMargin_20px + rightMargin_20px), QuickOrderVC_lblInfo_height);
-        _lblInfo = [[BaseLabel alloc] initWithFrame:rect];
-        _lblInfo.text = @"This action will submit new order.\rPlease Confirm !";
-        _lblInfo.textAlignment = NSTextAlignmentCenter;
-        [_lblInfo defaultStyling];
+        [_viewQuickOrder updateUI];
+        _viewQuickOrder.lblInfo.text = @"This action will submit new order.\rPlease Confirm !";
+
+        [self.view addSubview:_viewQuickOrder];
     }
-    return _lblInfo;
+    return _viewQuickOrder;
 }
 
 - (ColoredButton *)btnDone
@@ -121,18 +106,9 @@ const CGFloat QuickOrderVC_btnDone_height = 60;
     return _btnDone;
 }
 
-- (UIBarButtonItem *) bbiCancel
+- (void) onBBICancel:(UIBarButtonItem *)sender
 {
-    if (_bbiCancel == nil)
-    {
-        _bbiCancel = [[UIBarButtonItem alloc] initWithTitle:@"Cancel" style:UIBarButtonItemStylePlain target:self action:@selector(onbbiCancel:)];
-    }
-    return _bbiCancel;
-}
-
-- (void) onbbiCancel:(UIBarButtonItem *)sender
-{
-    [self.navigationController popViewControllerAnimated:YES];
+    [self safeDismissViewControllerFromSelf:NO animated:YES callbackCompletion:nil];
 }
 
 - (void) onBtnTap:(ColoredButton *)sender

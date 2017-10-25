@@ -132,12 +132,12 @@
 
 - (void) showPascode
 {
-    RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
-    [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
-//    TOPasscodeViewController *view = [[TOPasscodeViewController alloc] initWithStyle:TOPasscodeViewStyleOpaqueLight passcodeType:TOPasscodeTypeFourDigits];
-//    view.delegate = self;
-//    view.allowBiometricValidation = NO;
-//    [self unSafePresent:view onSelf:YES animated:YES callbackCompletion:nil];
+//    RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
+//    [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
+    TOPasscodeViewController *view = [[TOPasscodeViewController alloc] initWithStyle:TOPasscodeViewStyleOpaqueLight passcodeType:TOPasscodeTypeFourDigits];
+    view.delegate = self;
+    view.allowBiometricValidation = NO;
+    [self unSafePresent:view onSelf:YES animated:YES callbackCompletion:nil];
 }
 
 
