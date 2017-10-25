@@ -92,9 +92,9 @@
 		CE14A9B31F9FF64D00FB9C47 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9B11F9FF64D00FB9C47 /* RegistrationViewController.m */; };
 		CE14A9B61F9FF6FB00FB9C47 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE14A9B51F9FF6FB00FB9C47 /* RegistrationViewController.xib */; };
 		CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805CB1F8E5A4F00081FD0 /* BaseTableViewCell.m */; };
-		CE1805D11F8E5EC200081FD0 /* PasswordField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D01F8E5EC200081FD0 /* PasswordField.m */; };
-		CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */; };
-		CE1805D91F8E623700081FD0 /* PasswordFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */; };
+		CE1805D11F8E5EC200081FD0 /* EditField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D01F8E5EC200081FD0 /* EditField.m */; };
+		CE1805D51F8E621300081FD0 /* EditFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D31F8E621300081FD0 /* EditFieldCell.m */; };
+		CE1805D91F8E623700081FD0 /* EditFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1805D81F8E623700081FD0 /* EditFieldCell.xib */; };
 		CE20D9811F9ECD4800E48AD7 /* CreateServiceRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20D9801F9ECD4800E48AD7 /* CreateServiceRequestView.m */; };
 		CE23D2091F942E640021403B /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23D2071F942E640021403B /* ItemCell.m */; };
 		CE23D20C1F942F310021403B /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE23D20B1F942F310021403B /* ItemCell.xib */; };
@@ -380,11 +380,11 @@
 		CE14A9B51F9FF6FB00FB9C47 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		CE1805CA1F8E5A4F00081FD0 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		CE1805CB1F8E5A4F00081FD0 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
-		CE1805CF1F8E5EC200081FD0 /* PasswordField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordField.h; sourceTree = "<group>"; };
-		CE1805D01F8E5EC200081FD0 /* PasswordField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordField.m; sourceTree = "<group>"; };
-		CE1805D21F8E621300081FD0 /* PasswordFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordFieldCell.h; sourceTree = "<group>"; };
-		CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PasswordFieldCell.m; sourceTree = "<group>"; };
-		CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PasswordFieldCell.xib; sourceTree = "<group>"; };
+		CE1805CF1F8E5EC200081FD0 /* EditField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditField.h; sourceTree = "<group>"; };
+		CE1805D01F8E5EC200081FD0 /* EditField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditField.m; sourceTree = "<group>"; };
+		CE1805D21F8E621300081FD0 /* EditFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditFieldCell.h; sourceTree = "<group>"; };
+		CE1805D31F8E621300081FD0 /* EditFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditFieldCell.m; sourceTree = "<group>"; };
+		CE1805D81F8E623700081FD0 /* EditFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFieldCell.xib; sourceTree = "<group>"; };
 		CE20D97F1F9ECD4800E48AD7 /* CreateServiceRequestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateServiceRequestView.h; sourceTree = "<group>"; };
 		CE20D9801F9ECD4800E48AD7 /* CreateServiceRequestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateServiceRequestView.m; sourceTree = "<group>"; };
 		CE23D2061F942E640021403B /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
@@ -802,8 +802,8 @@
 			children = (
 				CE42D6AF1F9EA68100A9FE50 /* ReportLineCell.h */,
 				CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */,
-				CE1805D21F8E621300081FD0 /* PasswordFieldCell.h */,
-				CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */,
+				CE1805D21F8E621300081FD0 /* EditFieldCell.h */,
+				CE1805D31F8E621300081FD0 /* EditFieldCell.m */,
 				CEAF7CB21F90362000010042 /* TitleCell.h */,
 				CEAF7CB31F90362000010042 /* TitleCell.m */,
 				CE23D2061F942E640021403B /* ItemCell.h */,
@@ -835,8 +835,8 @@
 		CE1805CE1F8E5EA900081FD0 /* PasswordField */ = {
 			isa = PBXGroup;
 			children = (
-				CE1805CF1F8E5EC200081FD0 /* PasswordField.h */,
-				CE1805D01F8E5EC200081FD0 /* PasswordField.m */,
+				CE1805CF1F8E5EC200081FD0 /* EditField.h */,
+				CE1805D01F8E5EC200081FD0 /* EditField.m */,
 			);
 			path = PasswordField;
 			sourceTree = "<group>";
@@ -857,7 +857,7 @@
 				CE12C2881F9654A000D9EDB8 /* SliderCell.xib */,
 				CE23D20B1F942F310021403B /* ItemCell.xib */,
 				CEAF7CB71F90365000010042 /* TitleCell.xib */,
-				CE1805D81F8E623700081FD0 /* PasswordFieldCell.xib */,
+				CE1805D81F8E623700081FD0 /* EditFieldCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -1698,7 +1698,7 @@
 				CEDE04F71F9550CE005A3354 /* Delivery_high@1x.png in Resources */,
 				CE0ACFA11F914A6500984EB3 /* ProfilePic@2x.png in Resources */,
 				CE3A71111F8D0C5200F42B9A /* MainViewController.xib in Resources */,
-				CE1805D91F8E623700081FD0 /* PasswordFieldCell.xib in Resources */,
+				CE1805D91F8E623700081FD0 /* EditFieldCell.xib in Resources */,
 				CE0ACFA01F914A6500984EB3 /* ProfilePic@1x.png in Resources */,
 				CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */,
 				CE23D20C1F942F310021403B /* ItemCell.xib in Resources */,
@@ -1837,7 +1837,7 @@
 				CE3A71301F8D274E00F42B9A /* BaseTableViewController.m in Sources */,
 				CE42D6921F9E382700A9FE50 /* PathCheckboxView.m in Sources */,
 				CE23D2091F942E640021403B /* ItemCell.m in Sources */,
-				CE1805D11F8E5EC200081FD0 /* PasswordField.m in Sources */,
+				CE1805D11F8E5EC200081FD0 /* EditField.m in Sources */,
 				CEF9994B1F8D538600B7F1FC /* Utilities.m in Sources */,
 				CE12C2F91F96B36B00D9EDB8 /* TOPasscodeFixedInputView.m in Sources */,
 				CE12C2F61F96B36B00D9EDB8 /* TOPasscodeSettingsWarningLabel.m in Sources */,
@@ -1874,7 +1874,7 @@
 				CE20D9811F9ECD4800E48AD7 /* CreateServiceRequestView.m in Sources */,
 				CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */,
 				CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */,
-				CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */,
+				CE1805D51F8E621300081FD0 /* EditFieldCell.m in Sources */,
 				CE12C2EF1F96B36B00D9EDB8 /* TOPasscodeSettingsViewController.m in Sources */,
 				CEBDCB5C1F916EA80078C813 /* BottomTabButton.m in Sources */,
 				CE4BC5231F9EAE89004F1CDC /* LaunchViewController.m in Sources */,

@@ -6,33 +6,33 @@
 //  Copyright © 2017 HCL. All rights reserved.
 //
 
-#import "PasswordFieldCell.h"
+#import "EditFieldCell.h"
 
 
-const CGFloat pwdFieldCellTopMargin = 10;
-const CGFloat pwdFieldCellBottomMargin = 10;
-const CGFloat pwdFieldCellLeftMargin = 40;
-const CGFloat pwdFieldCellRightMargin = 40;
+const CGFloat EditFieldCellTopMargin = 10;
+const CGFloat EditFieldCellBottomMargin = 10;
+const CGFloat EditFieldCellLeftMargin = 40;
+const CGFloat EditFieldCellRightMargin = 40;
 
 
-@interface PasswordFieldCell() <UITextFieldDelegate>
+@interface EditFieldCell() <UITextFieldDelegate>
 @end
 
 
-@implementation PasswordFieldCell
+@implementation EditFieldCell
 
-+ (PasswordFieldCell *) dequeueFrom:(UITableView *)tableView loadFromNib:(NSString *)nibName
++ (EditFieldCell *) dequeueFrom:(UITableView *)tableView loadFromNib:(NSString *)nibName
 {
-    static NSString *CellIdentifier = @"PasswordFieldCell";
-    PasswordFieldCell *cell = (PasswordFieldCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"EditFieldCell";
+    EditFieldCell *cell = (EditFieldCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     if (cell == nil)
     {
         NSArray *topLevelObjects = [[NSBundle mainBundle] loadNibNamed:nibName owner:nil options:nil];
         for (id currentObject in topLevelObjects)
         {
-            if ([currentObject isKindOfClass:[PasswordFieldCell class]])
+            if ([currentObject isKindOfClass:[EditFieldCell class]])
             {
-                cell = (PasswordFieldCell *)currentObject;
+                cell = (EditFieldCell *)currentObject;
                 break;
             }
         }
@@ -56,29 +56,29 @@ const CGFloat pwdFieldCellRightMargin = 40;
 {
     self.backgroundColor = [UIColor clearColor];
     self.contentView.backgroundColor = [UIColor clearColor];
-    self.passwordField.backgroundColor = [UIColor clearColor];
+    self.editField.backgroundColor = [UIColor clearColor];
 
-    self.passwordField.textField.delegate = self;
-    self.passwordField.textField.keyboardType = self.keyboardType;
-    self.passwordField.textField.returnKeyType = self.returnKeyType;
+    self.editField.textField.delegate = self;
+    self.editField.textField.keyboardType = self.keyboardType;
+    self.editField.textField.returnKeyType = self.returnKeyType;
     
-    self.passwordField.textField.text = [self.dictionary objectForKey:self.key];
+    self.editField.textField.text = [self.dictionary objectForKey:self.key];
 }
 
 - (void)layoutSubviews
 {
     [super layoutSubviews];
     
-    CGRect rect_pwdField = self.passwordField.frame;
+    CGRect rect_editField = self.editField.frame;
 
-    rect_pwdField.origin.x = pwdFieldCellLeftMargin;
-    rect_pwdField.origin.y = pwdFieldCellTopMargin;
-    rect_pwdField.size.width = self.frame.size.width - (pwdFieldCellLeftMargin + pwdFieldCellRightMargin);
-    rect_pwdField.size.height = self.frame.size.height - (pwdFieldCellTopMargin + pwdFieldCellBottomMargin);
+    rect_editField.origin.x = EditFieldCellLeftMargin;
+    rect_editField.origin.y = EditFieldCellTopMargin;
+    rect_editField.size.width = self.frame.size.width - (EditFieldCellLeftMargin + EditFieldCellRightMargin);
+    rect_editField.size.height = self.frame.size.height - (EditFieldCellTopMargin + EditFieldCellBottomMargin);
 
-    self.passwordField.frame = rect_pwdField;
+    self.editField.frame = rect_editField;
 
-    [self.passwordField layoutUI];
+    [self.editField layoutUI];
 }
 
 

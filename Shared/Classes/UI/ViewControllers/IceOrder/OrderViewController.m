@@ -168,7 +168,7 @@ const CGFloat TicketVC_deliveryView_height = 60;
     return _deliveryTimeLineView;
 }
 
-- (void) onBBICancel:(UIBarButtonItem *)sender
+- (void) onbbiCancel:(UIBarButtonItem *)sender
 {
     [self clearTicket];
 }

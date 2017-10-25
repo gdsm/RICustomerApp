@@ -1,29 +1,29 @@
 //
-//  PasswordField.m
+//  EditField.m
 //  ReddyIce
 //
 //  Created by Gagan on 11/10/17.
 //  Copyright © 2017 HCL. All rights reserved.
 //
 
-#import "PasswordField.h"
+#import "EditField.h"
 #import "Globals.h"
 
-const CGFloat passwordField_lbl_leftMargin = 0.0f;
-const CGFloat passwordField_lbl_rightMargin = 0.0f;
-const CGFloat passwordField_lbl_topMargin = 0.0f;
-const CGFloat passwordField_lbl_bottomMargin = 5.0f;
-const CGFloat passwordField_lbl_height = 20.0f;
+const CGFloat EditField_lbl_leftMargin = 0.0f;
+const CGFloat EditField_lbl_rightMargin = 0.0f;
+const CGFloat EditField_lbl_topMargin = 0.0f;
+const CGFloat EditField_lbl_bottomMargin = 5.0f;
+const CGFloat EditField_lbl_height = 20.0f;
 
-const CGFloat passwordField_tf_leftMargin = 0.0f;
-const CGFloat passwordField_tf_rightMargin = 0.0f;
-const CGFloat passwordField_tf_topMargin = 10.0f;
-const CGFloat passwordField_tf_botomMargin = 1.0f;
-
-
+const CGFloat EditField_tf_leftMargin = 0.0f;
+const CGFloat EditField_tf_rightMargin = 0.0f;
+const CGFloat EditField_tf_topMargin = 10.0f;
+const CGFloat EditField_tf_botomMargin = 1.0f;
 
 
-@implementation PasswordField
+
+
+@implementation EditField
 
 - (void) layoutUI
 {
@@ -35,24 +35,24 @@ const CGFloat passwordField_tf_botomMargin = 1.0f;
     
     if (self.lblHint.hidden == NO)
     {
-        offsetY += passwordField_lbl_topMargin;
+        offsetY += EditField_lbl_topMargin;
         
-        rect_lblHint.origin.x = passwordField_lbl_leftMargin;
+        rect_lblHint.origin.x = EditField_lbl_leftMargin;
         rect_lblHint.origin.y = offsetY;
-        rect_lblHint.size.height = passwordField_lbl_height;
-        rect_lblHint.size.width = self.frame.size.width - passwordField_lbl_leftMargin - passwordField_lbl_rightMargin;
+        rect_lblHint.size.height = EditField_lbl_height;
+        rect_lblHint.size.width = self.frame.size.width - EditField_lbl_leftMargin - EditField_lbl_rightMargin;
         
         offsetY += (rect_lblHint.size.height);
     }
     
     if (self.textField.hidden == NO)
     {
-        offsetY += passwordField_tf_topMargin;
+        offsetY += EditField_tf_topMargin;
         
-        rect_textField.origin.x = passwordField_tf_leftMargin;
+        rect_textField.origin.x = EditField_tf_leftMargin;
         rect_textField.origin.y = offsetY;
-        rect_textField.size.height = self.frame.size.height - offsetY - passwordField_tf_botomMargin;
-        rect_textField.size.width = self.frame.size.width - passwordField_tf_leftMargin - passwordField_tf_rightMargin;
+        rect_textField.size.height = self.frame.size.height - offsetY - EditField_tf_botomMargin;
+        rect_textField.size.width = self.frame.size.width - EditField_tf_leftMargin - EditField_tf_rightMargin;
 
         offsetY += (offsetY + rect_textField.size.height);
     }

@@ -8,7 +8,7 @@
 
 #import "BaseView.h"
 
-@interface PasswordField : BaseView
+@interface EditField : BaseView
 
 @property (nonatomic, strong) UILabel* lblHint;
 @property (nonatomic, strong) UITextField* textField;

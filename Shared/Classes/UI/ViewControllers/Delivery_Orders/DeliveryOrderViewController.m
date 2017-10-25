@@ -171,7 +171,7 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
         rect_segControl.origin.y = topMargin_20px + top;
         rect_segControl.size.height = viewHeight_40px;
 
-        _segControl = [[UISegmentedControl alloc] initWithItems:@[@"Orders(4)", @"Delivery", @"DNS"]];
+        _segControl = [[UISegmentedControl alloc] initWithItems:@[@"Orders(4)", @"Delivery"]];
         _segControl.frame = rect_segControl;
         _segControl.clipsToBounds = YES;
         

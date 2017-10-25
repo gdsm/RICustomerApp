@@ -8,7 +8,7 @@
 
 #import "ChangePasswordViewController.h"
 #import "ChangePasswordModel.h"
-#import "PasswordFieldCell.h"
+#import "EditFieldCell.h"
 
 const CGFloat changePasswordVC_cellHeight = 90;
 
@@ -57,7 +57,7 @@ const CGFloat changePasswordVC_cellHeight = 90;
     
     self.tableView.scrollEnabled = NO;
     
-    if ((self.isPresentedViewController) || (self.isPresentedNavigationController))
+    if (self.showCancel)
     {
         self.navigationItem.leftBarButtonItem = self.bbiCancel;
     }
@@ -149,15 +149,15 @@ const CGFloat changePasswordVC_cellHeight = 90;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PasswordFieldCell *cell = [PasswordFieldCell dequeueFrom:tableView loadFromNib:@"PasswordFieldCell"];
+    EditFieldCell *cell = [EditFieldCell dequeueFrom:tableView loadFromNib:@"EditFieldCell"];
     cell.indexPath = indexPath;
     
     NSString* placeHolderText = nil;
     NSString* key = [self.changePasswordModel.allKeys objectAtIndex:indexPath.row];
     NSString* hintText = [self.changePasswordModel displayValueForKey:key];
     
-    cell.passwordField.hintText = hintText;
-    cell.passwordField.placeHolderText = placeHolderText;
+    cell.editField.hintText = hintText;
+    cell.editField.placeHolderText = placeHolderText;
     [cell updateWithDelegate:self dictionary:self.valueSet key:key keyboardType:UIKeyboardTypeDefault];
     cell.returnKeyType = UIReturnKeyNext;
     
@@ -171,8 +171,8 @@ const CGFloat changePasswordVC_cellHeight = 90;
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    PasswordFieldCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
-    [cell.passwordField.textField becomeFirstResponder];
+    EditFieldCell* cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    [cell.editField.textField becomeFirstResponder];
 }
 
 - (BOOL)tableView:(UITableView *)tableView shouldHighlightRowAtIndexPath:(NSIndexPath *)indexPath
@@ -187,12 +187,12 @@ const CGFloat changePasswordVC_cellHeight = 90;
 {
     if (indexPath.row < (self.changePasswordModel.allKeys.count-1))
     {
-        PasswordFieldCell* nextCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]];
-        [nextCell.passwordField.textField becomeFirstResponder];
+        EditFieldCell* nextCell = [self.tableView cellForRowAtIndexPath:[NSIndexPath indexPathForRow:indexPath.row+1 inSection:0]];
+        [nextCell.editField.textField becomeFirstResponder];
     }
     else
     {
-        PasswordFieldCell* pwdCell = (PasswordFieldCell *)cell;
+        EditFieldCell* pwdCell = (EditFieldCell *)cell;
         [self.changePasswordModel updateWithDictionary:pwdCell.dictionary];
         [self onBottomKeyboardButton:nil];
     }
@@ -200,7 +200,7 @@ const CGFloat changePasswordVC_cellHeight = 90;
 
 - (void) textFieldShouldEndEditing:(UITextField *)textField forIndexPath:(NSIndexPath *)indexPath inCell:(id)cell
 {
-    PasswordFieldCell* pwdCell = (PasswordFieldCell *)cell;
+    EditFieldCell* pwdCell = (EditFieldCell *)cell;
     [self.changePasswordModel updateWithDictionary:pwdCell.dictionary];
 }
 

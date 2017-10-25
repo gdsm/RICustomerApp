@@ -226,6 +226,7 @@ const CGFloat MainVC_UserViewHeight = 160;
 
     [self dismissPopOversAnimated:NO];
     ChangePasswordViewController* view = [[ChangePasswordViewController alloc] init];
+    view.showCancel = YES;
     view.removeCallback = ^{
         [weakSelf safeDismissViewControllerFromSelf:NO animated:YES callbackCompletion:nil];
     };

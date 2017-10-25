@@ -32,6 +32,7 @@ extern const CGFloat BaseVC_BottomTabHeight;
 @property (nonatomic, strong, nullable) UIImageView* bgImgv;
 //@property (nonatomic, strong, nullable) UIBarButtonItem* bbiBack;
 @property (nonatomic, strong, nullable) UIBarButtonItem* bbiCancel;
+@property (nonatomic) BOOL showCancel;
 - (void) onBBICancel:(nullable UIBarButtonItem *)sender;
 
 @property (nonatomic, strong, nullable) BottomTabView* bottomTabView;
