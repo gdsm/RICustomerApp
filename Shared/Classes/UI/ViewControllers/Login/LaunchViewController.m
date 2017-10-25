@@ -10,6 +10,7 @@
 #import "LoginViewController.h"
 #import "MainViewController.h"
 #import "TOPasscodeViewController.h"
+#import "RegistrationViewController.h"
 #import "Globals.h"
 #import "TouchIdView.h"
 #import "DeviceManager.h"
@@ -131,10 +132,12 @@
 
 - (void) showPascode
 {
-    TOPasscodeViewController *view = [[TOPasscodeViewController alloc] initWithStyle:TOPasscodeViewStyleOpaqueLight passcodeType:TOPasscodeTypeFourDigits];
-    view.delegate = self;
-    view.allowBiometricValidation = NO;
-    [self unSafePresent:view onSelf:YES animated:YES callbackCompletion:nil];
+    RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
+    [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
+//    TOPasscodeViewController *view = [[TOPasscodeViewController alloc] initWithStyle:TOPasscodeViewStyleOpaqueLight passcodeType:TOPasscodeTypeFourDigits];
+//    view.delegate = self;
+//    view.allowBiometricValidation = NO;
+//    [self unSafePresent:view onSelf:YES animated:YES callbackCompletion:nil];
 }
 
 

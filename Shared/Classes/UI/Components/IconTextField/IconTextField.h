@@ -11,8 +11,7 @@
 
 @interface IconTextField : BaseView
 
-
-@property (nonatomic, strong) UILabel* lblIcon;
+@property (nonatomic, strong) BaseLabel* lblIcon;
 @property (nonatomic, strong) UIImageView* imgvIcon;
 @property (nonatomic, strong) UITextField* textField;
 @property (nonatomic, strong) BaseView* viewUnderLine;
@@ -22,4 +21,5 @@
 @property (nonatomic, strong) NSString* placeHolderText;
 
 @property (nonatomic, readonly) BOOL isResponder;
+
 @end

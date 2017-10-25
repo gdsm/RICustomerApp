@@ -1,10 +1,3 @@
-//
-//  ThemingAssistant.m
-//  Silver
-//
-//  Created by Dustin Burke on 4/25/13.
-//
-//
 
 #import "ThemingAssistant.h"
 #import "Utilities.h"

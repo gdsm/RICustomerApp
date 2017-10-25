@@ -32,5 +32,14 @@
     self.numberOfLines = 0;
 }
 
+- (void) iconStyling
+{
+    self.backgroundColor = [UIColor clearColor];
+    self.textColor = [Globals shared].themingAssistant.defaultIconColor;
+    self.textAlignment = NSTextAlignmentCenter;
+    self.contentMode = UIViewContentModeScaleAspectFill;
+    self.clipsToBounds = YES;
+    self.font = [Globals shared].defaultIconFont;
+}
 
 @end

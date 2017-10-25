@@ -1,10 +1,3 @@
-//
-//  ThemingAssistant.h
-//  Silver
-//
-//  Created by Dustin Burke on 5/2/13.
-//
-//
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>

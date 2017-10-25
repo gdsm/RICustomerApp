@@ -14,5 +14,6 @@
 - (void) defaultIconFont;
 - (void) defaultTextFont;
 - (void) defaultStyling;
+- (void) iconStyling;
 
 @end

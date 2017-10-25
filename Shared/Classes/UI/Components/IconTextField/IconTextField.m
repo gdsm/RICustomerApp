@@ -139,18 +139,12 @@ const CGFloat iconTextField_tf_botomMargin = 0.0f;
     return _textField;
 }
 
-- (UILabel *) lblIcon
+- (BaseLabel *) lblIcon
 {
     if (_lblIcon == nil)
     {
-        _lblIcon = [[UILabel alloc] initWithFrame:self.frame];
-        _lblIcon.backgroundColor = [UIColor clearColor];
-        _lblIcon.textColor = [Globals shared].themingAssistant.defaultIconColor;
-        _lblIcon.textAlignment = NSTextAlignmentCenter;
-        _lblIcon.contentMode = UIViewContentModeScaleAspectFill;
-        _lblIcon.clipsToBounds = YES;
-        _lblIcon.font = [Globals shared].defaultIconFont;
-        
+        _lblIcon = [[BaseLabel alloc] initWithFrame:self.frame];
+        [_lblIcon iconStyling];
         [self addSubview:_lblIcon];
     }
     return _lblIcon;

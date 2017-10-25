@@ -89,6 +89,8 @@
 		CE14A9AB1F9FDD4300FB9C47 /* OrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9A51F9FDD4300FB9C47 /* OrderViewController.m */; };
 		CE14A9AC1F9FDD4300FB9C47 /* TicketViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9A71F9FDD4300FB9C47 /* TicketViewController.m */; };
 		CE14A9AF1F9FDE8B00FB9C47 /* QuickOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9AE1F9FDE8B00FB9C47 /* QuickOrderViewController.m */; };
+		CE14A9B31F9FF64D00FB9C47 /* RegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE14A9B11F9FF64D00FB9C47 /* RegistrationViewController.m */; };
+		CE14A9B61F9FF6FB00FB9C47 /* RegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE14A9B51F9FF6FB00FB9C47 /* RegistrationViewController.xib */; };
 		CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805CB1F8E5A4F00081FD0 /* BaseTableViewCell.m */; };
 		CE1805D11F8E5EC200081FD0 /* PasswordField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D01F8E5EC200081FD0 /* PasswordField.m */; };
 		CE1805D51F8E621300081FD0 /* PasswordFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D31F8E621300081FD0 /* PasswordFieldCell.m */; };
@@ -368,6 +370,9 @@
 		CE14A9A71F9FDD4300FB9C47 /* TicketViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TicketViewController.m; sourceTree = "<group>"; };
 		CE14A9AD1F9FDE8B00FB9C47 /* QuickOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QuickOrderViewController.h; sourceTree = "<group>"; };
 		CE14A9AE1F9FDE8B00FB9C47 /* QuickOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickOrderViewController.m; sourceTree = "<group>"; };
+		CE14A9B01F9FF64D00FB9C47 /* RegistrationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationViewController.h; sourceTree = "<group>"; };
+		CE14A9B11F9FF64D00FB9C47 /* RegistrationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationViewController.m; sourceTree = "<group>"; };
+		CE14A9B51F9FF6FB00FB9C47 /* RegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationViewController.xib; sourceTree = "<group>"; };
 		CE1805CA1F8E5A4F00081FD0 /* BaseTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		CE1805CB1F8E5A4F00081FD0 /* BaseTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		CE1805CF1F8E5EC200081FD0 /* PasswordField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PasswordField.h; sourceTree = "<group>"; };
@@ -1037,6 +1042,7 @@
 		CE3A71011F8D0C5200F42B9A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE14A9B51F9FF6FB00FB9C47 /* RegistrationViewController.xib */,
 				CE14A99B1F9FC01700FB9C47 /* ProblemSubmitConfirmationViewController.xib */,
 				CE14A97D1F9F827E00FB9C47 /* CreateProblemViewController.xib */,
 				CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */,
@@ -1149,6 +1155,8 @@
 				CE4BC51F1F9EAE88004F1CDC /* LaunchViewController.m */,
 				CE4BC5201F9EAE88004F1CDC /* LoginViewController.h */,
 				CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */,
+				CE14A9B01F9FF64D00FB9C47 /* RegistrationViewController.h */,
+				CE14A9B11F9FF64D00FB9C47 /* RegistrationViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1666,6 +1674,7 @@
 				CEDE05141F9550CE005A3354 /* Products_norm@3x.png in Resources */,
 				CEDE05011F9550CE005A3354 /* Feedback_norm@2x.png in Resources */,
 				CE3A710E1F8D0C5200F42B9A /* LaunchScreen.storyboard in Resources */,
+				CE14A9B61F9FF6FB00FB9C47 /* RegistrationViewController.xib in Resources */,
 				CEDE05041F9550CE005A3354 /* Home_high@2x.png in Resources */,
 				CEDE05111F9550CE005A3354 /* Products_high@3x.png in Resources */,
 				CE12C2671F963FD100D9EDB8 /* logo.png in Resources */,
@@ -1805,6 +1814,7 @@
 				CE12C29D1F9678AE00D9EDB8 /* ItemVariationCell.m in Sources */,
 				CEF999441F8D501C00B7F1FC /* BaseButton.m in Sources */,
 				CE5A4FE51F8FC1D7009D373B /* HomeButton.m in Sources */,
+				CE14A9B31F9FF64D00FB9C47 /* RegistrationViewController.m in Sources */,
 				CE5433441F9A8CE20059CA2C /* DeviceManager.m in Sources */,
 				CE12C2961F966C3800D9EDB8 /* EnterQuantityCell.m in Sources */,
 				CE5433411F9A8CE20059CA2C /* UserSummary.m in Sources */,
