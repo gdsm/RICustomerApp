@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4F8846C21FA2125200FE63A2 /* FeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F8846C11FA2125200FE63A2 /* FeedbackViewController.m */; };
 		CE0ACF7F1F911EBA00984EB3 /* TouchID@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0ACF7C1F911EB500984EB3 /* TouchID@2x.png */; };
 		CE0ACF801F911EBA00984EB3 /* TouchID@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0ACF7D1F911EB700984EB3 /* TouchID@1x.png */; };
 		CE0ACF811F911EBA00984EB3 /* TouchID@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE0ACF7E1F911EB800984EB3 /* TouchID@3x.png */; };
@@ -248,6 +249,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4F8846C01FA2125200FE63A2 /* FeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackViewController.h; sourceTree = "<group>"; };
+		4F8846C11FA2125200FE63A2 /* FeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackViewController.m; sourceTree = "<group>"; };
 		CE0ACF7C1F911EB500984EB3 /* TouchID@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TouchID@2x.png"; sourceTree = "<group>"; };
 		CE0ACF7D1F911EB700984EB3 /* TouchID@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TouchID@1x.png"; sourceTree = "<group>"; };
 		CE0ACF7E1F911EB800984EB3 /* TouchID@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TouchID@3x.png"; sourceTree = "<group>"; };
@@ -631,6 +634,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4F8846BF1FA2123200FE63A2 /* Feedback */ = {
+			isa = PBXGroup;
+			children = (
+				4F8846C01FA2125200FE63A2 /* FeedbackViewController.h */,
+				4F8846C11FA2125200FE63A2 /* FeedbackViewController.m */,
+			);
+			path = Feedback;
+			sourceTree = "<group>";
+		};
 		CE12C2461F963FD000D9EDB8 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
@@ -1395,6 +1407,7 @@
 		CE56856A1F8D746E005922AA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4F8846BF1FA2123200FE63A2 /* Feedback */,
 				CE4E2DCC1FA11F0A00C806A9 /* User */,
 				CE14A99D1F9FDD4300FB9C47 /* IceOrder */,
 				CE4BC5351F9EC08D004F1CDC /* EquipmentService */,
@@ -1791,6 +1804,7 @@
 				CE4BC5311F9EB0AB004F1CDC /* CategoryDetailView.m in Sources */,
 				CED4F5051F8EC6EA00723DAC /* MBProgressHUD.m in Sources */,
 				CE59833A1F910CE40098DC13 /* NSData+Additions.m in Sources */,
+				4F8846C21FA2125200FE63A2 /* FeedbackViewController.m in Sources */,
 				CE12C28C1F96582E00D9EDB8 /* CoreObject.m in Sources */,
 				CE12C2F31F96B36B00D9EDB8 /* TOPasscodeView.m in Sources */,
 				CE14A98F1F9FA14600FB9C47 /* CheckboxSelectionCell.m in Sources */,
