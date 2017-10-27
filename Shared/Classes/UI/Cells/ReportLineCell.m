@@ -62,7 +62,13 @@
 - (void) layoutSubviews
 {
     [super layoutSubviews];
-    _reportLineView.frame = self.bounds;
+    
+    CGRect rect_reportLine = self.reportLineView.frame;
+    rect_reportLine.origin.x = self.reportLineView.contentInsets.left;
+    rect_reportLine.origin.y = self.reportLineView.contentInsets.top;
+    rect_reportLine.size.width = self.contentView.frame.size.width - (self.reportLineView.contentInsets.left + self.reportLineView.contentInsets.right);
+    rect_reportLine.size.height = self.contentView.frame.size.height - (self.reportLineView.contentInsets.top + self.reportLineView.contentInsets.bottom);
+    self.reportLineView.frame = rect_reportLine;
 }
 
 @end

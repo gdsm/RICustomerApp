@@ -8,72 +8,72 @@
 
 #import "EditField.h"
 #import "Globals.h"
+#import "EditFieldStyleTopHintBottomField.h"
+#import "EditFieldStyleLeftHintRightField.h"
+#import "EditFieldStyleSplit.h"
 
-const CGFloat EditField_lbl_leftMargin = 0.0f;
-const CGFloat EditField_lbl_rightMargin = 0.0f;
-const CGFloat EditField_lbl_topMargin = 0.0f;
-const CGFloat EditField_lbl_bottomMargin = 5.0f;
-const CGFloat EditField_lbl_height = 20.0f;
-
-const CGFloat EditField_tf_leftMargin = 0.0f;
-const CGFloat EditField_tf_rightMargin = 0.0f;
-const CGFloat EditField_tf_topMargin = 10.0f;
-const CGFloat EditField_tf_botomMargin = 1.0f;
-
-
+@interface EditField()
+@property (nonatomic, strong) EditFieldStyleTopHintBottomField* editFieldStyleTopHintBottomField;
+@property (nonatomic, strong) EditFieldStyleLeftHintRightField* editFieldStyleLeftHintRightField;
+@property (nonatomic, strong) EditFieldStyleSplit* editFieldSplit;
+@end
 
 
 @implementation EditField
 
-- (void) layoutUI
+- (void)setEditFieldStyle:(EditFieldStyle)editFieldStyle
 {
-    CGRect rect_lblHint = self.lblHint.frame;
-    CGRect rect_textField = self.textField.frame;
-    CGRect rect_underLine = self.viewUnderLine.frame;
+    _editFieldStyle = editFieldStyle;
     
-    CGFloat offsetY = 0;
-    
-    if (self.lblHint.hidden == NO)
+    switch (editFieldStyle)
     {
-        offsetY += EditField_lbl_topMargin;
-        
-        rect_lblHint.origin.x = EditField_lbl_leftMargin;
-        rect_lblHint.origin.y = offsetY;
-        rect_lblHint.size.height = EditField_lbl_height;
-        rect_lblHint.size.width = self.frame.size.width - EditField_lbl_leftMargin - EditField_lbl_rightMargin;
-        
-        offsetY += (rect_lblHint.size.height);
+        case EditFieldStyle_Hint_V_TextField:
+            [self addSubview:self.editFieldStyleTopHintBottomField];
+            break;
+        case EditFieldStyle_Hint_H_TextField:
+            [self addSubview:self.editFieldStyleLeftHintRightField];
+            break;
+        case EditFieldStyle_Split:
+            [self addSubview:self.editFieldSplit];
+            break;
+        default:
+            break;
     }
-    
-    if (self.textField.hidden == NO)
-    {
-        offsetY += EditField_tf_topMargin;
-        
-        rect_textField.origin.x = EditField_tf_leftMargin;
-        rect_textField.origin.y = offsetY;
-        rect_textField.size.height = self.frame.size.height - offsetY - EditField_tf_botomMargin;
-        rect_textField.size.width = self.frame.size.width - EditField_tf_leftMargin - EditField_tf_rightMargin;
-
-        offsetY += (offsetY + rect_textField.size.height);
-    }
-    
-    if (self.viewUnderLine.hidden == NO)
-    {
-        rect_underLine.origin.x = 0;
-        rect_underLine.origin.y = self.frame.size.height - seperatorHeight_1px;
-        rect_underLine.size.width = self.frame.size.width;
-        rect_underLine.size.height = seperatorHeight_1px;
-    }
-    
-    self.lblHint.frame = rect_lblHint;
-    self.textField.frame = rect_textField;
-    self.viewUnderLine.frame = rect_underLine;
 }
 
-- (void)setHintText:(NSString *)hintText
+- (void) layoutUI
+{
+    UIView* view = nil;
+    switch (self.editFieldStyle) {
+        case EditFieldStyle_Hint_V_TextField:
+            view = self.editFieldStyleTopHintBottomField;
+            break;
+        case EditFieldStyle_Hint_H_TextField:
+            view = self.editFieldStyleLeftHintRightField;
+            break;
+        case EditFieldStyle_Split:
+            view = self.editFieldSplit;
+            break;
+        default:
+            break;
+    }
+    
+    if (view != nil)
+    {
+        view.frame = CGRectMake(self.contentInsets.left, self.contentInsets.top, self.contentWidth, self.contentHeight);
+    }
+}
+
+- (void) setHintText:(NSString *)hintText
 {
     _hintText = hintText;
     self.lblHint.text = hintText;
+}
+
+- (void) setPlaceHolderText2:(NSString *)placeHolderText2
+{
+    _placeHolderText = placeHolderText2;
+    self.textField2.placeholder = placeHolderText2;
 }
 
 - (void) setPlaceHolderText:(NSString *)placeHolderText
@@ -83,54 +83,129 @@ const CGFloat EditField_tf_botomMargin = 1.0f;
 
 - (UILabel *)lblHint
 {
-    if (_lblHint == nil)
+    switch (self.editFieldStyle)
     {
-        _lblHint = [[UILabel alloc] initWithFrame:self.frame];
-        _lblHint.backgroundColor = [UIColor clearColor];
-        _lblHint.clipsToBounds = YES;
-        _lblHint.textColor = [Globals shared].themingAssistant.defaultTextColor;
-        _lblHint.font = [Globals shared].defaultInfoFont;
-        _lblHint.textAlignment = NSTextAlignmentLeft;
-        
-        [self addSubview:_lblHint];
+        case EditFieldStyle_Hint_V_TextField:
+            return self.editFieldStyleTopHintBottomField.lblHint;
+            break;
+        case EditFieldStyle_Hint_H_TextField:
+            return self.editFieldStyleLeftHintRightField.lblHint;
+            break;
+        case EditFieldStyle_Split:
+            return self.editFieldSplit.lblHint;
+            break;
+        default:
+            break;
     }
-    return _lblHint;
+    return nil;
 }
 
 - (UITextField *) textField
 {
-    if (_textField == nil)
+    switch (self.editFieldStyle)
     {
-        _textField = [[UITextField alloc] initWithFrame:self.frame];
-        _textField.borderStyle = UITextBorderStyleNone;
-        _textField.backgroundColor = [UIColor clearColor];
-        _textField.textColor = [Globals shared].themingAssistant.defaultTextColor;
-        _textField.font = [[Globals shared] defaultTextFont];
-        _textField.contentMode = UIViewContentModeScaleAspectFill;
-        _textField.autocorrectionType = UITextAutocorrectionTypeNo;
-        _textField.clipsToBounds = YES;
-        
-        [self addSubview:_textField];
+        case EditFieldStyle_Hint_V_TextField:
+            return self.editFieldStyleTopHintBottomField.textField;
+            break;
+        case EditFieldStyle_Hint_H_TextField:
+            return self.editFieldStyleLeftHintRightField.textField;
+            break;
+        case EditFieldStyle_Split:
+            return self.editFieldSplit.viewTextFieldLeft.textField;
+            break;
+        default:
+            break;
     }
-    return _textField;
+    return nil;
 }
 
 - (BaseView *) viewUnderLine
 {
-    if (_viewUnderLine == nil)
+    switch (self.editFieldStyle)
     {
-        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, seperatorHeight_1px)];
-        _viewUnderLine.hidden = NO;
-        _viewUnderLine.backgroundColor = [Globals shared].themingAssistant.defaultBorderColor;
-        
-        [self addSubview:_viewUnderLine];
+        case EditFieldStyle_Hint_V_TextField:
+            return self.editFieldStyleTopHintBottomField.viewUnderline;
+            break;
+        case EditFieldStyle_Hint_H_TextField:
+            return self.editFieldStyleLeftHintRightField.viewUnderline;
+            break;
+        case EditFieldStyle_Split:
+            return self.editFieldSplit.viewTextFieldLeft.viewUnderline;
+            break;
+        default:
+            break;
     }
-    return _viewUnderLine;
+    return nil;
+}
+
+- (UITextField *) textField2
+{
+    switch (self.editFieldStyle)
+    {
+        case EditFieldStyle_Split:
+            return self.editFieldSplit.viewTextFieldRight.textField;
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
+- (BaseView *) viewUnderLine2
+{
+    switch (self.editFieldStyle)
+    {
+        case EditFieldStyle_Split:
+            return self.editFieldSplit.viewTextFieldRight.viewUnderline;
+            break;
+        default:
+            break;
+    }
+    return nil;
+}
+
+- (void)setHideField2:(BOOL)hideField2
+{
+    _hideField2 = hideField2;
+    if (self.editFieldStyle == EditFieldStyle_Split){
+        self.editFieldSplit.viewTextFieldRight.hidden = YES;
+    }
 }
 
 - (BOOL) isResponder
 {
     return self.textField.isFirstResponder;
+}
+
+
+- (EditFieldStyleTopHintBottomField *) editFieldStyleTopHintBottomField
+{
+    if (_editFieldStyleTopHintBottomField == nil)
+    {
+        _editFieldStyleTopHintBottomField = [EditFieldStyleTopHintBottomField instance];
+        [_editFieldStyleTopHintBottomField updateUI];
+    }
+    return _editFieldStyleTopHintBottomField;
+}
+
+- (EditFieldStyleLeftHintRightField *) editFieldStyleLeftHintRightField
+{
+    if (_editFieldStyleLeftHintRightField == nil)
+    {
+        _editFieldStyleLeftHintRightField = [EditFieldStyleLeftHintRightField instance];
+        [_editFieldStyleLeftHintRightField updateUI];
+    }
+    return _editFieldStyleLeftHintRightField;
+}
+
+- (EditFieldStyleSplit *)editFieldSplit
+{
+    if (_editFieldSplit == nil)
+    {
+        _editFieldSplit = [EditFieldStyleSplit instance];
+        [_editFieldSplit updateUI];
+    }
+    return _editFieldSplit;
 }
 
 @end

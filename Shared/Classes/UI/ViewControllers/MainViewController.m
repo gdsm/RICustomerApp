@@ -14,6 +14,7 @@
 #import "QuickOrderViewController.h"
 #import "UserOptionsViewController.h"
 #import "ChangePasswordViewController.h"
+#import "ProblemCategoryViewController.h"
 
 #import "HomeButtonsView.h"
 #import "QuickOrderView.h"
@@ -60,8 +61,6 @@ const CGFloat MainVC_UserViewHeight = 160;
 {
     [super viewWillAppear:animated];
     self.bottomTabView.hidden = NO;
-    [self.bottomTabView unselectBottomTabs];
-    self.bottomTabView.btnHome.selected = YES;
 }
 
 - (void)setupUI
@@ -154,7 +153,7 @@ const CGFloat MainVC_UserViewHeight = 160;
     [self.bottomTabView unselectBottomTabs];
     self.bottomTabView.btnReportAProb.selected = YES;
     [self.navigationController popToViewController:self animated:NO];
-    ReportProblemViewController* view = [[ReportProblemViewController alloc] init];
+    ProblemCategoryViewController* view = [[ProblemCategoryViewController alloc] init];
     [self safePush:view animated:YES];
 }
 
@@ -170,10 +169,17 @@ const CGFloat MainVC_UserViewHeight = 160;
     [self.bottomTabView unselectBottomTabs];
     self.bottomTabView.btnPlaceOrder.selected = YES;
     [self.navigationController popToViewController:self animated:NO];
+    ItemViewController* view = [[ItemViewController alloc] initWithStyle:UITableViewStylePlain];
+    [self safePush:view animated:YES];
+}
+
+- (void) placeQuickOrder
+{
+    [self.bottomTabView unselectBottomTabs];
+    self.bottomTabView.btnPlaceOrder.selected = YES;
+    [self.navigationController popToViewController:self animated:NO];
     QuickOrderViewController* view = [[QuickOrderViewController alloc] init];
     [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
-//    ItemViewController* view = [[ItemViewController alloc] initWithStyle:UITableViewStylePlain];
-//    [self safePush:view animated:YES];
 }
 
 - (void) showUserInfo
@@ -453,7 +459,7 @@ const CGFloat MainVC_UserViewHeight = 160;
         _viewQuickOrder = [[QuickOrderView alloc] initWithFrame:rect];
         [_viewQuickOrder updateUI];
         _viewQuickOrder.onQuickCheckout = ^(id sender) {
-            [weakSelf placeAnOrder];
+            [weakSelf placeQuickOrder];
         };
         [self.view addSubview:_viewQuickOrder];
     }

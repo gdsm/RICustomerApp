@@ -166,16 +166,24 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
     if (indexPath.row == 0)
     {
         ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
-        [cell updateCell];
+
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
         
         CGFloat div[] = {0.3f, 0.7f};
+
         [cell initWithDividers:div count:3];
         [cell.reportLineView setTitles:@"Order No.", @"Total Amount", @"Status", nil];
         [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
         [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentCenter;
         [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentRight;
+
+        UIEdgeInsets inset = cell.reportLineView.contentInsets;
+        inset.left = 0;
+        inset.right = 0;
+        cell.reportLineView.contentInsets = inset;
         
+        [cell updateCell];
+
         return cell;
     }
     else

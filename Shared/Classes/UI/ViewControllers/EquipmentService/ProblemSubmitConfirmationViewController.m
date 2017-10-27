@@ -36,6 +36,8 @@
     Your Equipment Service request is submitted successfully. One of our technician will contact you shortly.\r\
     If you would like immediate assistance, please call us at 1-000-000-0000.";
     self.navigationItem.rightBarButtonItem = self.bbiDone;
+    
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning {

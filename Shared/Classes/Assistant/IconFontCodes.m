@@ -101,4 +101,14 @@
     return @"\uf136";
 }
 
+- (NSString *)call
+{
+    return @"\uf2be";
+}
+
+- (NSString *)message
+{
+    return @"\uf194";
+}
+
 @end

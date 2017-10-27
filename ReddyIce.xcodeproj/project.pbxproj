@@ -142,6 +142,9 @@
 		CE4E2DCA1FA0FF8B00C806A9 /* QuickOrder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4E2DC71FA0FF8B00C806A9 /* QuickOrder@3x.png */; };
 		CE4E2DCB1FA0FF8B00C806A9 /* QuickOrder@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE4E2DC81FA0FF8B00C806A9 /* QuickOrder@1x.png */; };
 		CE4E2DCF1FA11F3300C806A9 /* UserOptionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E2DCE1FA11F3300C806A9 /* UserOptionsViewController.m */; };
+		CE4E2DD21FA136F600C806A9 /* UserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E2DD11FA136F600C806A9 /* UserProfileViewController.m */; };
+		CE4E2DD51FA15BA500C806A9 /* CustomerCareView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4E2DD41FA15BA500C806A9 /* CustomerCareView.m */; };
+		CE4E2DD71FA15BC100C806A9 /* CustomerCareView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE4E2DD61FA15BC100C806A9 /* CustomerCareView.xib */; };
 		CE5433221F9A5C9F0059CA2C /* OrderConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */; };
 		CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433261F9A8CE20059CA2C /* ItemSummary.m */; };
 		CE5433401F9A8CE20059CA2C /* ChangePasswordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5433291F9A8CE20059CA2C /* ChangePasswordModel.m */; };
@@ -174,6 +177,20 @@
 		CE5A4FFD1F8FF153009D373B /* RILogo@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A4FFA1F8FF152009D373B /* RILogo@1x.png */; };
 		CE5A4FFE1F8FF153009D373B /* RILogo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CE5A4FFB1F8FF153009D373B /* RILogo@2x.png */; };
 		CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE5A50001F9022A6009D373B /* HeaderInfoView.m */; };
+		CE6C483A1FA24F7B00471727 /* IconTextFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C48381FA24F7B00471727 /* IconTextFieldCell.m */; };
+		CE6C483D1FA24FBE00471727 /* IconTextFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6C483C1FA24FBE00471727 /* IconTextFieldCell.xib */; };
+		CE6C48401FA2567500471727 /* EditFieldStyleTopHintBottomField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C483F1FA2567500471727 /* EditFieldStyleTopHintBottomField.m */; };
+		CE6C48421FA256A000471727 /* EditField.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6C48411FA256A000471727 /* EditField.xib */; };
+		CE6C48451FA26AC300471727 /* EditFieldStyleLeftHintRightField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C48441FA26AC300471727 /* EditFieldStyleLeftHintRightField.m */; };
+		CE6C484C1FA2759600471727 /* EditFieldStyleSplit.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C484B1FA2759600471727 /* EditFieldStyleSplit.m */; };
+		CE6C484F1FA2914700471727 /* UnderlineTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C484E1FA2914700471727 /* UnderlineTextField.m */; };
+		CE6C48521FA2933A00471727 /* BaseTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C48511FA2933A00471727 /* BaseTextField.m */; };
+		CE6C48551FA2999100471727 /* ToggleSettingView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C48541FA2999100471727 /* ToggleSettingView.m */; };
+		CE6C48571FA299AE00471727 /* ToggleSettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6C48561FA299AE00471727 /* ToggleSettingView.xib */; };
+		CE6C486A1FA29D8A00471727 /* ToggleSettingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C48681FA29D8A00471727 /* ToggleSettingCell.m */; };
+		CE6C486F1FA29DB900471727 /* ToggleSettingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6C486D1FA29DB900471727 /* ToggleSettingCell.xib */; };
+		CE6C48731FA2A78C00471727 /* RegistrationConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE6C48711FA2A78C00471727 /* RegistrationConfirmationViewController.m */; };
+		CE6C48761FA2A7D600471727 /* RegistrationConfirmationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE6C48751FA2A7D600471727 /* RegistrationConfirmationViewController.xib */; };
 		CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */; };
 		CE70B8371F9AB44A00135A38 /* BaseLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE70B8361F9AB44A00135A38 /* BaseLabel.m */; };
 		CE70B83E1F9AB67500135A38 /* ReportLineCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE70B83D1F9AB67400135A38 /* ReportLineCell.xib */; };
@@ -195,6 +212,7 @@
 		CED748F51F97C88E006810D5 /* TicketLineItemHeaderCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CED748F31F97C88E006810D5 /* TicketLineItemHeaderCell.m */; };
 		CED748F91F97C8EB006810D5 /* TicketLineItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED748F71F97C8EA006810D5 /* TicketLineItemCell.xib */; };
 		CED748FA1F97C8EB006810D5 /* TicketLineItemHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED748F81F97C8EB006810D5 /* TicketLineItemHeaderCell.xib */; };
+		CED9A8471FA38A48009E2288 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = CED9A8461FA38A46009E2288 /* Launch.png */; };
 		CEDE04D71F953EFC005A3354 /* CheckoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDE04D61F953EFC005A3354 /* CheckoutView.m */; };
 		CEDE04F71F9550CE005A3354 /* Delivery_high@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDE04D91F9550CE005A3354 /* Delivery_high@1x.png */; };
 		CEDE04F81F9550CE005A3354 /* Delivery_high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDE04DA1F9550CE005A3354 /* Delivery_high@2x.png */; };
@@ -470,6 +488,11 @@
 		CE4E2DC81FA0FF8B00C806A9 /* QuickOrder@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "QuickOrder@1x.png"; sourceTree = "<group>"; };
 		CE4E2DCD1FA11F3300C806A9 /* UserOptionsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserOptionsViewController.h; sourceTree = "<group>"; };
 		CE4E2DCE1FA11F3300C806A9 /* UserOptionsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserOptionsViewController.m; sourceTree = "<group>"; };
+		CE4E2DD01FA136F600C806A9 /* UserProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfileViewController.h; sourceTree = "<group>"; };
+		CE4E2DD11FA136F600C806A9 /* UserProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserProfileViewController.m; sourceTree = "<group>"; };
+		CE4E2DD31FA15BA500C806A9 /* CustomerCareView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomerCareView.h; sourceTree = "<group>"; };
+		CE4E2DD41FA15BA500C806A9 /* CustomerCareView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomerCareView.m; sourceTree = "<group>"; };
+		CE4E2DD61FA15BC100C806A9 /* CustomerCareView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomerCareView.xib; sourceTree = "<group>"; };
 		CE5433211F9A5C9F0059CA2C /* OrderConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OrderConfirmationViewController.xib; sourceTree = "<group>"; };
 		CE5433251F9A8CE20059CA2C /* ItemSummary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemSummary.h; sourceTree = "<group>"; };
 		CE5433261F9A8CE20059CA2C /* ItemSummary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemSummary.m; sourceTree = "<group>"; };
@@ -530,6 +553,29 @@
 		CE5A4FFB1F8FF153009D373B /* RILogo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RILogo@2x.png"; sourceTree = "<group>"; };
 		CE5A4FFF1F9022A6009D373B /* HeaderInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderInfoView.h; sourceTree = "<group>"; };
 		CE5A50001F9022A6009D373B /* HeaderInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeaderInfoView.m; sourceTree = "<group>"; };
+		CE6C48371FA24F7B00471727 /* IconTextFieldCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = IconTextFieldCell.h; sourceTree = "<group>"; };
+		CE6C48381FA24F7B00471727 /* IconTextFieldCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IconTextFieldCell.m; sourceTree = "<group>"; };
+		CE6C483C1FA24FBE00471727 /* IconTextFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = IconTextFieldCell.xib; sourceTree = "<group>"; };
+		CE6C483E1FA2567500471727 /* EditFieldStyleTopHintBottomField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditFieldStyleTopHintBottomField.h; sourceTree = "<group>"; };
+		CE6C483F1FA2567500471727 /* EditFieldStyleTopHintBottomField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditFieldStyleTopHintBottomField.m; sourceTree = "<group>"; };
+		CE6C48411FA256A000471727 /* EditField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EditField.xib; sourceTree = "<group>"; };
+		CE6C48431FA26AC300471727 /* EditFieldStyleLeftHintRightField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditFieldStyleLeftHintRightField.h; sourceTree = "<group>"; };
+		CE6C48441FA26AC300471727 /* EditFieldStyleLeftHintRightField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditFieldStyleLeftHintRightField.m; sourceTree = "<group>"; };
+		CE6C484A1FA2759600471727 /* EditFieldStyleSplit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EditFieldStyleSplit.h; sourceTree = "<group>"; };
+		CE6C484B1FA2759600471727 /* EditFieldStyleSplit.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EditFieldStyleSplit.m; sourceTree = "<group>"; };
+		CE6C484D1FA2914700471727 /* UnderlineTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UnderlineTextField.h; sourceTree = "<group>"; };
+		CE6C484E1FA2914700471727 /* UnderlineTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UnderlineTextField.m; sourceTree = "<group>"; };
+		CE6C48501FA2933A00471727 /* BaseTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = BaseTextField.h; path = Shared/Classes/UI/Components/PasswordField/BaseTextField.h; sourceTree = SOURCE_ROOT; };
+		CE6C48511FA2933A00471727 /* BaseTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = BaseTextField.m; path = Shared/Classes/UI/Components/PasswordField/BaseTextField.m; sourceTree = SOURCE_ROOT; };
+		CE6C48531FA2999100471727 /* ToggleSettingView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToggleSettingView.h; sourceTree = "<group>"; };
+		CE6C48541FA2999100471727 /* ToggleSettingView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToggleSettingView.m; sourceTree = "<group>"; };
+		CE6C48561FA299AE00471727 /* ToggleSettingView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ToggleSettingView.xib; sourceTree = "<group>"; };
+		CE6C48671FA29D8A00471727 /* ToggleSettingCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToggleSettingCell.h; sourceTree = "<group>"; };
+		CE6C48681FA29D8A00471727 /* ToggleSettingCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToggleSettingCell.m; sourceTree = "<group>"; };
+		CE6C486D1FA29DB900471727 /* ToggleSettingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToggleSettingCell.xib; sourceTree = "<group>"; };
+		CE6C48701FA2A78C00471727 /* RegistrationConfirmationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RegistrationConfirmationViewController.h; sourceTree = "<group>"; };
+		CE6C48711FA2A78C00471727 /* RegistrationConfirmationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RegistrationConfirmationViewController.m; sourceTree = "<group>"; };
+		CE6C48751FA2A7D600471727 /* RegistrationConfirmationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RegistrationConfirmationViewController.xib; sourceTree = "<group>"; };
 		CE70B8221F9AAFC700135A38 /* DeliveryOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeliveryOrderViewController.h; sourceTree = "<group>"; };
 		CE70B8231F9AAFC700135A38 /* DeliveryOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeliveryOrderViewController.m; sourceTree = "<group>"; };
 		CE70B8351F9AB44A00135A38 /* BaseLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseLabel.h; sourceTree = "<group>"; };
@@ -567,6 +613,7 @@
 		CED748F31F97C88E006810D5 /* TicketLineItemHeaderCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TicketLineItemHeaderCell.m; sourceTree = "<group>"; };
 		CED748F71F97C8EA006810D5 /* TicketLineItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketLineItemCell.xib; sourceTree = "<group>"; };
 		CED748F81F97C8EB006810D5 /* TicketLineItemHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketLineItemHeaderCell.xib; sourceTree = "<group>"; };
+		CED9A8461FA38A46009E2288 /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
 		CEDE04D51F953EFC005A3354 /* CheckoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckoutView.h; sourceTree = "<group>"; };
 		CEDE04D61F953EFC005A3354 /* CheckoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckoutView.m; sourceTree = "<group>"; };
 		CEDE04D91F9550CE005A3354 /* Delivery_high@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delivery_high@1x.png"; sourceTree = "<group>"; };
@@ -828,6 +875,10 @@
 				CE42D6A11F9E8A9500A9FE50 /* DriverInfoCell.m */,
 				CE14A98C1F9FA14600FB9C47 /* CheckboxSelectionCell.h */,
 				CE14A98D1F9FA14600FB9C47 /* CheckboxSelectionCell.m */,
+				CE6C48371FA24F7B00471727 /* IconTextFieldCell.h */,
+				CE6C48381FA24F7B00471727 /* IconTextFieldCell.m */,
+				CE6C48671FA29D8A00471727 /* ToggleSettingCell.h */,
+				CE6C48681FA29D8A00471727 /* ToggleSettingCell.m */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -837,6 +888,14 @@
 			children = (
 				CE1805CF1F8E5EC200081FD0 /* EditField.h */,
 				CE1805D01F8E5EC200081FD0 /* EditField.m */,
+				CE6C483E1FA2567500471727 /* EditFieldStyleTopHintBottomField.h */,
+				CE6C483F1FA2567500471727 /* EditFieldStyleTopHintBottomField.m */,
+				CE6C48431FA26AC300471727 /* EditFieldStyleLeftHintRightField.h */,
+				CE6C48441FA26AC300471727 /* EditFieldStyleLeftHintRightField.m */,
+				CE6C484A1FA2759600471727 /* EditFieldStyleSplit.h */,
+				CE6C484B1FA2759600471727 /* EditFieldStyleSplit.m */,
+				CE6C484D1FA2914700471727 /* UnderlineTextField.h */,
+				CE6C484E1FA2914700471727 /* UnderlineTextField.m */,
 			);
 			path = PasswordField;
 			sourceTree = "<group>";
@@ -844,6 +903,8 @@
 		CE1805D71F8E623700081FD0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C486D1FA29DB900471727 /* ToggleSettingCell.xib */,
+				CE6C483C1FA24FBE00471727 /* IconTextFieldCell.xib */,
 				CE14A9911F9FA1A700FB9C47 /* CheckboxSelectionCell.xib */,
 				CE42D6A51F9E8ADF00A9FE50 /* DriverInfoCell.xib */,
 				CE42D6981F9E3F0200A9FE50 /* HistoryCell.xib */,
@@ -1022,6 +1083,8 @@
 				CE3CE7D41F8E72320050B656 /* BaseTextEntryCell.m */,
 				CE70B8351F9AB44A00135A38 /* BaseLabel.h */,
 				CE70B8361F9AB44A00135A38 /* BaseLabel.m */,
+				CE6C48501FA2933A00471727 /* BaseTextField.h */,
+				CE6C48511FA2933A00471727 /* BaseTextField.m */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -1054,6 +1117,7 @@
 		CE3A71011F8D0C5200F42B9A /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				CE6C48751FA2A7D600471727 /* RegistrationConfirmationViewController.xib */,
 				CE14A9B51F9FF6FB00FB9C47 /* RegistrationViewController.xib */,
 				CE14A99B1F9FC01700FB9C47 /* ProblemSubmitConfirmationViewController.xib */,
 				CE14A97D1F9F827E00FB9C47 /* CreateProblemViewController.xib */,
@@ -1085,6 +1149,7 @@
 		CE3A71061F8D0C5200F42B9A /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CED9A8461FA38A46009E2288 /* Launch.png */,
 				CE4E2DBF1FA0F80D00C806A9 /* IceOrder */,
 				CE12C2461F963FD000D9EDB8 /* Backgrounds */,
 				CE12C2451F963FCF00D9EDB8 /* barcode.png */,
@@ -1155,6 +1220,9 @@
 			isa = PBXGroup;
 			children = (
 				CE42D69E1F9E86ED00A9FE50 /* DriverInfoView.xib */,
+				CE4E2DD61FA15BC100C806A9 /* CustomerCareView.xib */,
+				CE6C48411FA256A000471727 /* EditField.xib */,
+				CE6C48561FA299AE00471727 /* ToggleSettingView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1170,6 +1238,8 @@
 				CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */,
 				CE14A9B01F9FF64D00FB9C47 /* RegistrationViewController.h */,
 				CE14A9B11F9FF64D00FB9C47 /* RegistrationViewController.m */,
+				CE6C48701FA2A78C00471727 /* RegistrationConfirmationViewController.h */,
+				CE6C48711FA2A78C00471727 /* RegistrationConfirmationViewController.m */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -1187,6 +1257,10 @@
 				CE4BC52D1F9EB0AB004F1CDC /* ReportLineView.m */,
 				CE4BC52E1F9EB0AB004F1CDC /* SliderView.h */,
 				CE4BC52F1F9EB0AB004F1CDC /* SliderView.m */,
+				CE4E2DD31FA15BA500C806A9 /* CustomerCareView.h */,
+				CE4E2DD41FA15BA500C806A9 /* CustomerCareView.m */,
+				CE6C48531FA2999100471727 /* ToggleSettingView.h */,
+				CE6C48541FA2999100471727 /* ToggleSettingView.m */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1232,6 +1306,8 @@
 			children = (
 				CE4E2DCD1FA11F3300C806A9 /* UserOptionsViewController.h */,
 				CE4E2DCE1FA11F3300C806A9 /* UserOptionsViewController.m */,
+				CE4E2DD01FA136F600C806A9 /* UserProfileViewController.h */,
+				CE4E2DD11FA136F600C806A9 /* UserProfileViewController.m */,
 			);
 			path = User;
 			sourceTree = "<group>";
@@ -1663,6 +1739,7 @@
 				CE5A4FF21F8FDC6A009D373B /* Material-Design-Iconic-Font.ttf in Resources */,
 				CE0ACF801F911EBA00984EB3 /* TouchID@1x.png in Resources */,
 				CEDE04FF1F9550CE005A3354 /* Feedback_high@3x.png in Resources */,
+				CE6C483D1FA24FBE00471727 /* IconTextFieldCell.xib in Resources */,
 				CEDE05061F9550CE005A3354 /* Home_norm@1x.png in Resources */,
 				CE12C2601F963FD100D9EDB8 /* barcode.png in Resources */,
 				CEDE05021F9550CE005A3354 /* Feedback_norm@3x.png in Resources */,
@@ -1671,7 +1748,10 @@
 				CE42D69F1F9E86ED00A9FE50 /* DriverInfoView.xib in Resources */,
 				CEDE04F91F9550CE005A3354 /* Delivery_high@3x.png in Resources */,
 				CE70B83E1F9AB67500135A38 /* ReportLineCell.xib in Resources */,
+				CE6C48571FA299AE00471727 /* ToggleSettingView.xib in Resources */,
+				CE6C486F1FA29DB900471727 /* ToggleSettingCell.xib in Resources */,
 				CE12C26A1F963FD100D9EDB8 /* prod_sample_2.png in Resources */,
+				CE6C48761FA2A7D600471727 /* RegistrationConfirmationViewController.xib in Resources */,
 				CEDE050F1F9550CE005A3354 /* Products_high@1x.png in Resources */,
 				CE12C2721F963FD100D9EDB8 /* Order@1x.png in Resources */,
 				CE12C2681F963FD100D9EDB8 /* prod_sample_0.png in Resources */,
@@ -1705,6 +1785,7 @@
 				CE3A71101F8D0C5200F42B9A /* LoginViewController.xib in Resources */,
 				CEDE050B1F9550CE005A3354 /* Problem_high@3x.png in Resources */,
 				CEDE05091F9550CE005A3354 /* Problem_high@1x.png in Resources */,
+				CE6C48421FA256A000471727 /* EditField.xib in Resources */,
 				CE12C2771F963FD100D9EDB8 /* Problem@3x.png in Resources */,
 				CE4E2DC91FA0FF8B00C806A9 /* QuickOrder@2x.png in Resources */,
 				CEDE04FA1F9550CE005A3354 /* Delivery_norm@1x.png in Resources */,
@@ -1713,10 +1794,12 @@
 				CE5A4FFC1F8FF153009D373B /* RILogo@3x.png in Resources */,
 				CE12C2731F963FD100D9EDB8 /* Order@2x.png in Resources */,
 				CE14A9921F9FA1A700FB9C47 /* CheckboxSelectionCell.xib in Resources */,
+				CE4E2DD71FA15BC100C806A9 /* CustomerCareView.xib in Resources */,
 				CEDE04F81F9550CE005A3354 /* Delivery_high@2x.png in Resources */,
 				CE12C26E1F963FD100D9EDB8 /* Delivery@3x.png in Resources */,
 				CEDE050C1F9550CE005A3354 /* Problem_norm@1x.png in Resources */,
 				CE42D6991F9E3F0200A9FE50 /* HistoryCell.xib in Resources */,
+				CED9A8471FA38A48009E2288 /* Launch.png in Resources */,
 				CEDE05141F9550CE005A3354 /* Products_norm@3x.png in Resources */,
 				CEDE05011F9550CE005A3354 /* Feedback_norm@2x.png in Resources */,
 				CE3A710E1F8D0C5200F42B9A /* LaunchScreen.storyboard in Resources */,
@@ -1770,12 +1853,14 @@
 				CE12C2F81F96B36B00D9EDB8 /* TOPasscodeCircleView.m in Sources */,
 				CE12C2861F96546B00D9EDB8 /* SliderCell.m in Sources */,
 				CEB4DA111F97ABF50059CDBD /* TicketLineItemView.m in Sources */,
+				CE6C48731FA2A78C00471727 /* RegistrationConfirmationViewController.m in Sources */,
 				CE3CE7D51F8E72320050B656 /* BaseTextEntryCell.m in Sources */,
 				CEC3A7D81F9BFD8B00392073 /* OrderHistoryViewController.m in Sources */,
 				CE12C2F51F96B36B00D9EDB8 /* TOPasscodeSettingsKeypadView.m in Sources */,
 				CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */,
 				CE4BC5301F9EB0AB004F1CDC /* BottomTabView.m in Sources */,
 				CE12C2EC1F96B36B00D9EDB8 /* TOPasscodeViewContentLayout.m in Sources */,
+				CE4E2DD51FA15BA500C806A9 /* CustomerCareView.m in Sources */,
 				CE5433401F9A8CE20059CA2C /* ChangePasswordModel.m in Sources */,
 				CE14A9AC1F9FDD4300FB9C47 /* TicketViewController.m in Sources */,
 				CE5A4FF01F8FD504009D373B /* IconFontCodes.m in Sources */,
@@ -1809,6 +1894,7 @@
 				CE0ACF9C1F9137A300984EB3 /* UserInfoView.m in Sources */,
 				CE42D6A31F9E8A9500A9FE50 /* DriverInfoCell.m in Sources */,
 				CE12C2921F96638400D9EDB8 /* EnterQuantityView.m in Sources */,
+				CE6C484C1FA2759600471727 /* EditFieldStyleSplit.m in Sources */,
 				CE12C2F71F96B36B00D9EDB8 /* TOPasscodeButtonLabel.m in Sources */,
 				CE3A71151F8D0C7B00F42B9A /* BaseViewController.m in Sources */,
 				CE11E12B1F93CCFA0043104F /* ItemVariationView.m in Sources */,
@@ -1823,6 +1909,7 @@
 				CE14A97B1F9F825000FB9C47 /* CreateProblemViewController.m in Sources */,
 				CE4BC5321F9EB0AB004F1CDC /* CrauselView.m in Sources */,
 				CE14A9AB1F9FDD4300FB9C47 /* OrderViewController.m in Sources */,
+				CE6C486A1FA29D8A00471727 /* ToggleSettingCell.m in Sources */,
 				CE12C2BA1F969D9900D9EDB8 /* CartView.m in Sources */,
 				CE3A710C1F8D0C5200F42B9A /* Globals.m in Sources */,
 				CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */,
@@ -1836,14 +1923,18 @@
 				CE14A9881F9F88B500FB9C47 /* GridPanelCell.m in Sources */,
 				CE3A71301F8D274E00F42B9A /* BaseTableViewController.m in Sources */,
 				CE42D6921F9E382700A9FE50 /* PathCheckboxView.m in Sources */,
+				CE6C483A1FA24F7B00471727 /* IconTextFieldCell.m in Sources */,
 				CE23D2091F942E640021403B /* ItemCell.m in Sources */,
 				CE1805D11F8E5EC200081FD0 /* EditField.m in Sources */,
+				CE6C48451FA26AC300471727 /* EditFieldStyleLeftHintRightField.m in Sources */,
+				CE6C48401FA2567500471727 /* EditFieldStyleTopHintBottomField.m in Sources */,
 				CEF9994B1F8D538600B7F1FC /* Utilities.m in Sources */,
 				CE12C2F91F96B36B00D9EDB8 /* TOPasscodeFixedInputView.m in Sources */,
 				CE12C2F61F96B36B00D9EDB8 /* TOPasscodeSettingsWarningLabel.m in Sources */,
 				CE5433511F9A90580059CA2C /* TicketManager.m in Sources */,
 				CE14A9A91F9FDD4300FB9C47 /* ItemViewController.m in Sources */,
 				CE14A9AF1F9FDE8B00FB9C47 /* QuickOrderViewController.m in Sources */,
+				CE6C48521FA2933A00471727 /* BaseTextField.m in Sources */,
 				CEC3A7D51F9BFD6E00392073 /* DeliveryHistoryViewController.m in Sources */,
 				CE12C2F41F96B36B00D9EDB8 /* TOPasscodeSettingsKeypadButton.m in Sources */,
 				CE14A98B1F9FA0A500FB9C47 /* ProblemCategoryViewController.m in Sources */,
@@ -1859,14 +1950,17 @@
 				CE3A71241F8D122400F42B9A /* BlockUtils.m in Sources */,
 				CE3A71291F8D1AAB00F42B9A /* LogoView.m in Sources */,
 				CE4BC5241F9EAE89004F1CDC /* LoginViewController.m in Sources */,
+				CE6C484F1FA2914700471727 /* UnderlineTextField.m in Sources */,
 				CE12C29D1F9678AE00D9EDB8 /* ItemVariationCell.m in Sources */,
 				CEF999441F8D501C00B7F1FC /* BaseButton.m in Sources */,
 				CE5A4FE51F8FC1D7009D373B /* HomeButton.m in Sources */,
 				CE14A9B31F9FF64D00FB9C47 /* RegistrationViewController.m in Sources */,
 				CE5433441F9A8CE20059CA2C /* DeviceManager.m in Sources */,
 				CE12C2961F966C3800D9EDB8 /* EnterQuantityCell.m in Sources */,
+				CE4E2DD21FA136F600C806A9 /* UserProfileViewController.m in Sources */,
 				CE5433411F9A8CE20059CA2C /* UserSummary.m in Sources */,
 				CE5A4FE81F8FC3B6009D373B /* HomeButtonsView.m in Sources */,
+				CE6C48551FA2999100471727 /* ToggleSettingView.m in Sources */,
 				CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */,
 				CE3A70CB1F8D0B9900F42B9A /* main.m in Sources */,
 				CE42D68F1F9E2F8D00A9FE50 /* HistoryView.m in Sources */,

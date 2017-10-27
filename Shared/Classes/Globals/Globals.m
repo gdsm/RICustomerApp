@@ -18,10 +18,13 @@ const CGFloat topMargin_10px = 10.0;
 const CGFloat topMargin_20px = 20.0;
 const CGFloat leftMargin_20px = 20.0;
 const CGFloat leftMargin_40px = 40.0;
+const CGFloat leftMargin_15px = 15.0;
 const CGFloat rightMargin_20px = 20.0;
 const CGFloat rightMargin_40px = 40.0;
+const CGFloat rightMargin_15px = 15.0;
 const CGFloat bottomMargin_20px = 20.0;
 const CGFloat cornerRadius_20px = 20.0;
+const CGFloat cornerRadius_10px = 10.0;
 const CGFloat cornerRadius_6px = 6.0;
 const CGFloat cartSize_44px = 44.0f;
 
@@ -47,6 +50,16 @@ const CGFloat cartSize_44px = 44.0f;
     return _globals_sharedInstance;
 }
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self != nil)
+    {
+        _registrationRequired = YES;
+    }
+    return self;
+}
+
 - (NSString *) documentsDirectory
 {
     if (_documentsDirectory == nil)
@@ -61,8 +74,8 @@ const CGFloat cartSize_44px = 44.0f;
 {
 //    BOOL retVal = ([UserManager shared].activeUser != nil);
 //    return retVal;
-    return YES;
-//    return NO;
+//    return YES;
+    return NO;
 }
 
 - (BOOL) isSessionExpired

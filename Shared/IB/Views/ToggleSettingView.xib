@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ToggleSettingView">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zjl-Jo-Kw9">
+                    <rect key="frame" x="253" y="15" width="49" height="31"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="47" id="Qlg-2l-emw"/>
+                        <constraint firstAttribute="height" constant="31" id="bMQ-Rf-MNK"/>
+                    </constraints>
+                    <connections>
+                        <action selector="onValueChanged:" destination="iN0-l3-epB" eventType="valueChanged" id="8J2-pW-XFz"/>
+                    </connections>
+                </switch>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g56-DY-uUx" customClass="BaseLabel">
+                    <rect key="frame" x="20" y="0.0" width="223" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="height" priority="250" constant="60" id="xBn-dj-mWt"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Zjl-Jo-Kw9" firstAttribute="leading" secondItem="g56-DY-uUx" secondAttribute="trailing" constant="10" id="02I-wx-oJk"/>
+                <constraint firstItem="g56-DY-uUx" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="3kv-Tr-oeD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="g56-DY-uUx" secondAttribute="bottom" id="3v2-66-4hM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Zjl-Jo-Kw9" secondAttribute="trailing" constant="20" id="EPZ-Eh-fjM"/>
+                <constraint firstItem="g56-DY-uUx" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="M7d-YF-GJd"/>
+                <constraint firstItem="Zjl-Jo-Kw9" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="jMC-Dj-ksA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="constBottomLbl" destination="3v2-66-4hM" id="WyN-lI-USu"/>
+                <outlet property="constLeftLblDescr" destination="3kv-Tr-oeD" id="MCX-GB-7xS"/>
+                <outlet property="constRightSwitch" destination="EPZ-Eh-fjM" id="loz-MO-Z7c"/>
+                <outlet property="constTopLblDescr" destination="M7d-YF-GJd" id="2eG-jP-Fje"/>
+                <outlet property="lblDescription" destination="g56-DY-uUx" id="1fe-Ss-SDW"/>
+                <outlet property="toggleSwitch" destination="Zjl-Jo-Kw9" id="ku6-Rq-ajp"/>
+            </connections>
+            <point key="canvasLocation" x="18" y="-223"/>
+        </view>
+    </objects>
+</document>

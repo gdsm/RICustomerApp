@@ -23,11 +23,14 @@ extern const CGFloat topMargin_20px;
 extern const CGFloat topMargin_10px;
 extern const CGFloat leftMargin_20px;
 extern const CGFloat leftMargin_40px;
+extern const CGFloat leftMargin_15px;
 extern const CGFloat rightMargin_20px;
 extern const CGFloat rightMargin_40px;
+extern const CGFloat rightMargin_15px;
 extern const CGFloat bottomMargin_20px;
 extern const CGFloat cornerRadius_20px;
 extern const CGFloat cornerRadius_6px;
+extern const CGFloat cornerRadius_10px;
 extern const CGFloat cartSize_44px;
 
 @interface Globals : NSObject
@@ -37,6 +40,7 @@ extern const CGFloat cartSize_44px;
 @property (nonatomic, strong, readonly) NSString *documentsDirectory;
 @property (nonatomic, readonly) BOOL anyActiveUser;
 @property (nonatomic, readonly) BOOL isSessionExpired;
+@property (nonatomic) BOOL registrationRequired;
 @property (nonatomic, weak, readonly) NSString* userName;
 @property (nonatomic, strong) ThemingAssistant* themingAssistant;
 @property (nonatomic, strong) UINavigationController* appNavigationController;

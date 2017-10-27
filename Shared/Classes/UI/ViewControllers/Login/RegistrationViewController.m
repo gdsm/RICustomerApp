@@ -7,6 +7,7 @@
 //
 
 #import "RegistrationViewController.h"
+#import "UserProfileViewController.h"
 #import "IconTextField.h"
 
 @interface RegistrationViewController ()
@@ -83,7 +84,9 @@
 
 - (void) continueLoginFlow
 {
-    
+    UserProfileViewController* view = [[UserProfileViewController alloc] initWithStyle:UITableViewStylePlain];
+    view.isNewUser = YES;
+    [self safePush:view animated:YES];
 }
 
 - (void) registerUser

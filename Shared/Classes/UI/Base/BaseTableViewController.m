@@ -216,7 +216,7 @@ const CGFloat BaseTVC_keyboardButtonBottomMargin = 10;
         
         [self layoutSubviews];
     }
-    else if (self.bottomTabView.hidden == NO)
+    else
     {
         UIEdgeInsets offset = self.tableOffset;
         offset.bottom = keyBoardFrame.size.height;

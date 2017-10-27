@@ -30,7 +30,7 @@ const CGFloat ProbCatVC_CbTitCell_Height = 60;
 {
     self.title = @"New Problem Request.";
     self.bgImgv.image = nil;
-    self.bottomTabView.hidden = YES;
+    self.bottomTabView.hidden = NO;
 
     CGFloat top = (self.lblInfo.frame.origin.y + self.lblInfo.frame.size.height);
     self.tableOffset = UIEdgeInsetsMake(top, 0, 0, 0);

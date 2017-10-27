@@ -28,4 +28,6 @@
 @property (nonatomic, weak, readonly) NSString* comment_text;
 @property (nonatomic, weak, readonly) NSString* chevron_left;
 @property (nonatomic, weak, readonly) NSString* cancel;
+@property (nonatomic, weak, readonly) NSString* call;
+@property (nonatomic, weak, readonly) NSString* message;
 @end

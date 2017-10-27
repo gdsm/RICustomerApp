@@ -9,7 +9,7 @@
 #import "QuickOrderView.h"
 
 const CGFloat QuickOrderViewHeight = 170;
-const CGFloat QuickOrderViewTopMargin = 90;
+const CGFloat QuickOrderViewTopMargin = 20;
 const CGFloat QuickOrderBtn_Height = 90;
 
 @implementation QuickOrderView

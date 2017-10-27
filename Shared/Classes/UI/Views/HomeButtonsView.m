@@ -30,7 +30,7 @@ const CGFloat HomeButtonView_HinnerMargin = 10;
 - (CGSize) estimatedSize
 {
     CGSize retSize = CGSizeMake(0, 0);
-    retSize.height = 400;
+    retSize.height = 350;
     return retSize;
 }
 
@@ -55,8 +55,9 @@ const CGFloat HomeButtonView_HinnerMargin = 10;
     CGFloat w = (self.frame.size.width - (3*interXMargin));
     CGFloat h = (self.frame.size.height - (3*interYMargin));
     CGFloat wh = MIN(w, h) * 0.5;
+    CGFloat occupW = (wh * 2) + (interXMargin);
 
-    CGFloat xOffset = ((self.frame.size.width - (2*wh)) * 0.5);
+    CGFloat xOffset = ((self.frame.size.width - occupW) * 0.5);
     CGFloat yOffset = interYMargin;
 
     rect_btnDeliveryHistory.origin.x = xOffset;

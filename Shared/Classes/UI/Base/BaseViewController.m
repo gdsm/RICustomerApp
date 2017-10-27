@@ -33,13 +33,10 @@ static BottomTabView* _static_btmTabView = nil;
     [self setupUI];
 }
 
-//- (void)viewDidAppear:(BOOL)animated
-//{
-//    [super viewDidAppear:animated];
-////    self.navigationController.navigationItem.backBarButtonItem.title = nil;
-////    self.navigationItem.backBarButtonItem.title = nil;
-////    self.navigationItem.leftBarButtonItem = self.bbiBack;
-//}
+- (void)dealloc
+{
+    [self removeKeyboardNotifications];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

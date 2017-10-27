@@ -15,7 +15,10 @@
 @property (nonatomic, strong) UIColor* gray666666;
 @property (nonatomic, strong) UIColor* gray999999;
 @property (nonatomic, strong) UIColor* grayCCCCCC;
+@property (nonatomic, strong) UIColor* gray333333;
 @property (nonatomic, strong) UIColor* clearNorm;
+@property (nonatomic, strong) UIColor* color91B3DB;
+@property (nonatomic, strong) UIColor* color0463D6;
 
 @property (nonatomic, weak) UIColor* defaultTableViewBGColor;
 @property (nonatomic, weak) UIColor* defaultViewBGColor;
@@ -35,16 +38,24 @@
 @property (nonatomic, strong) UIColor* homeBtnBgNormColor;
 @property (nonatomic, strong) UIColor* homeBtnBgHighColor;
 @property (nonatomic, strong) UIColor* homeBtnTitleColor;
+@property (nonatomic, weak) UIColor* homeBtnIceOrderBgNormColor;
+@property (nonatomic, weak) UIColor* homeBtnIceOrderBgHighColor;
+@property (nonatomic, weak) UIColor* homeBtnFeedbackBgNormColor;
+@property (nonatomic, weak) UIColor* homeBtnFeedbackBgHighColor;
+@property (nonatomic, weak) UIColor* homeBtnEqpSrvcBgNormColor;
+@property (nonatomic, weak) UIColor* homeBtnEqpSrvcBgHighColor;
+@property (nonatomic, weak) UIColor* homeBtnHistoryBgNormColor;
+@property (nonatomic, weak) UIColor* homeBtnHistoryBgHighColor;
 
 @property (nonatomic, weak) UIColor* btmBarBtnBgNormColor;
 @property (nonatomic, weak) UIColor* btmBarBtnBgHighColor;
 @property (nonatomic, weak) UIColor* btmBarBtnTitleColor;
 
-@property (nonatomic, strong) UIColor* profilePicBackground;
-@property (nonatomic, strong) UIColor* userNameTitleColor;
+@property (nonatomic, weak) UIColor* profilePicBackground;
+@property (nonatomic, weak) UIColor* userNameTitleColor;
 
 @property (nonatomic, strong) UIColor* itemVCBgColor;
-@property (nonatomic, strong) UIColor* itemTitleColor;
+@property (nonatomic, weak) UIColor* itemTitleColor;
 @property (nonatomic, strong) UIColor* itemCartQtyTitleColor;
 @property (nonatomic, strong) UIColor* itemVariationButtonBGNormalColor;
 @property (nonatomic, strong) UIColor* itemVariationButtonBGSelectedColor;

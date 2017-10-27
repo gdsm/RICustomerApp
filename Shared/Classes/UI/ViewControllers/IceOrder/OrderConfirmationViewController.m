@@ -9,6 +9,7 @@
 #import "OrderConfirmationViewController.h"
 #import "TitleCell.h"
 #import "NotificationInfo.h"
+#import "CustomerCareView.h"
 #import "NSString+Additions.h"
 
 const CGFloat OrderConfVC_lblThanks_Height = 70;
@@ -21,6 +22,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
 @interface OrderConfirmationViewController ()
 @property (nonatomic, strong) UIBarButtonItem* bbiShare;
+@property (nonatomic, strong) CustomerCareView* viewCustomerCare;
 @end
 
 @implementation OrderConfirmationViewController
@@ -36,8 +38,8 @@ const CGFloat OrderConfVC_TableHeight = 120;
     self.title = @"Order Confirmation";
     self.bgImgv.image = nil;
     
-    self.tableView.scrollEnabled = NO;
-    
+    self.tableView.hidden = YES;
+
     self.navigationItem.rightBarButtonItem = self.bbiShare;
 
     self.lblThanksOrder.backgroundColor = [UIColor clearColor];
@@ -74,16 +76,23 @@ const CGFloat OrderConfVC_TableHeight = 120;
     self.lblDateTime.textColor = [Globals shared].themingAssistant.defaultTextColor;
     self.lblDateTime.adjustsFontSizeToFitWidth = YES;
 
-    self.btnViewOrder.bgNormalColor = [Globals shared].themingAssistant.blueNorm;
-    self.btnViewOrder.bgHighlightedColor = [Globals shared].themingAssistant.blueHigh;
-    self.btnViewOrder.titleNormalColor = [UIColor whiteColor];
-    self.btnViewOrder.layer.cornerRadius = 10;
-    [self.btnViewOrder setTitle:@"View Ordered Items" forState:UIControlStateNormal];
+//    self.btnViewOrder.bgNormalColor = [Globals shared].themingAssistant.blueNorm;
+//    self.btnViewOrder.bgHighlightedColor = [Globals shared].themingAssistant.blueHigh;
+//    self.btnViewOrder.titleNormalColor = [UIColor whiteColor];
+//    self.btnViewOrder.layer.cornerRadius = cornerRadius_10px;
+//    [self.btnViewOrder setTitle:@"View Ordered Items" forState:UIControlStateNormal];
+    self.btnViewOrder.hidden = YES;
     
     self.btnDone.bgNormalColor = [Globals shared].themingAssistant.redNorm;
     self.btnDone.bgHighlightedColor = [Globals shared].themingAssistant.redHigh;
     self.btnDone.titleNormalColor = [UIColor whiteColor];
-    self.btnDone.layer.cornerRadius = 10;
+    self.btnDone.layer.cornerRadius = cornerRadius_10px;
+    
+    
+    [self.view addSubview:self.viewCustomerCare];
+    self.viewCustomerCare.lblInfo.text = @"For any query reach out to our customer care.\rPlease mention your order number to our customer representative to service you support quickly";
+    
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -108,6 +117,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
 {
     [[NSNotificationCenter defaultCenter] postNotificationName:noti_OrderConfirmationDone object:nil userInfo:nil];
 }
+
 
 #pragma mark - TableView Methods
 
@@ -160,6 +170,18 @@ const CGFloat OrderConfVC_TableHeight = 120;
     cell.backgroundColor = [UIColor whiteColor];
 }
 
+
+#pragma mark - Logical Flow Methods
+
+- (void) makeCall
+{
+    
+}
+
+- (void) makeMessage
+{
+    
+}
 
 #pragma mark - Layout Methods
 
@@ -225,6 +247,28 @@ const CGFloat OrderConfVC_TableHeight = 120;
         [_bbiShare setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].bbiIconFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
     }
     return _bbiShare;
+}
+
+- (CustomerCareView *)viewCustomerCare
+{
+    if (_viewCustomerCare == nil)
+    {
+        __weak OrderConfirmationViewController* weakSelf = self;
+        CGFloat top = self.view.frame.size.height - (CustomerCareView_Height + bottomMargin_20px + self.btnDone.frame.size.height + bottomMargin_20px);
+        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, CustomerCareView_Height);
+        _viewCustomerCare = [CustomerCareView instance];
+        _viewCustomerCare.frame = rect;
+        _viewCustomerCare.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        _viewCustomerCare.backgroundColor = [UIColor clearColor];
+        _viewCustomerCare.onCall = ^(id sender) {
+            [weakSelf makeCall];
+        };
+        _viewCustomerCare.onMessage = ^(id sender) {
+            [weakSelf makeMessage];
+        };
+        [_viewCustomerCare updateUI];
+    }
+    return _viewCustomerCare;
 }
 
 - (void) onBBIShare:(UIBarButtonItem *)sender

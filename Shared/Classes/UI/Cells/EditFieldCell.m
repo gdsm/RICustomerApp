@@ -9,12 +9,6 @@
 #import "EditFieldCell.h"
 
 
-const CGFloat EditFieldCellTopMargin = 10;
-const CGFloat EditFieldCellBottomMargin = 10;
-const CGFloat EditFieldCellLeftMargin = 40;
-const CGFloat EditFieldCellRightMargin = 40;
-
-
 @interface EditFieldCell() <UITextFieldDelegate>
 @end
 
@@ -68,15 +62,6 @@ const CGFloat EditFieldCellRightMargin = 40;
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    
-    CGRect rect_editField = self.editField.frame;
-
-    rect_editField.origin.x = EditFieldCellLeftMargin;
-    rect_editField.origin.y = EditFieldCellTopMargin;
-    rect_editField.size.width = self.frame.size.width - (EditFieldCellLeftMargin + EditFieldCellRightMargin);
-    rect_editField.size.height = self.frame.size.height - (EditFieldCellTopMargin + EditFieldCellBottomMargin);
-
-    self.editField.frame = rect_editField;
 
     [self.editField layoutUI];
 }

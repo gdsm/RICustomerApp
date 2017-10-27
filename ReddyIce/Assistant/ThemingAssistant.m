@@ -106,6 +106,15 @@
     return _grayCCCCCC;
 }
 
+- (UIColor *)gray333333
+{
+    if (_gray333333 == nil)
+    {
+        _gray333333 = [[Utilities shared] colorFromHexRed:@"33" green:@"33" blue:@"33" alpha:@"FF"];
+    }
+    return _gray333333;
+}
+
 - (UIColor *)clearNorm
 {
     if (_clearNorm == nil)
@@ -113,6 +122,24 @@
         _clearNorm = [UIColor clearColor];
     }
     return _clearNorm;
+}
+
+- (UIColor *)color91B3DB
+{
+    if (_color91B3DB == nil)
+    {
+        _color91B3DB = [[Utilities shared] colorFromHexRed:@"91" green:@"B3" blue:@"DB" alpha:@"FF"];
+    }
+    return _color91B3DB;
+}
+
+- (UIColor *)color0463D6
+{
+    if (_color0463D6 == nil)
+    {
+        _color0463D6 = [[Utilities shared] colorFromHexRed:@"04" green:@"63" blue:@"D6" alpha:@"FF"];
+    }
+    return _color0463D6;
 }
 
 
@@ -203,6 +230,38 @@
     return _homeBtnTitleColor;
 }
 
+- (UIColor *) homeBtnIceOrderBgNormColor{
+    return self.blueNorm;
+}
+
+- (UIColor *) homeBtnIceOrderBgHighColor{
+    return self.blueHigh;
+}
+
+- (UIColor *) homeBtnFeedbackBgNormColor{
+    return self.blueNorm;
+}
+
+- (UIColor *) homeBtnFeedbackBgHighColor{
+    return self.blueHigh;
+}
+
+- (UIColor *) homeBtnEqpSrvcBgNormColor{
+    return self.blueNorm;
+}
+
+- (UIColor *) homeBtnEqpSrvcBgHighColor{
+    return self.blueHigh;
+}
+
+- (UIColor *) homeBtnHistoryBgNormColor{
+    return self.blueNorm;
+}
+
+- (UIColor *) homeBtnHistoryBgHighColor{
+    return self.blueHigh;
+}
+
 - (UIColor *) btmBarBtnBgNormColor
 {
     return self.clearNorm;
@@ -220,20 +279,12 @@
 
 - (UIColor *) profilePicBackground
 {
-    if (_profilePicBackground == nil)
-    {
-        _profilePicBackground = [[Utilities shared] colorFromHexRed:@"91" green:@"B3" blue:@"DB" alpha:@"FF"];
-    }
-    return _profilePicBackground;
+    return self.color91B3DB;
 }
 
 - (UIColor *) userNameTitleColor
 {
-    if (_userNameTitleColor == nil)
-    {
-        _userNameTitleColor = [[Utilities shared] colorFromHexRed:@"04" green:@"63" blue:@"D6" alpha:@"FF"];
-    }
-    return _userNameTitleColor;
+    return self.color0463D6;
 }
 
 - (UIColor *) itemVCBgColor
@@ -247,11 +298,7 @@
 
 - (UIColor *) itemTitleColor
 {
-    if (_itemTitleColor == nil)
-    {
-        _itemTitleColor = [[Utilities shared] colorFromHexRed:@"33" green:@"33" blue:@"33" alpha:@"FF"];
-    }
-    return _itemTitleColor;
+    return self.gray333333;
 }
 
 - (UIColor *) itemCartQtyTitleColor

@@ -11,6 +11,12 @@
 #import "EditFieldCell.h"
 
 const CGFloat changePasswordVC_cellHeight = 90;
+const CGFloat changePasswordVC_cellTopMargin = 10;
+const CGFloat changePasswordVC_cellBottomMargin = 10;
+const CGFloat changePasswordVC_cellLeftMargin = 40;
+const CGFloat changePasswordVC_cellRightMargin = 40;
+
+
 
 @interface ChangePasswordViewController () <TextEntryDelegate>
 @property (nonatomic, strong) ChangePasswordModel* changePasswordModel;
@@ -156,6 +162,15 @@ const CGFloat changePasswordVC_cellHeight = 90;
     NSString* key = [self.changePasswordModel.allKeys objectAtIndex:indexPath.row];
     NSString* hintText = [self.changePasswordModel displayValueForKey:key];
     
+    cell.editField.editFieldStyle = EditFieldStyle_Hint_V_TextField;
+    
+    UIEdgeInsets inset = cell.editField.contentInsets;
+    inset.left = changePasswordVC_cellLeftMargin;
+    inset.right = changePasswordVC_cellRightMargin;
+    inset.top = changePasswordVC_cellTopMargin;
+    inset.bottom = changePasswordVC_cellBottomMargin;
+    cell.editField.contentInsets = inset;
+
     cell.editField.hintText = hintText;
     cell.editField.placeHolderText = placeHolderText;
     [cell updateWithDelegate:self dictionary:self.valueSet key:key keyboardType:UIKeyboardTypeDefault];

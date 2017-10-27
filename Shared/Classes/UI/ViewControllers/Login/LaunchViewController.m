@@ -54,7 +54,12 @@
 
 - (void) checkAppFreshness
 {
-    if (![Globals shared].anyActiveUser)
+    if ([Globals shared].registrationRequired)
+    {
+        [self showRegistration];
+        checkFreshnessOnce = NO;
+    }
+    else if (![Globals shared].anyActiveUser)
     {
         [self enterPassword];
     }
@@ -130,10 +135,14 @@
     }];
 }
 
+- (void) showRegistration
+{
+    RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
+    [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
+}
+
 - (void) showPascode
 {
-//    RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
-//    [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
     TOPasscodeViewController *view = [[TOPasscodeViewController alloc] initWithStyle:TOPasscodeViewStyleOpaqueLight passcodeType:TOPasscodeTypeFourDigits];
     view.delegate = self;
     view.allowBiometricValidation = NO;

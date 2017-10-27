@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseLabel.h"
+#import "BaseTextField.h"
 
 extern const CGFloat viewContentInset_top;
 extern const CGFloat viewContentInset_left;
