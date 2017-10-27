@@ -159,9 +159,11 @@ const CGFloat MainVC_UserViewHeight = 160;
 
 - (void) shareFeedback
 {
-//    [self.bottomTabView unselectBottomTabs];
-//    self.bottomTabView.btnShareFeedback.selected = YES;
-//    [self.navigationController popToViewController:self animated:NO];
+    [self.bottomTabView unselectBottomTabs];
+    self.bottomTabView.btnShareFeedback.selected = YES;
+    [self.navigationController popToViewController:self animated:NO];
+    FeedbackViewController* feedbackVC = [[FeedbackViewController alloc] init];
+    [self safePush: feedbackVC animated:YES];
 }
 
 - (void) placeAnOrder
