@@ -15,6 +15,7 @@
 #import "UserOptionsViewController.h"
 #import "ChangePasswordViewController.h"
 #import "ProblemCategoryViewController.h"
+#import "FeedbackViewController.h"
 
 #import "HomeButtonsView.h"
 #import "QuickOrderView.h"
