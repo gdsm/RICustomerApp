@@ -48,7 +48,6 @@
 		CE12C2921F96638400D9EDB8 /* EnterQuantityView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2911F96638400D9EDB8 /* EnterQuantityView.m */; };
 		CE12C2961F966C3800D9EDB8 /* EnterQuantityCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2941F966C3800D9EDB8 /* EnterQuantityCell.m */; };
 		CE12C2991F966C7E00D9EDB8 /* EnterQuantityCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C2981F966C7E00D9EDB8 /* EnterQuantityCell.xib */; };
-		CE12C29D1F9678AE00D9EDB8 /* ItemVariationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C29B1F9678AE00D9EDB8 /* ItemVariationCell.m */; };
 		CE12C2A01F9678DE00D9EDB8 /* ItemVariationCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C29F1F9678DE00D9EDB8 /* ItemVariationCell.xib */; };
 		CE12C2A71F968B1500D9EDB8 /* CategoryDetailCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE12C2A51F968B1500D9EDB8 /* CategoryDetailCell.m */; };
 		CE12C2AA1F968B5700D9EDB8 /* CategoryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE12C2A91F968B5700D9EDB8 /* CategoryDetailCell.xib */; };
@@ -97,7 +96,6 @@
 		CE1805D51F8E621300081FD0 /* EditFieldCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE1805D31F8E621300081FD0 /* EditFieldCell.m */; };
 		CE1805D91F8E623700081FD0 /* EditFieldCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE1805D81F8E623700081FD0 /* EditFieldCell.xib */; };
 		CE20D9811F9ECD4800E48AD7 /* CreateServiceRequestView.m in Sources */ = {isa = PBXBuildFile; fileRef = CE20D9801F9ECD4800E48AD7 /* CreateServiceRequestView.m */; };
-		CE23D2091F942E640021403B /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23D2071F942E640021403B /* ItemCell.m */; };
 		CE23D20C1F942F310021403B /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE23D20B1F942F310021403B /* ItemCell.xib */; };
 		CE23D20F1F943BD60021403B /* ToggleSwitchButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE23D20E1F943BD60021403B /* ToggleSwitchButton.m */; };
 		CE3A70C51F8D0B9900F42B9A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE3A70C41F8D0B9900F42B9A /* Assets.xcassets */; };
@@ -214,6 +212,8 @@
 		CED748F91F97C8EB006810D5 /* TicketLineItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED748F71F97C8EA006810D5 /* TicketLineItemCell.xib */; };
 		CED748FA1F97C8EB006810D5 /* TicketLineItemHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED748F81F97C8EB006810D5 /* TicketLineItemHeaderCell.xib */; };
 		CED9A8471FA38A48009E2288 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = CED9A8461FA38A46009E2288 /* Launch.png */; };
+		CED9A84D1FA390F8009E2288 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9A84A1FA390F7009E2288 /* ItemCell.m */; };
+		CED9A84E1FA390F8009E2288 /* ItemVariationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9A84C1FA390F7009E2288 /* ItemVariationCell.m */; };
 		CEDE04D71F953EFC005A3354 /* CheckoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDE04D61F953EFC005A3354 /* CheckoutView.m */; };
 		CEDE04F71F9550CE005A3354 /* Delivery_high@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDE04D91F9550CE005A3354 /* Delivery_high@1x.png */; };
 		CEDE04F81F9550CE005A3354 /* Delivery_high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDE04DA1F9550CE005A3354 /* Delivery_high@2x.png */; };
@@ -317,8 +317,6 @@
 		CE12C2931F966C3800D9EDB8 /* EnterQuantityCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EnterQuantityCell.h; sourceTree = "<group>"; };
 		CE12C2941F966C3800D9EDB8 /* EnterQuantityCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EnterQuantityCell.m; sourceTree = "<group>"; };
 		CE12C2981F966C7E00D9EDB8 /* EnterQuantityCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnterQuantityCell.xib; sourceTree = "<group>"; };
-		CE12C29A1F9678AE00D9EDB8 /* ItemVariationCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemVariationCell.h; sourceTree = "<group>"; };
-		CE12C29B1F9678AE00D9EDB8 /* ItemVariationCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemVariationCell.m; sourceTree = "<group>"; };
 		CE12C29F1F9678DE00D9EDB8 /* ItemVariationCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemVariationCell.xib; sourceTree = "<group>"; };
 		CE12C2A41F968B1500D9EDB8 /* CategoryDetailCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CategoryDetailCell.h; sourceTree = "<group>"; };
 		CE12C2A51F968B1500D9EDB8 /* CategoryDetailCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailCell.m; sourceTree = "<group>"; };
@@ -408,8 +406,6 @@
 		CE1805D81F8E623700081FD0 /* EditFieldCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditFieldCell.xib; sourceTree = "<group>"; };
 		CE20D97F1F9ECD4800E48AD7 /* CreateServiceRequestView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateServiceRequestView.h; sourceTree = "<group>"; };
 		CE20D9801F9ECD4800E48AD7 /* CreateServiceRequestView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateServiceRequestView.m; sourceTree = "<group>"; };
-		CE23D2061F942E640021403B /* ItemCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
-		CE23D2071F942E640021403B /* ItemCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		CE23D20B1F942F310021403B /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		CE23D20D1F943BD60021403B /* ToggleSwitchButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ToggleSwitchButton.h; sourceTree = "<group>"; };
 		CE23D20E1F943BD60021403B /* ToggleSwitchButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ToggleSwitchButton.m; sourceTree = "<group>"; };
@@ -617,6 +613,10 @@
 		CED748F71F97C8EA006810D5 /* TicketLineItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketLineItemCell.xib; sourceTree = "<group>"; };
 		CED748F81F97C8EB006810D5 /* TicketLineItemHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TicketLineItemHeaderCell.xib; sourceTree = "<group>"; };
 		CED9A8461FA38A46009E2288 /* Launch.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Launch.png; sourceTree = "<group>"; };
+		CED9A8491FA390F7009E2288 /* ItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemCell.h; sourceTree = "<group>"; };
+		CED9A84A1FA390F7009E2288 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
+		CED9A84B1FA390F7009E2288 /* ItemVariationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVariationCell.h; sourceTree = "<group>"; };
+		CED9A84C1FA390F7009E2288 /* ItemVariationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVariationCell.m; sourceTree = "<group>"; };
 		CEDE04D51F953EFC005A3354 /* CheckoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckoutView.h; sourceTree = "<group>"; };
 		CEDE04D61F953EFC005A3354 /* CheckoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckoutView.m; sourceTree = "<group>"; };
 		CEDE04D91F9550CE005A3354 /* Delivery_high@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delivery_high@1x.png"; sourceTree = "<group>"; };
@@ -859,20 +859,17 @@
 		CE1805CD1F8E5DD100081FD0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				CED9A8481FA390F7009E2288 /* IceOrder */,
 				CE42D6AF1F9EA68100A9FE50 /* ReportLineCell.h */,
 				CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */,
 				CE1805D21F8E621300081FD0 /* EditFieldCell.h */,
 				CE1805D31F8E621300081FD0 /* EditFieldCell.m */,
 				CEAF7CB21F90362000010042 /* TitleCell.h */,
 				CEAF7CB31F90362000010042 /* TitleCell.m */,
-				CE23D2061F942E640021403B /* ItemCell.h */,
-				CE23D2071F942E640021403B /* ItemCell.m */,
 				CE12C2831F96546B00D9EDB8 /* SliderCell.h */,
 				CE12C2841F96546B00D9EDB8 /* SliderCell.m */,
 				CE12C2931F966C3800D9EDB8 /* EnterQuantityCell.h */,
 				CE12C2941F966C3800D9EDB8 /* EnterQuantityCell.m */,
-				CE12C29A1F9678AE00D9EDB8 /* ItemVariationCell.h */,
-				CE12C29B1F9678AE00D9EDB8 /* ItemVariationCell.m */,
 				CE12C2A41F968B1500D9EDB8 /* CategoryDetailCell.h */,
 				CE12C2A51F968B1500D9EDB8 /* CategoryDetailCell.m */,
 				CE12C2AE1F96947500D9EDB8 /* CrauselCell.h */,
@@ -1588,6 +1585,17 @@
 			path = MBProgressHUD;
 			sourceTree = "<group>";
 		};
+		CED9A8481FA390F7009E2288 /* IceOrder */ = {
+			isa = PBXGroup;
+			children = (
+				CED9A8491FA390F7009E2288 /* ItemCell.h */,
+				CED9A84A1FA390F7009E2288 /* ItemCell.m */,
+				CED9A84B1FA390F7009E2288 /* ItemVariationCell.h */,
+				CED9A84C1FA390F7009E2288 /* ItemVariationCell.m */,
+			);
+			path = IceOrder;
+			sourceTree = "<group>";
+		};
 		CEDE04D81F9550CE005A3354 /* TabIcons */ = {
 			isa = PBXGroup;
 			children = (
@@ -1873,6 +1881,7 @@
 				CE70B8241F9AAFC700135A38 /* DeliveryOrderViewController.m in Sources */,
 				CE4BC5301F9EB0AB004F1CDC /* BottomTabView.m in Sources */,
 				CE12C2EC1F96B36B00D9EDB8 /* TOPasscodeViewContentLayout.m in Sources */,
+				CED9A84E1FA390F8009E2288 /* ItemVariationCell.m in Sources */,
 				CE4E2DD51FA15BA500C806A9 /* CustomerCareView.m in Sources */,
 				CE5433401F9A8CE20059CA2C /* ChangePasswordModel.m in Sources */,
 				CE14A9AC1F9FDD4300FB9C47 /* TicketViewController.m in Sources */,
@@ -1921,6 +1930,7 @@
 				CE3A710B1F8D0C5200F42B9A /* AppDelegate.m in Sources */,
 				CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */,
 				CE14A97B1F9F825000FB9C47 /* CreateProblemViewController.m in Sources */,
+				CED9A84D1FA390F8009E2288 /* ItemCell.m in Sources */,
 				CE4BC5321F9EB0AB004F1CDC /* CrauselView.m in Sources */,
 				CE14A9AB1F9FDD4300FB9C47 /* OrderViewController.m in Sources */,
 				CE6C486A1FA29D8A00471727 /* ToggleSettingCell.m in Sources */,
@@ -1938,7 +1948,6 @@
 				CE3A71301F8D274E00F42B9A /* BaseTableViewController.m in Sources */,
 				CE42D6921F9E382700A9FE50 /* PathCheckboxView.m in Sources */,
 				CE6C483A1FA24F7B00471727 /* IconTextFieldCell.m in Sources */,
-				CE23D2091F942E640021403B /* ItemCell.m in Sources */,
 				CE1805D11F8E5EC200081FD0 /* EditField.m in Sources */,
 				CE6C48451FA26AC300471727 /* EditFieldStyleLeftHintRightField.m in Sources */,
 				CE6C48401FA2567500471727 /* EditFieldStyleTopHintBottomField.m in Sources */,
@@ -1965,7 +1974,6 @@
 				CE3A71291F8D1AAB00F42B9A /* LogoView.m in Sources */,
 				CE4BC5241F9EAE89004F1CDC /* LoginViewController.m in Sources */,
 				CE6C484F1FA2914700471727 /* UnderlineTextField.m in Sources */,
-				CE12C29D1F9678AE00D9EDB8 /* ItemVariationCell.m in Sources */,
 				CEF999441F8D501C00B7F1FC /* BaseButton.m in Sources */,
 				CE5A4FE51F8FC1D7009D373B /* HomeButton.m in Sources */,
 				CE14A9B31F9FF64D00FB9C47 /* RegistrationViewController.m in Sources */,
