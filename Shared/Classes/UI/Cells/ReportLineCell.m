@@ -44,7 +44,6 @@
     line.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
 }
 
-//Add methods for v4 Style version//
 - (void) initWithDividers:(CGFloat *)dividers count:(NSUInteger)count
 {
     [self setBackgroundColor:[UIColor clearColor]];

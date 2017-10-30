@@ -54,12 +54,12 @@
 
 - (void) checkAppFreshness
 {
-    if ([Globals shared].registrationRequired)
+    if (0)//([Globals shared].registrationRequired)
     {
         [self showRegistration];
         checkFreshnessOnce = NO;
     }
-    else if (![Globals shared].anyActiveUser)
+    else if (0)//(![Globals shared].anyActiveUser)
     {
         [self enterPassword];
         [Globals shared].anyActiveUser = YES;

@@ -15,7 +15,7 @@
 
 
 const CGFloat DeliveryOrderVC_HeaderCell_Height = 40.0;
-const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
+const CGFloat DeliveryOrderVC_OrderCell_Height = 50.0;
 
 
 @interface DeliveryOrderViewController ()
@@ -134,9 +134,9 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
     
     yOffset += (rect_segControl.size.height + topMargin_20px);
     
-    rect_navController.origin.x = leftMargin_20px;
+    rect_navController.origin.x = 0;
     rect_navController.origin.y = yOffset;
-    rect_navController.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
+    rect_navController.size.width = self.view.frame.size.width;
     rect_navController.size.height = self.view.frame.size.height - (yOffset + self.bottomTabView.frame.size.height);
 
     self.navController.view.frame = rect_navController;

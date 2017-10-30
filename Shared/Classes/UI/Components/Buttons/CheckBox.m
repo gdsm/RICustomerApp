@@ -28,6 +28,11 @@ const CGFloat checkboxSize = 20;
     [self addSubview:self.button];
 }
 
+- (void)layoutUI
+{
+    self.button.frame = self.bounds;
+}
+
 - (void) onBtnTap:(ColoredButton *)sender
 {
     self.selected = !self.selected;

@@ -28,6 +28,7 @@ extern const CGFloat leftMargin_15px;
 extern const CGFloat rightMargin_20px;
 extern const CGFloat rightMargin_40px;
 extern const CGFloat rightMargin_15px;
+extern const CGFloat rightMargin_10px;
 extern const CGFloat bottomMargin_10px;
 extern const CGFloat bottomMargin_20px;
 extern const CGFloat cornerRadius_20px;

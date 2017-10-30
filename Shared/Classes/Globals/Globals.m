@@ -23,6 +23,7 @@ const CGFloat leftMargin_15px = 15.0;
 const CGFloat rightMargin_20px = 20.0;
 const CGFloat rightMargin_40px = 40.0;
 const CGFloat rightMargin_15px = 15.0;
+const CGFloat rightMargin_10px = 10.0;
 const CGFloat bottomMargin_10px = 10.0;
 const CGFloat bottomMargin_20px = 20.0;
 const CGFloat cornerRadius_20px = 20.0;

@@ -10,6 +10,7 @@
 #import "DeliveryOrderViewController.h"
 #import "OrderViewController.h"
 #import "ReportLineCell.h"
+#import "ReportLineTemplateCell.h"
 #import "HistoryCell.h"
 #import "TicketLineItemHeaderCell.h"
 #import "TicketLineItemCell.h"
@@ -162,51 +163,68 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
 
 - (UITableViewCell *) cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath
 {
-    __weak OrderHistoryViewController* weakSelf = self;
     if (indexPath.row == 0)
     {
         ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
-
-        cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        
-        CGFloat div[] = {0.3f, 0.7f};
-
-        [cell initWithDividers:div count:3];
-        [cell.reportLineView setTitles:@"Order No.", @"Total Amount", @"Status", nil];
-        [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
-        [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentCenter;
-        [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentRight;
-
-        UIEdgeInsets inset = cell.reportLineView.contentInsets;
-        inset.left = 0;
-        inset.right = 0;
-        cell.reportLineView.contentInsets = inset;
-        
         [cell updateCell];
-
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.viewUnderLine.hidden = NO;
+        
+        CGFloat div[] = {0.1f, 0.4f, 0.7f};
+        [cell initWithDividers:div count:4];
+        [cell.reportLineView setTitles:@"", @"Ref No.", @"Date", @"Status", nil];
+        [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentLeft;
+        [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentCenter;
+        [cell.reportLineView labelAtIndex:3].textAlignment = NSTextAlignmentRight;
+        
         return cell;
     }
     else
     {
-        HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
-
-        UIEdgeInsets inset = cell.historyView.contentInsets;
-        inset.left = 0;
-        inset.right = 0;
-        cell.historyView.contentInsets = inset;
-
+        ReportLineTemplateCell* cell = [ReportLineTemplateCell dequeueFrom:tableView loadFromNib:@"ReportLineTemplateCell"];
         [cell updateCell];
-        cell.historyView.historyType = HistoryType_Order;
-        cell.historyView.onStartPathCheck = ^(id sender) {
-            [weakSelf startPathChecked];
-        };
-        cell.historyView.onEndPathCheck = ^(id sender) {
-            [weakSelf endPathChecked];
-        };
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.viewUnderLine.hidden = NO;
         
+        CGFloat div[] = {0.1f, 0.4f, 0.7f};
+        [cell initWithDividers:div count:4 callbackTemplate:^UIView *(NSUInteger index) {
+            
+            UIView* retView = nil;
+            if (index == 0){
+                UIImageView* imgv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"Products_norm.png"]];
+                imgv.backgroundColor = [UIColor clearColor];
+                imgv.contentMode = UIViewContentModeScaleAspectFit;
+                retView = imgv;
+            }
+            else if (index == 1){
+                BaseLabel* lbl = [[BaseLabel alloc] init];
+                [lbl defaultStyling];
+                lbl.text = @"1234567";
+                retView = lbl;
+            }
+            else if (index == 2){
+                BaseLabel* lbl = [[BaseLabel alloc] init];
+                [lbl defaultStyling];
+                lbl.textAlignment = NSTextAlignmentCenter;
+                lbl.text = @"MM/DD/YYYY";
+                retView = lbl;
+            }
+            else if (index == 3){
+                BaseLabel* lbl = [[BaseLabel alloc] init];
+                [lbl defaultStyling];
+                lbl.textAlignment = NSTextAlignmentCenter;
+                lbl.layer.cornerRadius = cornerRadius_6px;
+                lbl.layer.borderColor = [Globals shared].themingAssistant.defaultBorderColor.CGColor;
+                lbl.layer.borderWidth = borderWidth_1px;
+                lbl.text = @"New Order";
+                retView = lbl;
+            }
+            return retView;
+        } layoutTemplate:nil];
+        cell.reportLineTemplate.interMargins = rightMargin_10px;
         return cell;
     }
+    
     return nil;
 }
 
@@ -323,3 +341,65 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
     return _bbiShare;
 }
 @end
+
+
+
+
+
+
+
+/*
+
+Old code.
+- (UITableViewCell *) cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath
+{
+    __weak OrderHistoryViewController* weakSelf = self;
+    if (indexPath.row == 0)
+    {
+        ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
+        
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        CGFloat div[] = {0.3f, 0.7f};
+        
+        [cell initWithDividers:div count:3];
+        [cell.reportLineView setTitles:@"Order No.", @"Total Amount", @"Status", nil];
+        [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
+        [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentCenter;
+        [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentRight;
+        
+        UIEdgeInsets inset = cell.reportLineView.contentInsets;
+        inset.left = 0;
+        inset.right = 0;
+        cell.reportLineView.contentInsets = inset;
+        
+        [cell updateCell];
+        
+        return cell;
+    }
+    else
+    {
+        HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
+        
+        UIEdgeInsets inset = cell.historyView.contentInsets;
+        inset.left = 0;
+        inset.right = 0;
+        cell.historyView.contentInsets = inset;
+        
+        [cell updateCell];
+        cell.historyView.historyType = HistoryType_Order;
+        cell.historyView.onStartPathCheck = ^(id sender) {
+            [weakSelf startPathChecked];
+        };
+        cell.historyView.onEndPathCheck = ^(id sender) {
+            [weakSelf endPathChecked];
+        };
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
+    return nil;
+}
+
+ */
+
