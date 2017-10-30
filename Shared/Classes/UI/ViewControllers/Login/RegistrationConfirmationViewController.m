@@ -33,9 +33,6 @@
     self.bgImgv.image = nil;
     self.tableView.hidden = YES;
     
-    CGFloat top = (self.navigationBarHeight + self.statusBarHeight + topMargin_20px);
-    self.tableOffset = UIEdgeInsetsMake(top, 0, 0, 0);
-    
     self.navigationItem.rightBarButtonItem = self.bbiDone;
     self.navigationItem.hidesBackButton = YES;
     

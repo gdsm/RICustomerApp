@@ -30,4 +30,6 @@
 @property (nonatomic, weak, readonly) NSString* cancel;
 @property (nonatomic, weak, readonly) NSString* call;
 @property (nonatomic, weak, readonly) NSString* message;
+@property (nonatomic, weak, readonly) NSString* mood_bad;
+@property (nonatomic, weak, readonly) NSString* mood_good;
 @end

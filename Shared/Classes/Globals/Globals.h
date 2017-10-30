@@ -27,10 +27,14 @@ extern const CGFloat leftMargin_15px;
 extern const CGFloat rightMargin_20px;
 extern const CGFloat rightMargin_40px;
 extern const CGFloat rightMargin_15px;
+extern const CGFloat bottomMargin_10px;
 extern const CGFloat bottomMargin_20px;
 extern const CGFloat cornerRadius_20px;
 extern const CGFloat cornerRadius_6px;
 extern const CGFloat cornerRadius_10px;
+extern const CGFloat cellHeight_40px;
+extern const CGFloat cellHeight_60px;
+extern const CGFloat cellHeight_80px;
 extern const CGFloat cartSize_44px;
 
 @interface Globals : NSObject

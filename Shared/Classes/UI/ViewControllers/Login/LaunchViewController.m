@@ -54,7 +54,7 @@
 
 - (void) checkAppFreshness
 {
-    if ([Globals shared].registrationRequired)
+    if (0)//([Globals shared].registrationRequired)
     {
         [self showRegistration];
         checkFreshnessOnce = NO;

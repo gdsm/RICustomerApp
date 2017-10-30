@@ -30,7 +30,7 @@ extern const CGFloat BaseVC_BottomTabHeight;
 - (void) dismissPopOversAnimated:(BOOL)animated;
 
 @property (nonatomic, strong, nullable) UIImageView* bgImgv;
-//@property (nonatomic, strong, nullable) UIBarButtonItem* bbiBack;
+@property (nonatomic, strong, nullable) UIBarButtonItem* bbiBack;
 @property (nonatomic, strong, nullable) UIBarButtonItem* bbiCancel;
 @property (nonatomic) BOOL showCancel;
 - (void) onBBICancel:(nullable UIBarButtonItem *)sender;
@@ -66,6 +66,12 @@ extern const CGFloat BaseVC_BottomTabHeight;
 - (void) unSafePush:(nonnull UIViewController *)viewController
            animated:(BOOL)animated;
 /**
+ * @brief Pops the array of viewcontrollers to the given viewcontroller in param.
+ * @param viewController : ViewController on which the flow needs to fallback
+ * @param animated : Fall to viewController with animation or not.
+ */
+- (void) safePopToController:(nonnull UIViewController *)viewController animated:(BOOL)animated;
+/**
  * @brief Would present the new view controller on the navigation controller. With safe present. It would make some cross checks to avoid crashes.
  * @param onSelf : The new view controller to be presented on ViewController or on navigation Controller
  * @param callback : Completion Block
@@ -97,4 +103,11 @@ extern const CGFloat BaseVC_BottomTabHeight;
 - (BOOL) unSafeDismissViewControllerFromSelf:(BOOL)onSelf
                                     animated:(BOOL)animated
                           callbackCompletion:(nullable blk_completion)callback;
+
+/**
+ * @brief Convert the view controller for popover Presentation.
+ */
+- (void) popoverPresentation:(nullable UIView *)sourceView
+                   barButton:(nullable UIBarButtonItem *)bbi
+                  sourceRect:(CGRect)sourceRect;
 @end

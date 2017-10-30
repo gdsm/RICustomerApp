@@ -1,9 +1,9 @@
 //
-//  ReportLineView.m
-//  Silver
+//  ReportLineView.h
+//  ReddyIce
 //
-//  Created by Dustin on 2/27/14.
-//
+//  Created by Gagan on 17/10/17.
+//  Copyright © 2017 HCL. All rights reserved.
 //
 
 #import "ReportLineView.h"

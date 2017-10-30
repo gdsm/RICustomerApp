@@ -31,13 +31,13 @@ const CGFloat CustomerCareView_Height = 150;
 - (void) updateUI
 {
     self.btnMessage.coloredButtonType = ColoredButtonType_Blue;
-    self.btnMessage.titleLabel.font = [Globals shared].defaultIconFont;
+    self.btnMessage.titleLabel.font = [Globals shared].bbiIconFont;
     self.btnMessage.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.btnMessage.titleNormalColor = [Globals shared].themingAssistant.whiteNorm;
     [self.btnMessage setTitle:[IconFontCodes shared].message forState:UIControlStateNormal];
     
     self.btnCall.coloredButtonType = ColoredButtonType_Blue;
-    self.btnCall.titleLabel.font = [Globals shared].defaultIconFont;
+    self.btnCall.titleLabel.font = [Globals shared].bbiIconFont;
     self.btnCall.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.btnCall.titleNormalColor = [Globals shared].themingAssistant.whiteNorm;
     [self.btnCall setTitle:[IconFontCodes shared].call forState:UIControlStateNormal];

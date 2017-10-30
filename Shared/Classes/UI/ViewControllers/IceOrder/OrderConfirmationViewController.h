@@ -10,11 +10,6 @@
 
 @interface OrderConfirmationViewController : BaseTableViewController
 
-@property (weak, nonatomic) IBOutlet UILabel *lblThanksOrder;
-@property (weak, nonatomic) IBOutlet UILabel *lblOrder;
-@property (weak, nonatomic) IBOutlet UILabel *lblDateTime;
-@property (weak, nonatomic) IBOutlet ColoredButton *btnViewOrder;
-- (IBAction)onBtpTap:(ColoredButton *)sender;
-@property (weak, nonatomic) IBOutlet ColoredButton *btnDone;
+@property (nonatomic, getter=isEquipmentRepair) BOOL equipmentRepair;
 
 @end

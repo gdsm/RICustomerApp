@@ -10,6 +10,7 @@
 
 NSString* const noti_OrderConfirmationDone = @"OrderConfirmationDone";
 NSString* const noti_ProblemRequestSubmit = @"ProblemRequestSubmit";
+NSString* const noti_FeedbackRequestSubmit = @"FeedbackRequestSubmit";
 NSString* const noti_ClearTicketDone = @"ClearTicketDone";
 
 @implementation NotificationInfo

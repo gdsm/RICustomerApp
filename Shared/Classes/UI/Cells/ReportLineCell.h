@@ -31,5 +31,6 @@
 @property (nonatomic) UIEdgeInsets cellBackgroundInsets;
 
 @property BOOL canHighlighted;
+@property (nonatomic, strong) BaseView* viewUnderLine;
 
 @end

@@ -326,4 +326,10 @@
 #endif
 }
 
++ (NSString *) stringFromIndexPath:(NSIndexPath *)indexPath
+{
+    NSString* retVal = [NSString stringWithFormat:@"%ld-%ld", (long)indexPath.section, (long)indexPath.row];
+    return retVal;
+}
+
 @end

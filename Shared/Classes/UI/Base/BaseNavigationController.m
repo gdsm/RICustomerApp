@@ -87,6 +87,7 @@
     
     [self dismissViewControllerAnimated:animated completion:callback];
 
+    isSuccess = YES;
     return isSuccess;
 }
 

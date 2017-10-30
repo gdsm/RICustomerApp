@@ -1,13 +1,14 @@
 //
-//  ReportLineCell.m
-//  Silver
+//  ReportLineCell.h
+//  ReddyIce
 //
-//  Created by Dustin on 2/27/14.
-//
+//  Created by Gagan on 18/10/17.
+//  Copyright © 2017 HCL. All rights reserved.
 //
 
 #import "ReportLineCell.h"
 #import "Utilities.h"
+#import "Globals.h"
 
 @implementation ReportLineCell
 
@@ -59,6 +60,20 @@
 
 }
 
+- (BaseView *) viewUnderLine
+{
+    if (_viewUnderLine == nil)
+    {
+        _viewUnderLine = [[BaseView alloc] initWithFrame:CGRectMake(self.reportLineView.contentInsets.left, self.frame.size.height - seperatorHeight_1px, self.reportLineView.contentWidth, seperatorHeight_1px)];
+        _viewUnderLine.hidden = YES;
+        _viewUnderLine.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
+        _viewUnderLine.backgroundColor = [Globals shared].themingAssistant.defaultSeperatorColor;
+        
+        [self.contentView addSubview:_viewUnderLine];
+    }
+    return _viewUnderLine;
+}
+
 - (void) layoutSubviews
 {
     [super layoutSubviews];
@@ -69,6 +84,15 @@
     rect_reportLine.size.width = self.contentView.frame.size.width - (self.reportLineView.contentInsets.left + self.reportLineView.contentInsets.right);
     rect_reportLine.size.height = self.contentView.frame.size.height - (self.reportLineView.contentInsets.top + self.reportLineView.contentInsets.bottom);
     self.reportLineView.frame = rect_reportLine;
+    
+    if ((_viewUnderLine != nil) && (_viewUnderLine.hidden == NO))
+    {
+        CGRect rect_viewUnderline = self.viewUnderLine.frame;
+        rect_viewUnderline.origin.x = rect_reportLine.origin.x;
+        rect_viewUnderline.origin.y = self.contentView.frame.size.height - (rect_viewUnderline.size.height);
+        rect_viewUnderline.size.width = rect_reportLine.size.width;
+        self.viewUnderLine.frame = rect_viewUnderline;
+    }
 }
 
 @end

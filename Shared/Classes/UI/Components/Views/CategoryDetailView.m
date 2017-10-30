@@ -60,21 +60,8 @@
     self.lblDetail.hidden = YES;
 }
 
-- (void) layoutUI
+- (void) setCategoryFrame:(CGRect)rect_category detailFrame:(CGRect)rect_detail
 {
-    CGRect rect_category = CGRectZero;
-    CGRect rect_detail = CGRectZero;
-    
-    rect_category.origin.x = self.contentInsets.left;
-    rect_category.origin.y = self.contentInsets.top;
-    rect_category.size.width = self.contentWidth * self.dividerRatio;
-    rect_category.size.height = self.contentHeight;
-    
-    rect_detail.origin.x = rect_category.origin.x + rect_category.size.width;
-    rect_detail.origin.y = self.contentInsets.top;
-    rect_detail.size.width = self.contentWidth * (1 - self.dividerRatio);
-    rect_detail.size.height = self.contentHeight;
-    
     if (self.lblCategory.hidden == false)
     {
         self.lblCategory.frame = rect_category;
@@ -93,6 +80,57 @@
     }
 }
 
+- (void) layoutUI_Horizontally
+{
+    CGRect rect_category = CGRectZero;
+    CGRect rect_detail = CGRectZero;
+    
+    rect_category.origin.x = self.contentInsets.left;
+    rect_category.origin.y = self.contentInsets.top;
+    rect_category.size.width = self.contentWidth * self.dividerRatio;
+    rect_category.size.height = self.contentHeight;
+    
+    rect_detail.origin.x = rect_category.origin.x + rect_category.size.width;
+    rect_detail.origin.y = self.contentInsets.top;
+    rect_detail.size.width = self.contentWidth * (1 - self.dividerRatio);
+    rect_detail.size.height = self.contentHeight;
+    
+    [self setCategoryFrame:rect_category detailFrame:rect_detail];
+}
+
+- (void) layoutUI_Vertically
+{
+    CGRect rect_category = CGRectZero;
+    CGRect rect_detail = CGRectZero;
+    
+    rect_category.origin.x = self.contentInsets.left;
+    rect_category.origin.y = self.contentInsets.top;
+    rect_category.size.width = self.contentWidth;
+    rect_category.size.height = self.contentHeight * self.dividerRatio;
+    
+    rect_detail.origin.x = self.contentInsets.left;
+    rect_detail.origin.y = rect_category.origin.y + rect_category.size.height;
+    rect_detail.size.width = self.contentWidth;
+    rect_detail.size.height = self.contentHeight * (1 - self.dividerRatio);
+    
+    [self setCategoryFrame:rect_category detailFrame:rect_detail];
+}
+
+- (void) layoutUI
+{
+    switch (self.categoryDetailStyle)
+    {
+        case CategoryDetailStyle_Horizontal:
+            [self layoutUI_Horizontally];
+            break;
+        case CategoryDetailStyle_Vertical:
+            [self layoutUI_Vertically];
+            break;
+        default:
+            break;
+    }
+}
+
 - (BaseLabel *) lblCategory
 {
     if (_lblCategory == nil)
@@ -100,14 +138,11 @@
         CGFloat w = self.contentWidth * 0.5;
         CGRect rect = CGRectMake(self.contentInsets.left, self.contentInsets.top, w, self.contentHeight);
         _lblCategory = [[BaseLabel alloc] initWithFrame:rect];
+        [_lblCategory defaultStyling];
         _lblCategory.font = [Globals shared].defaultInfoFont;
         _lblCategory.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleRightMargin;
-        _lblCategory.textColor = [Globals shared].themingAssistant.defaultTextColor;
-        _lblCategory.backgroundColor = [UIColor clearColor];
-        _lblCategory.numberOfLines = 0;
         _lblCategory.textAlignment = NSTextAlignmentLeft;
         _lblCategory.text = @"Category";
-        _lblCategory.adjustsFontSizeToFitWidth = YES;
     }
     return _lblCategory;
 }
@@ -119,14 +154,11 @@
         CGFloat w = self.contentWidth * 0.5;
         CGRect rect = CGRectMake(self.contentInsets.left + w, self.contentInsets.top, w, self.contentHeight);
         _lblDetail = [[BaseLabel alloc] initWithFrame:rect];
+        [_lblDetail defaultStyling];
         _lblDetail.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleLeftMargin;
         _lblDetail.font = [Globals shared].defaultInfoFont;
-        _lblDetail.textColor = [Globals shared].themingAssistant.defaultTextColor;
-        _lblDetail.backgroundColor = [UIColor clearColor];
-        _lblDetail.numberOfLines = 0;
         _lblDetail.textAlignment = NSTextAlignmentRight;
         _lblDetail.text = @"Detail";
-        _lblDetail.adjustsFontSizeToFitWidth = YES;
     }
     return _lblDetail;
 }

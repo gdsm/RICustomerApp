@@ -127,6 +127,8 @@
 		CE42D6A61F9E8ADF00A9FE50 /* DriverInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE42D6A51F9E8ADF00A9FE50 /* DriverInfoCell.xib */; };
 		CE42D6A91F9E925A00A9FE50 /* CategoryDetailButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6A81F9E925A00A9FE50 /* CategoryDetailButton.m */; };
 		CE42D6B11F9EA68200A9FE50 /* ReportLineCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */; };
+		CE4A6FB41FA7A4DC00BB0E6B /* FeedbackConfirmationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6FB31FA7A4DA00BB0E6B /* FeedbackConfirmationViewController.m */; };
+		CE4A6FB71FA7A5EA00BB0E6B /* iCarousel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4A6FB61FA7A5EA00BB0E6B /* iCarousel.m */; };
 		CE4BC5221F9EAE89004F1CDC /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC51D1F9EAE88004F1CDC /* ChangePasswordViewController.m */; };
 		CE4BC5231F9EAE89004F1CDC /* LaunchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC51F1F9EAE88004F1CDC /* LaunchViewController.m */; };
 		CE4BC5241F9EAE89004F1CDC /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE4BC5211F9EAE88004F1CDC /* LoginViewController.m */; };
@@ -214,6 +216,10 @@
 		CED9A8471FA38A48009E2288 /* Launch.png in Resources */ = {isa = PBXBuildFile; fileRef = CED9A8461FA38A46009E2288 /* Launch.png */; };
 		CED9A84D1FA390F8009E2288 /* ItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9A84A1FA390F7009E2288 /* ItemCell.m */; };
 		CED9A84E1FA390F8009E2288 /* ItemVariationCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9A84C1FA390F7009E2288 /* ItemVariationCell.m */; };
+		CED9A8511FA3A0D6009E2288 /* FeedbackQuestionareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9A8501FA3A0D6009E2288 /* FeedbackQuestionareViewController.m */; };
+		CED9A85C1FA3B775009E2288 /* FeedbackView.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9A85B1FA3B775009E2288 /* FeedbackView.m */; };
+		CED9A85E1FA3B7E2009E2288 /* FeedbackLevelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CED9A85D1FA3B7E2009E2288 /* FeedbackLevelView.xib */; };
+		CED9A8621FA3D937009E2288 /* FeedbackCommentsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CED9A8611FA3D937009E2288 /* FeedbackCommentsViewController.m */; };
 		CEDE04D71F953EFC005A3354 /* CheckoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = CEDE04D61F953EFC005A3354 /* CheckoutView.m */; };
 		CEDE04F71F9550CE005A3354 /* Delivery_high@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDE04D91F9550CE005A3354 /* Delivery_high@1x.png */; };
 		CEDE04F81F9550CE005A3354 /* Delivery_high@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDE04DA1F9550CE005A3354 /* Delivery_high@2x.png */; };
@@ -462,6 +468,10 @@
 		CE42D6A81F9E925A00A9FE50 /* CategoryDetailButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CategoryDetailButton.m; sourceTree = "<group>"; };
 		CE42D6AF1F9EA68100A9FE50 /* ReportLineCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReportLineCell.h; sourceTree = "<group>"; };
 		CE42D6B01F9EA68100A9FE50 /* ReportLineCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReportLineCell.m; sourceTree = "<group>"; };
+		CE4A6FB21FA7A4DA00BB0E6B /* FeedbackConfirmationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedbackConfirmationViewController.h; sourceTree = "<group>"; };
+		CE4A6FB31FA7A4DA00BB0E6B /* FeedbackConfirmationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedbackConfirmationViewController.m; sourceTree = "<group>"; };
+		CE4A6FB51FA7A5EA00BB0E6B /* iCarousel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCarousel.h; sourceTree = "<group>"; };
+		CE4A6FB61FA7A5EA00BB0E6B /* iCarousel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCarousel.m; sourceTree = "<group>"; };
 		CE4BC51C1F9EAE88004F1CDC /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
 		CE4BC51D1F9EAE88004F1CDC /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		CE4BC51E1F9EAE88004F1CDC /* LaunchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LaunchViewController.h; sourceTree = "<group>"; };
@@ -617,6 +627,13 @@
 		CED9A84A1FA390F7009E2288 /* ItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemCell.m; sourceTree = "<group>"; };
 		CED9A84B1FA390F7009E2288 /* ItemVariationCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemVariationCell.h; sourceTree = "<group>"; };
 		CED9A84C1FA390F7009E2288 /* ItemVariationCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemVariationCell.m; sourceTree = "<group>"; };
+		CED9A84F1FA3A0D5009E2288 /* FeedbackQuestionareViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackQuestionareViewController.h; sourceTree = "<group>"; };
+		CED9A8501FA3A0D6009E2288 /* FeedbackQuestionareViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackQuestionareViewController.m; sourceTree = "<group>"; };
+		CED9A85A1FA3B775009E2288 /* FeedbackView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackView.h; sourceTree = "<group>"; };
+		CED9A85B1FA3B775009E2288 /* FeedbackView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackView.m; sourceTree = "<group>"; };
+		CED9A85D1FA3B7E2009E2288 /* FeedbackLevelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FeedbackLevelView.xib; sourceTree = "<group>"; };
+		CED9A8601FA3D937009E2288 /* FeedbackCommentsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FeedbackCommentsViewController.h; sourceTree = "<group>"; };
+		CED9A8611FA3D937009E2288 /* FeedbackCommentsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FeedbackCommentsViewController.m; sourceTree = "<group>"; };
 		CEDE04D51F953EFC005A3354 /* CheckoutView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CheckoutView.h; sourceTree = "<group>"; };
 		CEDE04D61F953EFC005A3354 /* CheckoutView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CheckoutView.m; sourceTree = "<group>"; };
 		CEDE04D91F9550CE005A3354 /* Delivery_high@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Delivery_high@1x.png"; sourceTree = "<group>"; };
@@ -684,8 +701,14 @@
 		4F8846BF1FA2123200FE63A2 /* Feedback */ = {
 			isa = PBXGroup;
 			children = (
+				CE4A6FB21FA7A4DA00BB0E6B /* FeedbackConfirmationViewController.h */,
+				CE4A6FB31FA7A4DA00BB0E6B /* FeedbackConfirmationViewController.m */,
 				4F8846C01FA2125200FE63A2 /* FeedbackViewController.h */,
 				4F8846C11FA2125200FE63A2 /* FeedbackViewController.m */,
+				CED9A84F1FA3A0D5009E2288 /* FeedbackQuestionareViewController.h */,
+				CED9A8501FA3A0D6009E2288 /* FeedbackQuestionareViewController.m */,
+				CED9A8601FA3D937009E2288 /* FeedbackCommentsViewController.h */,
+				CED9A8611FA3D937009E2288 /* FeedbackCommentsViewController.m */,
 			);
 			path = Feedback;
 			sourceTree = "<group>";
@@ -1232,6 +1255,7 @@
 				CE4E2DD61FA15BC100C806A9 /* CustomerCareView.xib */,
 				CE6C48411FA256A000471727 /* EditField.xib */,
 				CE6C48561FA299AE00471727 /* ToggleSettingView.xib */,
+				CED9A85D1FA3B7E2009E2288 /* FeedbackLevelView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1495,6 +1519,7 @@
 		CE5685711F8D746E005922AA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				CED9A8581FA3B752009E2288 /* FeedbackViews */,
 				CE4E2DBB1FA0F5A800C806A9 /* IceOrder */,
 				CE20D97E1F9ECD1D00E48AD7 /* EquipmentService */,
 				CE5685721F8D746E005922AA /* AdditionalSecurityButtons.h */,
@@ -1570,6 +1595,7 @@
 		CED4F5011F8EC6EA00723DAC /* 3rdParty */ = {
 			isa = PBXGroup;
 			children = (
+				CED9A8541FA3A681009E2288 /* iCrausel */,
 				CE12C2C11F96B36B00D9EDB8 /* TOPasscodeViewController */,
 				CED4F5021F8EC6EA00723DAC /* MBProgressHUD */,
 			);
@@ -1594,6 +1620,24 @@
 				CED9A84C1FA390F7009E2288 /* ItemVariationCell.m */,
 			);
 			path = IceOrder;
+			sourceTree = "<group>";
+		};
+		CED9A8541FA3A681009E2288 /* iCrausel */ = {
+			isa = PBXGroup;
+			children = (
+				CE4A6FB51FA7A5EA00BB0E6B /* iCarousel.h */,
+				CE4A6FB61FA7A5EA00BB0E6B /* iCarousel.m */,
+			);
+			path = iCrausel;
+			sourceTree = "<group>";
+		};
+		CED9A8581FA3B752009E2288 /* FeedbackViews */ = {
+			isa = PBXGroup;
+			children = (
+				CED9A85A1FA3B775009E2288 /* FeedbackView.h */,
+				CED9A85B1FA3B775009E2288 /* FeedbackView.m */,
+			);
+			path = FeedbackViews;
 			sourceTree = "<group>";
 		};
 		CEDE04D81F9550CE005A3354 /* TabIcons */ = {
@@ -1825,6 +1869,7 @@
 				CEDE05011F9550CE005A3354 /* Feedback_norm@2x.png in Resources */,
 				CE3A710E1F8D0C5200F42B9A /* LaunchScreen.storyboard in Resources */,
 				CE14A9B61F9FF6FB00FB9C47 /* RegistrationViewController.xib in Resources */,
+				CED9A85E1FA3B7E2009E2288 /* FeedbackLevelView.xib in Resources */,
 				CEDE05041F9550CE005A3354 /* Home_high@2x.png in Resources */,
 				CEDE05111F9550CE005A3354 /* Products_high@3x.png in Resources */,
 				CE12C2671F963FD100D9EDB8 /* logo.png in Resources */,
@@ -1866,6 +1911,7 @@
 				CE59832F1F90FDE50098DC13 /* JSONRequest.m in Sources */,
 				CE5433431F9A8CE20059CA2C /* DataSyncManager.m in Sources */,
 				CEC3A7DB1F9BFD9B00392073 /* DNSHistoryViewController.m in Sources */,
+				CED9A8511FA3A0D6009E2288 /* FeedbackQuestionareViewController.m in Sources */,
 				CEDE04D71F953EFC005A3354 /* CheckoutView.m in Sources */,
 				CE14A9821F9F83AC00FB9C47 /* GridPanelView.m in Sources */,
 				CE5433451F9A8CE20059CA2C /* ItemManager.m in Sources */,
@@ -1928,6 +1974,7 @@
 				CE5685681F8D73BC005922AA /* ColoredButton.m in Sources */,
 				CE5433421F9A8CE20059CA2C /* DatabaseManager.m in Sources */,
 				CE3A710B1F8D0C5200F42B9A /* AppDelegate.m in Sources */,
+				CE4A6FB71FA7A5EA00BB0E6B /* iCarousel.m in Sources */,
 				CE1805CC1F8E5A4F00081FD0 /* BaseTableViewCell.m in Sources */,
 				CE14A97B1F9F825000FB9C47 /* CreateProblemViewController.m in Sources */,
 				CED9A84D1FA390F8009E2288 /* ItemCell.m in Sources */,
@@ -1941,6 +1988,7 @@
 				CE4E2DCF1FA11F3300C806A9 /* UserOptionsViewController.m in Sources */,
 				CE42D6B11F9EA68200A9FE50 /* ReportLineCell.m in Sources */,
 				CE4BC5221F9EAE89004F1CDC /* ChangePasswordViewController.m in Sources */,
+				CED9A8621FA3D937009E2288 /* FeedbackCommentsViewController.m in Sources */,
 				CE5685531F8D5A63005922AA /* ThemingAssistant.m in Sources */,
 				CE54333F1F9A8CE20059CA2C /* ItemSummary.m in Sources */,
 				CE5983341F90FED40098DC13 /* CoreService.m in Sources */,
@@ -1983,6 +2031,7 @@
 				CE5433411F9A8CE20059CA2C /* UserSummary.m in Sources */,
 				CE5A4FE81F8FC3B6009D373B /* HomeButtonsView.m in Sources */,
 				CE6C48551FA2999100471727 /* ToggleSettingView.m in Sources */,
+				CE4A6FB41FA7A4DC00BB0E6B /* FeedbackConfirmationViewController.m in Sources */,
 				CE5A50011F9022A6009D373B /* HeaderInfoView.m in Sources */,
 				CE3A70CB1F8D0B9900F42B9A /* main.m in Sources */,
 				CE42D68F1F9E2F8D00A9FE50 /* HistoryView.m in Sources */,
@@ -1990,6 +2039,7 @@
 				CE20D9811F9ECD4800E48AD7 /* CreateServiceRequestView.m in Sources */,
 				CE4BC5341F9EB0AB004F1CDC /* SliderView.m in Sources */,
 				CE42D69C1F9E86B500A9FE50 /* DriverInfoView.m in Sources */,
+				CED9A85C1FA3B775009E2288 /* FeedbackView.m in Sources */,
 				CE1805D51F8E621300081FD0 /* EditFieldCell.m in Sources */,
 				CE12C2EF1F96B36B00D9EDB8 /* TOPasscodeSettingsViewController.m in Sources */,
 				CEBDCB5C1F916EA80078C813 /* BottomTabButton.m in Sources */,

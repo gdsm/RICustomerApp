@@ -7,6 +7,7 @@
 //
 
 #import "TicketViewController.h"
+#import "OrderConfirmationViewController.h"
 #import "OrderViewController.h"
 #import "CheckoutView.h"
 #import "TicketLineItemCell.h"
@@ -38,14 +39,18 @@
     CGFloat bottom = self.bottomTabView.frame.size.height + self.checkoutView.frame.size.height;
     self.tableOffset = UIEdgeInsetsMake(top, 0, bottom, 0);
     
-    self.bottomTabView.hidden = YES;
-    
     self.navigationItem.rightBarButtonItem = self.bbiClear;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.bottomTabView.hidden = NO;
 }
 
 #pragma mark - Logical Flow
@@ -57,8 +62,11 @@
 
 - (void) confirmOrder
 {
-    OrderViewController* view = [[OrderViewController alloc] init];
-    [self safePush:view animated:YES];
+    OrderConfirmationViewController* view = [[OrderConfirmationViewController alloc] initWithNibName:@"OrderConfirmationViewController" bundle:nil];
+    [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
+
+    //    OrderViewController* view = [[OrderViewController alloc] init];
+//    [self safePush:view animated:YES];
 }
 
 - (void) refreshTicket

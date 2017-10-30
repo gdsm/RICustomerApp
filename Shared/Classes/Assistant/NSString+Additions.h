@@ -72,4 +72,5 @@
 /// @return the @c CGFloat form of this @c NSString
 - (CGFloat)cgFloatValue;
 
++ (NSString *) stringFromIndexPath:(NSIndexPath *)indexPath;
 @end

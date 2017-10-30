@@ -111,4 +111,14 @@
     return @"\uf194";
 }
 
+- (NSString *) mood_bad
+{
+    return @"\uf213";
+}
+
+- (NSString *) mood_good
+{
+    return @"\uf214";
+}
+
 @end

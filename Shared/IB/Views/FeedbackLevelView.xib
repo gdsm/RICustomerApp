@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="FeedbackView">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WVH-BG-OP4" customClass="BaseView">
+                    <rect key="frame" x="50" y="110" width="300" height="180"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gf3-zu-DIQ" customClass="BaseLabel">
+                            <rect key="frame" x="0.0" y="0.0" width="300" height="70"/>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="nJY-Et-HS7"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q3-sx-iIf" customClass="ColoredButton">
+                            <rect key="frame" x="0.0" y="120" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="C2F-z4-rGt"/>
+                                <constraint firstAttribute="height" constant="60" id="xvW-Oe-hgE"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="onBtnTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="qf8-El-k1r"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbg-fA-bpX" customClass="ColoredButton">
+                            <rect key="frame" x="80" y="120" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="HRE-1T-77a"/>
+                                <constraint firstAttribute="height" constant="60" id="ItV-bQ-ALN"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="onBtnTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="vrI-8u-T5f"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UMb-Jc-ZXg" customClass="ColoredButton">
+                            <rect key="frame" x="160" y="120" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="60" id="0gA-Ry-gNU"/>
+                                <constraint firstAttribute="height" constant="60" id="AhQ-Qg-kMY"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="onBtnTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="0J7-Jj-yT4"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DaT-Bs-UGj" customClass="ColoredButton">
+                            <rect key="frame" x="240" y="120" width="60" height="60"/>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="OMt-EU-uPk"/>
+                                <constraint firstAttribute="width" constant="60" id="dlr-jv-Ql3"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <connections>
+                                <action selector="onBtnTap:" destination="iN0-l3-epB" eventType="touchUpInside" id="OFI-z2-hnB"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="DaT-Bs-UGj" secondAttribute="bottom" id="6QK-is-WwO"/>
+                        <constraint firstAttribute="bottom" secondItem="UMb-Jc-ZXg" secondAttribute="bottom" id="EOO-Y4-cw8"/>
+                        <constraint firstAttribute="bottom" secondItem="cbg-fA-bpX" secondAttribute="bottom" id="FNi-1p-CyH"/>
+                        <constraint firstAttribute="height" constant="180" id="HPc-tr-6MN"/>
+                        <constraint firstAttribute="bottom" secondItem="7q3-sx-iIf" secondAttribute="bottom" id="L8c-Jb-BDw"/>
+                        <constraint firstItem="cbg-fA-bpX" firstAttribute="leading" secondItem="7q3-sx-iIf" secondAttribute="trailing" priority="250" constant="20" id="UMT-p2-baA"/>
+                        <constraint firstAttribute="width" constant="300" id="VJH-U5-qkZ"/>
+                        <constraint firstAttribute="trailing" secondItem="Gf3-zu-DIQ" secondAttribute="trailing" id="Ytk-c4-mzQ"/>
+                        <constraint firstAttribute="trailing" secondItem="DaT-Bs-UGj" secondAttribute="trailing" id="YyN-a8-4Ed"/>
+                        <constraint firstItem="Gf3-zu-DIQ" firstAttribute="top" secondItem="WVH-BG-OP4" secondAttribute="top" id="cLs-YG-Qqa"/>
+                        <constraint firstItem="Gf3-zu-DIQ" firstAttribute="leading" secondItem="WVH-BG-OP4" secondAttribute="leading" id="eC0-f3-HHe"/>
+                        <constraint firstItem="UMb-Jc-ZXg" firstAttribute="leading" secondItem="cbg-fA-bpX" secondAttribute="trailing" priority="250" constant="20" id="nP8-9M-0dl"/>
+                        <constraint firstItem="DaT-Bs-UGj" firstAttribute="leading" secondItem="UMb-Jc-ZXg" secondAttribute="trailing" priority="250" constant="20" id="qdC-2K-qvo"/>
+                        <constraint firstItem="7q3-sx-iIf" firstAttribute="leading" secondItem="WVH-BG-OP4" secondAttribute="leading" id="r7g-Re-lJM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.99215686270000003" green="0.90196078430000004" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="WVH-BG-OP4" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ZDA-yO-daR"/>
+                <constraint firstItem="WVH-BG-OP4" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="ZsA-xE-Nrx"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="btnLevel1" destination="7q3-sx-iIf" id="PpQ-N6-fvk"/>
+                <outlet property="btnLevel2" destination="cbg-fA-bpX" id="Wmt-Rw-Nz6"/>
+                <outlet property="btnLevel3" destination="UMb-Jc-ZXg" id="Alz-ED-gRm"/>
+                <outlet property="btnLevel4" destination="DaT-Bs-UGj" id="3C7-bf-aUR"/>
+                <outlet property="lblQuestion" destination="Gf3-zu-DIQ" id="rnI-eA-d29"/>
+                <outlet property="viewQuestion" destination="WVH-BG-OP4" id="U2p-5f-BWH"/>
+            </connections>
+        </view>
+    </objects>
+</document>

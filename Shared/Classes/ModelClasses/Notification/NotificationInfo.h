@@ -10,6 +10,7 @@
 
 extern NSString* const noti_OrderConfirmationDone;
 extern NSString* const noti_ProblemRequestSubmit;
+extern NSString* const noti_FeedbackRequestSubmit;
 extern NSString* const noti_ClearTicketDone;
 
 @interface NotificationInfo : CoreObject

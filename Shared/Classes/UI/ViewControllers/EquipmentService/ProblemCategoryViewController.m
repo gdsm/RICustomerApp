@@ -8,10 +8,9 @@
 
 #import "ProblemCategoryViewController.h"
 #import "ProblemDescriptionViewController.h"
-#import "CheckboxSelectionCell.h"
+#import "ReportLineCell.h"
 #import "Globals.h"
 
-const CGFloat ProbCatVC_CbTitCell_Height = 60;
 
 @interface ProblemCategoryViewController ()
 @property (nonatomic, strong) BaseLabel* lblInfo;
@@ -35,7 +34,9 @@ const CGFloat ProbCatVC_CbTitCell_Height = 60;
     CGFloat top = (self.lblInfo.frame.origin.y + self.lblInfo.frame.size.height);
     self.tableOffset = UIEdgeInsetsMake(top, 0, 0, 0);
     
-    self.navigationItem.rightBarButtonItem = self.bbiNext;
+//    self.navigationItem.rightBarButtonItem = self.bbiNext;
+    self.navigationItem.hidesBackButton = YES;
+
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     self.tableView.separatorInset = UIEdgeInsetsZero;
 }
@@ -91,22 +92,30 @@ const CGFloat ProbCatVC_CbTitCell_Height = 60;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGFloat height = ProbCatVC_CbTitCell_Height;
+    CGFloat height = cellHeight_60px;
     return height;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    CheckboxSelectionCell* cell = [CheckboxSelectionCell dequeueFrom:tableView loadFromNib:@"CheckboxSelectionCell"];
-    [cell updateCell];
+    ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
-    cell.lblTitle.text = [self.dataSource objectAtIndex:indexPath.row];
     
+    CGFloat div[] = {0.999f};
+    
+    [cell initWithDividers:div count:2];
+    [cell.reportLineView setTitles:[self.dataSource objectAtIndex:indexPath.row], nil];
+    [[cell.reportLineView labelAtIndex:0] defaultStyling];
+    [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
+    
+    [cell updateCell];
+
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    [self enterProblemDetail];
 }
 
 #pragma mark - UI Methods

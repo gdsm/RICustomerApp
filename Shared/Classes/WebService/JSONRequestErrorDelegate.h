@@ -1,9 +1,9 @@
 //
 //  JSONRequestErrorDelegate.h
-//  Silver
+//  ReddyIce
 //
-//  Created by Dustin Burke on 3/10/14.
-//
+//  Created by Gagan on 17/10/17.
+//  Copyright © 2017 HCL. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

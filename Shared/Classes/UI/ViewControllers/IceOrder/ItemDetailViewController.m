@@ -73,9 +73,14 @@ typedef NS_ENUM(NSUInteger, ItemDetailVC_CellSequence)
     self.allowKeyboardNotifications = YES;
     self.bgImgv.userInteractionEnabled = YES;
 
-    self.bottomTabView.hidden = NO;
     self.navigationItem.rightBarButtonItem = self.bbiCart;
     self.bgImgv.userInteractionEnabled = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.bottomTabView.hidden = NO;
 }
 
 - (void)didReceiveMemoryWarning {

@@ -132,7 +132,6 @@ NSString* const kCurrentCoreWALBackup = @"original.sqlite-wal.backup";
     {
         for (NSString *delItem in deleted)
         {
-////            [SilverLog level:SilverLogLevelInfo message:@"Going to delete %@ %@", eType, delItem];
             NSPredicate *predicate = [NSPredicate predicateWithFormat:format, delItem];
             [request setPredicate:predicate];
             
@@ -144,7 +143,6 @@ NSString* const kCurrentCoreWALBackup = @"original.sqlite-wal.backup";
                 for (NSManagedObject *item in fetchResults)
                 {
                     [self.managedObjectContext deleteObject:item];
-////                    [SilverLog level:SilverLogLevelInfo message:@"%@ %@ was deleted", eType, delItem];
                 }
             }
         }
@@ -163,7 +161,6 @@ NSString* const kCurrentCoreWALBackup = @"original.sqlite-wal.backup";
     
     if (!mutableFetchResults)
     {
-////        [SilverLog level:SilverLogLevelError message:@"Error looking up existing %@: %@", eType, error];
         abort();
     }
     
@@ -171,11 +168,9 @@ NSString* const kCurrentCoreWALBackup = @"original.sqlite-wal.backup";
     if ([mutableFetchResults count]) // this item already exists;
     {
         item = [mutableFetchResults objectAtIndex:0];
-////        [SilverLog level:SilverLogLevelDebug message:@"Updating %@ %@", eType, code];
     }
     else
     {
-////        [SilverLog level:SilverLogLevelDebug message:@"Adding %@ %@", eType, code];
         item = [NSEntityDescription insertNewObjectForEntityForName:eType inManagedObjectContext:self.managedObjectContext];
     }
     
@@ -190,8 +185,6 @@ NSString* const kCurrentCoreWALBackup = @"original.sqlite-wal.backup";
 
 - (void) deleteAllEntitiesOfType:(NSString *)eType
 {
-////    [SilverLog level:SilverLogLevelDebug message:@"Deleting all %@", eType];
-    
     NSFetchRequest *request = [[NSFetchRequest alloc] initWithEntityName:eType];
     
     NSError *error = nil;

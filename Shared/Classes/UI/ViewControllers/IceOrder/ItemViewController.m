@@ -39,6 +39,12 @@ const CGFloat ItemsVC_itemCellHeight = 200;
     CGFloat top = (self.navigationBarHeight + self.statusBarHeight);
     self.tableOffset = UIEdgeInsetsMake(top, 0, self.bottomTabView.frame.size.height, 0);
 
+    self.navigationItem.hidesBackButton = YES;
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
     self.bottomTabView.hidden = NO;
 }
 

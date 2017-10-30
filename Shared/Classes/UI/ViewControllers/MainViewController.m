@@ -133,54 +133,60 @@ const CGFloat MainVC_UserViewHeight = 160;
 
 #pragma mark - Logical Flow Methods
 
-- (void) setHomeTab
+- (void) unselectAllTabs
 {
     [self.bottomTabView unselectBottomTabs];
+    [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
+    [self safePopToController:self animated:NO];
+}
+
+- (void) setHomeTab
+{
+    [self unselectAllTabs];
     self.bottomTabView.btnHome.selected = YES;
-    [self.navigationController popToViewController:self animated:YES];
 }
 
 - (void) deliveryHistory
 {
-    [self.bottomTabView unselectBottomTabs];
+    [self unselectAllTabs];
     self.bottomTabView.btnDeliveryHistory.selected = YES;
-    [self.navigationController popToViewController:self animated:NO];
+
     DeliveryOrderViewController* view = [[DeliveryOrderViewController alloc] init];
-    [self safePush:view animated:YES];
+    [self safePush:view animated:NO];
 }
 
 - (void) reportAProblem
 {
-    [self.bottomTabView unselectBottomTabs];
+    [self unselectAllTabs];
     self.bottomTabView.btnReportAProb.selected = YES;
-    [self.navigationController popToViewController:self animated:NO];
+
     ProblemCategoryViewController* view = [[ProblemCategoryViewController alloc] init];
-    [self safePush:view animated:YES];
+    [self safePush:view animated:NO];
 }
 
 - (void) shareFeedback
 {
-    [self.bottomTabView unselectBottomTabs];
+    [self unselectAllTabs];
     self.bottomTabView.btnShareFeedback.selected = YES;
-    [self.navigationController popToViewController:self animated:NO];
-    FeedbackViewController* feedbackVC = [[FeedbackViewController alloc] init];
-    [self safePush: feedbackVC animated:YES];
+
+    FeedbackViewController* view = [[FeedbackViewController alloc] init];
+    [self safePush:view animated:NO];
 }
 
 - (void) placeAnOrder
 {
-    [self.bottomTabView unselectBottomTabs];
+    [self unselectAllTabs];
     self.bottomTabView.btnPlaceOrder.selected = YES;
-    [self.navigationController popToViewController:self animated:NO];
+
     ItemViewController* view = [[ItemViewController alloc] initWithStyle:UITableViewStylePlain];
-    [self safePush:view animated:YES];
+    [self safePush:view animated:NO];
 }
 
 - (void) placeQuickOrder
 {
-    [self.bottomTabView unselectBottomTabs];
+    [self unselectAllTabs];
     self.bottomTabView.btnPlaceOrder.selected = YES;
-    [self.navigationController popToViewController:self animated:NO];
+
     QuickOrderViewController* view = [[QuickOrderViewController alloc] init];
     [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
@@ -199,12 +205,11 @@ const CGFloat MainVC_UserViewHeight = 160;
     view.callbackChangePassword = ^{
         [weakSelf performSelectorOnMainThread:@selector(changePassword) withObject:nil waitUntilDone:NO];
     };
-    
-    view.modalPresentationStyle = UIModalPresentationPopover;
-    UIPopoverPresentationController* controller = view.popoverPresentationController;
-    controller.permittedArrowDirections = UIPopoverArrowDirectionAny;
-    controller.barButtonItem = self.bbiUser;
-    
+
+    if ([Utilities isiPad])
+    {
+        [view popoverPresentation:nil barButton:self.bbiUser sourceRect:CGRectZero];
+    }
     [self safePresent:view onSelf:YES animated:YES callbackCompletion:nil];
 }
 

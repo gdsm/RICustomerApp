@@ -38,7 +38,6 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
 
 - (void)setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Delivery History";
     self.bgImgv.image = nil;
     
@@ -46,6 +45,7 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
     self.bottomTabView.hidden = NO;
     
     self.navigationItem.rightBarButtonItem = self.bbiSearch;
+    self.navigationItem.hidesBackButton = YES;
 }
 
 - (void)didReceiveMemoryWarning
@@ -129,7 +129,8 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
     CGRect rect_segControl = self.segControl.frame;
 
     CGFloat yOffset = rect_segControl.origin.y;
-    rect_segControl.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
+    rect_segControl.size.width = self.view.frame.size.width * 0.6;
+    rect_segControl.origin.x = (self.view.frame.size.width - rect_segControl.size.width) * 0.5;
     
     yOffset += (rect_segControl.size.height + topMargin_20px);
     
@@ -175,8 +176,8 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 80.0;
         _segControl.frame = rect_segControl;
         _segControl.clipsToBounds = YES;
         
-        _segControl.backgroundColor = [UIColor lightGrayColor];
-        _segControl.tintColor = [UIColor whiteColor];
+        _segControl.backgroundColor = [UIColor whiteColor];
+        _segControl.tintColor = [Globals shared].themingAssistant.blueNorm;
         [_segControl addTarget:self action:@selector(onSegCtrlChanged:) forControlEvents:UIControlEventValueChanged];
         [self.view addSubview:_segControl];
     }

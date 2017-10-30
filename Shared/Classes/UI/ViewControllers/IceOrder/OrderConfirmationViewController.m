@@ -7,20 +7,26 @@
 //
 
 #import "OrderConfirmationViewController.h"
-#import "TitleCell.h"
+#import "ReportLineCell.h"
 #import "NotificationInfo.h"
 #import "CustomerCareView.h"
+#import "CategoryDetailView.h"
 #import "NSString+Additions.h"
 
-const CGFloat OrderConfVC_lblThanks_Height = 70;
-const CGFloat OrderConfVC_lblThanksOrder_margin = 10;
-const CGFloat OrderConfVC_lblThanksOrder_heightPer = 0.35;
-const CGFloat OrderConfVC_lblOrderBtnView_margin = 10;
-const CGFloat OrderConfVC_btnViewTable_margin = 10;
-const CGFloat OrderConfVC_btnView_height = 44;
 const CGFloat OrderConfVC_TableHeight = 120;
 
 @interface OrderConfirmationViewController ()
+
+@property (weak, nonatomic) IBOutlet BaseLabel *lblTitle;
+@property (weak, nonatomic) IBOutlet ColoredButton *btnDone;
+@property (weak, nonatomic) IBOutlet CategoryDetailView *viewOrderNo;
+@property (weak, nonatomic) IBOutlet CategoryDetailView *viewOrderDate;
+@property (weak, nonatomic) IBOutlet CategoryDetailView *viewEarliestDate;
+@property (weak, nonatomic) IBOutlet CategoryDetailView *viewLatestDate;
+@property (weak, nonatomic) IBOutlet CategoryDetailView *viewDeliveryAddress;
+
+- (IBAction)onBtpTap:(ColoredButton *)sender;
+
 @property (nonatomic, strong) UIBarButtonItem* bbiShare;
 @property (nonatomic, strong) CustomerCareView* viewCustomerCare;
 @end
@@ -38,59 +44,70 @@ const CGFloat OrderConfVC_TableHeight = 120;
     self.title = @"Order Confirmation";
     self.bgImgv.image = nil;
     
-    self.tableView.hidden = YES;
+    self.tableView.hidden = NO;
 
     self.navigationItem.rightBarButtonItem = self.bbiShare;
 
-    self.lblThanksOrder.backgroundColor = [UIColor clearColor];
-    self.lblThanksOrder.font = [Globals shared].defaultTextFont;
-    self.lblThanksOrder.numberOfLines = 0;
-    self.lblThanksOrder.textAlignment = NSTextAlignmentJustified;
-    self.lblThanksOrder.adjustsFontSizeToFitWidth = YES;
-    self.lblThanksOrder.textColor = [Globals shared].themingAssistant.defaultTextColor;
-    self.lblThanksOrder.text = @"Thank you for ordering with ReddyIce. You will receive an email confirmation shortly at email_id@domain.com.";
+    [self.lblTitle defaultStyling];
+    self.lblTitle.textAlignment = NSTextAlignmentCenter;
+    self.lblTitle.text = @"Thank you for ordering with ReddyIce.";
     
-    self.lblOrder.backgroundColor = [UIColor clearColor];
-    self.lblOrder.font = [Globals shared].defaultTextFont;
-    self.lblOrder.numberOfLines = 0;
-    self.lblOrder.textColor = [Globals shared].themingAssistant.defaultTextColor;
-    self.lblOrder.adjustsFontSizeToFitWidth = YES;
-    self.lblOrder.text = @"Order No.\r\
-    123456789\r\r\
-    Address\r\
-    Address line 1\r\
-    Address Line 2\r\
-    hh:mm\r\
-    Total Amount *\r\
-    $ 0000:00";
+    self.viewOrderNo.categoryDetailStyle = CategoryDetailStyle_Vertical;
+    [self.viewOrderNo updateUI];
+    self.viewOrderNo.category = @"Work Order No.";
+    self.viewOrderNo.lblCategory.textAlignment = NSTextAlignmentLeft;
+    self.viewOrderNo.lblCategory.font = [Globals shared].defaultInfoFont;
+    self.viewOrderNo.detail = @"123456780";
+    self.viewOrderNo.lblDetail.font = [Globals shared].defaultTextFont;
+    self.viewOrderNo.lblDetail.textAlignment = NSTextAlignmentLeft;
 
-    self.lblDateTime.backgroundColor = [UIColor clearColor];
-    self.lblDateTime.font = [Globals shared].defaultTextFont;
-    self.lblDateTime.numberOfLines = 0;
-    self.lblDateTime.text = @"Order Date\r\
-                            dd mmm yyyy\r\
-                            hh:mm\r\
-                            Expected Delivery*\r\
-                            dd mmm yyyy -\r\
-                            dd-mmm-yyyy.";
-    self.lblDateTime.textColor = [Globals shared].themingAssistant.defaultTextColor;
-    self.lblDateTime.adjustsFontSizeToFitWidth = YES;
+    self.viewOrderDate.categoryDetailStyle = CategoryDetailStyle_Vertical;
+    [self.viewOrderDate updateUI];
+    self.viewOrderDate.category = @"Work Order Date";
+    self.viewOrderDate.lblCategory.textAlignment = NSTextAlignmentRight;
+    self.viewOrderDate.lblCategory.font = [Globals shared].defaultInfoFont;
+    self.viewOrderDate.detail = @"MM/DD/YYYY";
+    self.viewOrderDate.lblDetail.font = [Globals shared].defaultTextFont;
+    self.viewOrderDate.lblDetail.textAlignment = NSTextAlignmentRight;
 
-//    self.btnViewOrder.bgNormalColor = [Globals shared].themingAssistant.blueNorm;
-//    self.btnViewOrder.bgHighlightedColor = [Globals shared].themingAssistant.blueHigh;
-//    self.btnViewOrder.titleNormalColor = [UIColor whiteColor];
-//    self.btnViewOrder.layer.cornerRadius = cornerRadius_10px;
-//    [self.btnViewOrder setTitle:@"View Ordered Items" forState:UIControlStateNormal];
-    self.btnViewOrder.hidden = YES;
-    
-    self.btnDone.bgNormalColor = [Globals shared].themingAssistant.redNorm;
-    self.btnDone.bgHighlightedColor = [Globals shared].themingAssistant.redHigh;
+    self.viewEarliestDate.categoryDetailStyle = CategoryDetailStyle_Vertical;
+    [self.viewEarliestDate updateUI];
+    self.viewEarliestDate.category = @"Earliest service date";
+    self.viewEarliestDate.lblCategory.textAlignment = NSTextAlignmentLeft;
+    self.viewEarliestDate.lblCategory.font = [Globals shared].defaultInfoFont;
+    self.viewEarliestDate.detail = @"MM/DD/YYYY";
+    self.viewEarliestDate.lblDetail.font = [Globals shared].defaultTextFont;
+    self.viewEarliestDate.lblDetail.textAlignment = NSTextAlignmentLeft;
+
+    self.viewLatestDate.categoryDetailStyle = CategoryDetailStyle_Vertical;
+    [self.viewLatestDate updateUI];
+    self.viewLatestDate.category = @"Latest service date";
+    self.viewLatestDate.lblCategory.textAlignment = NSTextAlignmentRight;
+    self.viewLatestDate.lblCategory.font = [Globals shared].defaultInfoFont;
+    self.viewLatestDate.detail = @"MM/DD/YYYY";
+    self.viewLatestDate.lblDetail.font = [Globals shared].defaultTextFont;
+    self.viewLatestDate.lblDetail.textAlignment = NSTextAlignmentRight;
+
+    self.viewDeliveryAddress.categoryDetailStyle = CategoryDetailStyle_Vertical;
+    [self.viewDeliveryAddress updateUI];
+    self.viewDeliveryAddress.category = @"Delivery to";
+    self.viewDeliveryAddress.lblCategory.textAlignment = NSTextAlignmentLeft;
+    self.viewDeliveryAddress.lblCategory.font = [Globals shared].defaultInfoFont;
+    self.viewDeliveryAddress.detail = @"WHATABURGER\r#108113933 E SAM, HOUSTON PKWAY\rNHOUSTON,TX 77044";
+    self.viewDeliveryAddress.lblDetail.font = [Globals shared].defaultTextFont;
+    self.viewDeliveryAddress.lblDetail.textAlignment = NSTextAlignmentLeft;
+
+    self.btnDone.coloredButtonType = ColoredButtonType_Blue;
     self.btnDone.titleNormalColor = [UIColor whiteColor];
     self.btnDone.layer.cornerRadius = cornerRadius_10px;
     
-    
+    self.viewOrderNo.backgroundColor = [UIColor clearColor];
+    self.viewOrderDate.backgroundColor = [UIColor clearColor];
+    self.viewEarliestDate.backgroundColor = [UIColor clearColor];
+    self.viewLatestDate.backgroundColor = [UIColor clearColor];
+    self.viewDeliveryAddress.backgroundColor = [UIColor clearColor];
+
     [self.view addSubview:self.viewCustomerCare];
-    self.viewCustomerCare.lblInfo.text = @"For any query reach out to our customer care.\rPlease mention your order number to our customer representative to service you support quickly";
     
     self.navigationItem.hidesBackButton = YES;
 }
@@ -98,6 +115,12 @@ const CGFloat OrderConfVC_TableHeight = 120;
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (void)setEquipmentRepair:(BOOL)equipmentRepair
+{
+    _equipmentRepair = equipmentRepair;
+    self.tableView.hidden = YES;
 }
 
 
@@ -128,27 +151,44 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return (OrderConfVC_TableHeight * 0.5);
+    return cellHeight_60px;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TitleCell* cell = [TitleCell dequeueFrom:tableView loadFromNib:@"TitleCell"];
-    [cell updateCell];
+    ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
+    CGFloat div[] = {0.1f, 0.5, 0.75};
+    
+    [cell initWithDividers:div count:4];
+    [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
+    [cell.reportLineView labelAtIndex:0].font = [Globals shared].defaultTextFont;
+    [cell.reportLineView labelAtIndex:0].textColor = [Globals shared].themingAssistant.defaultTextColor;
+
+    [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentLeft;
+    [cell.reportLineView labelAtIndex:1].font = [Globals shared].defaultTextFont;
+    [cell.reportLineView labelAtIndex:1].textColor = [Globals shared].themingAssistant.defaultTextColor;
+
+    [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentRight;
+    [cell.reportLineView labelAtIndex:2].font = [Globals shared].defaultTextFont;
+    [cell.reportLineView labelAtIndex:2].textColor = [Globals shared].themingAssistant.defaultTextColor;
+
+    [cell.reportLineView labelAtIndex:3].textAlignment = NSTextAlignmentRight;
+    [cell.reportLineView labelAtIndex:3].font = [Globals shared].defaultTextFont;
+    [cell.reportLineView labelAtIndex:3].textColor = [Globals shared].themingAssistant.defaultTextColor;
+    
+    cell.viewUnderLine.hidden = NO;
+
+    [cell updateCell];
+
     if (indexPath.row == 0)
     {
-        cell.lblTitle.text = @"You can always check  the status  of your order through this app in realtime.";
-        cell.viewSeperator.hidden = NO;
-        cell.btnInfo.hidden = YES;
+        [cell.reportLineView setTitles:@"Code",@"Products",@"Unit Price",@"Units", nil];
     }
-    else if (indexPath.row == 1)
+    else
     {
-        cell.lblTitle.text = @"For any query please reach out to our customer care.";
-        cell.viewSeperator.hidden = YES;
-        cell.btnInfo.hidden = NO;
-        [cell.btnInfo setTitle:[IconFontCodes shared].fileText forState:UIControlStateNormal];
+        [cell.reportLineView setTitles:@"700",@"Product Name",@"$00.00",@"lbs", nil];
     }
     
     return cell;
@@ -160,14 +200,10 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
 - (void)tableView:(UITableView *)tableView didHighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TitleCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.backgroundColor = [Globals shared].themingAssistant.whiteHigh;
 }
 
 - (void)tableView:(UITableView *)tableView didUnhighlightRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    TitleCell* cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.backgroundColor = [UIColor whiteColor];
 }
 
 
@@ -187,48 +223,67 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
 - (void) layoutSubViews
 {
-    CGRect rect_lblThanksOrder = self.lblThanksOrder.frame;
-    CGRect rect_lblOrder = self.lblOrder.frame;
-    CGRect rect_lblDateTime = self.lblDateTime.frame;
-    CGRect rect_btnViewOrder = self.btnViewOrder.frame;
+    CGRect rect_lblTitle = self.lblTitle.frame;
+    CGRect rect_viewOrderNo = self.viewOrderNo.frame;
+    CGRect rect_viewOrderDate = self.viewOrderDate.frame;
+    CGRect rect_viewEarliestDate = self.viewEarliestDate.frame;
+    CGRect rect_viewLatestDate = self.viewLatestDate.frame;
+    CGRect rect_viewDelivery = self.viewDeliveryAddress.frame;
     CGRect rect_tableView = self.tableView.frame;
 
     CGFloat yOffset = (self.navigationBarHeight + self.statusBarHeight + topMargin_20px);
 
-    rect_lblThanksOrder.origin.x = leftMargin_20px;
-    rect_lblThanksOrder.origin.y = yOffset;
-    rect_lblThanksOrder.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
+    rect_lblTitle.origin.x = leftMargin_20px;
+    rect_lblTitle.origin.y = yOffset;
+    rect_lblTitle.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
     
-    yOffset += (rect_lblThanksOrder.size.height + OrderConfVC_lblThanksOrder_margin);
+    yOffset += (rect_lblTitle.size.height + bottomMargin_10px);
 
-    rect_lblOrder.origin.x = leftMargin_20px;
-    rect_lblOrder.origin.y = yOffset;
-    rect_lblOrder.size.width = (self.view.frame.size.width * 0.5) - leftMargin_20px;
-    rect_lblOrder.size.height = self.view.frame.size.height * OrderConfVC_lblThanksOrder_heightPer;
+    rect_viewOrderNo.origin.x = 0;
+    rect_viewOrderNo.origin.y = yOffset;
+    rect_viewOrderNo.size.width = (self.view.frame.size.width * 0.5);
 
-    rect_lblDateTime.origin.x = self.lblOrder.frame.origin.x + self.lblOrder.frame.size.width;
-    rect_lblDateTime.origin.y = yOffset;
-    rect_lblDateTime.size.width = (self.view.frame.size.width * 0.5) - rightMargin_20px;
-    rect_lblDateTime.size.height = self.view.frame.size.height * OrderConfVC_lblThanksOrder_heightPer;
+    rect_viewOrderDate.origin.x = rect_viewOrderNo.origin.x + rect_viewOrderNo.size.width;
+    rect_viewOrderDate.origin.y = yOffset;
+    rect_viewOrderDate.size.width = rect_viewOrderNo.size.width;
 
-    yOffset += (rect_lblDateTime.size.height + OrderConfVC_lblOrderBtnView_margin);
+    yOffset += (rect_viewOrderNo.size.height + bottomMargin_10px);
 
-    rect_btnViewOrder.origin.x = (self.view.frame.size.width - rect_btnViewOrder.size.width) * 0.5;
-    rect_btnViewOrder.origin.y = yOffset;
-    rect_btnViewOrder.size.height = OrderConfVC_btnView_height;
+    rect_viewEarliestDate.origin.x = 0;
+    rect_viewEarliestDate.origin.y = yOffset;
+    rect_viewEarliestDate.size.width = (self.view.frame.size.width * 0.5);
+    
+    rect_viewLatestDate.origin.x = rect_viewEarliestDate.origin.x + rect_viewEarliestDate.size.width;
+    rect_viewLatestDate.origin.y = yOffset;
+    rect_viewLatestDate.size.width = rect_viewOrderNo.size.width;
+    
+    yOffset += (rect_viewEarliestDate.size.height + bottomMargin_10px);
 
-    yOffset += (rect_btnViewOrder.size.height + OrderConfVC_btnViewTable_margin);
+    rect_viewDelivery.origin.x = 0;
+    rect_viewDelivery.origin.y = yOffset;
+    rect_viewDelivery.size.width = self.view.frame.size.width;
+    
+    yOffset += (rect_viewDelivery.size.height + bottomMargin_20px);
 
-    rect_tableView.size.height = OrderConfVC_TableHeight;
-    rect_tableView.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
     rect_tableView.origin.x = leftMargin_20px;
     rect_tableView.origin.y = yOffset;
+    rect_tableView.size.height = self.viewCustomerCare.frame.origin.y - yOffset;
+    rect_tableView.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
     
-    self.lblThanksOrder.frame = rect_lblThanksOrder;
-    self.lblOrder.frame = rect_lblOrder;
-    self.lblDateTime.frame = rect_lblDateTime;
-    self.btnViewOrder.frame = rect_btnViewOrder;
-    self.tableView.frame= rect_tableView;
+    self.lblTitle.frame = rect_lblTitle;
+    self.viewOrderNo.frame = rect_viewOrderNo;
+    self.viewOrderDate.frame = rect_viewOrderDate;
+    self.viewEarliestDate.frame = rect_viewEarliestDate;
+    self.viewLatestDate.frame = rect_viewLatestDate;
+    self.viewDeliveryAddress.frame = rect_viewDelivery;
+    self.tableView.frame = rect_tableView;
+    
+    
+    [self.viewOrderNo layoutUI];
+    [self.viewOrderDate layoutUI];
+    [self.viewEarliestDate layoutUI];
+    [self.viewLatestDate layoutUI];
+    [self.viewDeliveryAddress layoutUI];
 }
 
 - (void)viewWillLayoutSubviews
@@ -278,11 +333,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
 - (IBAction)onBtpTap:(ColoredButton *)sender
 {
-    if ([sender isEqual:self.btnViewOrder])
-    {
-        [self viewOrder];
-    }
-    else if ([sender isEqual:self.btnDone])
+    if ([sender isEqual:self.btnDone])
     {
         [self orderPlacementComplete];
     }

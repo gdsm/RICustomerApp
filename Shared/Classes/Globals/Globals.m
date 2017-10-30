@@ -22,10 +22,14 @@ const CGFloat leftMargin_15px = 15.0;
 const CGFloat rightMargin_20px = 20.0;
 const CGFloat rightMargin_40px = 40.0;
 const CGFloat rightMargin_15px = 15.0;
+const CGFloat bottomMargin_10px = 10.0;
 const CGFloat bottomMargin_20px = 20.0;
 const CGFloat cornerRadius_20px = 20.0;
 const CGFloat cornerRadius_10px = 10.0;
 const CGFloat cornerRadius_6px = 6.0;
+const CGFloat cellHeight_40px = 40.0;
+const CGFloat cellHeight_60px = 60.0;
+const CGFloat cellHeight_80px = 80.0;
 const CGFloat cartSize_44px = 44.0f;
 
 @interface Globals()
@@ -72,10 +76,8 @@ const CGFloat cartSize_44px = 44.0f;
 
 - (BOOL) anyActiveUser
 {
-//    BOOL retVal = ([UserManager shared].activeUser != nil);
-//    return retVal;
-//    return YES;
-    return NO;
+    BOOL retVal = ([UserManager shared].activeUser != nil);
+    return retVal;
 }
 
 - (BOOL) isSessionExpired

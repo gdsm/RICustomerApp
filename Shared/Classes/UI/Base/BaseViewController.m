@@ -155,21 +155,6 @@ static BottomTabView* _static_btmTabView = nil;
     return _bgImgv;
 }
 
-//- (UIBarButtonItem *) bbiBack
-//{
-//    if (_bbiBack == nil)
-//    {
-//        _bbiBack = [[UIBarButtonItem alloc] initWithTitle:[IconFontCodes shared].chevron_left style:UIBarButtonItemStylePlain target:self action:@selector(onbbiBack:)];
-//        [_bbiBack setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].bbiIconFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
-//    }
-//    return _bbiBack;
-//}
-
-- (void) onbbiBack:(UIBarButtonItem *)sender
-{
-    
-}
-
 - (BottomTabView *) bottomTabView
 {
     if (_bottomTabView == nil)
@@ -192,7 +177,7 @@ static BottomTabView* _static_btmTabView = nil;
     return _bottomTabView;
 }
 
-- (UIBarButtonItem *)bbiCancel
+- (UIBarButtonItem *) bbiCancel
 {
     if (_bbiCancel == nil)
     {
@@ -200,6 +185,16 @@ static BottomTabView* _static_btmTabView = nil;
         [_bbiCancel setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].bbiIconFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
     }
     return _bbiCancel;
+}
+
+- (UIBarButtonItem *) bbiBack
+{
+    if (_bbiBack == nil)
+    {
+        _bbiBack = [[UIBarButtonItem alloc] initWithTitle:[IconFontCodes shared].chevron_left style:UIBarButtonItemStylePlain target:self action:@selector(onbbiBack:)];
+        [_bbiBack setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[Globals shared].bbiIconFont, NSFontAttributeName, [Globals shared].themingAssistant.defaultIconColor, NSForegroundColorAttributeName,nil] forState:UIControlStateNormal];
+    }
+    return _bbiBack;
 }
 
 - (void) onBBICancel:(UIBarButtonItem *)sender
@@ -211,6 +206,12 @@ static BottomTabView* _static_btmTabView = nil;
         self.removeCallback();
     }
 }
+
+- (void) onbbiBack:(UIBarButtonItem *)sender
+{
+    
+}
+
 
 #pragma mark - Push/Present ViewControllers
 
@@ -256,6 +257,35 @@ static BottomTabView* _static_btmTabView = nil;
     {
         [navController pushViewController:view animated:animated];
     }
+}
+
+- (void) safePopToController:(UIViewController *)view
+                    animated:(BOOL)animated
+{
+    if (view == nil)
+    {
+        return;
+    }
+    NSArray* vcs = view.navigationController.viewControllers;
+    
+    NSMutableArray* loadVcs = [NSMutableArray new];
+    for (NSInteger count=0 ; count<vcs.count ; count++)
+    {
+        UIViewController* vc = [vcs objectAtIndex:count];
+        if (![vc isEqual:view]){
+            [loadVcs addObject:vc];
+        }
+        else{
+            [loadVcs addObject:vc];
+            break;
+        }
+    }
+    if ((loadVcs.count <= 0) || (loadVcs.count == vcs.count)){
+        // there is no viewcontroller to pop.
+        return;
+    }
+    
+    [self.navigationController setViewControllers:loadVcs animated:NO];
 }
 
 - (void) safePresent:(UIViewController *)view
@@ -368,6 +398,29 @@ static BottomTabView* _static_btmTabView = nil;
     }
     isSuccess = YES;
     return isSuccess;
+}
+
+- (void) popoverPresentation:(UIView *)sourceView
+                   barButton:(UIBarButtonItem *)bbi
+                  sourceRect:(CGRect)sourceRect
+{
+    if ((sourceView == nil) && (bbi == nil)){
+        // cannot change to popover params are nil.
+        return;
+    }
+    
+    self.modalPresentationStyle = UIModalPresentationPopover;
+    UIPopoverPresentationController* controller = self.popoverPresentationController;
+    controller.permittedArrowDirections = UIPopoverArrowDirectionAny;
+    if (bbi != nil)
+    {
+        controller.barButtonItem = bbi;
+    }
+    else if (sourceView != nil)
+    {
+        controller.sourceView = sourceView;
+        controller.sourceRect = sourceRect;
+    }
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "ProblemDescriptionViewController.h"
 #import "ProblemSubmitConfirmationViewController.h"
+#import "OrderConfirmationViewController.h"
 #import "CategoryDetailView.h"
 
 const CGFloat ProblemDescrVC_equipment_height = 50;
@@ -51,8 +52,12 @@ const CGFloat ProblemDescrVC_category_height = 50;
 
 - (void) submitProblem
 {
-    ProblemSubmitConfirmationViewController* view = [[ProblemSubmitConfirmationViewController alloc] init];
-    [self safePush:view animated:YES];
+    // Equipment repair is also an order.
+    OrderConfirmationViewController* view = [[OrderConfirmationViewController alloc] initWithNibName:@"OrderConfirmationViewController" bundle:nil];
+    [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
+    view.equipmentRepair = YES;
+//    ProblemSubmitConfirmationViewController* view = [[ProblemSubmitConfirmationViewController alloc] init];
+//    [self safePush:view animated:YES];
 }
 
 #pragma mark - Notification Methods

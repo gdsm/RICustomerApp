@@ -20,12 +20,6 @@
  */
 + (NSDecimalNumberHandler *) bankerRoundingToPennies;
 
-/**
- * default number handler for Silver.
- * scale: 16
- * normal rounding
- * raise on all four exceptions.
- */
 + (NSDecimalNumberHandler *)defaultDecimalNumberHandler;
 
 /**

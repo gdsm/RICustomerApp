@@ -27,6 +27,7 @@
 {
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(orderConfirmationDone:) name:noti_OrderConfirmationDone object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(problemRequestSubmit:) name:noti_ProblemRequestSubmit object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(feedbackRequestSubmit:) name:noti_FeedbackRequestSubmit object:nil];
 }
 
 - (void) removeNotifications
@@ -44,6 +45,12 @@
 }
 
 - (void) problemRequestSubmit:(NSNotification *)sender
+{
+    // Have some core stuff later.
+    [[NSNotificationCenter defaultCenter] postNotificationName:noti_ClearTicketDone object:nil userInfo:nil];
+}
+
+- (void) feedbackRequestSubmit:(NSNotification *)sender
 {
     // Have some core stuff later.
     [[NSNotificationCenter defaultCenter] postNotificationName:noti_ClearTicketDone object:nil userInfo:nil];

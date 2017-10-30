@@ -89,7 +89,6 @@ typedef NS_ENUM(NSUInteger, DisclaimerRows) {
 
 - (void)setupUI
 {
-    //TODO:[GM]: Add localisation
     if (_isNewUser)
     {
         self.title = @"New User";

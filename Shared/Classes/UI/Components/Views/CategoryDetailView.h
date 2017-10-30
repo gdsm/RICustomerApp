@@ -8,7 +8,15 @@
 
 #import "BaseView.h"
 
+typedef NS_ENUM(NSUInteger, CategoryDetailStyle){
+    CategoryDetailStyle_Horizontal,
+    CategoryDetailStyle_Vertical
+};
+
+
 @interface CategoryDetailView : BaseView
+
+@property (nonatomic) CategoryDetailStyle categoryDetailStyle;
 
 @property (nonatomic, strong) BaseLabel* lblCategory;
 @property (nonatomic, strong) BaseLabel* lblDetail;
