@@ -54,7 +54,7 @@
 
 - (void) checkAppFreshness
 {
-    if (0)//([Globals shared].registrationRequired)
+    if ([Globals shared].registrationRequired)
     {
         [self showRegistration];
         checkFreshnessOnce = NO;
@@ -62,6 +62,7 @@
     else if (![Globals shared].anyActiveUser)
     {
         [self enterPassword];
+        [Globals shared].anyActiveUser = YES;
     }
     else if ([Globals shared].isSessionExpired && [UserManager shared].activeUser.hasAdditionalSecurity)
     {

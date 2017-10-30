@@ -14,6 +14,7 @@ const CGFloat borderWidth_1px = 1.0;
 const CGFloat viewHeight_20px = 20.0;
 const CGFloat viewHeight_40px = 40.0;
 const CGFloat viewHeight_60px = 60.0;
+const CGFloat viewWidth_160px = 160.0;
 const CGFloat topMargin_10px = 10.0;
 const CGFloat topMargin_20px = 20.0;
 const CGFloat leftMargin_20px = 20.0;
@@ -60,6 +61,7 @@ const CGFloat cartSize_44px = 44.0f;
     if (self != nil)
     {
         _registrationRequired = YES;
+        _anyActiveUser = NO;
     }
     return self;
 }
@@ -74,11 +76,11 @@ const CGFloat cartSize_44px = 44.0f;
     return _documentsDirectory;
 }
 
-- (BOOL) anyActiveUser
-{
-    BOOL retVal = ([UserManager shared].activeUser != nil);
-    return retVal;
-}
+//- (BOOL) anyActiveUser
+//{
+//    BOOL retVal = ([UserManager shared].activeUser != nil);
+//    return retVal;
+//}
 
 - (BOOL) isSessionExpired
 {

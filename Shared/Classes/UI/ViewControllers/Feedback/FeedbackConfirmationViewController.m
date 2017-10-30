@@ -205,9 +205,9 @@ const CGFloat ConfirmVC_SLA_Height = 100;
     if (_btnDone == nil)
     {
         CGRect rect = CGRectZero;
-        rect.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
+        rect.size.width = viewWidth_160px;
         rect.size.height = viewHeight_40px;
-        rect.origin.x = leftMargin_20px;
+        rect.origin.x = (self.view.frame.size.width - rect.size.width) * 0.5;
         rect.origin.y = self.view.frame.size.height - (rect.size.height + bottomMargin_20px);
 
         _btnDone = [ColoredButton coloredButtonType:ColoredButtonType_Blue frame:rect];

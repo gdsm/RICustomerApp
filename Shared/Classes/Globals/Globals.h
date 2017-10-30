@@ -19,6 +19,7 @@ extern const CGFloat borderWidth_1px;
 extern const CGFloat viewHeight_20px;
 extern const CGFloat viewHeight_40px;
 extern const CGFloat viewHeight_60px;
+extern const CGFloat viewWidth_160px;
 extern const CGFloat topMargin_20px;
 extern const CGFloat topMargin_10px;
 extern const CGFloat leftMargin_20px;
@@ -42,7 +43,7 @@ extern const CGFloat cartSize_44px;
 + (Globals *) shared;
 
 @property (nonatomic, strong, readonly) NSString *documentsDirectory;
-@property (nonatomic, readonly) BOOL anyActiveUser;
+@property (nonatomic) BOOL anyActiveUser;
 @property (nonatomic, readonly) BOOL isSessionExpired;
 @property (nonatomic) BOOL registrationRequired;
 @property (nonatomic, weak, readonly) NSString* userName;
