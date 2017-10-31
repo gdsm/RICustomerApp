@@ -14,6 +14,7 @@
 {
     CategoryDetailButton* btn = [CategoryDetailButton buttonWithType:UIButtonTypeCustom];
     [btn updateUI];
+    btn.frame = frame;
     return btn;
 }
 

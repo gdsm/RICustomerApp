@@ -14,7 +14,9 @@ const CGFloat borderWidth_1px = 1.0;
 const CGFloat viewHeight_20px = 20.0;
 const CGFloat viewHeight_40px = 40.0;
 const CGFloat viewHeight_60px = 60.0;
+const CGFloat viewHeight_150px = 150.0;
 const CGFloat viewWidth_160px = 160.0;
+const CGFloat topMargin_5px = 5.0;
 const CGFloat topMargin_10px = 10.0;
 const CGFloat topMargin_20px = 20.0;
 const CGFloat leftMargin_20px = 20.0;
@@ -24,6 +26,7 @@ const CGFloat rightMargin_20px = 20.0;
 const CGFloat rightMargin_40px = 40.0;
 const CGFloat rightMargin_15px = 15.0;
 const CGFloat rightMargin_10px = 10.0;
+const CGFloat bottomMargin_5px = 5.0;
 const CGFloat bottomMargin_10px = 10.0;
 const CGFloat bottomMargin_20px = 20.0;
 const CGFloat cornerRadius_20px = 20.0;
@@ -32,6 +35,7 @@ const CGFloat cornerRadius_6px = 6.0;
 const CGFloat cellHeight_40px = 40.0;
 const CGFloat cellHeight_60px = 60.0;
 const CGFloat cellHeight_80px = 80.0;
+const CGFloat cellHeight_150px = 150.0;
 const CGFloat cartSize_44px = 44.0f;
 
 @interface Globals()

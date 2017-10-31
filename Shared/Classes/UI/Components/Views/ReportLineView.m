@@ -47,9 +47,8 @@
             }
             
             BaseLabel *label = [[BaseLabel alloc] init];
-            [label setFont:[[Globals shared] defaultTextFont]];
+            [label defaultStyling];
             label.backgroundColor = [UIColor clearColor];
-            label.textColor = [Globals shared].themingAssistant.defaultTextColor;
             label.contentInsets = self.labelInsetMargins;
             label.numberOfLines = 0;
             [self addSubview:label];

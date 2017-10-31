@@ -52,23 +52,27 @@ const CGFloat OrderConfVC_TableHeight = 120;
     self.lblTitle.textAlignment = NSTextAlignmentCenter;
     self.lblTitle.text = @"Thank you for ordering with ReddyIce.";
     
+    UIEdgeInsets inset = UIEdgeInsetsMake(topMargin_5px, leftMargin_20px, bottomMargin_5px, rightMargin_20px);
+    
     self.viewOrderNo.categoryDetailStyle = CategoryDetailStyle_Vertical;
     [self.viewOrderNo updateUI];
-    self.viewOrderNo.category = @"Work Order No.";
+    self.viewOrderNo.category = @"Order No.";
     self.viewOrderNo.lblCategory.textAlignment = NSTextAlignmentLeft;
     self.viewOrderNo.lblCategory.font = [Globals shared].defaultInfoFont;
     self.viewOrderNo.detail = @"123456780";
     self.viewOrderNo.lblDetail.font = [Globals shared].defaultTextFont;
     self.viewOrderNo.lblDetail.textAlignment = NSTextAlignmentLeft;
+    self.viewOrderNo.contentInsets = inset;
 
     self.viewOrderDate.categoryDetailStyle = CategoryDetailStyle_Vertical;
     [self.viewOrderDate updateUI];
-    self.viewOrderDate.category = @"Work Order Date";
+    self.viewOrderDate.category = @"Order Date";
     self.viewOrderDate.lblCategory.textAlignment = NSTextAlignmentRight;
     self.viewOrderDate.lblCategory.font = [Globals shared].defaultInfoFont;
     self.viewOrderDate.detail = @"MM/DD/YYYY";
     self.viewOrderDate.lblDetail.font = [Globals shared].defaultTextFont;
     self.viewOrderDate.lblDetail.textAlignment = NSTextAlignmentRight;
+    self.viewOrderDate.contentInsets = inset;
 
     self.viewEarliestDate.categoryDetailStyle = CategoryDetailStyle_Vertical;
     [self.viewEarliestDate updateUI];
@@ -78,6 +82,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
     self.viewEarliestDate.detail = @"MM/DD/YYYY";
     self.viewEarliestDate.lblDetail.font = [Globals shared].defaultTextFont;
     self.viewEarliestDate.lblDetail.textAlignment = NSTextAlignmentLeft;
+    self.viewEarliestDate.contentInsets = inset;
 
     self.viewLatestDate.categoryDetailStyle = CategoryDetailStyle_Vertical;
     [self.viewLatestDate updateUI];
@@ -87,6 +92,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
     self.viewLatestDate.detail = @"MM/DD/YYYY";
     self.viewLatestDate.lblDetail.font = [Globals shared].defaultTextFont;
     self.viewLatestDate.lblDetail.textAlignment = NSTextAlignmentRight;
+    self.viewLatestDate.contentInsets = inset;
 
     self.viewDeliveryAddress.categoryDetailStyle = CategoryDetailStyle_Vertical;
     [self.viewDeliveryAddress updateUI];
@@ -96,6 +102,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
     self.viewDeliveryAddress.detail = @"WHATABURGER\r#108113933 E SAM, HOUSTON PKWAY\rNHOUSTON,TX 77044";
     self.viewDeliveryAddress.lblDetail.font = [Globals shared].defaultTextFont;
     self.viewDeliveryAddress.lblDetail.textAlignment = NSTextAlignmentLeft;
+    self.viewDeliveryAddress.contentInsets = inset;
 
     self.btnDone.coloredButtonType = ColoredButtonType_Blue;
     self.btnDone.titleNormalColor = [UIColor whiteColor];
@@ -120,7 +127,13 @@ const CGFloat OrderConfVC_TableHeight = 120;
 - (void)setEquipmentRepair:(BOOL)equipmentRepair
 {
     _equipmentRepair = equipmentRepair;
-    self.tableView.hidden = YES;
+    self.tableView.hidden = equipmentRepair;
+    
+    if (equipmentRepair == YES)
+    {
+        self.viewOrderNo.category = @"Work Order No.";
+        self.viewOrderDate.category = @"Work Order Date";
+    }
 }
 
 
@@ -159,24 +172,24 @@ const CGFloat OrderConfVC_TableHeight = 120;
     ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
     
-    CGFloat div[] = {0.1f, 0.5, 0.75};
+    CGFloat div[] = {0.6};
     
-    [cell initWithDividers:div count:4];
+    [cell initWithDividers:div count:2];
     [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
     [cell.reportLineView labelAtIndex:0].font = [Globals shared].defaultTextFont;
     [cell.reportLineView labelAtIndex:0].textColor = [Globals shared].themingAssistant.defaultTextColor;
 
-    [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentLeft;
+    [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentRight;
     [cell.reportLineView labelAtIndex:1].font = [Globals shared].defaultTextFont;
     [cell.reportLineView labelAtIndex:1].textColor = [Globals shared].themingAssistant.defaultTextColor;
 
-    [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentRight;
-    [cell.reportLineView labelAtIndex:2].font = [Globals shared].defaultTextFont;
-    [cell.reportLineView labelAtIndex:2].textColor = [Globals shared].themingAssistant.defaultTextColor;
-
-    [cell.reportLineView labelAtIndex:3].textAlignment = NSTextAlignmentRight;
-    [cell.reportLineView labelAtIndex:3].font = [Globals shared].defaultTextFont;
-    [cell.reportLineView labelAtIndex:3].textColor = [Globals shared].themingAssistant.defaultTextColor;
+//    [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentRight;
+//    [cell.reportLineView labelAtIndex:2].font = [Globals shared].defaultTextFont;
+//    [cell.reportLineView labelAtIndex:2].textColor = [Globals shared].themingAssistant.defaultTextColor;
+//
+//    [cell.reportLineView labelAtIndex:3].textAlignment = NSTextAlignmentRight;
+//    [cell.reportLineView labelAtIndex:3].font = [Globals shared].defaultTextFont;
+//    [cell.reportLineView labelAtIndex:3].textColor = [Globals shared].themingAssistant.defaultTextColor;
     
     cell.viewUnderLine.hidden = NO;
 
@@ -184,11 +197,11 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
     if (indexPath.row == 0)
     {
-        [cell.reportLineView setTitles:@"Code",@"Products",@"Unit Price",@"Units", nil];
+        [cell.reportLineView setTitles:@"Products",@"Qty", nil];
     }
     else
     {
-        [cell.reportLineView setTitles:@"700",@"Product Name",@"$00.00",@"lbs", nil];
+        [cell.reportLineView setTitles:@"Product Name",@"99", nil];
     }
     
     return cell;
@@ -247,7 +260,7 @@ const CGFloat OrderConfVC_TableHeight = 120;
     rect_viewOrderDate.origin.y = yOffset;
     rect_viewOrderDate.size.width = rect_viewOrderNo.size.width;
 
-    yOffset += (rect_viewOrderNo.size.height + bottomMargin_10px);
+    yOffset += (rect_viewOrderNo.size.height);
 
     rect_viewEarliestDate.origin.x = 0;
     rect_viewEarliestDate.origin.y = yOffset;
@@ -257,18 +270,18 @@ const CGFloat OrderConfVC_TableHeight = 120;
     rect_viewLatestDate.origin.y = yOffset;
     rect_viewLatestDate.size.width = rect_viewOrderNo.size.width;
     
-    yOffset += (rect_viewEarliestDate.size.height + bottomMargin_10px);
+    yOffset += (rect_viewEarliestDate.size.height);
 
     rect_viewDelivery.origin.x = 0;
     rect_viewDelivery.origin.y = yOffset;
     rect_viewDelivery.size.width = self.view.frame.size.width;
     
-    yOffset += (rect_viewDelivery.size.height + bottomMargin_20px);
+    yOffset += (rect_viewDelivery.size.height);
 
-    rect_tableView.origin.x = leftMargin_20px;
+    rect_tableView.origin.x = 0;
     rect_tableView.origin.y = yOffset;
     rect_tableView.size.height = self.viewCustomerCare.frame.origin.y - yOffset;
-    rect_tableView.size.width = self.view.frame.size.width - (leftMargin_20px + rightMargin_20px);
+    rect_tableView.size.width = self.view.frame.size.width;
     
     self.lblTitle.frame = rect_lblTitle;
     self.viewOrderNo.frame = rect_viewOrderNo;
@@ -309,8 +322,8 @@ const CGFloat OrderConfVC_TableHeight = 120;
     if (_viewCustomerCare == nil)
     {
         __weak OrderConfirmationViewController* weakSelf = self;
-        CGFloat top = self.view.frame.size.height - (CustomerCareView_Height + bottomMargin_20px + self.btnDone.frame.size.height + bottomMargin_20px);
-        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, CustomerCareView_Height);
+        CGFloat top = self.view.frame.size.height - (viewHeight_150px + bottomMargin_10px + self.btnDone.frame.size.height + bottomMargin_10px);
+        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, viewHeight_150px);
         _viewCustomerCare = [CustomerCareView instance];
         _viewCustomerCare.frame = rect;
         _viewCustomerCare.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;

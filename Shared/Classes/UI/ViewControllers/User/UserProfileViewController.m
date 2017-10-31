@@ -304,7 +304,7 @@ typedef NS_ENUM(NSUInteger, DisclaimerRows) {
         else if (indexPath.row == StoreInfoRow_StoreId)
         {
             cell.editField.editFieldStyle = EditFieldStyle_Hint_H_TextField;
-            cell.editField.hintText = @"Store Id";
+            cell.editField.hintText = @"Customer Id";
         }
         else if (indexPath.row == StoreInfoRow_StreetAddr)
         {

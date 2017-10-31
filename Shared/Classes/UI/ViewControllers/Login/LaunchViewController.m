@@ -85,12 +85,15 @@
     view.onSuccessfullLogin = ^{
         [weakSelf performSelectorOnMainThread:@selector(enterMainScreen) withObject:nil waitUntilDone:NO];
     };
+    view.onNewRegistration = ^{
+        [weakSelf performSelectorOnMainThread:@selector(showRegistration) withObject:nil waitUntilDone:NO];
+    };
     [self safePresent:view onSelf:NO animated:NO callbackCompletion:nil];
 }
 
 - (void) enterMainScreen
 {
-    [self.navigationController dismissViewControllerAnimated:NO completion:nil];
+    [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
     MainViewController* view = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
     [self safePush:view animated:YES];
 }
@@ -138,6 +141,7 @@
 
 - (void) showRegistration
 {
+    [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
     RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
     [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }

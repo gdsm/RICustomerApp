@@ -182,8 +182,8 @@ const CGFloat ConfirmVC_SLA_Height = 100;
     if (_viewCustomerCare == nil)
     {
         __weak FeedbackConfirmationViewController* weakSelf = self;
-        CGFloat top = self.btnDone.frame.origin.y - (CustomerCareView_Height + bottomMargin_20px);
-        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, CustomerCareView_Height);
+        CGFloat top = self.btnDone.frame.origin.y - (viewHeight_150px + bottomMargin_20px);
+        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, viewHeight_150px);
         
         _viewCustomerCare = [CustomerCareView instance];
         _viewCustomerCare.frame = rect;

@@ -38,6 +38,7 @@ const CGFloat loginVC_passwordIconSize = 26;
 
 @property (strong, nonatomic) ColoredButton* btnLogin;
 @property (strong, nonatomic) UIBarButtonItem* bbiForgotPassword;
+@property (strong, nonatomic) UIBarButtonItem* bbiNewRegistration;
 @end
 
 
@@ -123,6 +124,7 @@ const CGFloat loginVC_passwordIconSize = 26;
 //    [self.view addSubview:self.btnLogin];
     
     self.navigationItem.rightBarButtonItem = self.bbiForgotPassword;
+    self.navigationItem.leftBarButtonItem = self.bbiNewRegistration;
 }
 
 
@@ -160,6 +162,14 @@ const CGFloat loginVC_passwordIconSize = 26;
 //    [[Utilities shared] showToast:@"Reset email send to your account" onView:self.view timeDuration:2];
     ChangePasswordViewController* view = [[ChangePasswordViewController alloc] initWithStyle:UITableViewStylePlain];
     [self safePush:view animated:YES];
+}
+
+- (void) newRegistration
+{
+    if (self.onNewRegistration != nil)
+    {
+        self.onNewRegistration();
+    }
 }
 
 
@@ -255,6 +265,15 @@ const CGFloat loginVC_passwordIconSize = 26;
     return _bbiForgotPassword;
 }
 
+- (UIBarButtonItem *) bbiNewRegistration
+{
+    if (_bbiNewRegistration == nil)
+    {
+        _bbiNewRegistration = [[UIBarButtonItem alloc] initWithTitle:@"New Registration" style:UIBarButtonItemStylePlain target:self action:@selector(onbbiNewRegistration:)];
+    }
+    return _bbiNewRegistration;
+}
+
 #pragma mark - Listeners
 
 - (void)keyboardDidHide:(NSNotification *)notification
@@ -271,6 +290,11 @@ const CGFloat loginVC_passwordIconSize = 26;
 - (void) onbbiForgotPassword:(UIBarButtonItem *)bbi
 {
     [self forgotPassword];
+}
+
+- (void) onbbiNewRegistration:(UIBarButtonItem *)bbi
+{
+    [self newRegistration];
 }
 
 - (void) onBtnTap:(ColoredButton *)sender

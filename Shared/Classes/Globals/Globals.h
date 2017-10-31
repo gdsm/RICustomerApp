@@ -19,7 +19,9 @@ extern const CGFloat borderWidth_1px;
 extern const CGFloat viewHeight_20px;
 extern const CGFloat viewHeight_40px;
 extern const CGFloat viewHeight_60px;
+extern const CGFloat viewHeight_150px;
 extern const CGFloat viewWidth_160px;
+extern const CGFloat topMargin_5px;
 extern const CGFloat topMargin_20px;
 extern const CGFloat topMargin_10px;
 extern const CGFloat leftMargin_20px;
@@ -29,6 +31,7 @@ extern const CGFloat rightMargin_20px;
 extern const CGFloat rightMargin_40px;
 extern const CGFloat rightMargin_15px;
 extern const CGFloat rightMargin_10px;
+extern const CGFloat bottomMargin_5px;
 extern const CGFloat bottomMargin_10px;
 extern const CGFloat bottomMargin_20px;
 extern const CGFloat cornerRadius_20px;
@@ -37,6 +40,7 @@ extern const CGFloat cornerRadius_10px;
 extern const CGFloat cellHeight_40px;
 extern const CGFloat cellHeight_60px;
 extern const CGFloat cellHeight_80px;
+extern const CGFloat cellHeight_150px;
 extern const CGFloat cartSize_44px;
 
 @interface Globals : NSObject

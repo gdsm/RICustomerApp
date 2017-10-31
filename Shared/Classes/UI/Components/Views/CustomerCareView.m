@@ -9,8 +9,6 @@
 #import "CustomerCareView.h"
 #import "IconFontCodes.h"
 
-const CGFloat CustomerCareView_Height = 150;
-
 @implementation CustomerCareView
 
 + (CustomerCareView *) instance

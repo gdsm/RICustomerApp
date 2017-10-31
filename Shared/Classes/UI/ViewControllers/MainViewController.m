@@ -210,7 +210,13 @@ const CGFloat MainVC_UserViewHeight = 160;
     {
         [view popoverPresentation:nil barButton:self.bbiUser sourceRect:CGRectZero];
     }
-    [self safePresent:view onSelf:YES animated:YES callbackCompletion:nil];
+    else
+    {
+        view.removeCallback = ^{
+            [weakSelf safeDismissViewControllerFromSelf:NO animated:YES callbackCompletion:nil];
+        };
+    }
+    [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 
 - (void) barcodeScanner

@@ -172,7 +172,7 @@
 
         _btnRegister = [ColoredButton coloredButtonType:ColoredButtonType_Blue frame:rect];
         [_btnRegister updateUI];
-        [_btnRegister setTitle:@"Registered store phone number not avaliable." forState:UIControlStateNormal];
+        [_btnRegister setTitle:@"Registered store phone number not avaliable ?" forState:UIControlStateNormal];
         _btnRegister.titleLabel.font = [Globals shared].defaultTextFont;
         _btnRegister.layer.cornerRadius = cornerRadius_6px;
         _btnRegister.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;

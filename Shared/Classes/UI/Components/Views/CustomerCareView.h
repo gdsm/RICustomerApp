@@ -10,8 +10,6 @@
 #import "ColoredButton.h"
 #import "BlockUtils.h"
 
-extern const CGFloat CustomerCareView_Height;
-
 @interface CustomerCareView : BaseView
 
 + (CustomerCareView *) instance;

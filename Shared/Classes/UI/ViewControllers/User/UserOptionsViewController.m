@@ -34,6 +34,11 @@ typedef NS_ENUM(NSUInteger, UserOptionsType) {
 {
     self.title = [UserManager shared].activeUser.name;
     self.bgImgv.image = nil;
+    
+    CGFloat top = (self.navigationBarHeight + self.statusBarHeight);
+    self.tableOffset = UIEdgeInsetsMake(top, 0, 0, 0);
+
+    self.navigationItem.leftBarButtonItem = self.bbiCancel;
 }
 
 - (CGSize) preferredContentSize

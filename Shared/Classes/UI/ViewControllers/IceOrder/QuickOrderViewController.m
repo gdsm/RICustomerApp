@@ -94,6 +94,7 @@ const CGFloat QuickOrderVC_viewAddress_height = 100;
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    __weak QuickOrderViewController* weakSelf = self;
     CGFloat div1 = self.tableView.frame.size.width - (viewContentInset_left + viewContentInset_right);
     div1 = (cellHeight_40px / div1);
     
@@ -129,8 +130,11 @@ const CGFloat QuickOrderVC_viewAddress_height = 100;
                 CGRect rect = CGRectMake(0, 0 , checkboxSize, checkboxSize);
                 CheckBox* cb = [[CheckBox alloc] initWithFrame:rect];
                 [cb updateUI];
+                UIEdgeInsets inset = cb.contentInsets;
+                inset.left = 0;
+                cb.contentInsets = inset;
                 cb.onCheckboxCallback = ^(id sender) {
-                    NSLog(@"Check box tap");
+                    [weakSelf removeSelectedItem];
                 };
                 retView = cb;
             }

@@ -12,6 +12,7 @@
 #import "ReportLineCell.h"
 #import "HistoryCell.h"
 #import "TicketLineItemHeaderCell.h"
+#import "ReportLineTemplateCell.h"
 #import "TicketLineItemCell.h"
 #import "CategoryDetailCell.h"
 #import "DriverInfoCell.h"
@@ -87,6 +88,12 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
     return _lineItems;
 }
 
+#pragma mark - Logical Flow Methods
+
+- (void) makeSelectedPayments
+{
+    
+}
 
 #pragma mark - TableView Methods
 
@@ -190,7 +197,7 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
         }
         else
         {
-            height = DeliveryOrderVC_OrderCell_Height;
+            height = cellHeight_60px;
         }
     }
     return height;
@@ -198,35 +205,81 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
 
 - (UITableViewCell *) cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath
 {
+    __weak DeliveryHistoryViewController* weakSelf = self;
+    CGFloat div1 = self.tableView.frame.size.width - (viewContentInset_left + viewContentInset_right);
+    div1 = (cellHeight_40px / div1);
+
     if (indexPath.row == 0)
     {
         ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
         [cell updateCell];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.viewUnderLine.hidden = NO;
         
-        CGFloat div[] = {0.5f};
-        [cell initWithDividers:div count:2];
-        [cell.reportLineView setTitles:@"Invoice No.", @"Total Amount", nil];
-        [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
-        [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentRight;
+        CGFloat div[] = {div1, 0.35f, 0.6f, 0.85f};
+        [cell initWithDividers:div count:5];
+        [cell.reportLineView setTitles:@"", @"Invoice No.", @"Delivery Date", @"Amount", @"Payment", nil];
+        [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentLeft;
+        [cell.reportLineView labelAtIndex:2].textAlignment = NSTextAlignmentCenter;
+        [cell.reportLineView labelAtIndex:3].textAlignment = NSTextAlignmentCenter;
+        [cell.reportLineView labelAtIndex:4].textAlignment = NSTextAlignmentRight;
         
         return cell;
     }
     else
     {
-        HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
-
-        UIEdgeInsets inset = cell.historyView.contentInsets;
-        inset.left = 0;
-        inset.right = 0;
-        cell.historyView.contentInsets = inset;
-        
+        ReportLineTemplateCell* cell = [ReportLineTemplateCell dequeueFrom:tableView loadFromNib:@"ReportLineTemplateCell"];
         [cell updateCell];
-        cell.historyView.historyType = HistoryType_Delivery;
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        cell.viewUnderLine.hidden = NO;
         
+        CGFloat div[] = {div1, 0.35f, 0.6f, 0.85f};
+        [cell initWithDividers:div count:5 callbackTemplate:^UIView *(NSUInteger index) {
+            
+            UIView* retView = nil;
+            if (index == 0){
+                CGRect rect = CGRectMake(0, 0 , checkboxSize, checkboxSize);
+                CheckBox* cb = [[CheckBox alloc] initWithFrame:rect];
+                [cb updateUI];
+                UIEdgeInsets inset = cb.contentInsets;
+                inset.left = 0;
+                cb.contentInsets = inset;
+                cb.onCheckboxCallback = ^(id sender) {
+                    [weakSelf makeSelectedPayments];;
+                };
+                retView = cb;
+            }
+            else if (index == 1){
+                BaseLabel* lbl = [[BaseLabel alloc] init];
+                [lbl defaultStyling];
+                lbl.text = @"1234567";
+                retView = lbl;
+            }
+            else if (index == 2){
+                BaseLabel* lbl = [[BaseLabel alloc] init];
+                [lbl defaultStyling];
+                lbl.textAlignment = NSTextAlignmentCenter;
+                lbl.text = @"MM/DD/YYYY";
+                retView = lbl;
+            }
+            else if (index == 3){
+                BaseLabel* lbl = [[BaseLabel alloc] init];
+                [lbl defaultStyling];
+                lbl.textAlignment = NSTextAlignmentCenter;
+                lbl.text = @"$00.00";
+                retView = lbl;
+            }
+            else if (index == 4){
+                BaseLabel* lbl = [[BaseLabel alloc] init];
+                [lbl iconStyling];
+                lbl.text = [IconFontCodes shared].money;
+                retView = lbl;
+            }
+            return retView;
+        } layoutTemplate:nil];
         return cell;
     }
+    
     return nil;
 }
 
@@ -384,3 +437,60 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
 }
 
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ 
+ Old code
+
+
+- (UITableViewCell *) cellForTableView:(UITableView *)tableView indexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.row == 0)
+    {
+        ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
+        [cell updateCell];
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        CGFloat div[] = {0.5f};
+        [cell initWithDividers:div count:2];
+        [cell.reportLineView setTitles:@"Invoice No.", @"Total Amount", nil];
+        [cell.reportLineView labelAtIndex:0].textAlignment = NSTextAlignmentLeft;
+        [cell.reportLineView labelAtIndex:1].textAlignment = NSTextAlignmentRight;
+        
+        return cell;
+    }
+    else
+    {
+        HistoryCell* cell = [HistoryCell dequeueFrom:tableView loadFromNib:@"HistoryCell"];
+        
+        UIEdgeInsets inset = cell.historyView.contentInsets;
+        inset.left = 0;
+        inset.right = 0;
+        cell.historyView.contentInsets = inset;
+        
+        [cell updateCell];
+        cell.historyView.historyType = HistoryType_Delivery;
+        cell.selectionStyle = UITableViewCellSelectionStyleNone;
+        
+        return cell;
+    }
+    return nil;
+}
+*/

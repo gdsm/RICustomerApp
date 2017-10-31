@@ -121,4 +121,9 @@
     return @"\uf214";
 }
 
+- (NSString *)money
+{
+    return @"\uf19a";
+}
+
 @end

@@ -8,8 +8,10 @@
 
 #import "DeliveryOrderViewController.h"
 #import "DeliveryHistoryViewController.h"
+#import "OrderConfirmationViewController.h"
 #import "OrderHistoryViewController.h"
 #import "DNSHistoryViewController.h"
+#import "InvoiceReceiptViewController.h"
 #import "BaseNavigationController.h"
 #import "Globals.h"
 
@@ -36,13 +38,18 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 50.0;
     [self setSelectedSegment:0];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.bottomTabView.hidden = NO;
+}
+
 - (void)setupUI
 {
     self.title = @"Delivery History";
     self.bgImgv.image = nil;
     
     self.tableView.hidden = YES;
-    self.bottomTabView.hidden = NO;
     
     self.navigationItem.rightBarButtonItem = self.bbiSearch;
     self.navigationItem.hidesBackButton = YES;
@@ -61,13 +68,14 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 50.0;
 }
 - (void) showFullOrderHistory
 {
-    __weak DeliveryOrderViewController* weakSelf = self;
+//    __weak DeliveryOrderViewController* weakSelf = self;
 
-    OrderHistoryViewController* view = [[OrderHistoryViewController alloc] init];
-    view.detailHistory = true;
-    view.onCancel = ^{
-        [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
-    };
+//    OrderHistoryViewController* view = [[OrderHistoryViewController alloc] init];
+//    view.detailHistory = true;
+//    view.onCancel = ^{
+//        [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
+//    };
+    OrderConfirmationViewController* view = [[OrderConfirmationViewController alloc] initWithNibName:@"OrderConfirmationViewController" bundle:nil];
     [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 
@@ -81,10 +89,14 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 50.0;
 - (void) showFullDeliveryHistory
 {
     __weak DeliveryOrderViewController* weakSelf = self;
-    DeliveryHistoryViewController* view = [[DeliveryHistoryViewController alloc] init];
-    view.detailHistory = true;
-    view.onCancel = ^{
-        [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
+//    DeliveryHistoryViewController* view = [[DeliveryHistoryViewController alloc] init];
+//    view.detailHistory = true;
+//    view.onCancel = ^{
+//        [weakSelf.navigationController dismissViewControllerAnimated:YES completion:nil];
+//    };
+    InvoiceReceiptViewController* view = [[InvoiceReceiptViewController alloc] initWithStyle:UITableViewStylePlain];
+    view.removeCallback = ^{
+        [weakSelf safeDismissViewControllerFromSelf:NO animated:YES callbackCompletion:nil];
     };
     [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
@@ -172,10 +184,15 @@ const CGFloat DeliveryOrderVC_OrderCell_Height = 50.0;
         rect_segControl.origin.y = topMargin_20px + top;
         rect_segControl.size.height = viewHeight_40px;
 
-        _segControl = [[UISegmentedControl alloc] initWithItems:@[@"Orders(4)", @"Invoice"]];
+        _segControl = [[UISegmentedControl alloc] initWithItems:@[@"Orders(3)", @"Invoices(3)"]];
         _segControl.frame = rect_segControl;
         _segControl.clipsToBounds = YES;
-        
+
+        NSDictionary *attributes = [NSDictionary dictionaryWithObject:[Globals shared].boldTextFont
+                                                               forKey:NSFontAttributeName];
+        [_segControl setTitleTextAttributes:attributes
+                                   forState:UIControlStateNormal];
+
         _segControl.backgroundColor = [UIColor whiteColor];
         _segControl.tintColor = [Globals shared].themingAssistant.blueNorm;
         [_segControl addTarget:self action:@selector(onSegCtrlChanged:) forControlEvents:UIControlEventValueChanged];

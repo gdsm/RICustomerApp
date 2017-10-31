@@ -73,8 +73,8 @@
     if (_viewCustomerCare == nil)
     {
         __weak RegistrationConfirmationViewController* weakSelf = self;
-        CGFloat top = self.view.frame.size.height - (CustomerCareView_Height + bottomMargin_20px);
-        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, CustomerCareView_Height);
+        CGFloat top = self.view.frame.size.height - (viewHeight_150px + bottomMargin_20px);
+        CGRect rect = CGRectMake(0, top, self.view.frame.size.width, viewHeight_150px);
         _viewCustomerCare = [CustomerCareView instance];
         _viewCustomerCare.frame = rect;
         _viewCustomerCare.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;

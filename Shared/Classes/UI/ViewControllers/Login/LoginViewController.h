@@ -11,5 +11,6 @@
 @interface LoginViewController : BaseViewController
 
 @property (nonatomic, strong) blk_completion onSuccessfullLogin;
+@property (nonatomic, strong) blk_completion onNewRegistration;
 
 @end
