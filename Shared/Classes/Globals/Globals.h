@@ -43,6 +43,10 @@ extern const CGFloat cellHeight_80px;
 extern const CGFloat cellHeight_150px;
 extern const CGFloat cartSize_44px;
 
+extern const NSTimeInterval toastTime;
+
+
+
 @interface Globals : NSObject
 
 + (Globals *) shared;

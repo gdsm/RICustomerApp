@@ -73,4 +73,7 @@
 - (CGFloat)cgFloatValue;
 
 + (NSString *) stringFromIndexPath:(NSIndexPath *)indexPath;
+
++ (NSString*) formatPhoneNumber:(NSString*)simpleNumber deleteLastChar:(BOOL)deleteLastChar;
++ (NSString*) unformatPhoneNumber:(NSString*)simpleNumber;
 @end

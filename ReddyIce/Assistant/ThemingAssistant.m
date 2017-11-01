@@ -142,6 +142,15 @@
     return _color0463D6;
 }
 
+- (UIColor *) color6DA2C0
+{
+    if (_color6DA2C0 == nil)
+    {
+        _color6DA2C0 = [[Utilities shared] colorFromHexRed:@"6D" green:@"A2" blue:@"C0" alpha:@"FF"];
+    }
+    return _color6DA2C0;
+}
+
 
 #pragma mark - Default Colors
 
@@ -182,6 +191,21 @@
 
 
 #pragma mark - Usage Based Colors
+
+- (UIColor *) navBarBlueThemeBorderColor
+{
+    return self.color6DA2C0;
+}
+
+- (UIColor *) navBarBlueThemeBgColor
+{
+    return self.blueNorm;
+}
+
+- (UIColor *) navBarBlueThemeTextColor
+{
+    return self.whiteNorm;
+}
 
 - (UIColor *) badgeButtonColor
 {

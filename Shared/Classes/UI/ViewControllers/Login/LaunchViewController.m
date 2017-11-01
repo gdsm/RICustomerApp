@@ -18,12 +18,10 @@
 
 @interface LaunchViewController () <TOPasscodeViewControllerDelegate>
 @property (strong, nonatomic) TouchIdView *viewTouchId;
+@property (nonatomic) BOOL checkFreshnessOnce;
 @end
 
 @implementation LaunchViewController
-{
-    BOOL checkFreshnessOnce;
-}
 
 #pragma mark - View Life Cycle Method
 
@@ -40,9 +38,9 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (checkFreshnessOnce == NO)
+    if (self.checkFreshnessOnce == NO)
     {
-        checkFreshnessOnce = YES;
+        self.checkFreshnessOnce = YES;
         [self checkAppFreshness];
     }
 }
@@ -54,12 +52,11 @@
 
 - (void) checkAppFreshness
 {
-    if (0)//([Globals shared].registrationRequired)
+    if ([Globals shared].registrationRequired)
     {
         [self showRegistration];
-        checkFreshnessOnce = NO;
     }
-    else if (0)//(![Globals shared].anyActiveUser)
+    else if (![Globals shared].anyActiveUser)
     {
         [self enterPassword];
         [Globals shared].anyActiveUser = YES;
@@ -80,6 +77,8 @@
 - (void) enterPassword
 {
     __weak LaunchViewController* weakSelf = self;
+    
+    [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
 
     LoginViewController* view = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
     view.onSuccessfullLogin = ^{
@@ -88,7 +87,7 @@
     view.onNewRegistration = ^{
         [weakSelf performSelectorOnMainThread:@selector(showRegistration) withObject:nil waitUntilDone:NO];
     };
-    [self safePresent:view onSelf:NO animated:NO callbackCompletion:nil];
+    [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 
 - (void) enterMainScreen
@@ -141,8 +140,15 @@
 
 - (void) showRegistration
 {
+    __weak LaunchViewController* weakSelf = self;
+    self.checkFreshnessOnce = NO;
+
     [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
     RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
+    view.onLogin = ^{
+        weakSelf.checkFreshnessOnce = YES;
+        [weakSelf performSelectorOnMainThread:@selector(enterPassword) withObject:nil waitUntilDone:NO];
+    };
     [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 

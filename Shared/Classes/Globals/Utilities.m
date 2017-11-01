@@ -118,4 +118,11 @@
     });
 }
 
+#pragma mark - Stirngs
+
+- (NSUInteger) maxPhoneNumberDigits
+{
+    return 10;
+}
+
 @end

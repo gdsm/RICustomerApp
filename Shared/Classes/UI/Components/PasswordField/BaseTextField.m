@@ -8,6 +8,7 @@
 
 #import "BaseTextField.h"
 #import "Globals.h"
+#import "Utilities.h"
 
 @implementation BaseTextField
 
@@ -15,6 +16,12 @@
 {
     self.textColor = [Globals shared].themingAssistant.defaultTextColor;
     self.font = [[Globals shared] defaultTextFont];
+}
+
+- (void) phoneNumberMode
+{
+    self.numerOfCharacters = [[Utilities shared] maxPhoneNumberDigits];
+    self.textFieldMode = TextFieldMode_PhoneNumber;
 }
 
 @end

@@ -8,6 +8,7 @@
 
 #import "IconTextField.h"
 #import "Globals.h"
+#import "NSString+Additions.h"
 
 const CGFloat iconTextField_icon_leftMargin = 5.0f;
 const CGFloat iconTextField_icon_rightMargin = 5.0f;
@@ -20,7 +21,7 @@ const CGFloat iconTextField_tf_topMargin = 1.0f;
 const CGFloat iconTextField_tf_botomMargin = 0.0f;
 
 
-@interface IconTextField ()
+@interface IconTextField () <UITextFieldDelegate>
 @end
 
 
@@ -109,6 +110,47 @@ const CGFloat iconTextField_tf_botomMargin = 0.0f;
     self.textField.placeholder = placeHolderText;
 }
 
+
+#pragma mark - Delegate Methods
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    BOOL retVal = YES;
+    NSString* totalString = [NSString stringWithFormat:@"%@%@",textField.text,string];
+    if (self.textField.textFieldMode == TextFieldMode_PhoneNumber)
+    {
+        if (range.length == 1)
+        {
+            textField.text = [NSString formatPhoneNumber:totalString deleteLastChar:YES];
+        }
+        else
+        {
+            NSString* phone = [NSString unformatPhoneNumber:totalString];
+            textField.text = [NSString formatPhoneNumber:phone deleteLastChar:NO];
+        }
+        
+        retVal = NO;
+
+        if (self.valueChanged != nil)
+        {
+            NSString* stripedPhone = [NSString unformatPhoneNumber:textField.text];
+            self.valueChanged(stripedPhone);
+        }
+    }
+    else
+    {
+        if (self.valueChanged != nil)
+        {
+            self.valueChanged(totalString);
+        }
+    }
+
+    return retVal;
+}
+
+
+#pragma mark - UI Methods
+
 - (UIImageView *) imgvIcon
 {
     if (_imgvIcon == nil)
@@ -123,16 +165,17 @@ const CGFloat iconTextField_tf_botomMargin = 0.0f;
     return _imgvIcon;
 }
 
-- (UITextField *) textField
+- (BaseTextField *) textField
 {
     if (_textField == nil)
     {
-        _textField = [[UITextField alloc] initWithFrame:self.frame];
+        _textField = [[BaseTextField alloc] initWithFrame:self.frame];
         _textField.borderStyle = UITextBorderStyleNone;
         _textField.backgroundColor = [UIColor clearColor];
         _textField.contentMode = UIViewContentModeScaleAspectFill;
         _textField.font = [Globals shared].defaultTextFont;
         _textField.clipsToBounds = YES;
+        _textField.delegate = self;
         
         [self addSubview:_textField];
     }

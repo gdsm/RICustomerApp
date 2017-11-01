@@ -8,13 +8,16 @@
 
 #import <UIKit/UIKit.h>
 #import "BaseView.h"
+#import "BaseTextField.h"
 
 @interface IconTextField : BaseView
 
 @property (nonatomic, strong) BaseLabel* lblIcon;
 @property (nonatomic, strong) UIImageView* imgvIcon;
-@property (nonatomic, strong) UITextField* textField;
+@property (nonatomic, strong) BaseTextField* textField;
 @property (nonatomic, strong) BaseView* viewUnderLine;
+
+@property (nonatomic) blk_textFieldValueChanged valueChanged;
 
 @property (nonatomic, strong) NSString* imageName;
 @property (nonatomic, strong) NSString* iconCode;

@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "UserSummary.h"
 
+typedef void (^blk_userRegistrationCallback)(UserSummary* user, NSString* error);
+
 @interface UserManager : NSObject
 
 + (UserManager *) shared;
@@ -16,5 +18,6 @@
 @property (nonatomic, strong) UserSummary* activeUser;
 
 - (void) createDemoUser;
+- (NSString *) registerUserWithPhone:(UserSummary *)user callback:(blk_userRegistrationCallback)callback;
 - (NSString *) attempLoginForUser:(NSString *)user withPassword:(NSString *)password;
 @end

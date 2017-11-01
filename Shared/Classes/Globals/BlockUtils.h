@@ -10,6 +10,7 @@
 
 typedef void (^blk_completion)(void);
 typedef void (^blk_actionSender)(id sender);
+typedef void (^blk_callbackResponse)(NSDictionary* response);
 typedef void (^blk_actionIndexPath)(NSIndexPath* sender);
 typedef void (^blk_valueChanged)(NSDecimalNumber* value);
 

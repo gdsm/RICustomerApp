@@ -31,7 +31,7 @@
     self.bgImgv.image = nil;
     self.bottomTabView.hidden = NO;
 
-    CGFloat top = (self.lblInfo.frame.origin.y + self.lblInfo.frame.size.height);
+    CGFloat top = (self.lblInfo.frame.origin.y + self.lblInfo.frame.size.height + topMargin_20px);
     self.tableOffset = UIEdgeInsetsMake(top, 0, 0, 0);
     
 //    self.navigationItem.rightBarButtonItem = self.bbiNext;
@@ -126,10 +126,11 @@
     {
         CGFloat top = (self.navigationBarHeight + self.statusBarHeight + topMargin_20px);
 
-        CGRect rect = CGRectMake(leftMargin_20px, top, self.view.frame.size.width - leftMargin_20px, viewHeight_40px);
+        CGRect rect = CGRectMake(leftMargin_20px, top, self.view.frame.size.width - (leftMargin_20px + rightMargin_20px), viewHeight_40px);
         _lblInfo = [[BaseLabel alloc] initWithFrame:rect];
-        _lblInfo.text = @"Please Select Reason";
         [_lblInfo defaultStyling];
+        _lblInfo.font = [Globals shared].boldTextFont;
+        _lblInfo.text = @"Please Select Reason";
         [self.view addSubview:_lblInfo];
     }
     return _lblInfo;

@@ -7,7 +7,10 @@
 //
 
 #import "BaseTableViewController.h"
+#import "BlockUtils.h"
 
 @interface RegistrationViewController : BaseTableViewController
+
+@property (nonatomic, strong) blk_completion onLogin;
 
 @end

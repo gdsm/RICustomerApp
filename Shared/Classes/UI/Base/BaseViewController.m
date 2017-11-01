@@ -9,6 +9,7 @@
 #import "BaseViewController.h"
 #import "BaseNavigationController.h"
 #import "Utilities.h"
+#import "UINavigationBar+Additions.h"
 
 const CGFloat BaseVC_BottomTabHeight = 60;
 static BottomTabView* _static_btmTabView = nil;
@@ -113,6 +114,49 @@ static BottomTabView* _static_btmTabView = nil;
 {
     [self unSafeDismissViewControllerFromSelf:YES animated:animated callbackCompletion:nil];
 }
+
+- (void) whiteTheme
+{
+    [self.navigationController.navigationBar whiteTheme];
+}
+
+- (void) blueTheme
+{
+    [self.navigationController.navigationBar blueTheme];
+}
+
+- (void) showHUD:(NSString *)msg
+{
+    if (![NSThread isMainThread])
+    {
+        [self performSelectorOnMainThread:@selector(showHUD:) withObject:msg waitUntilDone:NO];
+        return;
+    }
+    [[Utilities findFirstResonderIn:self.view] resignFirstResponder];
+    [[Utilities shared] showHud:msg onView:self.navigationController.view];
+}
+
+- (void) showToast:(NSString *)msg
+{
+    if (![NSThread isMainThread])
+    {
+        [self performSelectorOnMainThread:@selector(showToast:) withObject:msg waitUntilDone:NO];
+        return;
+    }
+    [[Utilities findFirstResonderIn:self.view] resignFirstResponder];
+    [[Utilities shared] showToast:msg onView:self.navigationController.view timeDuration:toastTime];
+}
+
+- (void) hideHUD
+{
+    if (![NSThread isMainThread])
+    {
+        [self performSelectorOnMainThread:@selector(hideHUD) withObject:nil waitUntilDone:NO];
+        return;
+    }
+    [[Utilities shared] hideHudFromView:self.navigationController.view];
+}
+
 
 #pragma mark - Layout Methods
 

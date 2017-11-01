@@ -30,5 +30,8 @@
 - (void) hideHudFromView:(UIView *)view;
 - (void) showToast:(NSString *)msg onView:(UIView *)view timeDuration:(CGFloat)time;
 
+#pragma mark - Stirngs
+
+- (NSUInteger) maxPhoneNumberDigits;
 
 @end

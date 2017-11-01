@@ -19,6 +19,7 @@
 @property (nonatomic, strong) UIColor* clearNorm;
 @property (nonatomic, strong) UIColor* color91B3DB;
 @property (nonatomic, strong) UIColor* color0463D6;
+@property (nonatomic, strong) UIColor* color6DA2C0;
 
 @property (nonatomic, weak) UIColor* defaultTableViewBGColor;
 @property (nonatomic, weak) UIColor* defaultViewBGColor;
@@ -27,6 +28,10 @@
 @property (nonatomic, weak) UIColor* defaultIconColor;
 @property (nonatomic, weak) UIColor* defaultContentBgColor;
 @property (nonatomic, weak) UIColor* defaultSeperatorColor;
+
+@property (nonatomic, weak) UIColor* navBarBlueThemeBorderColor;
+@property (nonatomic, weak) UIColor* navBarBlueThemeBgColor;
+@property (nonatomic, weak) UIColor* navBarBlueThemeTextColor;
 
 @property (nonatomic, weak) UIColor* badgeButtonColor;
 

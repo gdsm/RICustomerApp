@@ -39,6 +39,12 @@ extern const CGFloat BaseVC_BottomTabHeight;
 
 @property (nonatomic, strong, nullable) blk_completion removeCallback;
 
+- (void) whiteTheme;
+- (void) blueTheme;
+
+- (void) showHUD:(nullable NSString *)msg;
+- (void) showToast:(nullable NSString *)msg;
+- (void) hideHUD;
 
 #pragma mark - Push/Present ViewControllers
 /**

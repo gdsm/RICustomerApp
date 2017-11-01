@@ -8,6 +8,8 @@
 
 #import "UserManager.h"
 #import "DatabaseManager.h"
+#import "Utilities.h"
+#import "BlockUtils.h"
 #import "CD_User.h"
 
 @implementation UserManager
@@ -120,5 +122,49 @@
 
     return error;
 }
+
+
+
+
+#pragma mark - User Registration
+
+- (NSString *) registerUserWithPhone:(UserSummary *)user
+                            callback:(blk_userRegistrationCallback)callback
+{
+    NSString* err = nil;
+    
+    if (user == nil){
+        err = @"NIL user passed";
+        return err;
+    }
+    else if ((user.phoneNumber == nil) || (user.phoneNumber.length < [[Utilities shared] maxPhoneNumberDigits])){
+        err = @"Invalid Phone number";
+        return err;
+    }
+    
+    [self registerUser:nil callback:^(NSDictionary* response) {
+        
+        if (callback != nil){
+            callback(user, @"Unable to register user");
+        }
+    }];
+    
+    return err;
+}
+
+
+#pragma mark - Web Service Access Methods
+
+- (void) registerUser:(NSDictionary *)userDict callback:(blk_callbackResponse)callback
+{
+    [NSTimer scheduledTimerWithTimeInterval:5 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        if (callback != nil){
+            callback(nil);
+        }
+    }];
+}
+
+#pragma mark - Database Access Methods
+
 
 @end

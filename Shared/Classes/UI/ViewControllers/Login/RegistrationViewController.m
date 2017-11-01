@@ -9,6 +9,8 @@
 #import "RegistrationViewController.h"
 #import "UserProfileViewController.h"
 #import "IconTextField.h"
+#import "UserManager.h"
+#import "UserSummary.h"
 
 @interface RegistrationViewController ()
 
@@ -20,6 +22,9 @@
 
 @property (strong, nonatomic) ColoredButton *btnRegister;
 @property (strong, nonatomic) ColoredButton *btnContinue;
+@property (strong, nonatomic) UIBarButtonItem* bbiLogin;
+
+@property (strong, nonatomic) UserSummary* userSummary;
 
 @end
 
@@ -43,15 +48,29 @@
     
     self.allowKeyboardNotifications = YES;
     
+    UIEdgeInsets inset = self.viewRegister.contentInsets;
+    inset.left = self.view.frame.size.width * 0.2;
+    inset.right = self.view.frame.size.width * 0.2;
+    self.viewRegister.contentInsets = inset;
+
+    inset = self.viewContinue.contentInsets;
+    inset.left = self.view.frame.size.width * 0.2;
+    inset.right = self.view.frame.size.width * 0.2;
+    self.viewContinue.contentInsets = inset;
+
     self.btnRegister.coloredButtonType = ColoredButtonType_Blue;
     self.viewBottom.backgroundColor = [UIColor clearColor];
     self.viewContinue.backgroundColor = [UIColor clearColor];
     self.viewRegister.backgroundColor = [UIColor clearColor];
-
+    
     [self.view addSubview:self.lblInfo];
     [self.view addSubview:self.tfPhoneNumber];
     [self.viewContinue addSubview:self.btnContinue];
     [self.viewRegister addSubview:self.btnRegister];
+    
+    [self blueTheme];
+    
+    self.navigationItem.leftBarButtonItem = self.bbiLogin;
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -63,6 +82,14 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
+}
+
+- (UserSummary *)userSummary
+{
+    if (_userSummary == nil){
+        _userSummary = [UserSummary new];
+    }
+    return _userSummary;
 }
 
 
@@ -82,16 +109,38 @@
 
 #pragma mark - Logical Flow Methods
 
-- (void) continueLoginFlow
+- (void) userProfileFlowConfirmed
 {
     UserProfileViewController* view = [[UserProfileViewController alloc] initWithStyle:UITableViewStylePlain];
     view.isNewUser = YES;
     [self safePush:view animated:YES];
 }
 
+- (void) continueLoginFlow
+{
+    __weak RegistrationViewController* weakSelf = self;
+    
+    NSString* err = [[UserManager shared] registerUserWithPhone:self.userSummary callback:^(UserSummary *user, NSString *error) {
+        [weakSelf hideHUD];
+        if (error != nil){
+            [weakSelf showToast:error];
+        }
+        else{
+            [weakSelf userProfileFlowConfirmed];
+        }
+    }];
+    
+    if (err != nil){
+        [self showToast:err];
+    }
+    else{
+        [self showHUD:@"Registering User"];
+    }
+}
+
 - (void) registerUser
 {
-    
+    [self userProfileFlowConfirmed];
 }
 
 
@@ -101,6 +150,7 @@
 {
     [super viewWillLayoutSubviews];
     [self.tfPhoneNumber layoutUI];
+    [self.viewRegister layoutUI];
 }
 
 - (void) layoutBottomView:(CGFloat)bottomMargin
@@ -135,14 +185,21 @@
         CGFloat top = (self.lblInfo.frame.origin.y + self.lblInfo.frame.size.height + topMargin_20px);
         CGRect rect = CGRectMake(leftMargin_20px, top, self.view.frame.size.width - (leftMargin_20px + rightMargin_20px), viewHeight_60px);
 
+        __weak RegistrationViewController* weakSelf = self;
+        
         _tfPhoneNumber = [[IconTextField alloc] initWithFrame:rect];
         [_tfPhoneNumber.lblIcon defaultStyling];
         _tfPhoneNumber.iconCode = @"+1";
         _tfPhoneNumber.viewUnderLine.hidden = NO;
+        [_tfPhoneNumber.textField phoneNumberMode];
         _tfPhoneNumber.backgroundColor = [UIColor clearColor];
         _tfPhoneNumber.placeHolderText = @"Enter Registered Phone Number";
         _tfPhoneNumber.textField.keyboardType = UIKeyboardTypePhonePad;
         _tfPhoneNumber.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
+        
+        _tfPhoneNumber.valueChanged = ^(NSString *value) {
+            weakSelf.userSummary.phoneNumber = value;
+        };
     }
     return _tfPhoneNumber;
 }
@@ -181,6 +238,14 @@
     return _btnRegister;
 }
 
+- (UIBarButtonItem *)bbiLogin
+{
+    if (_bbiLogin == nil){
+        _bbiLogin = [[UIBarButtonItem alloc] initWithTitle:@"Login" style:UIBarButtonItemStylePlain target:self action:@selector(onbbiLogin:)];
+    }
+    return _bbiLogin;
+}
+
 - (void) onBtnTap:(ColoredButton *)sender
 {
     if ([sender isEqual:self.btnContinue])
@@ -190,6 +255,14 @@
     else if ([sender isEqual:self.btnRegister])
     {
         [self registerUser];
+    }
+}
+
+- (void) onbbiLogin:(UIBarButtonItem *)sender
+{
+    if (self.onLogin != nil)
+    {
+        self.onLogin();
     }
 }
 

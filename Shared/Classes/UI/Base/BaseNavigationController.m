@@ -7,6 +7,7 @@
 //
 
 #import "BaseNavigationController.h"
+#import "UINavigationBar+Additions.h"
 #import "Utilities.h"
 #import "Globals.h"
 

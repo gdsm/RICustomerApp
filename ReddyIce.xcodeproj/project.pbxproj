@@ -259,6 +259,8 @@
 		CEDE05141F9550CE005A3354 /* Products_norm@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = CEDE04F61F9550CE005A3354 /* Products_norm@3x.png */; };
 		CEF999441F8D501C00B7F1FC /* BaseButton.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF999431F8D501C00B7F1FC /* BaseButton.m */; };
 		CEF9994B1F8D538600B7F1FC /* Utilities.m in Sources */ = {isa = PBXBuildFile; fileRef = CEF9994A1F8D538600B7F1FC /* Utilities.m */; };
+		CEFE9DCC1FA9119B002CDD62 /* UINavigationBar+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE9DCB1FA9119B002CDD62 /* UINavigationBar+Additions.m */; };
+		CEFE9DCF1FA93314002CDD62 /* NSCharacterSet+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = CEFE9DCE1FA93314002CDD62 /* NSCharacterSet+Additions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -686,6 +688,10 @@
 		CEF999431F8D501C00B7F1FC /* BaseButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BaseButton.m; sourceTree = "<group>"; };
 		CEF999491F8D538600B7F1FC /* Utilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilities.h; sourceTree = "<group>"; };
 		CEF9994A1F8D538600B7F1FC /* Utilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilities.m; sourceTree = "<group>"; };
+		CEFE9DCA1FA9119B002CDD62 /* UINavigationBar+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UINavigationBar+Additions.h"; sourceTree = "<group>"; };
+		CEFE9DCB1FA9119B002CDD62 /* UINavigationBar+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UINavigationBar+Additions.m"; sourceTree = "<group>"; };
+		CEFE9DCD1FA93314002CDD62 /* NSCharacterSet+Additions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSCharacterSet+Additions.h"; sourceTree = "<group>"; };
+		CEFE9DCE1FA93314002CDD62 /* NSCharacterSet+Additions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSCharacterSet+Additions.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1077,6 +1083,10 @@
 				CE5983391F910CE40098DC13 /* NSData+Additions.m */,
 				CE12C27B1F96517C00D9EDB8 /* NSDecimalNumber+Additions.h */,
 				CE12C27C1F96517C00D9EDB8 /* NSDecimalNumber+Additions.m */,
+				CEFE9DCA1FA9119B002CDD62 /* UINavigationBar+Additions.h */,
+				CEFE9DCB1FA9119B002CDD62 /* UINavigationBar+Additions.m */,
+				CEFE9DCD1FA93314002CDD62 /* NSCharacterSet+Additions.h */,
+				CEFE9DCE1FA93314002CDD62 /* NSCharacterSet+Additions.m */,
 			);
 			path = Assistant;
 			sourceTree = "<group>";
@@ -1980,6 +1990,7 @@
 				CE4BC5331F9EB0AB004F1CDC /* ReportLineView.m in Sources */,
 				CE12C2B71F9698CC00D9EDB8 /* BadgeButton.m in Sources */,
 				CED748F51F97C88E006810D5 /* TicketLineItemHeaderCell.m in Sources */,
+				CEFE9DCF1FA93314002CDD62 /* NSCharacterSet+Additions.m in Sources */,
 				CE5433461F9A8CE20059CA2C /* UserManager.m in Sources */,
 				CE4E2DBE1FA0F5C400C806A9 /* QuickOrderView.m in Sources */,
 				CE5983371F91063E0098DC13 /* NSDictionary+Additions.m in Sources */,
@@ -2043,6 +2054,7 @@
 				CE5685671F8D73BC005922AA /* ButtonItem.m in Sources */,
 				CEC81A1E1F99246400035909 /* DeliveryTimelineView.m in Sources */,
 				CE14A9951F9FAA8A00FB9C47 /* ProblemDescriptionViewController.m in Sources */,
+				CEFE9DCC1FA9119B002CDD62 /* UINavigationBar+Additions.m in Sources */,
 				CE54334D1F9A8E8C0059CA2C /* TicketObject.m in Sources */,
 				CE23D20F1F943BD60021403B /* ToggleSwitchButton.m in Sources */,
 				CE12C2F01F96B36B00D9EDB8 /* TOPasscodeViewController.m in Sources */,

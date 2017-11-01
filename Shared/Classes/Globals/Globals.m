@@ -38,6 +38,8 @@ const CGFloat cellHeight_80px = 80.0;
 const CGFloat cellHeight_150px = 150.0;
 const CGFloat cartSize_44px = 44.0f;
 
+const NSTimeInterval toastTime = 2.0;
+
 @interface Globals()
 
 @end

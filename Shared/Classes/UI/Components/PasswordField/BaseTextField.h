@@ -8,8 +8,20 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^blk_textFieldValueChanged)(NSString* value);
+
+
+typedef NS_ENUM(NSUInteger, TextFieldMode){
+    TextFieldMode_Unknown,
+    TextFieldMode_PhoneNumber
+};
+
 @interface BaseTextField : UITextField
 
+@property (nonatomic) NSUInteger numerOfCharacters;
+@property (nonatomic) TextFieldMode textFieldMode;
+
 - (void) defaultStyling;
+- (void) phoneNumberMode;
 
 @end
