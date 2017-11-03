@@ -17,6 +17,8 @@
 
 + (UIView *)findFirstResonderIn:(UIView *)view;
 
++ (BOOL) demoMode;
+
 
 #pragma mark - Color
 

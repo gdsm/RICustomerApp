@@ -12,5 +12,6 @@
 @interface RegistrationViewController : BaseTableViewController
 
 @property (nonatomic, strong) blk_completion onLogin;
+@property (nonatomic, strong) blk_completion onSuccessfulRegistration;
 
 @end

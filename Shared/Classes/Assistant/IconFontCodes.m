@@ -126,4 +126,9 @@
     return @"\uf19a";
 }
 
+- (NSString *) mail
+{
+    return @"\uF195";
+}
+
 @end

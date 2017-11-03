@@ -14,6 +14,9 @@
 #import "Globals.h"
 #import "TouchIdView.h"
 #import "DeviceManager.h"
+#import "NotificationInfo.h"
+
+#import "UserSummary.h"
 #import "UserManager.h"
 
 @interface LaunchViewController () <TOPasscodeViewControllerDelegate>
@@ -78,6 +81,9 @@
     view.onLogin = ^{
         [weakSelf performSelectorOnMainThread:@selector(showLogin) withObject:nil waitUntilDone:NO];
     };
+    view.onSuccessfulRegistration = ^{
+        [weakSelf updateUserRegistrationState:UserRegistrationState_Registered];
+    };
     [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 
@@ -89,9 +95,7 @@
 
     LoginViewController* view = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
     view.onSuccessfullLogin = ^{
-        [UserManager shared].activeUser.userLoggedInState = UserLoggedInState_LoggedIn;
-        [UserManager shared].activeUser.additionalSecurityExpired = NO;
-        [[UserManager shared] saveActiveUser];
+        [weakSelf updateUserLoginState:UserLoggedInState_LoggedIn];
         [weakSelf safeDismissViewControllerFromSelf:NO animated:YES callbackCompletion:nil];
     };
     view.onNewRegistration = ^{
@@ -155,6 +159,27 @@
     [self unSafePresent:view onSelf:YES animated:YES callbackCompletion:nil];
 }
 
+- (void) updateUserLoginState:(UserLoggedInState)state
+{
+    NotificationInfo* info = [NotificationInfo new];
+    info.userLoggedInState = [NSNumber numberWithInteger:state];
+    [[NSNotificationCenter defaultCenter] postNotificationName:noti_UpdateUserLoggedInState object:nil userInfo:[info toDictionary]];
+}
+
+- (void) updateUserRegistrationState:(UserRegistrationState)state
+{
+    NotificationInfo* info = [NotificationInfo new];
+    info.userRegistrationState = [NSNumber numberWithInteger:state];
+    [[NSNotificationCenter defaultCenter] postNotificationName:noti_UpdateUserRegistrationState object:nil userInfo:[info toDictionary]];
+}
+
+- (void) updateUserAdditionalSecurity:(BOOL)value
+{
+    NotificationInfo* info = [NotificationInfo new];
+    info.userAdditionalSecurity = [NSNumber numberWithBool:value];
+    [[NSNotificationCenter defaultCenter] postNotificationName:noti_UpdateUserAdditionalSecurity object:nil userInfo:[info toDictionary]];
+}
+
 
 #pragma mark - Passcode Delegate
 
@@ -166,8 +191,7 @@
 - (void)didInputCorrectPasscodeInPasscodeViewController:(TOPasscodeViewController *)passcodeViewController
 {
     [self dismissViewControllerAnimated:YES completion:nil];
-    [UserManager shared].activeUser.additionalSecurityExpired = NO;
-    [[UserManager shared] saveActiveUser];
+    [self updateUserAdditionalSecurity:NO];
 }
 
 - (void)didTapCancelInPasscodeViewController:(TOPasscodeViewController *)passcodeViewController

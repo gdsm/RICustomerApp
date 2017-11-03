@@ -13,9 +13,18 @@ extern NSString* const noti_ProblemRequestSubmit;
 extern NSString* const noti_FeedbackRequestSubmit;
 extern NSString* const noti_ClearTicketDone;
 
+extern NSString* const noti_UpdateUserLoggedInState;
+extern NSString* const noti_UpdateUserRegistrationState;
+extern NSString* const noti_UpdateUserAdditionalSecurity;
+
+
 @interface NotificationInfo : CoreObject
 
 @property (nonatomic, strong) NSNumber* ticketWorkFlow;
 @property (nonatomic, strong) NSNumber* ticketType;
+
+@property (nonatomic, strong) NSNumber* userLoggedInState;
+@property (nonatomic, strong) NSNumber* userRegistrationState;
+@property (nonatomic, strong) NSNumber* userAdditionalSecurity;
 
 @end

@@ -9,6 +9,7 @@
 #import "RegistrationViewController.h"
 #import "UserProfileViewController.h"
 #import "IconTextField.h"
+
 #import "UserManager.h"
 #import "UserSummary.h"
 
@@ -113,6 +114,7 @@
 {
     UserProfileViewController* view = [[UserProfileViewController alloc] initWithStyle:UITableViewStylePlain];
     view.isNewUser = YES;
+    view.onRegistrationComplete = self.onSuccessfulRegistration;
     [self safePush:view animated:YES];
 }
 

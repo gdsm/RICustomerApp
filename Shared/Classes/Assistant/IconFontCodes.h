@@ -33,4 +33,5 @@
 @property (nonatomic, weak, readonly) NSString* mood_bad;
 @property (nonatomic, weak, readonly) NSString* mood_good;
 @property (nonatomic, weak, readonly) NSString* money;
+@property (nonatomic, weak, readonly) NSString* mail;
 @end

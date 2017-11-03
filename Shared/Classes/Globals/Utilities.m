@@ -50,6 +50,11 @@
     return nil;
 }
 
++ (BOOL) demoMode
+{
+    return YES;
+}
+
 
 #pragma mark - Color
 

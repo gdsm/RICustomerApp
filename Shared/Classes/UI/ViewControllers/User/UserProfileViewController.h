@@ -7,9 +7,11 @@
 //
 
 #import "BaseTableViewController.h"
+#import "BlockUtils.h"
 
 @interface UserProfileViewController : BaseTableViewController
 
 @property (nonatomic) BOOL isNewUser;
+@property (nonatomic, strong) blk_completion onRegistrationComplete;
 
 @end

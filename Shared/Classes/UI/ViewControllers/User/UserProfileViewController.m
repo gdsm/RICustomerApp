@@ -14,8 +14,6 @@
 #import "ToggleSettingCell.h"
 #import "CheckboxSelectionCell.h"
 
-#import "UserManager.h"
-
 
 const CGFloat UserInfoRow_Name_Height = 60;
 const CGFloat UserInfoRow_EmailId_Height = 60;
@@ -120,8 +118,10 @@ typedef NS_ENUM(NSUInteger, DisclaimerRows) {
 {
     RegistrationConfirmationViewController* view = [[RegistrationConfirmationViewController alloc] initWithNibName:@"RegistrationConfirmationViewController" bundle:nil];
     [self safePush:view animated:YES];
-    [UserManager shared].activeUser.userRegistrationState = UserRegistrationState_Registered;
-    [[UserManager shared] saveActiveUser];
+    
+    if (self.onRegistrationComplete != nil){
+        self.onRegistrationComplete();
+    }
 }
 
 
@@ -237,7 +237,7 @@ typedef NS_ENUM(NSUInteger, DisclaimerRows) {
             cell.iconTextField.textField.placeholder = @"Enter your phone number";
         }
         else if (indexPath.row == UserInfoRow_EmailId){
-            cell.iconTextField.iconCode = [IconFontCodes shared].message;
+            cell.iconTextField.iconCode = [IconFontCodes shared].mail;
             cell.iconTextField.textField.placeholder = @"Enter your email Id";
         }
         
