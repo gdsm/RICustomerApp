@@ -67,8 +67,6 @@ const NSTimeInterval toastTime = 2.0;
     self = [super init];
     if (self != nil)
     {
-        _registrationRequired = YES;
-        _anyActiveUser = NO;
     }
     return self;
 }
@@ -83,16 +81,21 @@ const NSTimeInterval toastTime = 2.0;
     return _documentsDirectory;
 }
 
-//- (BOOL) anyActiveUser
-//{
-//    BOOL retVal = ([UserManager shared].activeUser != nil);
-//    return retVal;
-//}
-
-- (BOOL) isSessionExpired
+- (BOOL) loginRequired
 {
-//    BOOL retVal = NO;
-    BOOL retVal = YES;
+    BOOL retVal = ([UserManager shared].activeUser.userLoggedInState == UserLoggedInState_LoggedOut);
+    return retVal;
+}
+
+- (BOOL) registrationRequired
+{
+    BOOL retVal = ([UserManager shared].activeUser.userRegistrationState == UserRegistrationState_NotRegistered);
+    return retVal;
+}
+
+- (BOOL) additionalSecurityRequired
+{
+    BOOL retVal = [UserManager shared].activeUser.additionalSecurityExpired;
     return retVal;
 }
 

@@ -33,7 +33,6 @@
 
 - (void)setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"New Problem Request.";
     self.bgImgv.image = nil;
     self.bottomTabView.hidden = YES;

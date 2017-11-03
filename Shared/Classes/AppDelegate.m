@@ -20,8 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [[DatabaseManager shared] tryToUpgradeCoreData];
-    [[UserManager shared] createDemoUser];
+//    [[DatabaseManager shared] tryToUpgradeCoreData];
     [[CoreService shared] initializeListeners];
     return YES;
 }

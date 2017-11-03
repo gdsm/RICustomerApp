@@ -36,7 +36,6 @@ const CGFloat TicketVC_deliveryView_height = 60;
 
 - (void) setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Order Preview";
     self.bgImgv.image = nil;
     

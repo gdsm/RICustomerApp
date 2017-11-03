@@ -49,13 +49,13 @@
     self.allowKeyboardNotifications = YES;
     
     UIEdgeInsets inset = self.viewRegister.contentInsets;
-    inset.left = self.view.frame.size.width * 0.2;
-    inset.right = self.view.frame.size.width * 0.2;
+    inset.left = self.view.frame.size.width * 0.1;
+    inset.right = self.view.frame.size.width * 0.1;
     self.viewRegister.contentInsets = inset;
 
     inset = self.viewContinue.contentInsets;
-    inset.left = self.view.frame.size.width * 0.2;
-    inset.right = self.view.frame.size.width * 0.2;
+    inset.left = self.view.frame.size.width * 0.1;
+    inset.right = self.view.frame.size.width * 0.1;
     self.viewContinue.contentInsets = inset;
 
     self.btnRegister.coloredButtonType = ColoredButtonType_Blue;
@@ -87,7 +87,7 @@
 - (UserSummary *)userSummary
 {
     if (_userSummary == nil){
-        _userSummary = [UserSummary new];
+        _userSummary = [UserManager shared].activeUser;
     }
     return _userSummary;
 }

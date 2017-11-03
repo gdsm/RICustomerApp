@@ -34,7 +34,6 @@ const CGFloat OrderHisVC_AmountCell_Height = 60;
 
 - (void) setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"#Order : 0000000001";
 
     if (self.detailHistory)

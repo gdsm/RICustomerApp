@@ -151,6 +151,42 @@
     return _color6DA2C0;
 }
 
+- (UIColor *) color3A7AC2
+{
+    if (_color3A7AC2 == nil)
+    {
+        _color3A7AC2 = [[Utilities shared] colorFromHexRed:@"3A" green:@"7A" blue:@"C2" alpha:@"FF"];
+    }
+    return _color3A7AC2;
+}
+
+- (UIColor *) color3AB181
+{
+    if (_color3AB181 == nil)
+    {
+        _color3AB181 = [[Utilities shared] colorFromHexRed:@"3A" green:@"B1" blue:@"81" alpha:@"FF"];
+    }
+    return _color3AB181;
+}
+
+- (UIColor *) color94679D
+{
+    if (_color94679D == nil)
+    {
+        _color94679D = [[Utilities shared] colorFromHexRed:@"94" green:@"67" blue:@"9D" alpha:@"FF"];
+    }
+    return _color94679D;
+}
+
+- (UIColor *) colorF58619
+{
+    if (_colorF58619 == nil)
+    {
+        _colorF58619 = [[Utilities shared] colorFromHexRed:@"F5" green:@"86" blue:@"19" alpha:@"FF"];
+    }
+    return _colorF58619;
+}
+
 
 #pragma mark - Default Colors
 
@@ -255,35 +291,35 @@
 }
 
 - (UIColor *) homeBtnIceOrderBgNormColor{
-    return self.blueNorm;
+    return self.color3A7AC2;
 }
 
 - (UIColor *) homeBtnIceOrderBgHighColor{
-    return self.blueHigh;
+    return self.color3A7AC2;
 }
 
 - (UIColor *) homeBtnFeedbackBgNormColor{
-    return self.blueNorm;
+    return self.color3AB181;
 }
 
 - (UIColor *) homeBtnFeedbackBgHighColor{
-    return self.blueHigh;
+    return self.color3AB181;
 }
 
 - (UIColor *) homeBtnEqpSrvcBgNormColor{
-    return self.blueNorm;
+    return self.color94679D;
 }
 
 - (UIColor *) homeBtnEqpSrvcBgHighColor{
-    return self.blueHigh;
+    return self.color94679D;
 }
 
 - (UIColor *) homeBtnHistoryBgNormColor{
-    return self.blueNorm;
+    return self.colorF58619;
 }
 
 - (UIColor *) homeBtnHistoryBgHighColor{
-    return self.blueHigh;
+    return self.colorF58619;
 }
 
 - (UIColor *) btmBarBtnBgNormColor

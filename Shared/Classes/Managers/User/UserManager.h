@@ -17,7 +17,7 @@ typedef void (^blk_userRegistrationCallback)(UserSummary* user, NSString* error)
 
 @property (nonatomic, strong) UserSummary* activeUser;
 
-- (void) createDemoUser;
+- (void) saveActiveUser;
 - (NSString *) registerUserWithPhone:(UserSummary *)user callback:(blk_userRegistrationCallback)callback;
 - (NSString *) attempLoginForUser:(NSString *)user withPassword:(NSString *)password;
 @end

@@ -52,7 +52,6 @@ typedef NS_ENUM(NSUInteger, DeliveryHistorySections)
 
 - (void) setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"#Invoice : 0000000001";
     
     if (self.detailHistory)

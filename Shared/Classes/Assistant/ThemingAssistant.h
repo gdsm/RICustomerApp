@@ -20,6 +20,10 @@
 @property (nonatomic, strong) UIColor* color91B3DB;
 @property (nonatomic, strong) UIColor* color0463D6;
 @property (nonatomic, strong) UIColor* color6DA2C0;
+@property (nonatomic, strong) UIColor* color3A7AC2;
+@property (nonatomic, strong) UIColor* color3AB181;
+@property (nonatomic, strong) UIColor* color94679D;
+@property (nonatomic, strong) UIColor* colorF58619;
 
 @property (nonatomic, weak) UIColor* defaultTableViewBGColor;
 @property (nonatomic, weak) UIColor* defaultViewBGColor;

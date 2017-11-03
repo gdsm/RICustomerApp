@@ -26,24 +26,62 @@
     return _userManager_sharedInstance;
 }
 
-- (void) createDemoUser
+- (UserSummary *) createDemoUser
 {
-    NSString* demoUserId = @"DemoUserId";
-    
-    NSFetchRequest *request = nil;
-    CD_User *user = (CD_User *)[[DatabaseManager shared] newOrExistingEntity:demoUserId ofType:@"CD_User" predicateFormat:@"(userId == %@)" reuseRequest:&request];
-    
-    user.name = @"Reddy";
+    UserSummary* user = [UserSummary new];
+    user.name = @"Reddy Ice";
+    user.userId = @"Reddy";
     user.password = @"ice";
-    user.userId = demoUserId;
     user.passcode = @"1234";
-    user.isActive = @1;
+    user.userRegistrationState = UserRegistrationState_NotRegistered;
+    user.userLoggedInState = UserLoggedInState_LoggedOut;
+    user.additionalSecurityExpired = YES;
+    
+    [self saveDemoUser:user];
+    
+    return user;
+}
 
-    [[DatabaseManager shared] saveChanges];
+- (void) saveDemoUser:(UserSummary *)user
+{
+    if (user == nil){
+        return;
+    }
+    NSDictionary* dict = [user toDictionary];
+    [[NSUserDefaults standardUserDefaults] setObject:dict forKey:@"DemoUser"];
+}
+
+- (UserSummary *) getDemoUser
+{
+    NSDictionary* dict = [[NSUserDefaults standardUserDefaults] objectForKey:@"DemoUser"];
+    UserSummary* user = nil;
+    
+    if (dict == nil){
+        user = [self createDemoUser];
+    }
+    else{
+        user = [UserSummary new];
+        [user updateWithDictionary:dict];
+    }
+    return user;
+}
+
+- (void) saveActiveUser
+{
+#ifdef DEV_MODE
+    [self saveDemoUser:self.activeUser];
+    return;
+#endif
 }
 
 - (UserSummary *) activeUser
 {
+#ifdef DEV_MODE
+    if (_activeUser == nil){
+        _activeUser = [self getDemoUser];
+        _activeUser.additionalSecurityExpired = YES;
+    }
+#endif
     if (_activeUser == nil)
     {
         NSManagedObjectContext* moc = [DatabaseManager shared].managedObjectContext;
@@ -87,29 +125,15 @@
         error = @"Nil password passed";
         return error;
     }
-    
-    NSManagedObjectContext* moc = [DatabaseManager shared].managedObjectContext;
-    NSEntityDescription *entity = [NSEntityDescription entityForName:@"CD_User" inManagedObjectContext:moc];
-    
-    NSFetchRequest *request = [[NSFetchRequest alloc] init];
-    [request setEntity:entity];
-    
-    NSError *err = nil;
-    
-    NSArray* finalResult = [moc executeFetchRequest:request error:&err];
-    if (err != nil)
-    {
-        error = err.localizedDescription;
-        return error;
-    }
+
+    NSArray<UserSummary *>* usrs = [self getAllUsers];
     
     BOOL userMatch = false;
-    for (CD_User* user in finalResult)
+    for (UserSummary* user in usrs)
     {
-        if (([user.name isEqualToString:name]) && ([user.password isEqualToString:password]))
+        if (([user.userId isEqualToString:name]) && ([user.password isEqualToString:password]))
         {
-            user.isActive = @1;
-            [[DatabaseManager shared] saveChanges];
+            user.userLoggedInState = UserLoggedInState_LoggedIn;
             userMatch = true;
             break;
         }
@@ -121,6 +145,15 @@
     }
 
     return error;
+}
+
+- (NSMutableArray<UserSummary *>*) getAllUsers
+{
+    NSMutableArray<UserSummary *>* retVal = [NSMutableArray new];
+#ifdef DEV_MODE
+    [retVal addObject:[self getDemoUser]];
+#endif
+    return retVal;
 }
 
 

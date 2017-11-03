@@ -96,8 +96,9 @@ const CGFloat HomeButtonView_HinnerMargin = 10;
 {
     if (_btnPlaceOrder == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnPlaceOrder = [self getButton:@"Order.png" title:@"Ice\rOrder"];
+        _btnPlaceOrder.bgNormalColor = [Globals shared].themingAssistant.homeBtnIceOrderBgNormColor;
+        _btnPlaceOrder.bgHighlightedColor = [Globals shared].themingAssistant.homeBtnIceOrderBgHighColor;
         [_btnPlaceOrder addTarget:self action:@selector(onBtnTap:) forControlEvents:UIControlEventTouchUpInside];
         
         [self addSubview:_btnPlaceOrder];
@@ -109,8 +110,9 @@ const CGFloat HomeButtonView_HinnerMargin = 10;
 {
     if (_btnReportAProb == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnReportAProb = [self getButton:@"Problem.png" title:@"Equipment\rRepair"];
+        _btnReportAProb.bgNormalColor = [Globals shared].themingAssistant.homeBtnEqpSrvcBgNormColor;
+        _btnReportAProb.bgHighlightedColor = [Globals shared].themingAssistant.homeBtnEqpSrvcBgHighColor;
         [_btnReportAProb addTarget:self action:@selector(onBtnTap:) forControlEvents:UIControlEventTouchUpInside];
 
         [self addSubview:_btnReportAProb];
@@ -122,8 +124,9 @@ const CGFloat HomeButtonView_HinnerMargin = 10;
 {
     if (_btnShareFeedback == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnShareFeedback = [self getButton:@"Feedback.png" title:@"Share\rFeedback"];
+        _btnShareFeedback.bgNormalColor = [Globals shared].themingAssistant.homeBtnFeedbackBgNormColor;
+        _btnShareFeedback.bgHighlightedColor = [Globals shared].themingAssistant.homeBtnFeedbackBgHighColor;
         [_btnShareFeedback addTarget:self action:@selector(onBtnTap:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_btnShareFeedback];
     }
@@ -134,8 +137,9 @@ const CGFloat HomeButtonView_HinnerMargin = 10;
 {
     if (_btnDeliveryHistory == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnDeliveryHistory = [self getButton:@"Delivery.png" title:@"History"];
+        _btnDeliveryHistory.bgNormalColor = [Globals shared].themingAssistant.homeBtnHistoryBgNormColor;
+        _btnDeliveryHistory.bgHighlightedColor = [Globals shared].themingAssistant.homeBtnHistoryBgHighColor;
         [_btnDeliveryHistory addTarget:self action:@selector(onBtnTap:) forControlEvents:UIControlEventTouchUpInside];
         [self addSubview:_btnDeliveryHistory];
     }

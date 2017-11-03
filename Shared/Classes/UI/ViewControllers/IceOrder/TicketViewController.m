@@ -31,7 +31,6 @@
 
 - (void) setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Cart Items";
     self.bgImgv.image = nil;
     

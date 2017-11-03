@@ -33,7 +33,6 @@ const CGFloat ReportProbVC_HistoryCell_Height = 80.0;
 
 - (void)setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Report a problem";
     self.bgImgv.image = nil;
     self.bottomTabView.hidden = NO;

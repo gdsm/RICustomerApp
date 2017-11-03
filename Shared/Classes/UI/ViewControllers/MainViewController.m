@@ -23,6 +23,7 @@
 #import "UserInfoView.h"
 #import "CartView.h"
 
+#import "UserManager.h"
 #import "NotificationInfo.h"
 
 const CGFloat MainVC_BarcodeBtnHeight = 44;
@@ -232,7 +233,9 @@ const CGFloat MainVC_UserViewHeight = 160;
 
 - (void) logoutUser
 {
+    [UserManager shared].activeUser.userLoggedInState = UserLoggedInState_LoggedOut;
     [self dismissPopOversAnimated:NO];
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void) userProfile
@@ -446,7 +449,6 @@ const CGFloat MainVC_UserViewHeight = 160;
 
 - (UserInfoView *)userInfoView
 {
-    //TODO:[GM]: Add Localisation
     if (_userInfoView == nil)
     {
         CGRect rect = CGRectMake(0, 0, self.view.frame.size.width, 200);

@@ -40,7 +40,6 @@ const CGFloat OrderConfVC_TableHeight = 120;
 
 - (void) setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Order Confirmation";
     self.bgImgv.image = nil;
     

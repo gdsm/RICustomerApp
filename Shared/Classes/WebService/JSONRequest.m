@@ -80,7 +80,6 @@ const NSString* JSONRequest_kURLConnection = @"kURLConnection";
     NSString* hostAddr = [CoreService shared].hostAddress;
     if ((hostAddr == nil) || (self.endPoint == nil) || (self.function == nil))
     {
-        // TODO:[GM]: Log error here.
         // Cannot request connection with nil params.
         return;
     }

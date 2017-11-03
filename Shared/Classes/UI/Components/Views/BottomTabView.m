@@ -113,7 +113,6 @@ const CGFloat BottomBtnView_InterMargin = 2;
 {
     if (_btnHome == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnHome = [self getButton:@"Home_norm.png"
                   highlightedImage:@"Home_high.png"
                      selectedImage:@"Home_high.png"
@@ -129,7 +128,6 @@ const CGFloat BottomBtnView_InterMargin = 2;
 {
     if (_btnPlaceOrder == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnPlaceOrder = [self getButton:@"Products_norm.png"
                         highlightedImage:@"Products_high.png"
                            selectedImage:@"Products_high.png"
@@ -145,7 +143,6 @@ const CGFloat BottomBtnView_InterMargin = 2;
 {
     if (_btnReportAProb == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnReportAProb = [self getButton:@"Problem_norm.png"
                          highlightedImage:@"Problem_high.png"
                             selectedImage:@"Problem_high.png"
@@ -161,7 +158,6 @@ const CGFloat BottomBtnView_InterMargin = 2;
 {
     if (_btnShareFeedback == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnShareFeedback = [self getButton:@"Feedback_norm.png"
                            highlightedImage:@"Feedback_high.png"
                               selectedImage:@"Feedback_high.png"
@@ -176,7 +172,6 @@ const CGFloat BottomBtnView_InterMargin = 2;
 {
     if (_btnDeliveryHistory == nil)
     {
-        //TODO:[GM]: Add Localisation
         _btnDeliveryHistory = [self getButton:@"Delivery_norm.png"
                              highlightedImage:@"Delivery_high.png"
                                 selectedImage:@"Delivery_high.png"

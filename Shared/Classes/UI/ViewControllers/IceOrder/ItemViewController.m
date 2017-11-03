@@ -32,7 +32,6 @@ const CGFloat ItemsVC_itemCellHeight = 200;
 
 - (void)setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Products";
     self.bgImgv.image = nil;
 

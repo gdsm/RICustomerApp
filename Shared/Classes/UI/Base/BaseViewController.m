@@ -215,9 +215,8 @@ static BottomTabView* _static_btmTabView = nil;
         _bottomTabView.layer.shadowRadius = 2;
         _bottomTabView.layer.shadowOpacity = 0.5;
         _bottomTabView.hidden = YES;
-
-        [self.navigationController.view addSubview:_bottomTabView];
     }
+    [self.navigationController.view addSubview:_bottomTabView];
     return _bottomTabView;
 }
 

@@ -38,11 +38,7 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    if (self.checkFreshnessOnce == NO)
-    {
-        self.checkFreshnessOnce = YES;
-        [self checkAppFreshness];
-    }
+    [self checkUserState];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,31 +46,42 @@
     [super didReceiveMemoryWarning];
 }
 
-- (void) checkAppFreshness
+- (void) checkUserState
 {
     if ([Globals shared].registrationRequired)
     {
         [self showRegistration];
     }
-    else if (![Globals shared].anyActiveUser)
+    else if ([Globals shared].loginRequired)
     {
-        [self enterPassword];
-        [Globals shared].anyActiveUser = YES;
+        [self showLogin];
     }
-    else if ([Globals shared].isSessionExpired && [UserManager shared].activeUser.hasAdditionalSecurity)
+    else if ([Globals shared].additionalSecurityRequired)
     {
         [self showAdditionalSecurity];
     }
     else
     {
-        [self enterMainScreen];
+        [self showMainScreen];
     }
 }
 
 
 #pragma mark - Logical Flow
 
-- (void) enterPassword
+- (void) showRegistration
+{
+    __weak LaunchViewController* weakSelf = self;
+    
+    [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
+    RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
+    view.onLogin = ^{
+        [weakSelf performSelectorOnMainThread:@selector(showLogin) withObject:nil waitUntilDone:NO];
+    };
+    [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
+}
+
+- (void) showLogin
 {
     __weak LaunchViewController* weakSelf = self;
     
@@ -82,7 +89,10 @@
 
     LoginViewController* view = [[LoginViewController alloc] initWithNibName:@"LoginViewController" bundle:[NSBundle mainBundle]];
     view.onSuccessfullLogin = ^{
-        [weakSelf performSelectorOnMainThread:@selector(enterMainScreen) withObject:nil waitUntilDone:NO];
+        [UserManager shared].activeUser.userLoggedInState = UserLoggedInState_LoggedIn;
+        [UserManager shared].activeUser.additionalSecurityExpired = NO;
+        [[UserManager shared] saveActiveUser];
+        [weakSelf safeDismissViewControllerFromSelf:NO animated:YES callbackCompletion:nil];
     };
     view.onNewRegistration = ^{
         [weakSelf performSelectorOnMainThread:@selector(showRegistration) withObject:nil waitUntilDone:NO];
@@ -90,7 +100,7 @@
     [self safePresent:view onSelf:NO animated:YES callbackCompletion:nil];
 }
 
-- (void) enterMainScreen
+- (void) showMainScreen
 {
     [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
     MainViewController* view = [[MainViewController alloc] initWithNibName:@"MainViewController" bundle:[NSBundle mainBundle]];
@@ -114,7 +124,6 @@
 
 - (void) showTouchID
 {
-    //TODO:[GM]: localisation;
     self.viewTouchId.hidden = NO;
     self.title = @"Touch ID";
     [self layoutUI];
@@ -138,20 +147,6 @@
     }];
 }
 
-- (void) showRegistration
-{
-    __weak LaunchViewController* weakSelf = self;
-    self.checkFreshnessOnce = NO;
-
-    [self safeDismissViewControllerFromSelf:NO animated:NO callbackCompletion:nil];
-    RegistrationViewController* view = [[RegistrationViewController alloc] initWithNibName:@"RegistrationViewController" bundle:nil];
-    view.onLogin = ^{
-        weakSelf.checkFreshnessOnce = YES;
-        [weakSelf performSelectorOnMainThread:@selector(enterPassword) withObject:nil waitUntilDone:NO];
-    };
-    [self unSafePresent:view onSelf:NO animated:YES callbackCompletion:nil];
-}
-
 - (void) showPascode
 {
     TOPasscodeViewController *view = [[TOPasscodeViewController alloc] initWithStyle:TOPasscodeViewStyleOpaqueLight passcodeType:TOPasscodeTypeFourDigits];
@@ -170,17 +165,16 @@
 
 - (void)didInputCorrectPasscodeInPasscodeViewController:(TOPasscodeViewController *)passcodeViewController
 {
-    __weak LaunchViewController* weakSelf = self;
-    [self dismissViewControllerAnimated:YES completion:^{
-        [weakSelf enterMainScreen];
-    }];
+    [self dismissViewControllerAnimated:YES completion:nil];
+    [UserManager shared].activeUser.additionalSecurityExpired = NO;
+    [[UserManager shared] saveActiveUser];
 }
 
 - (void)didTapCancelInPasscodeViewController:(TOPasscodeViewController *)passcodeViewController
 {
     __weak LaunchViewController* weakSelf = self;
     [self dismissViewControllerAnimated:YES completion:^{
-        [weakSelf enterPassword];
+        [weakSelf showLogin];
     }];
 }
 
@@ -200,7 +194,7 @@
             _viewTouchId.hidden = YES;
             _viewTouchId.backgroundColor = [UIColor clearColor];
             _viewTouchId.onEnterPassword = ^(id sender) {
-                [weakSelf enterPassword];
+                [weakSelf showLogin];
             };
             
             [self.view addSubview:_viewTouchId];

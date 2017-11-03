@@ -14,6 +14,8 @@
 #import "ToggleSettingCell.h"
 #import "CheckboxSelectionCell.h"
 
+#import "UserManager.h"
+
 
 const CGFloat UserInfoRow_Name_Height = 60;
 const CGFloat UserInfoRow_EmailId_Height = 60;
@@ -118,6 +120,8 @@ typedef NS_ENUM(NSUInteger, DisclaimerRows) {
 {
     RegistrationConfirmationViewController* view = [[RegistrationConfirmationViewController alloc] initWithNibName:@"RegistrationConfirmationViewController" bundle:nil];
     [self safePush:view animated:YES];
+    [UserManager shared].activeUser.userRegistrationState = UserRegistrationState_Registered;
+    [[UserManager shared] saveActiveUser];
 }
 
 
@@ -250,7 +254,6 @@ typedef NS_ENUM(NSUInteger, DisclaimerRows) {
     {
         ReportLineCell* cell = [ReportLineCell dequeueFrom:tableView loadFromNib:@"ReportLineCell"];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
-        cell.backgroundColor = [Globals shared].themingAssistant.blueNorm;
 
         CGFloat div[] = {0.f};
         

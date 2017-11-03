@@ -53,7 +53,6 @@ typedef NS_ENUM(NSUInteger, ItemDetailVC_CellSequence)
 
 - (void)setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Detail";
     self.bgImgv.image = nil;
     

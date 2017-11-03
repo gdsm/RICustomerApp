@@ -34,7 +34,6 @@ const CGFloat TouchIDView_EnterPwdHeight = 44;
     self.viewReddyIceLogo.imageName = @"RILogo.png";
     self.viewReddyIceLogo.backgroundColor = [UIColor clearColor];
 
-    //TODO:[GM]: Add localisation.
     self.lblInfo.text = @"Login with Touch ID \n for faster, easier access to your account";
     self.lblInfo.textColor = [Globals shared].themingAssistant.defaultTextColor;
     self.lblInfo.backgroundColor = [UIColor clearColor];

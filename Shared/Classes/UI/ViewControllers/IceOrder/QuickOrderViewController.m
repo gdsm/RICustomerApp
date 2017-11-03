@@ -48,7 +48,6 @@ const CGFloat QuickOrderVC_viewAddress_height = 100;
 
 - (void) setupUI
 {
-    //TODO:[GM]: Add localisation
     self.title = @"Quick Order";
     self.bgImgv.image = nil;
     

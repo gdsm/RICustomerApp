@@ -52,9 +52,9 @@ extern const NSTimeInterval toastTime;
 + (Globals *) shared;
 
 @property (nonatomic, strong, readonly) NSString *documentsDirectory;
-@property (nonatomic) BOOL anyActiveUser;
-@property (nonatomic, readonly) BOOL isSessionExpired;
+@property (nonatomic) BOOL loginRequired;
 @property (nonatomic) BOOL registrationRequired;
+@property (nonatomic) BOOL additionalSecurityRequired;
 @property (nonatomic, weak, readonly) NSString* userName;
 @property (nonatomic, strong) ThemingAssistant* themingAssistant;
 @property (nonatomic, strong) UINavigationController* appNavigationController;

@@ -9,7 +9,6 @@
 #import "BaseView.h"
 #import "BlockUtils.h"
 
-//TODO:[Gagan]: mode this enum to object class
 typedef NS_ENUM(NSUInteger, HistoryType) {
     HistoryType_Order,
     HistoryType_Delivery,
